@@ -100,6 +100,59 @@ Konceptet utgår från att säkerhet inte uppnås genom att bara lägga till fle
 
 ---
 
+# Relation to Zero Trust
+
+Konceptet bygger primärt på:
+
+- fysisk närvaro
+- zonkontext
+- rörelselogik
+- enheters lokation
+- kontroll av credentials och tillgångar i fysisk miljö
+
+Det betyder att modellen inte utgår från att Zero Trust är en ny eller okänd idé för organisationer som arbetar med hög säkerhet.
+
+I stället utgår konceptet från att många verksamheter redan känner till eller använder Zero Trust-principer i varierande grad, särskilt inom identitet, nätverk, applikationsåtkomst och device posture.
+
+Detta koncept försöker därför inte ersätta Zero Trust, utan tillför snarare en starkare fysisk och operativ dimension till tillitsmodellen.
+
+## Conceptual Position
+
+Modellen utgår från att tillit i högsäker miljö påverkas starkt av:
+
+- var en person befinner sig
+- hur personen tog sig dit
+- var en enhet befinner sig
+- vilken zon som nås
+- vilket syfte som finns
+- om rörelse och användning följer förväntat mönster
+
+Detta är frågor som ofta ligger utanför eller bara delvis täcks av mer traditionella Zero Trust-implementationer.
+
+## Zero Trust Compatibility
+
+Konceptet är väl kompatibelt med Zero Trust-principer, särskilt inom områden som:
+
+- kontextbaserad tillit
+- minsta privilegium
+- segmentering
+- kontinuerlig validering
+- minskad tillit till interna standardpositioner
+- starkare kontroll av privilegierad åtkomst
+
+Zero Trust kan därför utan problem läggas ovanpå eller integreras med denna modell.
+
+## Practical Interpretation
+
+Kort uttryckt:
+
+- detta koncept är inte en ompaketering av Zero Trust
+- det är inte beroende av att introducera Zero Trust som idé
+- det är en facility-centrerad tillitsmodell med stark fysisk och operativ förankring
+- Zero Trust fungerar som ett kompatibelt och förstärkande lager där det är relevant
+
+Den praktiska poängen är att hög säkerhet i denna modell inte bara avgörs av identitet och systemåtkomst, utan också av fysisk kontext, kontrollerad rörelse och enheters position i facilityn.
+
 ## Trust Must Be Contextual
 Tillträde och behörighet ska inte enbart avgöras av om ett kort, konto eller token finns.
 
