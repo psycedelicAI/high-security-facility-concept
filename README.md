@@ -46,6 +46,28 @@ Hög säkerhet uppstår inte bara genom att kontrollera **vem** som har access, 
 
 ---
 
+## Relation to Zero Trust
+
+Konceptet bygger i första hand på:
+
+- fysisk närvaro
+- zonkontext
+- rörelselogik
+- enheters lokation
+- credential custody i fysisk miljö
+
+Det är därför inte primärt utformat som en traditionell Zero Trust-modell, och det förutsätter inte att organisationer saknar kännedom om Zero Trust.
+
+I stället kan konceptet förstås som en **facility-centrerad tillitsmodell** som kompletterar Zero Trust genom att tillföra starkare fysisk och operativ kontext.
+
+Zero Trust-principer som:
+- kontextbaserad tillit
+- segmentering
+- minsta privilegium
+- kontinuerlig validering
+
+är fullt kompatibla med modellen och kan integreras där det är relevant.
+
 ## Current Status
 
 **Assessment Reference:** `88 / 100`
