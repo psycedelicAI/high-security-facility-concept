@@ -61,12 +61,15 @@ Det är därför inte primärt utformat som en traditionell Zero Trust-modell, o
 I stället kan konceptet förstås som en **facility-centrerad tillitsmodell** som kompletterar Zero Trust genom att tillföra starkare fysisk och operativ kontext.
 
 Zero Trust-principer som:
+
 - kontextbaserad tillit
 - segmentering
 - minsta privilegium
 - kontinuerlig validering
 
 är fullt kompatibla med modellen och kan integreras där det är relevant.
+
+---
 
 ## Current Status
 
@@ -102,6 +105,7 @@ Konceptet ska i nuläget ses som:
 - [`docs/executive-summary.md`](docs/executive-summary.md)
 - [`docs/one-pager.md`](docs/one-pager.md)
 - [`docs/concept.md`](docs/concept.md)
+- [`docs/faq.md`](docs/faq.md)
 
 ### Full Assessment
 - [`docs/assessment.md`](docs/assessment.md)
@@ -136,6 +140,7 @@ Detta koncept är mest relevant för:
 - miljöer där insiderhot och avvikande rörelsemönster är realistiska risker
 
 Det är inte primärt utformat för:
+
 - vanliga kontorsmiljöer
 - lågfriktionsmiljöer
 - generisk standard-enterprise IT
@@ -152,6 +157,7 @@ Det är inte primärt utformat för:
     ├── [executive-summary.md](https://executive-summary.md)
     ├── [one-pager.md](https://one-pager.md)
     ├── [concept.md](https://concept.md)
+    ├── [faq.md](https://faq.md)
     ├── [value-proposition.md](https://value-proposition.md)
     ├── [use-cases.md](https://use-cases.md)
     ├── [assessment.md](https://assessment.md)
