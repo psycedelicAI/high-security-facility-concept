@@ -105,7 +105,7 @@ Konceptet ska i nuläget ses som:
 - [`docs/executive-summary.md`](docs/executive-summary.md)
 - [`docs/one-pager.md`](docs/one-pager.md)
 - [`docs/concept.md`](docs/concept.md)
-- [`docs/faq.md`](docs/faq.md)
+- [`docs/faq.md`](docs/FAQ.md)
 
 ### Full Assessment
 - [`docs/assessment.md`](docs/assessment.md)
