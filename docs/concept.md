@@ -1,6 +1,6 @@
-# Concept – High-Security Facility Concept
+# High-Security Facility Concept
 
-> Ett koncept för nästa generations högsäker tekniska anläggningar där fysisk säkerhet, rörelselogik, credential custody, privilegierad åtkomst och drift samverkar som ett sammanhängande system.
+> Ett koncept för högsäker teknisk anläggning där fysisk närvaro, zonlogik, credential custody, device context, privilegierad åtkomst, recovery och governance samverkar som ett sammanhängande system.
 
 ---
 
@@ -10,93 +10,99 @@
 |---|---|
 | Document | Concept |
 | Subject | High-Security Facility Concept |
-| Type | Concept Description / Vision Document |
+| Type | Core Concept Description |
 | Status | Draft |
-| Scope | Vision, design philosophy, value proposition, strategic positioning |
-| Audience | Decision-makers, security architects, facility planners, potential partners, reviewers |
+| Scope | Vision, principles, conceptual structure, design intent, strategic framing |
+| Audience | Security architects, facility planners, technical leads, decision-makers, reviewers |
 
 ---
 
-## Executive Concept Summary
+## Purpose
 
-**High-Security Facility Concept** är en konceptuell modell för hur högsäker teknisk verksamhet kan designas som ett sammanhängande system av:
+Detta dokument beskriver kärnan i **High-Security Facility Concept**.
 
-- fysisk säkerhet
-- zonstyrd rörelse
-- credential custody
-- privilegierad åtkomst
-- asset control
-- OPSEC
-- drift, service och återställning
+Syftet är att formulera konceptets centrala idé, designfilosofi och avgränsning, samt att förklara hur fysisk säkerhet, rörelselogik, credentials, devices, privilegierad åtkomst, tekniska zoner, recovery och governance kan förstås som delar av samma tillitsmodell.
 
-I stället för att behandla säkerhet som separata tekniska eller fysiska kontroller, utgår konceptet från att tillit i en högsäker miljö måste byggas och upprätthållas genom hela kedjan:
+Dokumentet är avsett att vara repots huvudsakliga konceptbeskrivning och fungera som referenspunkt för den övriga dokumentationen.
 
-- vem personen är
-- vilken roll personen har
+---
+
+# Concept Summary
+
+**High-Security Facility Concept** är en modell för miljöer där hög säkerhet inte kan reduceras till enskilda kontroller som dörrar, badges, MFA eller nätverkssegmentering var för sig.
+
+I stället utgår konceptet från att tillit i högsäker miljö formas av sambandet mellan:
+
+- identitet
+- fysisk närvaro
+- rörelse
+- zon
+- credential
+- device
+- privilegium
+- incident
+- recovery
+- governance
+
+Det innebär att frågan inte bara är **vem** som har access, utan också:
+
+- var personen befinner sig
+- hur personen tog sig dit
 - vilken enhet som används
-- vilken zon personen befinner sig i
-- hur personen kom dit
-- vilket syfte som finns
-- vilken typ av åtkomst som begärs
-- hur avvikelser hanteras
-- hur återställning sker när något går fel
+- om rätt credential används i rätt kontext
+- om handlingen sker i rätt driftläge
+- om rörelsemönster och åtkomst är normala eller avvikande
+- hur modellen beter sig vid incident, undantag och återställning
 
-Detta skapar en modell där fysisk rörelse, access, devices och administrativa handlingar inte ses som isolerade händelser, utan som delar av en gemensam **trust architecture**.
+Konceptet är därför inte främst en samling produkter eller tekniska kontroller, utan en **trust architecture** för högsäker facilitymiljö.
 
 ---
 
-# Vision
+# Why This Concept Exists
 
-Visionen är att skapa en högsäker anläggning där:
+Många säkerhetsmiljöer har starka punktkontroller, men svagare koppling mellan dem.
 
-- rätt person använder rätt identitet
-- i rätt zon
-- med rätt enhet
-- via rätt väg
-- för rätt syfte
-- under rätt tidsfönster
-- med rätt nivå av kontroll och spårbarhet
+Vanliga glapp uppstår mellan:
 
-Målet är inte bara att hindra obehöriga från att komma in, utan att designa en miljö där:
+- fysisk säkerhet och IT-säkerhet
+- identitet och faktisk fysisk rörelse
+- credentials och custody
+- devices och fysisk lokation
+- adminpolicy och faktisk adminkontext
+- drift och säkerhetsstyrning
+- incidenthantering och recovery
+- säkerhetsdesign och governance
 
-- avvikelse blir synlig
-- genvägar blir svårare
-- insiderhot möter friktion
-- credentials hålls under kontroll
-- privilegierad åtkomst blir tydligt separerad
-- tekniska skyddszoner kan drivas säkert utan att tappa återställningsförmåga
+Resultatet blir ofta att miljön ser stark ut på papperet, men i praktiken innehåller informella genvägar, otydliga undantag eller svag intern spårbarhet.
 
----
-
-# The Problem This Concept Addresses
-
-Många miljöer med höga säkerhetskrav lider i praktiken av en eller flera av följande svagheter:
-
-- fysisk säkerhet och IT-säkerhet är separata världar
-- access bygger för mycket på enskilda credentials snarare än kontext
-- rörelsemönster inne i facilityn granskas inte
-- badges och andra credentials lämnar facilityn och exponeras i privat miljö
-- privilegierad åtkomst sker från fel enheter eller i fel kontext
-- devices behandlas som vanliga arbetsredskap i stället för säkerhetsobjekt
-- tekniska zoner saknar tydlig skillnad mellan normaldrift, service och change
-- recovery och incidentrespons bygger på improvisation i stället för design
-
-Detta koncept adresserar dessa problem genom att samla dem under en gemensam modell.
+Detta koncept finns för att minska de glappen genom att beskriva en mer sammanhängande modell där fysisk, logisk och operativ säkerhet förstås som delar av samma problem.
 
 ---
 
 # Design Philosophy
 
-## Security as a System, Not a Stack of Controls
-Konceptet utgår från att säkerhet inte uppnås genom att bara lägga till fler lösningar, utan genom att skapa logiska samband mellan:
+Konceptet bygger på några grundläggande idéer:
 
-- människor
-- credentials
-- devices
-- zoner
-- processer
-- återställning
-- ansvar
+## Security Is a System, Not a Point Control
+Ingen enskild kontroll ska ensam bära tilliten. Säkerhet uppstår genom hur flera kontroller samverkar.
+
+## Physical Context Matters
+I högsäker facilitymiljö är fysisk närvaro, passageordning och faktisk plats säkerhetsrelevanta parametrar, inte bara praktisk logistik.
+
+## Trust Must Be Contextual
+Tillit ska bedömas utifrån roll, zon, device, credential, rörelsemönster och driftkontext — inte bara utifrån att en identitet eller badge existerar.
+
+## Friction Can Be a Security Feature
+I vissa miljöer är låg friktion inte målet. Högre säkerhet kan kräva fler steg, tydligare separationer och starkare custody.
+
+## High-Risk Functions Need Separation
+Privilegerad administration, teknikzonsaccess, break-glass och recovery ska behandlas som särskilda kontexter med starkare kontroll.
+
+## Recovery Is Part of Security
+En stark modell måste inte bara fungera i normal drift, utan också vid incidenter, förlust, fel, undantag och återställning.
+
+## Governance Makes Security Durable
+Utan tydligt ägarskap, review, undantagshantering och policyförankring blir även bra design skör över tid.
 
 ---
 
@@ -108,7 +114,7 @@ Konceptet bygger primärt på:
 - zonkontext
 - rörelselogik
 - enheters lokation
-- kontroll av credentials och tillgångar i fysisk miljö
+- credential custody i fysisk miljö
 
 Det betyder att modellen inte utgår från att Zero Trust är en ny eller okänd idé för organisationer som arbetar med hög säkerhet.
 
@@ -153,286 +159,175 @@ Kort uttryckt:
 
 Den praktiska poängen är att hög säkerhet i denna modell inte bara avgörs av identitet och systemåtkomst, utan också av fysisk kontext, kontrollerad rörelse och enheters position i facilityn.
 
-## Trust Must Be Contextual
-Tillträde och behörighet ska inte enbart avgöras av om ett kort, konto eller token finns.
-
-Tillit ska också påverkas av:
-- var användaren befinner sig
-- hur användaren kom dit
-- vilken enhet som används
-- vilken roll användaren har
-- om aktiviteten är väntad eller avvikande
-
----
-
-## High Friction Can Be a Feature
-I högsäker verksamhet är låg friktion inte alltid målet.
-
-I vissa miljöer är det önskvärt att:
-- access tar tid
-- rörelse är kontrollerad
-- credentials inte lämnar facilityn
-- adminvägar är separata
-- högriskaktiviteter kräver extra steg
-
-Konceptet utgår därför från att friktion kan vara en **avsiktlig säkerhetsfunktion**, inte ett misslyckande.
-
----
-
-## Security Must Survive Real Operations
-Ett koncept för högsäker miljö måste fungera inte bara i ideal drift, utan även vid:
-
-- service
-- change
-- credential loss
-- systemfel
-- incident
-- recovery
-- offboarding
-
-Därför innehåller modellen även styrning för:
-- maintenance
-- recovery
-- governance
-- incident response
-
 ---
 
 # Core Concept Components
 
-## 1. Layered Physical and Logical Security
-Anläggningen designas med flera samverkande skyddslager, där både fysisk och logisk säkerhet bidrar till samma målbild.
+## 1. Identity
+Identiteter är centrala, men inte tillräckliga i sig själva. Tillit byggs inte enbart på konton eller badges, utan på hur identiteten uppträder i rätt kontext.
 
-Exempel:
-- perimeter
-- reception
-- man-traps
-- zonklassning
-- badge-kontroll
-- biometriska faktorer
-- FIDO2 / YubiKey
-- adminseparation
-- nätsegmentering
-- asset tracking
+## 2. Physical Presence
+Fysisk närvaro i facilityn är en säkerhetsrelevant faktor. Att befinna sig i en viss zon är inte bara ett resultat av access utan också en del av tillitsbedömningen.
 
----
+## 3. Zone Model
+Facilityn delas in i zoner med olika skyddsvärde och olika krav på passage, syfte och tillåten aktivitet.
 
-## 2. Sequential Zone Access
-Högre klassade zoner kräver inte bara behörighet, utan korrekt passage genom tidigare relevanta zoner.
+## 4. Movement Logic
+Hur någon rör sig genom facilityn är säkerhetsrelevant. Sekventiell passage och avvikelsedetektion är centrala mekanismer i modellen.
 
-Detta gör att modellen kan upptäcka:
-- otillåtna genvägar
-- märkliga rörelsemönster
-- möjlig credential misuse
-- avvikelser som annars inte syns i vanlig dörrlogik
+## 5. Credentials
+Badges, tokens och andra credentials behandlas som säkerhetsobjekt, inte bara användarhjälpmedel.
 
----
+## 6. Credential Custody
+Credentials ska hållas under aktiv kontroll, med tydliga regler för förvaring, utlämning, återlämning, spärr och incidenthantering.
 
-## 3. Credential Custody
-Badges, tokens och andra säkerhetskritiska objekt ska omfattas av tydlig chain of custody.
+## 7. Devices
+Devices är bärare av data, identitet och tillit. Deras status, roll och lokation påverkar säkerhetsbedömningen.
 
-Detta innebär till exempel:
-- badges stannar i facilityn
-- förlust och utebliven återlämning blir synlig
-- privilegierade credentials skyddas hårdare
-- credentials behandlas som säkerhetsobjekt, inte vardagliga tillbehör
+## 8. Device Context
+Det är inte bara vilken enhet som används som är relevant, utan också var den befinner sig och om den används i rätt miljö.
 
----
+## 9. Protected Technical Zones
+Serverhallar och andra tekniska skyddszoner behandlas som särskilda miljöer med begränsad mänsklig närvaro och högre krav på syftesbunden access.
 
-## 4. Device Trust and Asset Control
-Enheter ses inte bara som verktyg, utan som bärare av tillit och risk.
+## 10. Privileged Access
+Administrativ åtkomst separeras från vanlig användning genom separata identiteter, separata enheter, stark autentisering och tydligare styrning.
 
-Därför omfattar modellen:
-- olika laptopklasser
-- dedikerade adminenheter
-- kontrollerad device movement
-- policy för var enheter får användas
-- asset visibility via exempelvis RFID
-- larm och auto-lock vid avvikande rörelse
+## 11. Maintenance and Change
+Tekniskt arbete i skyddade zoner ska ske i definierad kontext, inte via informella genvägar eller otydliga driftlägen.
+
+## 12. Incident Response
+Avvikelser ska kunna upptäckas, klassificeras, begränsas och kopplas till både fysisk och logisk kontext.
+
+## 13. Recovery
+Recovery är en planerad del av modellen och omfattar reservvägar, återställning, fallback och återgång till normal drift.
+
+## 14. Governance
+Governance binder ihop konceptet genom ownership, policy, review, recertifiering, undantagshantering och uppföljning.
 
 ---
 
-## 5. Protected Technical Zones
-Skyddade tekniska zoner, såsom serverhallar och känsliga nätverksutrymmen, behandlas som en särskild typ av miljö.
+# What Makes the Concept Distinct
 
-De skiljer sig från vanliga arbetsytor genom att:
-- mänsklig närvaro ska vara begränsad
-- service ska vara syftesbunden
-- större arbete ska ske under change control
-- återgång till drift ska vara verifierad
+Följande delar är särskilt utmärkande:
 
----
+## Sequential Zone Validation
+Tillträde till högre skyddszoner bygger inte bara på behörighet, utan också på korrekt fysisk passage.
 
-## 6. Privileged Access Separation
-Administrativ och högprivilegierad åtkomst ska skiljas från vanlig användning.
+## Credential Custody by Design
+Badges och andra känsliga credentials hålls under kontrollerad förvaring i stället för att behandlas som vardagsobjekt.
 
-Detta inkluderar:
-- separata adminidentiteter
-- separata adminenheter
-- stark autentisering
-- tydlig loggning
-- högre kontrollnivå för känsliga åtgärder
-- särskild modell för emergency / break-glass
+## Device Location as a Security Parameter
+Enheters placering och rörelse behandlas som del av säkerhetsmodellen.
 
----
+## Separation of Normal and Privileged Context
+Vanlig användning och privilegierad administration behandlas som olika trust classes.
 
-## 7. Recovery and Incident Readiness
-Konceptet bygger på att hög säkerhet måste kunna återställas utan att förlora kontroll.
+## Protected Technical Zone Logic
+Teknikzoner modelleras som särskilda drift- och säkerhetsmiljöer, inte vanliga arbetsytor.
 
-Därför ingår:
-- recovery-modell
-- incidenthantering
-- undantag under kontroll
-- återgång till normal drift
-- styrd fallback i stället för informell bypass
+## Recovery and Governance as Core Design Elements
+Återställning, styrning och eftergranskning är inbyggda från början.
 
 ---
 
-# Intended Environments
+# Intended Use Environments
 
-Detta koncept är främst relevant för miljöer som:
+Konceptet är främst relevant för:
 
 - skyddade serverhallar
 - säkerhetsklassade driftmiljöer
 - tekniska säkerhetszoner
 - verksamheter med höga krav på OPSEC
-- miljöer med behov av stark fysisk och logisk segmentering
-- verksamheter där insiderhot och avvikande rörelsemönster måste tas på allvar
+- miljöer där insiderhot är realistiska risker
+- facilitymiljöer där devices, credentials och rörelse måste hållas under stark kontroll
 
-Konceptet är **inte primärt avsett** för:
+Konceptet är mindre lämpligt för:
+
 - vanliga kontorsmiljöer
-- bred standard-enterprise IT
-- miljöer där användarbekvämlighet är överordnat skyddsbehovet
-
----
-
-# Strategic Value
-
-## Better Alignment Between Physical and Digital Security
-Konceptet förenar fysisk och logisk säkerhet i samma modell, vilket minskar glapp mellan facility security och IT security.
-
----
-
-## Stronger Insider Resistance
-Genom att kombinera zonlogik, credential custody, device control och adminseparation blir det svårare att:
-
-- ta genvägar
-- dölja avvikande rörelse
-- missbruka tillgångar
-- föra ut känslig utrustning
-- skapa informella säkerhetshål
-
----
-
-## Higher Traceability
-Modellen höjer spårbarheten genom att koppla ihop:
-
-- identitet
-- zon
-- device
-- adminaktivitet
-- credential status
-- change eller incidentkontext
-
----
-
-## More Mature High-Security Operations
-Konceptet försöker inte bara beskriva hur man hindrar åtkomst, utan också hur man:
-
-- driver
-- servar
-- återställer
-- granskar
-- förbättrar
-
-en högsäker miljö över tid.
-
----
-
-# What Makes the Concept Different
-
-Det som särskiljer detta koncept från mer traditionella säkerhetsmodeller är kombinationen av:
-
-- **sekventiell zonlogik**
-- **credential custody som OPSEC-kontroll**
-- **device movement som säkerhetsparameter**
-- **dedikerade adminvägar**
-- **stark separation mellan normalyta och skyddad teknikzon**
-- **recovery och governance som del av designen, inte eftertanke**
-
-Det är alltså inte en modell som bara säger “mer kontroll”.
-
-Det är en modell som försöker definiera **hur tillit faktiskt byggs och bevaras i en högsäker anläggning**.
+- lågfriktionsmiljöer
+- generisk enterprise-användning utan skyddad facilitylogik
+- organisationer som saknar förmåga eller vilja att upprätthålla stark governance
 
 ---
 
 # Concept Maturity
 
-Konceptet är i nuläget att betrakta som:
+Konceptet ska i nuläget förstås som:
 
-- stark konceptskiss
-- dokumenterad modell på väg mot struktur
-- inte färdig implementationsarkitektur
-- inte färdig produkt
-- men ett seriöst underlag för vidare design, förädling eller paketering
+- en relativt mogen konceptmodell
+- ett dokumenterat designunderlag
+- en grund för vidare säkerhetsarkitektur
+- ett diskussions- och granskningsunderlag
+- inte en färdig implementation
 
-### Current Assessment Reference
-**88 / 100**
+Det finns redan en tydlig struktur kring:
 
-Detta reflekterar:
-- stark säkerhetsinstinkt
-- god arkitektonisk riktning
-- bra intern logik
-
-Samtidigt återstår viss utveckling inom:
+- översikt och positionering
+- assessment och roadmap
+- zonmodell
+- privileged access
+- asset custody
+- maintenance
 - governance
-- recoverydetaljering
-- policyformalisering
-- external packaging
-- operational refinement
-
----
-
-# Potential Use Cases
-
-## 1. Conceptual Design for High-Security Facilities
-Som underlag för diskussion och arkitektur kring skyddade drift- eller teknikmiljöer.
-
-## 2. Security Architecture Framework
-Som modell för hur fysisk, logisk och operativ säkerhet kan samverka.
-
-## 3. Internal Innovation Concept
-Som idégrund för vidareutveckling inom säkerhetsarkitektur, facility planning eller skyddad drift.
-
-## 4. Strategic Pitch Material
-Som del av presentation till aktörer som arbetar med:
-- facility security
-- classified operations
-- high-security IT
-- critical infrastructure
-- secure operations environments
-
----
-
-# Development Direction
-
-För att utveckla konceptet vidare bör fokus ligga på:
-
-- governance
-- recovery playbooks
-- incidenttriage
 - policy baseline
-- visual diagrams
-- executive packaging
-- use-case articulation
-- target audience refinement
+- incident response
+- recovery
+- use cases
+- visualisering genom diagram
+
+---
+
+# Design Intent
+
+Detta koncept försöker inte maximera bekvämlighet eller generisk användbarhet.
+
+I stället är designintentionen att skapa en modell för miljöer där:
+
+- kontroll väger tyngre än låg friktion
+- fysisk kontext är säkerhetsrelevant
+- credentials och devices är skyddsobjekt
+- rörelse är en del av tillitsbedömningen
+- högriskfunktioner kräver separata vägar
+- recovery måste vara planerad
+- governance måste vara tydlig
+
+---
+
+# Strategic Value
+
+Det strategiska värdet i konceptet ligger i att det:
+
+- kopplar ihop fysisk, logisk och operativ säkerhet
+- skapar tydligare trust boundaries
+- stärker insiderresistens
+- gör rörelse och device-lokation säkerhetsrelevanta
+- minskar beroendet av informella arbetssätt
+- stödjer spårbarhet, review och styrning över tid
+
+Detta gör konceptet användbart både som diskussionsunderlag och som grund för vidare design, arkitektur eller paketering.
+
+---
+
+# Limits and Boundaries
+
+Detta dokument beskriver inte:
+
+- full teknisk implementation
+- produktval
+- specifika leverantörslösningar
+- fullständig policyuppsättning
+- juridiska krav per jurisdiktion
+- detaljerad driftinstruktion
+
+Dessa delar kräver separat arbete, miljöspecifik anpassning och vidare förädling.
 
 ---
 
 # Final Concept Statement
 
-**High-Security Facility Concept** är ett försök att beskriva hur en högsäker teknisk anläggning kan byggas som ett sammanhängande system där människor, credentials, zoner, devices, privilegier och drift inte behandlas som separata problem — utan som delar av samma säkerhetsmodell.
+**High-Security Facility Concept** är en facility-centrerad tillitsmodell för högsäker teknisk miljö där identitet, fysisk närvaro, rörelse, zoner, credentials, devices, privilegier, incidenter, recovery och governance behandlas som delar av samma säkerhetsarkitektur.
 
 Den centrala idén är:
 
-> **Hög säkerhet uppstår inte bara genom att kontrollera vem som får tillträde, utan genom att kontrollera hur identitet, rörelse, enheter, privilegier och återställning samverkar över tid.**
+> **Hög säkerhet blir starkare när tillit inte bara avgörs av vem någon är, utan också av var de befinner sig, hur de rör sig, vilken enhet de använder, vilken credential de bär och hur modellen hanterar avvikelse, återställning och styrning över tid.**
