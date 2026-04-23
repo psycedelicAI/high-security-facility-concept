@@ -1,0 +1,174 @@
+# Documentation Index – High-Security Facility Concept
+
+> Navigationsöversikt för dokumentationen i High-Security Facility Concept.
+
+---
+
+## Purpose
+
+Detta dokument fungerar som ett index över dokumentationen i repot och hjälper läsaren att snabbt hitta rätt material beroende på syfte.
+
+Det är särskilt användbart för att:
+
+- få snabb överblick
+- hitta rätt dokument beroende på roll eller intresse
+- förstå hur dokumentationen hänger ihop
+- navigera mellan koncept, arkitektur, governance och operations
+
+---
+
+# Start Here
+
+Om du är ny till konceptet, börja här:
+
+1. [`executive-summary.md`](executive-summary.md)
+2. [`one-pager.md`](one-pager.md)
+3. [`concept.md`](concept.md)
+4. [`faq.md`](faq.md)
+5. [`diagrams.md`](diagrams.md)
+
+---
+
+# Core Overview Documents
+
+### [`executive-summary.md`](executive-summary.md)
+Kort beslutsfattarvänlig sammanfattning av konceptet.
+
+### [`one-pager.md`](one-pager.md)
+Kort pitchvänlig översikt som snabbt förklarar vad konceptet är och varför det är relevant.
+
+### [`concept.md`](concept.md)
+Huvuddokumentet för konceptets vision, filosofi, designprinciper och strategiska positionering.
+
+### [`faq.md`](faq.md)
+Vanliga frågor och korta svar om konceptets syfte, avgränsning och relation till exempelvis Zero Trust.
+
+### [`diagrams.md`](diagrams.md)
+Visuella Mermaid-diagram som ger snabb översikt över konceptets struktur, zonflöden och incident/recovery-livscykel.
+
+---
+
+# Strategic and Framing Documents
+
+### [`value-proposition.md`](value-proposition.md)
+Beskriver vilket problem konceptet adresserar och vilket strategiskt värde det kan skapa.
+
+### [`use-cases.md`](use-cases.md)
+Visar i vilka typer av miljöer konceptet passar och varför.
+
+### [`assessment.md`](assessment.md)
+Full konceptbedömning med styrkor, svagheter, mognadsnivå och rekommenderade förbättringsområden.
+
+### [`roadmap.md`](roadmap.md)
+Färdplan för hur konceptet kan vidareutvecklas.
+
+---
+
+# Core Architecture Documents
+
+### [`zone-model.md`](zone-model.md)
+Beskriver zonstruktur, sekventiell passage, rörelselogik och fysisk avvikelsehantering.
+
+### [`privileged-access.md`](privileged-access.md)
+Beskriver modell för privilegierad åtkomst, adminidentiteter, adminenheter och break-glass-relaterad logik.
+
+### [`asset-custody.md`](asset-custody.md)
+Beskriver hantering av badges, tokens, laptops, media och andra säkerhetskritiska tillgångar.
+
+### [`maintenance-model.md`](maintenance-model.md)
+Beskriver maintenance, change, serviceaktiviteter och drift i skyddade tekniska zoner.
+
+---
+
+# Governance, Policy and Resilience
+
+### [`governance-model.md`](governance-model.md)
+Beskriver ägarskap, ansvar, approvals, recertifiering och undantag.
+
+### [`policy-baseline.md`](policy-baseline.md)
+Definierar grundläggande policyprinciper för hela säkerhetsmodellen.
+
+### [`recovery-model.md`](recovery-model.md)
+Beskriver fallback, återställning, recovery-vägar och återgång till normal drift.
+
+### [`incident-response.md`](incident-response.md)
+Beskriver incidentklassning, containment, utredning, recoverykoppling och eftergranskning.
+
+---
+
+# Suggested Reading by Goal
+
+## If You Want a Quick Overview
+- [`executive-summary.md`](executive-summary.md)
+- [`one-pager.md`](one-pager.md)
+- [`diagrams.md`](diagrams.md)
+
+## If You Want to Understand the Concept Deeply
+- [`concept.md`](concept.md)
+- [`faq.md`](faq.md)
+- [`value-proposition.md`](value-proposition.md)
+- [`assessment.md`](assessment.md)
+
+## If You Want the Architecture
+- [`zone-model.md`](zone-model.md)
+- [`privileged-access.md`](privileged-access.md)
+- [`asset-custody.md`](asset-custody.md)
+- [`maintenance-model.md`](maintenance-model.md)
+
+## If You Want Governance and Operational Maturity
+- [`governance-model.md`](governance-model.md)
+- [`policy-baseline.md`](policy-baseline.md)
+- [`recovery-model.md`](recovery-model.md)
+- [`incident-response.md`](incident-response.md)
+
+## If You Want Applicability and Positioning
+- [`use-cases.md`](use-cases.md)
+- [`value-proposition.md`](value-proposition.md)
+- [`one-pager.md`](one-pager.md)
+
+---
+
+# Suggested Reading by Role
+
+## Decision-Maker / Executive
+- [`executive-summary.md`](executive-summary.md)
+- [`one-pager.md`](one-pager.md)
+- [`value-proposition.md`](value-proposition.md)
+- [`diagrams.md`](diagrams.md)
+
+## Security Architect
+- [`concept.md`](concept.md)
+- [`assessment.md`](assessment.md)
+- [`zone-model.md`](zone-model.md)
+- [`privileged-access.md`](privileged-access.md)
+- [`policy-baseline.md`](policy-baseline.md)
+
+## Facility Security / Physical Security
+- [`zone-model.md`](zone-model.md)
+- [`asset-custody.md`](asset-custody.md)
+- [`incident-response.md`](incident-response.md)
+- [`governance-model.md`](governance-model.md)
+
+## IT / Infrastructure / Operations
+- [`privileged-access.md`](privileged-access.md)
+- [`maintenance-model.md`](maintenance-model.md)
+- [`recovery-model.md`](recovery-model.md)
+- [`incident-response.md`](incident-response.md)
+
+## Governance / Audit / Review
+- [`governance-model.md`](governance-model.md)
+- [`policy-baseline.md`](policy-baseline.md)
+- [`assessment.md`](assessment.md)
+- [`recovery-model.md`](recovery-model.md)
+
+---
+
+# Final Note
+
+Detta index är till för att göra repot lättare att använda när dokumentationen växer.
+
+Målet är att göra konceptet mer:
+- navigerbart
+- begripligt
+- presentabelt
+- professionellt
