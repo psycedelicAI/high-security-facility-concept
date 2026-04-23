@@ -1,12 +1,14 @@
 # High-Security Facility Concept
 
-> Ett koncept för högsäker teknisk anläggning där fysisk säkerhet, zonlogik, credential custody, privilegierad åtkomst, device control, recovery och governance samverkar som ett sammanhängande system.
+> Where identity, movement, devices, privilege, and recovery become one security model.
+
+A conceptual high-security facility model combining physical security, zone logic, credential custody, privileged access, recovery, and governance.
 
 ---
 
 ## Overview
 
-**High-Security Facility Concept** är en konceptuell modell för miljöer där hög kontroll, tydlig spårbarhet och stark separation mellan roller, zoner och tillgångar är avsiktliga designval.
+**High-Security Facility Concept** är en konceptuell modell för miljöer där hög kontroll, tydlig spårbarhet och stark separation mellan roller, zoner, credentials och tillgångar är avsiktliga designval.
 
 Konceptet riktar sig främst mot:
 
@@ -19,6 +21,7 @@ Konceptet riktar sig främst mot:
 Detta repo beskriver en modell där:
 
 - människor
+- fysisk rörelse
 - zoner
 - credentials
 - devices
@@ -35,14 +38,15 @@ behandlas som delar av samma **trust architecture**.
 
 Hög säkerhet uppstår inte bara genom att kontrollera **vem** som har access, utan också genom att kontrollera:
 
+- var personen befinner sig
 - hur personen rör sig genom facilityn
 - vilken zon som nås
 - vilken credential som används
 - vilken enhet som används
 - om aktiviteten sker i rätt kontext
-- hur avvikelser och recovery hanteras
+- hur avvikelser, incidenter och recovery hanteras
 
-> **Identitet, rörelse, devices, credentials, privilegier och återställning måste hänga ihop för att skapa verklig hög säkerhet.**
+> **Identitet, fysisk närvaro, rörelse, enheter, credentials, privilegier och återställning måste hänga ihop för att skapa verklig hög säkerhet.**
 
 ---
 
@@ -80,6 +84,7 @@ Konceptet ska i nuläget ses som:
 - en stark konceptmodell
 - ett dokumenterat designunderlag
 - ett ramverk för vidare säkerhetsarkitektur
+- ett underlag för diskussion, förädling och visualisering
 - inte en färdig implementationsspecifikation
 
 ---
@@ -89,25 +94,40 @@ Konceptet ska i nuläget ses som:
 - Defense in Depth
 - Sequential Zone Access
 - Credential Custody
+- Device Trust & Asset Control
 - Privileged Access Separation
 - Protected Technical Zones
-- Device Trust & Asset Control
 - OPSEC by Design
+- Incident Readiness
 - Recovery by Design
 - Governance and Reviewability
 
 ---
 
-## Documentation
+## Start Here
 
-### Start Here
+Om du är ny till repot, börja här:
+
 - [`docs/index.md`](docs/index.md)
 - [`docs/executive-summary.md`](docs/executive-summary.md)
 - [`docs/one-pager.md`](docs/one-pager.md)
 - [`docs/concept.md`](docs/concept.md)
-- [`docs/faq.md`](docs/FAQ.md)
+- [`docs/faq.md`](docs/faq.md)
+- [`docs/diagrams.md`](docs/diagrams.md)
 
-### Full Assessment
+---
+
+## Documentation Structure
+
+### Overview and Positioning
+- [`docs/executive-summary.md`](docs/executive-summary.md)
+- [`docs/one-pager.md`](docs/one-pager.md)
+- [`docs/concept.md`](docs/concept.md)
+- [`docs/faq.md`](docs/faq.md)
+- [`docs/value-proposition.md`](docs/value-proposition.md)
+- [`docs/use-cases.md`](docs/use-cases.md)
+
+### Assessment and Development
 - [`docs/assessment.md`](docs/assessment.md)
 - [`docs/roadmap.md`](docs/roadmap.md)
 
@@ -117,15 +137,14 @@ Konceptet ska i nuläget ses som:
 - [`docs/asset-custody.md`](docs/asset-custody.md)
 - [`docs/maintenance-model.md`](docs/maintenance-model.md)
 
-### Governance, Policy & Resilience
+### Governance, Policy and Resilience
 - [`docs/governance-model.md`](docs/governance-model.md)
 - [`docs/policy-baseline.md`](docs/policy-baseline.md)
 - [`docs/recovery-model.md`](docs/recovery-model.md)
 - [`docs/incident-response.md`](docs/incident-response.md)
 
-### Value & Applicability
-- [`docs/value-proposition.md`](docs/value-proposition.md)
-- [`docs/use-cases.md`](docs/use-cases.md)
+### Visual Documentation
+- [`docs/diagrams.md`](docs/diagrams.md)
 
 ---
 
@@ -138,6 +157,7 @@ Detta koncept är mest relevant för:
 - säkerhetsklassade miljöer
 - facility security med stark koppling till IT-säkerhet
 - miljöer där insiderhot och avvikande rörelsemönster är realistiska risker
+- verksamheter där credentials, devices och fysisk närvaro måste hållas under hög kontroll
 
 Det är inte primärt utformat för:
 
@@ -158,6 +178,7 @@ Det är inte primärt utformat för:
     ├── [one-pager.md](https://one-pager.md)
     ├── [concept.md](https://concept.md)
     ├── [faq.md](https://faq.md)
+    ├── [diagrams.md](https://diagrams.md)
     ├── [value-proposition.md](https://value-proposition.md)
     ├── [use-cases.md](https://use-cases.md)
     ├── [assessment.md](https://assessment.md)
