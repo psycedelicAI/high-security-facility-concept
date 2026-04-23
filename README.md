@@ -1,14 +1,14 @@
 # High-Security Facility Concept
 
-> Where identity, movement, devices, privilege, and recovery become one security model.
+> Where identity, movement, zones, devices, surveillance, privilege, recovery, and governance become one security model.
 
-A conceptual high-security facility model combining physical security, zone logic, credential custody, privileged access, recovery, and governance.
+A conceptual high-security facility model combining physical security, zone logic, credential custody, device context, surveillance architecture, privileged access, recovery, and governance.
 
 ---
 
 ## Overview
 
-**High-Security Facility Concept** är en konceptuell modell för miljöer där hög kontroll, tydlig spårbarhet och stark separation mellan roller, zoner, credentials och tillgångar är avsiktliga designval.
+**High-Security Facility Concept** är en konceptuell modell för miljöer där hög kontroll, tydlig spårbarhet och stark separation mellan roller, zoner, credentials, devices och skyddade tillgångar är avsiktliga designval.
 
 Konceptet riktar sig främst mot:
 
@@ -16,7 +16,7 @@ Konceptet riktar sig främst mot:
 - säkerhetsklassade driftmiljöer
 - tekniska säkerhetszoner
 - miljöer med höga krav på OPSEC
-- verksamheter där fysisk och logisk säkerhet måste integreras tätt
+- verksamheter där fysisk, logisk och operativ säkerhet måste integreras tätt
 
 Detta repo beskriver en modell där:
 
@@ -25,6 +25,7 @@ Detta repo beskriver en modell där:
 - zoner
 - credentials
 - devices
+- surveillance
 - privilegier
 - incidenter
 - recovery
@@ -43,10 +44,42 @@ Hög säkerhet uppstår inte bara genom att kontrollera **vem** som har access, 
 - vilken zon som nås
 - vilken credential som används
 - vilken enhet som används
+- hur facilityn övervakas
 - om aktiviteten sker i rätt kontext
 - hur avvikelser, incidenter och recovery hanteras
 
-> **Identitet, fysisk närvaro, rörelse, enheter, credentials, privilegier och återställning måste hänga ihop för att skapa verklig hög säkerhet.**
+> **Identitet, fysisk närvaro, rörelse, enheter, credentials, surveillance, privilegier och återställning måste hänga ihop för att skapa verklig hög säkerhet.**
+
+---
+
+## What Makes This Concept Distinct
+
+Några av konceptets mest särskiljande delar är:
+
+- Sequential Zone Access
+- Credential Custody by Design
+- Device Location as Security Context
+- Separation of Normal and Privileged Paths
+- Protected Technical Zone Logic
+- Surveillance with Operational Purpose
+- 3D Threat Thinking
+- Recovery by Design
+- Governance as a Core Security Function
+
+---
+
+## 3D Threat Thinking
+
+Konceptet utgår inte från att hot enbart kommer via entréer eller marknivå.
+
+I stället tillämpas **3D Threat Thinking**, där facilityn förstås som en rumslig säkerhetsmiljö där intrång, närvaro och påverkan kan ske från flera riktningar och nivåer, inklusive:
+
+- takaccess
+- sidointrång
+- ovanliga eller icke-linjära angreppsvägar
+- strukturellt förbisedda accesspunkter
+
+Detta breddar hotmodellen bortom traditionell tvådimensionell perimeterlogik.
 
 ---
 
@@ -59,10 +92,11 @@ Konceptet bygger i första hand på:
 - rörelselogik
 - enheters lokation
 - credential custody i fysisk miljö
+- surveillance som aktiv säkerhetsfunktion
 
 Det är därför inte primärt utformat som en traditionell Zero Trust-modell, och det förutsätter inte att organisationer saknar kännedom om Zero Trust.
 
-I stället kan konceptet förstås som en **facility-centrerad tillitsmodell** som kompletterar Zero Trust genom att tillföra starkare fysisk och operativ kontext.
+I stället kan konceptet förstås som en **facility-centrerad tillitsmodell** som kompletterar Zero Trust genom att tillföra starkare fysisk, rumslig och operativ kontext.
 
 Zero Trust-principer som:
 
@@ -95,6 +129,8 @@ Konceptet ska i nuläget ses som:
 - Sequential Zone Access
 - Credential Custody
 - Device Trust & Asset Control
+- Surveillance Architecture
+- 3D Threat Thinking
 - Privileged Access Separation
 - Protected Technical Zones
 - OPSEC by Design
@@ -124,6 +160,7 @@ Om du är ny till repot, börja här:
 - [`docs/one-pager.md`](docs/one-pager.md)
 - [`docs/concept.md`](docs/concept.md)
 - [`docs/faq.md`](docs/faq.md)
+- [`docs/diagrams.md`](docs/diagrams.md)
 - [`docs/value-proposition.md`](docs/value-proposition.md)
 - [`docs/use-cases.md`](docs/use-cases.md)
 
@@ -136,6 +173,7 @@ Om du är ny till repot, börja här:
 - [`docs/privileged-access.md`](docs/privileged-access.md)
 - [`docs/asset-custody.md`](docs/asset-custody.md)
 - [`docs/maintenance-model.md`](docs/maintenance-model.md)
+- [`docs/surveillance-model.md`](docs/surveillance-model.md)
 
 ### Governance, Policy and Resilience
 - [`docs/governance-model.md`](docs/governance-model.md)
@@ -157,7 +195,7 @@ Detta koncept är mest relevant för:
 - säkerhetsklassade miljöer
 - facility security med stark koppling till IT-säkerhet
 - miljöer där insiderhot och avvikande rörelsemönster är realistiska risker
-- verksamheter där credentials, devices och fysisk närvaro måste hållas under hög kontroll
+- verksamheter där credentials, devices, surveillance och fysisk närvaro måste hållas under hög kontroll
 
 Det är inte primärt utformat för:
 
@@ -187,6 +225,7 @@ Det är inte primärt utformat för:
     ├── [privileged-access.md](https://privileged-access.md)
     ├── [asset-custody.md](https://asset-custody.md)
     ├── [maintenance-model.md](https://maintenance-model.md)
+    ├── [surveillance-model.md](https://surveillance-model.md)
     ├── [governance-model.md](https://governance-model.md)
     ├── [policy-baseline.md](https://policy-baseline.md)
     ├── [recovery-model.md](https://recovery-model.md)
