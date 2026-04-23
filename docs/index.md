@@ -38,10 +38,10 @@ Kort beslutsfattarvänlig sammanfattning av konceptet.
 Kort pitchvänlig översikt som snabbt förklarar vad konceptet är och varför det är relevant.
 
 ### [`concept.md`](concept.md)
-Huvuddokumentet för konceptets vision, filosofi, designprinciper och strategiska positionering.
+Huvuddokumentet för konceptets vision, filosofi, designprinciper, 3D Threat Thinking och strategiska positionering.
 
 ### [`faq.md`](faq.md)
-Vanliga frågor och korta svar om konceptets syfte, avgränsning, Zero Trust-relation och användning.
+Vanliga frågor och korta svar om konceptets syfte, avgränsning, relation till Zero Trust och praktiska användning.
 
 ### [`diagrams.md`](diagrams.md)
 Visuella Mermaid-diagram som ger snabb översikt över konceptets struktur, zonflöden, incident/recovery-livscykel och privilegierad åtkomst.
@@ -60,23 +60,26 @@ Visar i vilka typer av miljöer konceptet passar och varför.
 Full konceptbedömning med styrkor, svagheter, mognadsnivå och rekommenderade förbättringsområden.
 
 ### [`roadmap.md`](roadmap.md)
-Färdplan för hur konceptet kan vidareutvecklas.
+Färdplan för hur konceptet kan vidareutvecklas i mognad, visualisering och professionell validering.
 
 ---
 
 # Core Architecture Documents
 
 ### [`zone-model.md`](zone-model.md)
-Beskriver zonstruktur, sekventiell passage, rörelselogik och fysisk avvikelsehantering.
+Beskriver zonstruktur, sekventiell passage, rörelselogik, roof-aware zoning och hur 3D Threat Thinking påverkar fysisk tillitsmodell.
 
 ### [`privileged-access.md`](privileged-access.md)
-Beskriver modell för privilegierad åtkomst, adminidentiteter, adminenheter och break-glass-relaterad logik.
+Beskriver modell för privilegierad åtkomst, adminidentiteter, adminenheter, stark autentisering och break-glass-relaterad logik.
 
 ### [`asset-custody.md`](asset-custody.md)
 Beskriver hantering av badges, tokens, laptops, media och andra säkerhetskritiska tillgångar.
 
 ### [`maintenance-model.md`](maintenance-model.md)
 Beskriver maintenance, change, serviceaktiviteter och drift i skyddade tekniska zoner.
+
+### [`surveillance-model.md`](surveillance-model.md)
+Beskriver CCTV, FLIR, anti-tamper-placering, roof security, incident presets och surveillance som aktiv säkerhetsfunktion.
 
 ---
 
@@ -121,6 +124,7 @@ Samling av Mermaid-diagram för high-level overview, zone flow, incident/recover
 - [`privileged-access.md`](privileged-access.md)
 - [`asset-custody.md`](asset-custody.md)
 - [`maintenance-model.md`](maintenance-model.md)
+- [`surveillance-model.md`](surveillance-model.md)
 
 ## If You Want Governance and Operational Maturity
 - [`governance-model.md`](governance-model.md)
@@ -154,10 +158,12 @@ Samling av Mermaid-diagram för high-level overview, zone flow, incident/recover
 - [`assessment.md`](assessment.md)
 - [`zone-model.md`](zone-model.md)
 - [`privileged-access.md`](privileged-access.md)
+- [`surveillance-model.md`](surveillance-model.md)
 - [`policy-baseline.md`](policy-baseline.md)
 
 ## Facility Security / Physical Security
 - [`zone-model.md`](zone-model.md)
+- [`surveillance-model.md`](surveillance-model.md)
 - [`asset-custody.md`](asset-custody.md)
 - [`incident-response.md`](incident-response.md)
 - [`governance-model.md`](governance-model.md)
@@ -167,6 +173,7 @@ Samling av Mermaid-diagram för high-level overview, zone flow, incident/recover
 - [`maintenance-model.md`](maintenance-model.md)
 - [`recovery-model.md`](recovery-model.md)
 - [`incident-response.md`](incident-response.md)
+- [`surveillance-model.md`](surveillance-model.md)
 
 ## Governance / Audit / Review
 - [`governance-model.md`](governance-model.md)
@@ -193,6 +200,7 @@ Det nuvarande dokumentpaketet täcker bland annat:
 - privileged access
 - asset custody
 - maintenance
+- surveillance
 - governance
 - policy baseline
 - recovery
