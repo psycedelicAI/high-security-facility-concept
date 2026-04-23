@@ -106,6 +106,60 @@ flowchart TD
 
 ---
 
+# 4. Privileged Access Context Diagram
+
+Detta diagram visar hur privilegierad åtkomst separeras från vanlig användning och kopplas till starkare kontroll, loggning och governance.
+
+```mermaid
+flowchart TD
+    subgraph User_Context
+        A[Standard User Identity]
+        B[Standard User Device]
+        C[General User Access]
+        A --> B
+        A --> C
+    end
+
+    subgraph Privileged_Context
+        D[Admin Identity]
+        E[Dedicated Admin Device]
+        F[Strong Authentication]
+        G[Privileged Access Path]
+        D --> E
+        D --> F
+        E --> G
+        F --> G
+    end
+
+    subgraph Protected_Environment
+        H[Protected Systems / Technical Zones]
+        I[Administrative Actions]
+        G --> H
+        G --> I
+    end
+
+    subgraph Control_and_Oversight
+        J[Audit Logging]
+        K[Governance Review]
+        M[Recovery / Return to Normal]
+        I --> J
+        I --> K
+        K --> M
+    end
+
+    L[Break-Glass Access] -. Emergency Only .-> G
+    L --> J
+    L --> K
+```
+
+### Notes
+- Vanlig användning och privilegierad åtkomst hålls i separata kontexter.
+- Privilegierad åtkomst kräver dedikerad identitet, dedikerad enhet och stark autentisering.
+- Alla administrativa handlingar kopplas till loggning och governance review.
+- Break-glass finns som nödfunktion, men är uttryckligen avvikande, kontrollerad och granskningsbar.
+
+---
+
 # Suggested Use
 
 Dessa diagram kan användas som:
@@ -122,7 +176,6 @@ Dessa diagram kan användas som:
 
 Möjliga framtida diagram att lägga till:
 
-- Privileged Access Context Diagram
 - Credential Custody Flow
 - Technical Zone Operating States
 - Governance and Policy Relationships
