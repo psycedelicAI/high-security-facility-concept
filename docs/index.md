@@ -13,7 +13,7 @@ Det är särskilt användbart för att:
 - få snabb överblick
 - hitta rätt dokument beroende på roll eller intresse
 - förstå hur dokumentationen hänger ihop
-- navigera mellan koncept, arkitektur, governance och operations
+- navigera mellan koncept, arkitektur, governance, visuals och operations
 
 ---
 
@@ -41,10 +41,10 @@ Kort pitchvänlig översikt som snabbt förklarar vad konceptet är och varför 
 Huvuddokumentet för konceptets vision, filosofi, designprinciper och strategiska positionering.
 
 ### [`faq.md`](faq.md)
-Vanliga frågor och korta svar om konceptets syfte, avgränsning och relation till exempelvis Zero Trust.
+Vanliga frågor och korta svar om konceptets syfte, avgränsning, Zero Trust-relation och användning.
 
 ### [`diagrams.md`](diagrams.md)
-Visuella Mermaid-diagram som ger snabb översikt över konceptets struktur, zonflöden och incident/recovery-livscykel.
+Visuella Mermaid-diagram som ger snabb översikt över konceptets struktur, zonflöden, incident/recovery-livscykel och privilegierad åtkomst.
 
 ---
 
@@ -96,6 +96,13 @@ Beskriver incidentklassning, containment, utredning, recoverykoppling och efterg
 
 ---
 
+# Visual Documentation
+
+### [`diagrams.md`](diagrams.md)
+Samling av Mermaid-diagram för high-level overview, zone flow, incident/recovery och privileged access.
+
+---
+
 # Suggested Reading by Goal
 
 ## If You Want a Quick Overview
@@ -125,6 +132,12 @@ Beskriver incidentklassning, containment, utredning, recoverykoppling och efterg
 - [`use-cases.md`](use-cases.md)
 - [`value-proposition.md`](value-proposition.md)
 - [`one-pager.md`](one-pager.md)
+- [`faq.md`](faq.md)
+
+## If You Want the Visual View First
+- [`diagrams.md`](diagrams.md)
+- [`one-pager.md`](one-pager.md)
+- [`executive-summary.md`](executive-summary.md)
 
 ---
 
@@ -163,12 +176,52 @@ Beskriver incidentklassning, containment, utredning, recoverykoppling och efterg
 
 ---
 
+# Current Documentation Scope
+
+Det nuvarande dokumentpaketet täcker bland annat:
+
+- executive summary
+- one-pager
+- konceptbeskrivning
+- FAQ
+- diagram
+- strategiskt värde
+- use cases
+- bedömning
+- roadmap
+- zonmodell
+- privileged access
+- asset custody
+- maintenance
+- governance
+- policy baseline
+- recovery
+- incident response
+
+---
+
+# Recommended Next Additions
+
+Möjliga framtida dokument eller förstärkningar:
+
+- Credential Custody Flow diagram
+- Technical Zone Operating States diagram
+- Governance and Policy Relationships diagram
+- access review model
+- exception handling model
+- break-glass model
+- visitor / contractor model
+
+---
+
 # Final Note
 
 Detta index är till för att göra repot lättare att använda när dokumentationen växer.
 
 Målet är att göra konceptet mer:
+
 - navigerbart
 - begripligt
 - presentabelt
+- visuellt tillgängligt
 - professionellt
