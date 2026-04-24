@@ -1,6 +1,6 @@
 # Roadmap – High-Security Facility Concept
 
-> Färdplan för hur High-Security Facility Concept kan utvecklas vidare i mognad, tydlighet, visualisering och professionell validering.
+> Roadmap for how the High-Security Facility Concept can be further developed in maturity, clarity, visualization, and professional validation.
 
 ---
 
@@ -12,31 +12,31 @@
 | Subject | High-Security Facility Concept |
 | Type | Concept Development Roadmap |
 | Status | Draft |
-| Scope | Mognad, dokumentutveckling, visualisering, validering, nästa steg |
+| Scope | Maturity, document development, visualization, validation, next steps |
 | Audience | Repo owner, reviewers, collaborators, future contributors |
 
 ---
 
 ## Purpose
 
-Detta dokument beskriver rekommenderade nästa steg för att vidareutveckla **High-Security Facility Concept**.
+This document describes recommended next steps for further developing the **High-Security Facility Concept**.
 
-Syftet är att ge en tydlig riktning för hur konceptet kan:
+Its purpose is to provide a clear direction for how the concept can:
 
-- bli mer moget
-- bli mer begripligt
-- bli lättare att granska
-- bli bättre paketerat
-- bli mer professionellt validerat
-- utvecklas från stark konceptskiss till mer robust arkitekturramverk
+- become more mature
+- become easier to understand
+- become easier to review
+- become better packaged
+- become more professionally validated
+- evolve from a strong concept sketch into a more robust architectural framework
 
-Roadmapen utgår från att konceptet redan har en relativt stark dokumentbas och nu befinner sig i ett läge där nästa steg handlar mindre om att “komma på fler idéer” och mer om att förfina, visualisera, testa och validera modellen.
+The roadmap assumes that the concept already has a relatively strong documentation base and is now at a stage where the next steps are less about “coming up with more ideas” and more about refining, visualizing, testing, and validating the model.
 
 ---
 
 # Current State
 
-Konceptet har redan etablerat:
+The concept has already established:
 
 - executive summary
 - one-pager
@@ -57,49 +57,51 @@ Konceptet har redan etablerat:
 - incident response model
 - documentation index
 
-Detta innebär att konceptet nu har:
+This means that the concept now has:
 
-- en tydlig kärnidé
-- en tydlig positionering
-- en dokumenterad struktur
-- flera specialiserade delmodeller
-- en mer professionell repo-presentation
-- en första visuell modell genom Mermaid-diagram
+- a clear core idea
+- a clear positioning
+- a documented structure
+- several specialized sub-models
+- a more professional repository presentation
+- an initial visual model through Mermaid diagrams
 
 ---
 
 # Roadmap Philosophy
 
-Nästa steg bör inte i första hand handla om att göra konceptet bredare.
+The next steps should not primarily be about making the concept broader.
 
-I stället bör utvecklingen fokusera på att göra konceptet:
+Instead, development should focus on making the concept:
 
-- skarpare
-- tydligare
-- mer konsekvent
-- mer granskningsbart
-- mer visuellt
-- mer trovärdigt i professionell dialog
+- sharper
+- clearer
+- more consistent
+- more reviewable
+- more visual
+- more credible in professional dialogue
 
-Det betyder att roadmapen prioriterar:
+This means that the roadmap prioritizes:
 
-1. konsolidering före expansion
-2. tydlighet före mängd
-3. visualisering före abstraktion
-4. validering före överproduktion
-5. rätt målgrupp före bred exponering
+1. consolidation before expansion
+2. clarity before quantity
+3. visualization before abstraction
+4. validation before overproduction
+5. the right audience before broad exposure
 
 ---
 
 # Phase 1 – Documentation Consolidation
 
 ## Goal
-Stärka konsekvens, tydlighet och intern sammanhållning i dokumentpaketet.
+
+Strengthen consistency, clarity, and internal cohesion across the document set.
 
 ## Focus Areas
 
 ### 1.1 Strengthen Cross-Referencing
-Säkerställ att dokumenten refererar till varandra på ett mer konsekvent sätt, till exempel mellan:
+
+Ensure that documents reference each other more consistently, for example between:
 
 - concept
 - FAQ
@@ -110,7 +112,8 @@ Säkerställ att dokumenten refererar till varandra på ett mer konsekvent sätt
 - policy baseline
 
 ### 1.2 Normalize Language
-Förfina terminologi så att samma begrepp används konsekvent genom hela repot, exempelvis:
+
+Refine terminology so that the same concepts are used consistently across the repository, for example:
 
 - zone vs technical zone
 - credential vs badge vs token
@@ -119,25 +122,30 @@ Förfina terminologi så att samma begrepp används konsekvent genom hela repot,
 - governance vs oversight vs review
 
 ### 1.3 Tighten Redundancy
-Identifiera och minska onödig upprepning mellan dokument utan att förlora användbarhet.
+
+Identify and reduce unnecessary repetition between documents without losing usability.
 
 ### 1.4 Improve Reader Paths
-Säkerställ att README och `docs/index.md` ger tydliga läsvägar beroende på roll och syfte.
+
+Ensure that the README and `docs/index.md` provide clear reading paths depending on role and purpose.
 
 ## Outcome
-Ett mer konsekvent, mer professionellt och mer lättnavigerat dokumentpaket.
+
+A more consistent, more professional, and more navigable document set.
 
 ---
 
 # Phase 2 – Visual Maturity
 
 ## Goal
-Göra konceptet enklare att förstå och diskutera visuellt.
+
+Make the concept easier to understand and discuss visually.
 
 ## Focus Areas
 
 ### 2.1 Expand Diagram Set
-Lägg till fler Mermaid-diagram för områden som:
+
+Add more Mermaid diagrams for areas such as:
 
 - credential custody flow
 - technical zone operating states
@@ -146,57 +154,65 @@ Lägg till fler Mermaid-diagram för områden som:
 - exception and break-glass handling
 
 ### 2.2 Improve Existing Diagrams
-Förfina befintliga diagram så att de blir:
 
-- tydligare
-- snyggare
-- mer konsekventa i struktur
-- bättre anpassade för läsning i GitHub
+Refine existing diagrams so they become:
+
+- clearer
+- cleaner
+- more consistent in structure
+- better adapted for reading in GitHub
 
 ### 2.3 Link Diagrams to Core Documents
-Se till att konceptets viktigaste dokument länkar till relevanta diagram.
+
+Ensure that the concept’s most important documents link to relevant diagrams.
 
 ## Outcome
-Ett repo som inte bara är välskrivet, utan också lättare att ta till sig snabbt.
+
+A repository that is not only well written, but also easier to absorb quickly.
 
 ---
 
 # Phase 3 – Concept Refinement
 
 ## Goal
-Skärpa konceptets mest originella delar och förtydliga gränserna för modellen.
+
+Sharpen the concept’s most original elements and clarify the boundaries of the model.
 
 ## Focus Areas
 
 ### 3.1 Deepen Facility-Centered Trust Positioning
-Förtydliga att konceptets kärna ligger i:
 
-- fysisk närvaro
-- rörelselogik
+Clarify that the core of the concept lies in:
+
+- physical presence
+- movement logic
 - device location
 - credential custody
-- skyddade tekniska zoner
+- protected technical zones
 
-och att detta är konceptets huvudsakliga differentiering.
+and that this is the concept’s primary differentiation.
 
 ### 3.2 Strengthen Zero Trust Positioning
-Fortsätt förtydliga att konceptet:
 
-- inte försöker ersätta Zero Trust
-- inte bygger på att Zero Trust är okänt
-- är kompatibelt med Zero Trust-principer
-- tillför en fysisk och operativ dimension
+Continue clarifying that the concept:
+
+- does not try to replace Zero Trust
+- does not assume that Zero Trust is unknown
+- is compatible with Zero Trust principles
+- adds a physical and operational dimension
 
 ### 3.3 Clarify Boundaries
-Beskriv tydligare vad konceptet inte är, till exempel att det inte är:
 
-- färdig implementation
-- produkt
-- leverantörsspecifikation
-- komplett policybibliotek
+Describe more clearly what the concept is not, for example that it is not:
+
+- a finished implementation
+- a product
+- a vendor specification
+- a complete policy library
 
 ### 3.4 Improve Distinctiveness
-Lyft fram de mest särskiljande elementen ännu tydligare:
+
+Highlight the most distinctive elements even more clearly:
 
 - sequential zone validation
 - credential custody by design
@@ -205,30 +221,35 @@ Lyft fram de mest särskiljande elementen ännu tydligare:
 - governance and recovery as core elements
 
 ## Outcome
-En skarpare och tydligare konceptidentitet.
+
+A sharper and clearer concept identity.
 
 ---
 
 # Phase 4 – Structured Validation
 
 ## Goal
-Få kvalificerad feedback från rätt typer av säkerhetsspecialister.
+
+Obtain qualified feedback from the right types of security specialists.
 
 ## Focus Areas
 
 ### 4.1 Public Visibility With Clear Framing
-Om repot görs publikt bör det ramas in som:
 
-- konceptmodell
-- diskussionsunderlag
-- arkitekturramverk
-- inte färdig implementation
+If the repository is made public, it should be framed as:
+
+- a conceptual model
+- a discussion basis
+- an architectural framework
+- not a finished implementation
 
 ### 4.2 Add a Feedback Invitation
-Lägg till en kort sektion i README som tydligt säger vilken feedback som efterfrågas.
+
+Add a short section in the README that clearly explains what kind of feedback is being requested.
 
 ### 4.3 Seek Targeted Review
-Sök aktivt återkoppling från personer med erfarenhet inom:
+
+Actively seek feedback from people with experience in:
 
 - security architecture
 - facility security
@@ -238,134 +259,151 @@ Sök aktivt återkoppling från personer med erfarenhet inom:
 - governance / audit
 
 ### 4.4 Ask Better Questions
-Be om specifik återkoppling, till exempel kring:
 
-- sekventiell zonlogik
+Request specific feedback, for example around:
+
+- sequential zone logic
 - credential custody
-- device location som säkerhetsparameter
-- adminseparation
+- device location as a security parameter
+- admin separation
 - recovery integration
 - governance realism
 
 ## Outcome
-Mer användbar och professionellt relevant validering.
+
+More useful and professionally relevant validation.
 
 ---
 
 # Phase 5 – Operational Modeling
 
 ## Goal
-Börja beskriva hur modellen skulle kunna operationaliseras utan att låsa den till en specifik implementation.
+
+Begin describing how the model could be operationalized without locking it into a specific implementation.
 
 ## Focus Areas
 
 ### 5.1 Add Access Review Model
-Ta fram en modell för:
 
-- recertifiering
+Develop a model for:
+
+- recertification
 - access review
 - privileged review
 - periodic validation
 
 ### 5.2 Add Exception Handling Model
-Beskriv hur undantag ska:
 
-- initieras
-- bedömas
-- godkännas
-- tidsbegränsas
-- granskas
+Describe how exceptions should be:
+
+- initiated
+- assessed
+- approved
+- time-limited
+- reviewed
 
 ### 5.3 Add Break-Glass Model
-Beskriv emergency access mer explicit:
 
-- när det får användas
-- av vem
-- under vilka villkor
-- hur det loggas
-- hur det eftergranskas
+Describe emergency access more explicitly:
+
+- when it may be used
+- by whom
+- under what conditions
+- how it is logged
+- how it is post-reviewed
 
 ### 5.4 Add Visitor / Contractor Model
-Beskriv hur externa personer hanteras i en modell där fysisk närvaro och custody är centrala.
+
+Describe how external persons are handled in a model where physical presence and custody are central.
 
 ## Outcome
-En mer operativt tänkbar modell utan att förlora konceptuell flexibilitet.
+
+A more operationally plausible model without losing conceptual flexibility.
 
 ---
 
 # Phase 6 – Future Strategic Packaging
 
 ## Goal
-Göra konceptet mer användbart utanför själva GitHub-repot.
+
+Make the concept more useful outside the GitHub repository itself.
 
 ## Focus Areas
 
 ### 6.1 Create a Whitepaper Version
-Ta fram en mer sammanhållen, extern version av konceptet i whitepaper-format.
+
+Develop a more cohesive external version of the concept in whitepaper format.
 
 ### 6.2 Create Presentation Material
-Bygg en kort slide deck för att presentera konceptet i möten eller diskussioner.
+
+Build a short slide deck for presenting the concept in meetings or discussions.
 
 ### 6.3 Create a Short Analyst / Reviewer Version
-Ta fram en komprimerad variant för personer som vill förstå konceptet snabbt men professionellt.
+
+Develop a compressed version for people who want to understand the concept quickly but professionally.
 
 ### 6.4 Explore Practical Scenarios
-Fördjupa några use cases mer realistiskt för att visa hur konceptet skulle kunna användas.
+
+Deepen some use cases more realistically to show how the concept could be applied.
 
 ## Outcome
-Större användbarhet i professionell dialog, rådgivning eller vidare paketering.
+
+Greater usefulness in professional dialogue, advisory work, or further packaging.
 
 ---
 
 # Priority Recommendations
 
-Om endast några få nästa steg ska prioriteras bör fokus ligga på:
+If only a few next steps should be prioritized, focus should be placed on:
 
 ## Highest Priority
-1. konsolidera dokumentationen
-2. bygga ut [diagrams.md](https://diagrams.md)
-3. stärka cross-references
-4. förtydliga feedback- och valideringsspåret
+
+1. consolidate the documentation
+2. expand [`diagrams.md`](diagrams.md)
+3. strengthen cross-references
+4. clarify the feedback and validation track
 
 ## Medium Priority
+
 5. access review model
 6. exception handling model
 7. break-glass model
 
 ## Later Priority
+
 8. whitepaper
 9. presentation deck
-10. djupare operativa scenarier
+10. deeper operational scenarios
 
 ---
 
 # What Success Looks Like
 
-Roadmapen är lyckad om konceptet utvecklas från:
+The roadmap is successful if the concept develops from:
 
-- stark konceptskiss
+- a strong concept sketch
 
-till:
+into:
 
-- tydligt arkitekturramverk
-- visuellt begripligt underlag
-- professionellt granskningsbart material
-- trovärdig diskussionsplattform för högsäker facility security
+- a clear architectural framework
+- visually understandable material
+- professionally reviewable documentation
+- a credible discussion platform for high-security facility security
 
-Det betyder inte att konceptet måste bli en produkt eller en färdig implementation, utan att det ska bli:
+This does not mean that the concept must become a product or a finished implementation, but that it should become:
 
-- mer robust
-- mer konsekvent
-- mer presentabelt
-- mer validerbart
-- mer användbart i dialog med rätt personer
+- more robust
+- more consistent
+- more presentable
+- more validatable
+- more useful in dialogue with the right people
 
 ---
 
 # Final Note
 
-Den viktigaste principen i denna roadmap är att nästa steg bör bygga djup och trovärdighet, inte bara mer volym.
+The most important principle in this roadmap is that the next steps should build depth and credibility, not just more volume.
 
-Det centrala målet är därför:
+The central goal is therefore:
 
-> **att utveckla High-Security Facility Concept från en stark idé med bra dokumentation till ett skarpt, visuellt tydligt och professionellt granskningsbart ramverk för högsäker facility security.**
+> **to develop the High-Security Facility Concept from a strong idea with good documentation into a sharp, visually clear, and professionally reviewable framework for high-security facility security.**
