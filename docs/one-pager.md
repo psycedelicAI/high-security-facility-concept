@@ -1,130 +1,133 @@
 # One-Pager – High-Security Facility Concept
 
-> Ett koncept för högsäker teknisk anläggning där fysisk säkerhet, zonlogik, credential custody, device control, privilegierad åtkomst och recovery samverkar som ett sammanhängande system.
+> A concept for a high-security technical facility in which physical security, zone logic, credential custody, device control, privileged access, and recovery function as one coherent system.
 
 ---
 
 ## What It Is
 
-**High-Security Facility Concept** är en konceptuell modell för hur en högsäker teknisk miljö kan designas för att ge starkare kontroll över:
+The **High-Security Facility Concept** is a conceptual model for how a high-security technical environment can be designed to provide stronger control over:
 
-- fysisk access
-- rörelse mellan zoner
-- badges och credentials
-- devices och tillgångar
-- privilegierad administration
-- tekniska skyddszoner
-- incidenter och recovery
+- physical access
+- movement between zones
+- badges and credentials
+- devices and assets
+- privileged administration
+- protected technical zones
+- incidents and recovery
 
-I stället för att behandla dessa områden som separata säkerhetsproblem utgår konceptet från att de måste fungera tillsammans som en gemensam **trust model**.
+Instead of treating these areas as separate security problems, the concept is based on the idea that they must work together as a shared **trust model**.
 
 ---
 
 ## The Core Idea
 
-Hög säkerhet uppstår inte bara genom att veta **vem** som har access, utan genom att förstå:
+High security is not created only by knowing **who** has access, but by understanding:
 
-- vilken roll personen har
-- vilken zon personen befinner sig i
-- hur personen tog sig dit
-- vilken credential som används
-- vilken device som används
-- om aktiviteten är normal eller avvikande
-- hur undantag, incidenter och återställning hanteras
+- what role the person has
+- which zone the person is in
+- how the person got there
+- which credential is being used
+- which device is being used
+- whether the activity is normal or anomalous
+- how exceptions, incidents, and recovery are handled
 
-Kort sagt:
+In short:
 
-> **Identitet, rörelse, devices, credentials, privilegier och recovery måste hänga ihop för att skapa verklig hög säkerhet.**
+> **Identity, movement, devices, credentials, privileges, and recovery must be connected to create real high security.**
 
 ---
 
 ## The Problem It Solves
 
-Många säkerhetsmiljöer har starka punktkontroller, men svag koppling mellan:
+Many security environments have strong point controls, but weak linkage between:
 
-- fysisk säkerhet och IT-säkerhet
-- access och rörelsemönster
-- credentials och custody
-- adminpolicy och faktisk adminkontext
-- drift, incidenthantering och recovery
+- physical security and IT security
+- access and movement patterns
+- credentials and custody
+- admin policy and actual administrative context
+- operations, incident handling, and recovery
 
-Det skapar luckor där:
-- credentials exponeras
-- genvägar uppstår
-- devices rör sig fel
-- avvikelser missas
-- högriskåtkomst sker i fel kontext
-- recovery bygger på improvisation
+This creates gaps where:
+
+- credentials are exposed
+- shortcuts emerge
+- devices move incorrectly
+- deviations are missed
+- high-risk access takes place in the wrong context
+- recovery depends on improvisation
 
 ---
 
 ## Key Differentiators
 
 ### Sequential Zone Access
-Högre zoner kräver korrekt passage genom tidigare zoner, vilket förbättrar spårbarhet och avvikelsedetektering.
+Higher zones require correct passage through prior zones, which improves traceability and deviation detection.
 
 ### Credential Custody
-Badges och andra känsliga credentials hålls under aktiv kontroll, exempelvis genom att badges stannar i facilityn.
+Badges and other sensitive credentials are kept under active control, for example by ensuring that badges remain inside the facility.
 
 ### Device Trust
-Devices behandlas som säkerhetsbärare, inte bara arbetsverktyg.
+Devices are treated as carriers of security, not just work tools.
 
 ### Privileged Access Separation
-Adminåtkomst sker med separata identiteter, separata enheter och starkare kontrollnivå.
+Administrative access takes place with separate identities, separate devices, and a higher level of control.
 
 ### Protected Technical Zones
-Serverhallar och andra teknikzoner behandlas som särskilda miljöer med begränsad närvaro och tydlig change/recovery-logik.
+Data halls and other technical zones are treated as special environments with limited presence and clear change / recovery logic.
 
 ### Recovery by Design
-Recovery och fallback är inbyggda i modellen och inte beroende av informella nödlösningar.
+Recovery and fallback are built into the model and do not depend on informal emergency workarounds.
 
 ---
 
 ## Intended Environments
 
-Konceptet är främst relevant för:
+The concept is primarily relevant for:
 
-- skyddade serverhallar
-- säkerhetsklassade driftmiljöer
-- tekniska säkerhetszoner
-- miljöer med höga krav på OPSEC
-- verksamheter där insiderhot och avvikande rörelsemönster är relevanta risker
+- protected data centers
+- security-classified operational environments
+- technical security zones
+- environments with high OPSEC requirements
+- organizations where insider threats and anomalous movement patterns are relevant risks
 
-Det är inte i första hand utformat för:
-- vanliga kontorsmiljöer
-- lågfriktionsmiljöer
-- generell standard-enterprise IT
+It is not primarily designed for:
+
+- standard office environments
+- low-friction environments
+- general standard enterprise IT
 
 ---
 
 ## Why It Matters
 
-Konceptet skapar värde genom att:
+The concept creates value by:
 
-- koppla ihop fysisk och logisk säkerhet
-- minska informella säkerhetsglapp
-- stärka kontrollen över credentials och assets
-- höja spårbarhet i högklassade miljöer
-- separera högriskfunktioner tydligare
-- stödja mogen drift, recovery och incidenthantering
+- connecting physical and logical security
+- reducing informal security gaps
+- strengthening control over credentials and assets
+- increasing traceability in high-classification environments
+- separating high-risk functions more clearly
+- supporting mature operations, recovery, and incident handling
 
 ---
 
 ## Current Status
 
-Konceptet är idag att betrakta som:
+The concept should currently be regarded as:
 
-- en stark konceptmodell
-- ett dokumenterat designunderlag
-- en möjlig grund för vidare säkerhetsarkitektur, rådgivning eller paketering
+- a strong conceptual model
+- a documented design foundation
+- a possible basis for further security architecture, advisory work, or packaging
 
 ### Assessment Reference
+
 **88 / 100**
 
 ---
 
 ## Bottom Line
 
-**High-Security Facility Concept** är ett försök att beskriva högsäker teknisk miljö som ett sammanhängande system där människor, credentials, devices, privilegier, zoner och drift inte hanteras separat — utan som delar av samma säkerhetsarkitektur.
+The **High-Security Facility Concept** is an attempt to describe a high-security technical environment as a coherent system in which people, credentials, devices, privileges, zones, and operations are not handled separately, but as parts of the same security architecture.
 
-> **Hög säkerhet blir starkare när tillit inte bara handlar om access, utan om sambandet mellan identitet, rörelse, enheter, kontroll och återställning.**
+> **High security becomes stronger when trust is not only about access, but about the relationship between identity, movement, devices, control, and recovery.**
