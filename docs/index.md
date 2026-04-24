@@ -1,25 +1,25 @@
 # Documentation Index – High-Security Facility Concept
 
-> Navigationsöversikt för dokumentationen i High-Security Facility Concept.
+> Navigation overview for the documentation in the High-Security Facility Concept repository.
 
 ---
 
 ## Purpose
 
-Detta dokument fungerar som ett index över dokumentationen i repot och hjälper läsaren att snabbt hitta rätt material beroende på syfte.
+This document serves as an index to the repository documentation and helps the reader quickly find the right material depending on purpose.
 
-Det är särskilt användbart för att:
+It is especially useful for:
 
-- få snabb överblick
-- hitta rätt dokument beroende på roll eller intresse
-- förstå hur dokumentationen hänger ihop
-- navigera mellan koncept, arkitektur, governance, visuals och operations
+- getting a quick overview
+- finding the right document based on role or interest
+- understanding how the documentation fits together
+- navigating between concept, architecture, governance, visuals, and operations
 
 ---
 
 # Start Here
 
-Om du är ny till konceptet, börja här:
+If you are new to the concept, start here:
 
 1. [`executive-summary.md`](executive-summary.md)
 2. [`one-pager.md`](one-pager.md)
@@ -32,94 +32,116 @@ Om du är ny till konceptet, börja här:
 # Core Overview Documents
 
 ### [`executive-summary.md`](executive-summary.md)
-Kort beslutsfattarvänlig sammanfattning av konceptet.
+
+Short, decision-maker-friendly summary of the concept.
 
 ### [`one-pager.md`](one-pager.md)
-Kort pitchvänlig översikt som snabbt förklarar vad konceptet är och varför det är relevant.
+
+Short, pitch-friendly overview that quickly explains what the concept is and why it is relevant.
 
 ### [`concept.md`](concept.md)
-Huvuddokumentet för konceptets vision, filosofi, designprinciper, 3D Threat Thinking och strategiska positionering.
+
+The main document for the concept’s vision, philosophy, design principles, 3D Threat Thinking, and strategic positioning.
 
 ### [`faq.md`](faq.md)
-Vanliga frågor och korta svar om konceptets syfte, avgränsning, relation till Zero Trust och praktiska användning.
+
+Common questions and short answers about the concept’s purpose, scope, relationship to Zero Trust, and practical use.
 
 ### [`diagrams.md`](diagrams.md)
-Visuella Mermaid-diagram som ger snabb översikt över konceptets struktur, zonflöden, incident/recovery-livscykel och privilegierad åtkomst.
+
+Visual Mermaid diagrams that provide a quick overview of the concept’s structure, zone flows, incident / recovery lifecycle, and privileged access.
 
 ---
 
 # Strategic and Framing Documents
 
 ### [`value-proposition.md`](value-proposition.md)
-Beskriver vilket problem konceptet adresserar och vilket strategiskt värde det kan skapa.
+
+Describes the problem the concept addresses and the strategic value it can create.
 
 ### [`use-cases.md`](use-cases.md)
-Visar i vilka typer av miljöer konceptet passar och varför.
+
+Shows the types of environments in which the concept fits and why.
 
 ### [`assessment.md`](assessment.md)
-Full konceptbedömning med styrkor, svagheter, mognadsnivå och rekommenderade förbättringsområden.
+
+Full concept assessment with strengths, weaknesses, maturity level, and recommended improvement areas.
 
 ### [`roadmap.md`](roadmap.md)
-Färdplan för hur konceptet kan vidareutvecklas i mognad, visualisering och professionell validering.
+
+Roadmap for how the concept can be further developed in maturity, visualization, and professional validation.
 
 ---
 
 # Core Architecture Documents
 
 ### [`zone-model.md`](zone-model.md)
-Beskriver zonstruktur, sekventiell passage, rörelselogik, roof-aware zoning och hur 3D Threat Thinking påverkar fysisk tillitsmodell.
+
+Describes the zone structure, sequential passage, movement logic, roof-aware zoning, and how 3D Threat Thinking affects the physical trust model.
 
 ### [`privileged-access.md`](privileged-access.md)
-Beskriver modell för privilegierad åtkomst, adminidentiteter, adminenheter, stark autentisering och break-glass-relaterad logik.
+
+Describes the model for privileged access, admin identities, admin devices, strong authentication, and break-glass-related logic.
 
 ### [`asset-custody.md`](asset-custody.md)
-Beskriver hantering av badges, tokens, laptops, media och andra säkerhetskritiska tillgångar.
+
+Describes the handling of badges, tokens, laptops, media, and other security-critical assets.
 
 ### [`maintenance-model.md`](maintenance-model.md)
-Beskriver maintenance, change, serviceaktiviteter och drift i skyddade tekniska zoner.
+
+Describes maintenance, change, service activities, and operations in protected technical zones.
 
 ### [`surveillance-model.md`](surveillance-model.md)
-Beskriver CCTV, FLIR, anti-tamper-placering, roof security, incident presets och surveillance som aktiv säkerhetsfunktion.
+
+Describes CCTV, FLIR, anti-tamper placement, roof security, incident presets, and surveillance as an active security function.
 
 ---
 
 # Governance, Policy and Resilience
 
 ### [`governance-model.md`](governance-model.md)
-Beskriver ägarskap, ansvar, approvals, recertifiering och undantag.
+
+Describes ownership, responsibilities, approvals, recertification, and exceptions.
 
 ### [`policy-baseline.md`](policy-baseline.md)
-Definierar grundläggande policyprinciper för hela säkerhetsmodellen.
+
+Defines baseline policy principles for the entire security model.
 
 ### [`recovery-model.md`](recovery-model.md)
-Beskriver fallback, återställning, recovery-vägar och återgång till normal drift.
+
+Describes fallback, restoration, recovery paths, and return to normal operations.
 
 ### [`incident-response.md`](incident-response.md)
-Beskriver incidentklassning, containment, utredning, recoverykoppling och eftergranskning.
+
+Describes incident classification, containment, investigation, recovery linkage, and post-review.
 
 ---
 
 # Visual Documentation
 
 ### [`diagrams.md`](diagrams.md)
-Samling av Mermaid-diagram för high-level overview, zone flow, incident/recovery och privileged access.
+
+Collection of Mermaid diagrams for the high-level overview, zone flow, incident / recovery, and privileged access.
 
 ---
 
 # Suggested Reading by Goal
 
 ## If You Want a Quick Overview
+
 - [`executive-summary.md`](executive-summary.md)
 - [`one-pager.md`](one-pager.md)
 - [`diagrams.md`](diagrams.md)
 
 ## If You Want to Understand the Concept Deeply
+
 - [`concept.md`](concept.md)
 - [`faq.md`](faq.md)
 - [`value-proposition.md`](value-proposition.md)
 - [`assessment.md`](assessment.md)
 
 ## If You Want the Architecture
+
 - [`zone-model.md`](zone-model.md)
 - [`privileged-access.md`](privileged-access.md)
 - [`asset-custody.md`](asset-custody.md)
@@ -127,18 +149,21 @@ Samling av Mermaid-diagram för high-level overview, zone flow, incident/recover
 - [`surveillance-model.md`](surveillance-model.md)
 
 ## If You Want Governance and Operational Maturity
+
 - [`governance-model.md`](governance-model.md)
 - [`policy-baseline.md`](policy-baseline.md)
 - [`recovery-model.md`](recovery-model.md)
 - [`incident-response.md`](incident-response.md)
 
 ## If You Want Applicability and Positioning
+
 - [`use-cases.md`](use-cases.md)
 - [`value-proposition.md`](value-proposition.md)
 - [`one-pager.md`](one-pager.md)
 - [`faq.md`](faq.md)
 
 ## If You Want the Visual View First
+
 - [`diagrams.md`](diagrams.md)
 - [`one-pager.md`](one-pager.md)
 - [`executive-summary.md`](executive-summary.md)
@@ -148,12 +173,14 @@ Samling av Mermaid-diagram för high-level overview, zone flow, incident/recover
 # Suggested Reading by Role
 
 ## Decision-Maker / Executive
+
 - [`executive-summary.md`](executive-summary.md)
 - [`one-pager.md`](one-pager.md)
 - [`value-proposition.md`](value-proposition.md)
 - [`diagrams.md`](diagrams.md)
 
 ## Security Architect
+
 - [`concept.md`](concept.md)
 - [`assessment.md`](assessment.md)
 - [`zone-model.md`](zone-model.md)
@@ -162,6 +189,7 @@ Samling av Mermaid-diagram för high-level overview, zone flow, incident/recover
 - [`policy-baseline.md`](policy-baseline.md)
 
 ## Facility Security / Physical Security
+
 - [`zone-model.md`](zone-model.md)
 - [`surveillance-model.md`](surveillance-model.md)
 - [`asset-custody.md`](asset-custody.md)
@@ -169,6 +197,7 @@ Samling av Mermaid-diagram för high-level overview, zone flow, incident/recover
 - [`governance-model.md`](governance-model.md)
 
 ## IT / Infrastructure / Operations
+
 - [`privileged-access.md`](privileged-access.md)
 - [`maintenance-model.md`](maintenance-model.md)
 - [`recovery-model.md`](recovery-model.md)
@@ -176,6 +205,7 @@ Samling av Mermaid-diagram för high-level overview, zone flow, incident/recover
 - [`surveillance-model.md`](surveillance-model.md)
 
 ## Governance / Audit / Review
+
 - [`governance-model.md`](governance-model.md)
 - [`policy-baseline.md`](policy-baseline.md)
 - [`assessment.md`](assessment.md)
@@ -185,18 +215,18 @@ Samling av Mermaid-diagram för high-level overview, zone flow, incident/recover
 
 # Current Documentation Scope
 
-Det nuvarande dokumentpaketet täcker bland annat:
+The current document set covers, among other things:
 
 - executive summary
 - one-pager
-- konceptbeskrivning
+- concept description
 - FAQ
-- diagram
-- strategiskt värde
+- diagrams
+- strategic value
 - use cases
-- bedömning
+- assessment
 - roadmap
-- zonmodell
+- zone model
 - privileged access
 - asset custody
 - maintenance
@@ -210,7 +240,7 @@ Det nuvarande dokumentpaketet täcker bland annat:
 
 # Recommended Next Additions
 
-Möjliga framtida dokument eller förstärkningar:
+Possible future documents or enhancements:
 
 - Credential Custody Flow diagram
 - Technical Zone Operating States diagram
@@ -224,12 +254,12 @@ Möjliga framtida dokument eller förstärkningar:
 
 # Final Note
 
-Detta index är till för att göra repot lättare att använda när dokumentationen växer.
+This index is intended to make the repository easier to use as the documentation grows.
 
-Målet är att göra konceptet mer:
+The goal is to make the concept more:
 
-- navigerbart
-- begripligt
-- presentabelt
-- visuellt tillgängligt
-- professionellt
+- navigable
+- understandable
+- presentable
+- visually accessible
+- professional
