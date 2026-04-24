@@ -1,6 +1,6 @@
 # Asset Custody Model – High-Security Facility Concept
 
-> Konceptuell modell för kontroll, förvaring, rörelse och spårbarhet av badges, tokens, laptops och andra säkerhetskritiska tillgångar i en högsäker teknisk anläggning.
+> Conceptual model for the control, storage, movement, and traceability of badges, tokens, laptops, and other security-critical assets in a high-security technical facility.
 
 ---
 
@@ -19,428 +19,483 @@
 
 ## Purpose
 
-Detta dokument beskriver en konceptuell modell för **asset custody** i en högsäker miljö.
+This document describes a conceptual model for **asset custody** in a high-security environment.
 
-Målet är att säkerställa att känsliga tillgångar:
+The goal is to ensure that sensitive assets:
 
-- förvaras på rätt plats
-- används av rätt person
-- inte lämnar tillåtet område utan kontroll
-- kan spåras och granskas
-- omfattas av tydlig chain of custody
-- skyddas både mot förlust och mot missbruk
+- are stored in the correct location
+- are used by the correct person
+- do not leave the permitted area without control
+- can be tracked and reviewed
+- are covered by a clear chain of custody
+- are protected against both loss and misuse
 
 ---
 
 ## Scope
 
-Följande typer av tillgångar omfattas av modellen:
+The following types of assets are covered by the model:
 
-- access badges / passagekort
-- YubiKeys / FIDO2-tokens
-- smartcards / säkerhetskort
+- access badges / entry cards
+- YubiKeys / FIDO2 tokens
+- smartcards / security cards
 - admin laptops
 - user laptops
 - power user laptops
-- konsultenheter
-- externa krypterade lagringsmedier
-- lockers och tillhörande förvaringsobjekt
-- övriga säkerhetskritiska identifierings- eller åtkomstobjekt
+- consultant devices
+- external encrypted storage media
+- lockers and related storage objects
+- other security-critical identification or access objects
 
 ---
 
 # Core Principles
 
 ## 1. Assets Are Security Objects
-Tillgångar som badges, tokens och laptops ska inte behandlas som vanliga arbetsverktyg, utan som **säkerhetsobjekt**.
 
-Det innebär att:
-- de omfattas av policy
-- deras rörelse ska kontrolleras
-- deras förvaring ska vara definierad
-- deras användning ska kunna knytas till person, plats och syfte
+Assets such as badges, tokens, and laptops must not be treated as ordinary work tools, but as **security objects**.
+
+This means that:
+
+- they are subject to policy
+- their movement must be controlled
+- their storage must be defined
+- their use must be attributable to person, place, and purpose
 
 ---
 
 ## 2. Custody Must Be Explicit
-För varje säkerhetsrelevant tillgång ska det vara tydligt:
 
-- vem som har den
-- var den befinner sig
-- när den hämtades ut
-- när den lämnades tillbaka
-- om den har lämnat tillåtet område
-- om den avvikit från policy
+For every security-relevant asset, it must be clear:
+
+- who has it
+- where it is located
+- when it was issued
+- when it was returned
+- whether it has left the permitted area
+- whether it has deviated from policy
 
 ---
 
 ## 3. Sensitive Assets Should Not Drift Into Private Life
-Säkerhetskritiska tillgångar bör inte följa med in i privatlivet om det inte finns ett uttryckligt och kontrollerat behov.
 
-Det gäller särskilt:
+Security-critical assets should not follow users into private life unless there is an explicit and controlled need.
+
+This applies especially to:
+
 - badges
-- högt skyddade tokens
-- adminenheter
-- särskilda säkerhetskort
+- highly protected tokens
+- admin devices
+- special security cards
 
 ---
 
 ## 4. Movement Is a Security Event
-När en tillgång flyttas mellan zoner, lämnar facilityn eller separeras från avsedd kontext ska detta betraktas som en säkerhetshändelse eller minst en policyrelevant händelse.
+
+When an asset moves between zones, leaves the facility, or becomes separated from its intended context, this should be treated as a security event, or at minimum as a policy-relevant event.
 
 ---
 
 ## 5. Asset Type Determines Control Level
-Olika tillgångar ska ha olika kontrollnivå beroende på:
 
-- känslighet
-- privilegienivå
-- koppling till identitet
-- koppling till systemsäkerhet
-- exfiltrationsrisk
-- återställningssvårighet
+Different assets should have different levels of control depending on:
+
+- sensitivity
+- privilege level
+- linkage to identity
+- linkage to system security
+- exfiltration risk
+- recovery difficulty
 
 ---
 
 # Asset Categories
 
 ## 1. Access Credentials
-Exempel:
+
+Examples:
+
 - badge
-- passagekort
-- RFID-baserad identifiering
-- smartcards för fysisk tillgång
+- entry card
+- RFID-based identification
+- smartcards for physical access
 
 ### Security Relevance
-Dessa tillgångar styr fysisk rörelse och ska därför omfattas av stark custody-kontroll.
+
+These assets control physical movement and should therefore be subject to strong custody control.
 
 ---
 
 ## 2. Authentication Tokens
-Exempel:
+
+Examples:
+
 - YubiKey
-- FIDO2-token
-- smartcard för systeminloggning
-- andra hårdvarubundna autentiseringsobjekt
+- FIDO2 token
+- smartcard for system login
+- other hardware-bound authentication objects
 
 ### Security Relevance
-Dessa tillgångar kan ge logisk åtkomst till känsliga system och ska därför skyddas minst lika starkt som fysiska accessobjekt.
+
+These assets can provide logical access to sensitive systems and should therefore be protected at least as strongly as physical access objects.
 
 ---
 
 ## 3. Managed Endpoints
-Exempel:
+
+Examples:
+
 - admin laptops
 - power user laptops
 - user laptops
-- konsultenheter under facilitykontroll
+- consultant devices under facility control
 
 ### Security Relevance
-Dessa tillgångar bär både data, identitet och trust-nivå och ska därför kontrolleras utifrån både säkerhet och drift.
+
+These assets carry data, identity, and trust level, and must therefore be controlled from both a security and operational perspective.
 
 ---
 
 ## 4. Portable Storage
-Exempel:
-- externa krypterade SSD-enheter
-- särskilda flyttbara media
+
+Examples:
+
+- external encrypted SSD devices
+- special removable media
 
 ### Security Relevance
-Flyttbara media utgör hög exfiltrationsrisk och ska omfattas av striktare policy än vanliga klientenheter.
+
+Removable media present a high exfiltration risk and should be subject to stricter policy than ordinary client devices.
 
 ---
 
 # Badge Custody Model
 
 ## Principle
-Badges ska som huvudregel **stanna i facilityn** och inte följa med användaren hem eller ut i privat miljö.
+
+As a general rule, badges should **remain inside the facility** and not follow the user home or into private environments.
 
 ---
 
 ## Purpose
-Denna modell stärker:
+
+This model strengthens:
 
 - OPSEC
-- skydd mot social engineering
-- minskad extern exponering
-- snabb avaktivering vid offboarding
-- mindre risk för glömda eller tappade badges
-- bättre kontroll över credential lifecycle
+- protection against social engineering
+- reduced external exposure
+- rapid deactivation during offboarding
+- lower risk of forgotten or lost badges
+- better control over the credential lifecycle
 
 ---
 
 ## Expected Operational Flow
-1. användaren anländer till facilityn
-2. badge hämtas ut eller aktiveras enligt fastställd process
-3. badge används för tillåten rörelse under arbetspass
-4. badge återlämnas till reception eller definierad säker förvaring vid arbetspassets slut
+
+1. the user arrives at the facility
+2. the badge is issued or activated according to the established process
+3. the badge is used for permitted movement during the work session
+4. the badge is returned to reception or a defined secure storage point at the end of the work session
 
 ---
 
 ## Security Benefits
-- användaren kan inte glömma badge hemma
-- badge exponeras inte i bil, bostad eller offentlig miljö
-- avslutad anställning eller ändrad behörighet blir enklare att hantera
-- credentialn befinner sig redan i kontrollerad miljö för spärr eller återtag
+
+- the user cannot forget the badge at home
+- the badge is not exposed in a car, residence, or public environment
+- termination of employment or changes in authorization become easier to manage
+- the credential is already in a controlled environment for revocation or retrieval
 
 ---
 
 ## Recommended Controls
-- utlämning och återlämning loggas
-- badge ska vara personligt kopplad eller spårbart tilldelad
-- utebliven återlämning ska generera uppföljning
-- tillfälliga badges ska ha särskild policy
-- besöksbadges och konsultbadges ska vara tydligt separerade från ordinarie badges
+
+- issuance and return must be logged
+- the badge should be personally linked or traceably assigned
+- failure to return a badge should trigger follow-up
+- temporary badges should have a separate policy
+- visitor badges and consultant badges should be clearly separated from standard badges
 
 ---
 
 # Token Custody Model
 
 ## Principle
-Autentiseringstokens ska hanteras utifrån deras risknivå.
+
+Authentication tokens should be handled according to their risk level.
 
 ### Example Distinction
-- standard user tokens kan i vissa miljöer vara personburna
-- högprivilegierade tokens bör omfattas av starkare custody
-- break-glass eller särskilt känsliga tokens bör hållas under strikt kontrollerad förvaring
+
+- standard user tokens may, in some environments, be user-carried
+- highly privileged tokens should be subject to stronger custody
+- break-glass or especially sensitive tokens should be kept under strictly controlled storage
 
 ---
 
 ## Security Considerations
-Token custody bör ta hänsyn till:
-- vilken åtkomst token möjliggör
-- om token används för privilegierad administration
-- om token används för BIOS, lokal admin eller globalt känsliga funktioner
-- hur återställning ska ske om token försvinner
+
+Token custody should take into account:
+
+- what access the token enables
+- whether the token is used for privileged administration
+- whether the token is used for BIOS, local admin, or globally sensitive functions
+- how recovery should take place if the token is lost
 
 ---
 
 ## Recommended Controls
-- personbunden tilldelning där möjligt
-- separata regler för standardtoken och högkänslig token
-- tydlig spärrprocess
-- återutgivning under kontroll
-- stark koppling mellan token, identitet och roll
+
+- personally assigned issuance where possible
+- separate rules for standard tokens and highly sensitive tokens
+- clear revocation process
+- controlled reissuance
+- strong linkage between token, identity, and role
 
 ---
 
 # Laptop Custody Model
 
 ## Principle
-Laptops ska behandlas som både arbetsverktyg och säkerhetsobjekt.
 
-Det innebär att:
-- varje laptop ska ha definierad rollklass
-- tillåten rörelse ska vara tydlig
-- förflyttning utanför policy ska kunna upptäckas
-- känsligare laptops ska omfattas av högre kontrollnivå
+Laptops should be treated as both work tools and security objects.
+
+This means that:
+
+- every laptop must have a defined role class
+- permitted movement must be clear
+- movement outside policy must be detectable
+- more sensitive laptops must be subject to a higher level of control
 
 ---
 
 ## Device Classes
-Exempel på laptopklasser:
+
+Examples of laptop classes:
 
 - admin laptop
 - power user laptop
 - standard laptop
 - consultant laptop
 
-Varje klass bör ha:
-- egen policy
-- egen tillitsnivå
-- egen tillåten zonmodell
-- egen åtkomstprofil
+Each class should have:
+
+- its own policy
+- its own trust level
+- its own permitted zone model
+- its own access profile
 
 ---
 
 ## Facility Movement Control
-Laptops ska endast få röra sig inom godkända zoner och under definierade villkor.
+
+Laptops should only be allowed to move within approved zones and under defined conditions.
 
 ### Example Principles
-- vissa laptops får aldrig lämna facilityn
-- vissa laptops får inte tas in i särskilda zoner
-- vissa laptops får endast användas i definierade arbetsområden
-- vissa laptops kan kräva särskild övervakning eller eskort vid förflyttning
+
+- some laptops must never leave the facility
+- some laptops must not be brought into specific zones
+- some laptops may only be used in defined work areas
+- some laptops may require special monitoring or escort when moved
 
 ---
 
 ## RFID-Based Tracking
-RFID ska användas som stöd för:
 
-- realtidspositionering
-- zonkontroll
+RFID should be used to support:
+
+- real-time positioning
+- zone control
 - asset visibility
-- policytrigger
-- larm om enhet lämnar tillåtet område
+- policy triggers
+- alerts when a device leaves the permitted area
 
-Det ska **inte** ses som enda säkerhetsmekanism, men som ett starkt komplement till annan kontroll.
+It should **not** be seen as the only security mechanism, but as a strong complement to other controls.
 
 ---
 
 ## Recommended Responses to Device Deviation
-När en laptop lämnar tillåtet område eller avviker från policy bör systemet kunna:
 
-1. logga händelsen
-2. generera larm
-3. låsa enheten
-4. begränsa fortsatt systemåtkomst
-5. kräva manuell säkerhetsverifiering
+When a laptop leaves the permitted area or deviates from policy, the system should be able to:
 
-Remote wipe bör normalt vara en senare åtgärd efter bekräftad incident, inte första respons.
+1. log the event
+2. generate an alert
+3. lock the device
+4. restrict continued system access
+5. require manual security verification
+
+Remote wipe should normally be a later action after a confirmed incident, not the first response.
 
 ---
 
 # Pairing and Context Validation
 
-Vissa tillgångar kan med fördel kopplas ihop kontextuellt, exempelvis:
+Some assets can advantageously be linked together contextually, for example:
 
-- användare + badge
-- användare + laptop
-- adminidentitet + adminenhet
-- zon + tillåten enhetsklass
+- user + badge
+- user + laptop
+- admin identity + admin device
+- zone + permitted device class
 
-Syftet är inte att skapa skör överautomation, utan att höja möjligheten att upptäcka:
+The purpose is not to create fragile over-automation, but to improve the ability to detect:
 
-- otillåten separation
-- felaktig enhetsanvändning
-- policybrott
-- avvikande rörelsemönster
+- unauthorized separation
+- incorrect device usage
+- policy violations
+- anomalous movement patterns
 
 ---
 
 # Lockers and Controlled Storage
 
 ## Purpose
-Lockers fungerar som kontrollerad övergång mellan privat och skyddad miljö.
 
-De kan användas för:
-- förvaring av privata mobiltelefoner
-- förvaring av personliga föremål
-- förvaring av säkerhetsobjekt mellan arbetspass
-- utlämning och återtag av godkända tillgångar
+Lockers act as a controlled transition point between private life and the protected environment.
+
+They can be used for:
+
+- storage of personal mobile phones
+- storage of personal belongings
+- storage of security objects between work sessions
+- issuance and return of approved assets
 
 ---
 
 ## Security Value
-Lockers stärker modellen genom att:
-- separera privatliv från skyddad miljö
-- minska risken att förbjudna objekt tas in
-- skapa tydlig chain of custody för vissa tillgångar
-- stödja kontroll av vad som förs in och ut
+
+Lockers strengthen the model by:
+
+- separating private life from the protected environment
+- reducing the risk that prohibited objects are brought inside
+- creating a clear chain of custody for certain assets
+- supporting control over what enters and leaves the environment
 
 ---
 
 ## Recommended Controls
-- tilldelning ska vara spårbar
-- tillgång till locker ska vara kontrollerad
-- vissa lockers kan omfattas av särskild säkerhetspolicy
-- säkerhetsteam ska kunna låsa eller säkra lockers vid incident eller policybrott
+
+- assignment must be traceable
+- locker access must be controlled
+- some lockers may be subject to special security policy
+- security teams must be able to lock or secure lockers during an incident or policy violation
 
 ---
 
 # Portable Media Control
 
 ## Principle
-Flyttbara lagringsmedier ska behandlas som hög risk om de används i facilityn.
+
+Removable storage media must be treated as high risk when used in the facility.
 
 ### Security Concerns
-- dataexfiltration
-- okontrollerad import av data
-- förlust eller stöld
-- svår revisionsbarhet
+
+- data exfiltration
+- uncontrolled data import
+- loss or theft
+- poor auditability
 
 ---
 
 ## Recommended Controls
-- endast godkända krypterade media
-- tydlig registrering
-- begränsad användning till definierade roller och situationer
-- loggning av utlämning och återlämning
-- policy för destruktion, förvaring och återkallelse
+
+- only approved encrypted media
+- clear registration
+- restricted use to defined roles and situations
+- logging of issuance and return
+- policy for destruction, storage, and revocation
 
 ---
 
 # Offboarding & Revocation
 
-En stark custody-modell ska underlätta snabb och säker offboarding.
+A strong custody model should enable rapid and secure offboarding.
 
 ## Expected Benefits
-- badge finns redan inom facilityn
-- tokens kan återtas eller spärras direkt
-- laptops kan låsas, återtas eller isoleras
-- tillgångar behöver inte eftersökas i privat miljö i samma omfattning
+
+- the badge is already inside the facility
+- tokens can be retrieved or revoked immediately
+- laptops can be locked, recovered, or isolated
+- assets do not need to be searched for in private environments to the same extent
 
 ---
 
 ## Minimum Requirements
-- omedelbar spärr av logiska och fysiska credentials
-- tydlig checklista för återtag av tillgångar
-- verifiering att privilegierade objekt återlämnats
-- avvikelseflöde om något saknas
+
+- immediate revocation of logical and physical credentials
+- clear asset recovery checklist
+- verification that privileged objects have been returned
+- deviation flow if anything is missing
 
 ---
 
 # Logging & Audit Requirements
 
-Följande bör loggas där det är relevant:
+The following should be logged where relevant:
 
-- utlämning av badge
-- återlämning av badge
-- tilldelning av token
-- spärr av token
-- tilldelning av laptop
-- policyavvikelse för laptoprörelse
-- larm vid otillåten förflyttning
-- utlämning och återtag av flyttbara media
-- låsning, isolering eller återkallelse av enhet
-- avvikelse vid offboarding
+- badge issuance
+- badge return
+- token assignment
+- token revocation
+- laptop assignment
+- laptop movement policy deviation
+- alert on unauthorized movement
+- issuance and return of removable media
+- locking, isolation, or revocation of a device
+- deviation during offboarding
 
-Loggning bör vara:
-- tidsstämplad
-- personkopplad där möjligt
-- kopplad till zon eller plats
-- tillgänglig för revision
+Logging should be:
+
+- timestamped
+- linked to a person where possible
+- linked to a zone or location
+- available for audit
 
 ---
 
 # Recommended Policy Statements
 
 ## Example Policy 1
-Säkerhetskritiska tillgångar ska omfattas av tydlig chain of custody och får endast användas, förvaras eller förflyttas enligt fastställd policy.
+
+Security-critical assets must be covered by a clear chain of custody and may only be used, stored, or moved in accordance with established policy.
 
 ## Example Policy 2
-Access badges ska som huvudregel stanna i facilityn och återlämnas till definierad kontrollpunkt vid arbetspassets slut.
+
+As a general rule, access badges must remain inside the facility and be returned to a defined control point at the end of the work session.
 
 ## Example Policy 3
-Privilegerade autentiseringstokens och adminenheter ska omfattas av högre kontrollnivå än standardanvändarens tillgångar.
+
+Privileged authentication tokens and admin devices must be subject to a higher level of control than standard user assets.
 
 ## Example Policy 4
-Otillåten förflyttning av laptop eller annan säkerhetskritisk utrustning ska generera säkerhetshändelse, loggning och policyenlig respons.
+
+Unauthorized movement of a laptop or other security-critical equipment must generate a security event, logging, and a policy-defined response.
 
 ## Example Policy 5
-Flyttbara media ska endast tillåtas när de är godkända, krypterade, registrerade och motiverade av definierad arbetsuppgift.
+
+Removable media should only be permitted when approved, encrypted, registered, and justified by a defined work task.
 
 ---
 
 # Common Risks If Poorly Managed
 
-Om asset custody hanteras svagt uppstår ofta:
+If asset custody is managed weakly, the following often occurs:
 
-- badges som tappas eller exponeras externt
-- glömda credentials i privat miljö
-- svår offboarding
-- oklar ansvarskedja
-- laptops som lämnar facilityn utan kontroll
-- tokens utan tydlig ägare
-- dålig spårbarhet vid incident
-- ökad exfiltrationsrisk
+- badges are lost or exposed externally
+- credentials are forgotten in private environments
+- offboarding becomes difficult
+- the responsibility chain becomes unclear
+- laptops leave the facility without control
+- tokens lack a clear owner
+- traceability is poor during incidents
+- exfiltration risk increases
 
 ---
 
 # Recommended Next Steps
 
 ## 1. Create Asset Classification
-Dela in tillgångar i tydliga klasser, exempelvis:
+
+Divide assets into clear classes, for example:
+
 - standard credential
 - privileged credential
 - managed endpoint
@@ -448,43 +503,51 @@ Dela in tillgångar i tydliga klasser, exempelvis:
 - removable media
 
 ## 2. Build Custody Workflows
-Definiera processer för:
-- utlämning
-- återlämning
-- avvikelse
-- spärr
-- återtag
-- förlust
+
+Define processes for:
+
+- issuance
+- return
+- deviation
+- revocation
+- recovery
+- loss
 - offboarding
 
 ## 3. Map Controls to Asset Type
-Bestäm vilka kontroller som gäller för:
+
+Determine which controls apply to:
+
 - badges
 - tokens
-- adminlaptops
-- userlaptops
-- flyttbara media
+- admin laptops
+- user laptops
+- removable media
 
 ## 4. Define Response Levels
-Skapa tydliga nivåer för:
-- avvikande rörelse
-- utebliven återlämning
-- misstänkt credential misuse
-- otillåten device separation
+
+Create clear levels for:
+
+- anomalous movement
+- failure to return
+- suspected credential misuse
+- unauthorized device separation
 
 ## 5. Add Audit & Review
-Bestäm:
-- vem som granskar custody-händelser
-- hur ofta tillgångar recertifieras
-- hur avvikelser ska följas upp
-- hur inventering ska göras
+
+Decide:
+
+- who reviews custody events
+- how often assets are recertified
+- how deviations should be followed up
+- how inventory should be performed
 
 ---
 
 # Final Note
 
-En stark asset custody-modell minskar inte bara risken för förlust, utan höjer även säkerhetsnivån genom att göra tillgångars rörelse, användning och ägarskap synliga och kontrollerbara.
+A strong asset custody model not only reduces the risk of loss, but also raises the security level by making asset movement, use, and ownership visible and controllable.
 
-Den centrala principen i denna modell är:
+The central principle in this model is:
 
-> **Säkerhetskritiska tillgångar ska vara under aktiv kontroll, inte bara under antagen kontroll.**
+> **Security-critical assets must be under active control, not merely assumed control.**
