@@ -1,6 +1,6 @@
 # Governance Model – High-Security Facility Concept
 
-> Konceptuell styrmodell för ansvar, ägarskap, godkännanden, undantag, revision och recertifiering inom en högsäker teknisk anläggning.
+> Conceptual governance model for responsibility, ownership, approvals, exceptions, audit, and recertification within a high-security technical facility.
 
 ---
 
@@ -19,112 +19,122 @@
 
 ## Purpose
 
-Detta dokument beskriver en konceptuell **governance-modell** för High-Security Facility Concept.
+This document describes a conceptual **governance model** for the High-Security Facility Concept.
 
-Målet är att säkerställa att säkerhetsmodellen inte enbart består av tekniska och fysiska kontroller, utan även av tydlig styrning kring:
+The goal is to ensure that the security model does not consist only of technical and physical controls, but also of clear governance around:
 
-- vem som äger vad
-- vem som godkänner vad
-- hur undantag hanteras
-- hur åtkomst granskas
-- hur avvikelser följs upp
-- hur ansvar fördelas mellan roller och funktioner
+- who owns what
+- who approves what
+- how exceptions are handled
+- how access is reviewed
+- how deviations are followed up
+- how responsibilities are distributed across roles and functions
 
 ---
 
 ## Why Governance Matters
 
-En högsäker modell kan vara tekniskt stark men ändå svag i praktiken om följande saknas:
+A high-security model can be technically strong and still weak in practice if the following are missing:
 
-- tydliga ägare
-- definierade beslutspunkter
-- ansvarsmatris
-- undantagshantering
-- recertifiering
-- revisionsbarhet
-- uppföljning av policyavvikelser
+- clear owners
+- defined decision points
+- a responsibility matrix
+- exception handling
+- recertification
+- auditability
+- follow-up of policy deviations
 
-Governance behövs för att göra modellen:
+Governance is needed to make the model:
 
-- repeterbar
-- beslutsbar
-- mindre personberoende
-- revisionsbar
-- hållbar över tid
+- repeatable
+- governable
+- less person-dependent
+- auditable
+- sustainable over time
 
 ---
 
 # Governance Objectives
 
-Governance-modellen ska säkerställa att:
+The governance model must ensure that:
 
-- varje säkerhetskontroll har en tydlig ägare
-- varje zon, identitetstyp och tillgångskategori omfattas av ansvar
-- tillträde inte ges utan tydlig beslutskedja
-- undantag är kontrollerade, tidsbundna och spårbara
-- privilegier recertifieras regelbundet
-- incidenter och avvikelser följs upp
-- modellen kan utvecklas utan att tappa kontroll
+- every security control has a clear owner
+- every zone, identity type, and asset category is covered by defined responsibility
+- access is not granted without a clear decision chain
+- exceptions are controlled, time-bound, and traceable
+- privileges are recertified regularly
+- incidents and deviations are followed up
+- the model can evolve without losing control
 
 ---
 
 # Core Governance Principles
 
 ## 1. Ownership Must Be Explicit
-Varje säkerhetsrelevant objekt eller kontroll ska ha en tydlig ägare.
 
-Exempel:
-- zoner
-- badge-policy
+Every security-relevant object or control must have a clear owner.
+
+Examples:
+
+- zones
+- badge policy
 - privileged access
 - tokens
-- adminenheter
-- maintenance-processer
+- admin devices
+- maintenance processes
 - exception workflows
 
 ---
 
 ## 2. Approval Must Be Role-Based
-Godkännanden ska inte vara informella eller personberoende.
 
-De ska vara:
-- rollbaserade
-- dokumenterade
-- situationsanpassade
-- kopplade till tydligt scope
+Approvals must not be informal or person-dependent.
+
+They must be:
+
+- role-based
+- documented
+- situation-adapted
+- tied to a clearly defined scope
 
 ---
 
 ## 3. Access Must Be Reviewable
-Fysisk och logisk åtkomst ska gå att granska regelbundet.
 
-Det gäller bland annat:
-- zonbehörigheter
-- adminprivilegier
-- tillfälliga undantag
-- konsult- och besökstillgång
-- break-glass-tillgångar
+Physical and logical access must be reviewable on a regular basis.
+
+This includes, among other things:
+
+- zone authorizations
+- admin privileges
+- temporary exceptions
+- consultant and visitor access
+- break-glass assets
 
 ---
 
 ## 4. Exceptions Must Be Controlled
-Undantag är ibland nödvändiga, men de får inte bli dolda permanenta genvägar.
 
-Undantag ska därför vara:
-- motiverade
-- tidsbegränsade
-- godkända
-- loggade
-- eftergranskade
+Exceptions are sometimes necessary, but they must not become hidden permanent shortcuts.
+
+Exceptions must therefore be:
+
+- justified
+- time-limited
+- approved
+- logged
+- post-reviewed
 
 ---
 
 ## 5. Governance Must Cover Both Physical and Logical Security
-Styrningen ska omfatta både:
-- fysisk access
-- systemåtkomst
+
+Governance must cover both:
+
+- physical access
+- system access
 - asset custody
-- tekniska zoner
+- technical zones
 - maintenance
 - privileged access
 
@@ -133,140 +143,164 @@ Styrningen ska omfatta både:
 # Governance Domains
 
 ## 1. Zone Governance
-Styrning av:
-- zonklassning
-- tillträdesnivåer
-- passersekvenser
-- escortkrav
-- avvikelsehantering i fysisk rörelse
+
+Governance of:
+
+- zone classification
+- access levels
+- passage sequences
+- escort requirements
+- deviation handling in physical movement
 
 ### Governance Needs
-- zonägare
-- godkännandeflöden för fysisk access
-- översyn av zonbehörigheter
-- policy för sekvensavvikelse
-- undantagshantering för tillfälliga passager
+
+- zone owners
+- approval flows for physical access
+- review of zone authorizations
+- policy for sequence deviation
+- exception handling for temporary passage
 
 ---
 
 ## 2. Identity & Credential Governance
-Styrning av:
+
+Governance of:
+
 - badges
 - tokens
 - smartcards
-- identitetsbindning
+- identity binding
 - credential lifecycle
-- spärr och återtag
+- revocation and retrieval
 
 ### Governance Needs
+
 - credential ownership
-- process för tilldelning
-- process för återtag
-- förlusthantering
-- recertifiering av privilegierade credentials
+- issuance process
+- retrieval process
+- loss handling
+- recertification of privileged credentials
 
 ---
 
 ## 3. Privileged Access Governance
-Styrning av:
-- adminroller
-- adminidentiteter
-- adminenheter
-- förhöjd åtkomst
+
+Governance of:
+
+- admin roles
+- admin identities
+- admin devices
+- elevated access
 - break-glass
 
 ### Governance Needs
-- tydlig rollkatalog
-- ansvar för privilegietilldelning
-- regelbunden översyn
-- spårbarhet av användning
-- särskild kontroll över högsta privilegier
+
+- clear role catalog
+- responsibility for privilege assignment
+- regular review
+- traceability of use
+- special control over the highest privileges
 
 ---
 
 ## 4. Asset Governance
-Styrning av:
+
+Governance of:
+
 - laptops
-- tillgångsklasser
-- enhetsrörelse
-- RFID-relaterad policy
+- asset classes
+- device movement
+- RFID-related policy
 - lockers
-- flyttbara media
+- removable media
 
 ### Governance Needs
-- definierade asset owners
-- policy för rörelse och förvaring
-- inventering och avvikelseuppföljning
-- recertifiering av känsliga tillgångar
+
+- defined asset owners
+- policy for movement and storage
+- inventory and deviation follow-up
+- recertification of sensitive assets
 
 ---
 
 ## 5. Maintenance & Change Governance
-Styrning av:
-- serviceaktiviteter
+
+Governance of:
+
+- service activities
 - change approval
-- tillträde till teknikzoner
-- återgång till drift
-- tekniska undantag
+- access to technical zones
+- return to operations
+- technical exceptions
 
 ### Governance Needs
+
 - change ownership
-- godkännandekedja
-- kontroll av deltagare
-- verifiering efter arbete
-- eftergranskning vid avvikelse
+- approval chain
+- control of participants
+- post-work verification
+- post-review in case of deviation
 
 ---
 
 ## 6. Incident & Recovery Governance
-Styrning av:
-- incidentmode
+
+Governance of:
+
+- incident mode
 - recovery
-- break-glass-användning
-- avvikelsehantering
-- återställningsbeslut
+- break-glass usage
+- deviation handling
+- recovery decisions
 
 ### Governance Needs
-- definierade incidentroller
-- beslutsrätt för undantag i kris
-- eftergranskning av akuta avsteg
-- tydlig väg tillbaka till normal drift
+
+- defined incident roles
+- authority to approve exceptions during crisis
+- post-review of emergency deviations
+- a clear path back to normal operations
 
 ---
 
 # Governance Roles
 
-Nedan följer en konceptuell rollmodell. Exakta titlar kan anpassas till organisationens struktur.
+Below is a conceptual role model. Exact titles can be adapted to the organization’s structure.
 
 ---
 
 ## Security Governance Owner
-Övergripande ägare av styrmodell och säkerhetsprinciper.
+
+Overall owner of the governance model and security principles.
 
 ### Responsibilities
-- äger säkerhetsramverket
-- godkänner centrala policyer
-- säkerställer att kontroller har utsedda ägare
-- ansvarar för övergripande översyn och förbättring
+
+- owns the security framework
+- approves core policies
+- ensures that controls have designated owners
+- is responsible for overall review and improvement
 
 ---
 
 ## Facility Security Owner
-Ägare av fysisk säkerhetsmodell.
+
+Owner of the physical security model.
 
 ### Responsibilities
-- zonklassning
-- fysisk accesspolicy
-- reception / passersystem
-- escortpolicy
-- fysisk avvikelsehantering
+
+- zone classification
+- physical access policy
+- reception / access control system
+- escort policy
+- physical deviation handling
 
 ---
 
 ## Identity & Credential Owner
-Ägare av identitets- och credentialmodellen.
+
+Owner of the identity and credential model.
 
 ### Responsibilities
+
 - badge lifecycle
 - token lifecycle
 - smartcards
@@ -277,293 +311,341 @@ Nedan följer en konceptuell rollmodell. Exakta titlar kan anpassas till organis
 ---
 
 ## Privileged Access Owner
-Ägare av privileged access-modellen.
+
+Owner of the privileged access model.
 
 ### Responsibilities
-- adminrollskatalog
-- tilldelning av privilegier
-- adminpolicy
-- översyn av privilegierad åtkomst
-- break-glass-modell
+
+- admin role catalog
+- privilege assignment
+- admin policy
+- review of privileged access
+- break-glass model
 
 ---
 
 ## Asset Owner / Endpoint Owner
-Ansvarig för säkerhetskritiska klienter och tillgångar.
+
+Responsible for security-critical clients and assets.
 
 ### Responsibilities
-- laptopklasser
+
+- laptop classes
 - device policy
 - asset tracking
-- förflyttningspolicy
-- tekniska avvikelser kopplade till enheter
+- movement policy
+- technical deviations related to devices
 
 ---
 
 ## Change Authority
-Ansvarig för godkännande av större tekniskt arbete.
+
+Responsible for approval of major technical work.
 
 ### Responsibilities
+
 - change approval
-- riskbedömning av större ingrepp
-- kontroll av deltagare och scope
-- verifiering av återgång till normal drift
+- risk assessment of major interventions
+- control of participants and scope
+- verification of return to normal operations
 
 ---
 
 ## Audit / Review Function
-Ansvarig för oberoende eller halvoberoende uppföljning.
+
+Responsible for independent or semi-independent follow-up.
 
 ### Responsibilities
+
 - access review
 - privilege review
 - exception review
 - policy compliance review
-- avvikelseuppföljning
+- deviation follow-up
 
 ---
 
 # Approval Model
 
 ## Principle
-Godkännanden ska ske enligt tydliga nivåer beroende på:
 
-- tillgångens känslighet
-- zonens klassning
-- privilegienivå
-- tillfälligt eller permanent behov
-- standardfall eller undantag
+Approvals must take place according to clear levels depending on:
+
+- the sensitivity of the asset
+- the classification of the zone
+- the privilege level
+- temporary or permanent need
+- standard case or exception
 
 ---
 
 ## Example Approval Categories
 
 ### Standard Access Approval
-Gäller:
-- normal tilldelning av låg- eller medelkänslig access
-- standardzoner
-- etablerade roller
+
+Applies to:
+
+- normal assignment of low- or medium-sensitivity access
+- standard zones
+- established roles
 
 ### Elevated Access Approval
-Gäller:
-- högklassade zoner
-- känsliga tekniska utrymmen
-- privilegierade roller
-- högre risk än normalt
+
+Applies to:
+
+- high-classification zones
+- sensitive technical spaces
+- privileged roles
+- higher-than-normal risk
 
 ### Exception Approval
-Gäller:
-- tillfälliga avsteg
-- ovanliga accessvägar
-- tillfällig device movement
-- extra känsliga arbetsuppgifter
+
+Applies to:
+
+- temporary deviations
+- unusual access paths
+- temporary device movement
+- extra-sensitive work tasks
 
 ### Emergency Approval
-Gäller:
+
+Applies to:
+
 - incident
 - recovery
 - break-glass
-- brådskande återställning
+- urgent restoration
 
 ---
 
 # Access Review & Recertification
 
 ## Purpose
-Tilldelad åtkomst får inte betraktas som permanent korrekt bara för att den en gång godkänts.
+
+Assigned access must not be treated as permanently correct simply because it was approved once.
 
 ### Review Should Cover
-- fysisk zonåtkomst
-- privilegierade roller
-- badges och credentials
-- adminenheter
-- tillfälliga undantag
-- konsulter och externa roller
-- break-glass-beredskap
+
+- physical zone access
+- privileged roles
+- badges and credentials
+- admin devices
+- temporary exceptions
+- consultants and external roles
+- break-glass readiness
 
 ---
 
 ## Review Principles
-Recertifiering bör vara:
-- regelbunden
-- riskbaserad
-- rollbaserad
-- dokumenterad
-- åtgärdsbar
+
+Recertification should be:
+
+- regular
+- risk-based
+- role-based
+- documented
+- actionable
 
 ---
 
 ## Example Review Questions
-- behöver personen fortfarande denna tillgång?
-- är rollen fortfarande relevant?
-- används privilegiet faktiskt?
-- finns tillfälliga undantag som blivit permanenta?
-- finns credentials som borde spärras eller återtas?
-- är tilldelad zonåtkomst fortfarande motiverad?
+
+- does the person still need this access?
+- is the role still relevant?
+- is the privilege actually being used?
+- have temporary exceptions become permanent?
+- are there credentials that should be revoked or retrieved?
+- is the assigned zone access still justified?
 
 ---
 
 # Exception Handling Model
 
 ## Principle
-Undantag ska vara synliga, inte informella.
+
+Exceptions must be visible, not informal.
 
 ### Every Exception Should Have
-- tydlig motivering
-- tydlig ägare
-- tydlig giltighetstid
-- tydligt scope
-- tydligt godkännande
-- tydlig eftergranskning
+
+- a clear justification
+- a clear owner
+- a clear validity period
+- a clear scope
+- a clear approval
+- a clear post-review
 
 ---
 
 ## Examples of Exceptions
-- tillfällig passage utanför normal sekvens
-- extern maintenance i högklassad zon
-- tillfällig användning av särskild adminväg
-- kontrollerad device movement utanför standardpolicy
-- tillfällig access för recovery eller incidentarbete
+
+- temporary passage outside the normal sequence
+- external maintenance in a high-classification zone
+- temporary use of a special admin path
+- controlled device movement outside standard policy
+- temporary access for recovery or incident work
 
 ---
 
 ## Expiry Principle
-Undantag ska som huvudregel:
-- upphöra automatiskt
-- eller kräva aktiv omprövning
 
-De ska inte glida över till permanent praxis.
+As a general rule, exceptions must:
+
+- expire automatically
+- or require active reassessment
+
+They must not drift into permanent practice.
 
 ---
 
 # Auditability & Oversight
 
 ## Governance Requires Visibility
-Styrning utan synlighet är inte verklig styrning.
+
+Governance without visibility is not real governance.
 
 ### Oversight Should Include
-- accessloggar
+
+- access logs
 - change approvals
 - privileged use review
 - badge / credential anomalies
 - device movement anomalies
 - sequence deviation handling
-- undantagshistorik
+- exception history
 
 ---
 
 ## Minimum Expectations
-Det ska gå att svara på:
-- vem beslutade?
-- vem fick åtkomst?
-- till vad?
-- varför?
-- under hur lång tid?
-- enligt vilken process?
-- med vilket undantag, om något?
+
+It must be possible to answer:
+
+- who decided?
+- who was granted access?
+- to what?
+- why?
+- for how long?
+- according to which process?
+- with which exception, if any?
 
 ---
 
 # Offboarding Governance
 
-Governance-modellen ska stödja snabb och kontrollerad offboarding.
+The governance model must support rapid and controlled offboarding.
 
 ## Minimum Requirements
-- fysisk access spärras
-- logisk access spärras
-- badges återtas eller spärras
-- tokens återtas eller spärras
-- adminenheter återkallas
-- tillfälliga undantag avslutas
-- privilegierad åtkomst verifieras borttagen
+
+- physical access is revoked
+- logical access is revoked
+- badges are retrieved or revoked
+- tokens are retrieved or revoked
+- admin devices are recalled
+- temporary exceptions are terminated
+- privileged access is verified as removed
 
 ---
 
 ## Governance Value
-En stark governance-modell minskar risken för:
-- kvarstående access efter avslutad roll
-- glömda credentials
-- informella restprivilegier
-- personberoende offboarding
+
+A strong governance model reduces the risk of:
+
+- residual access after a role has ended
+- forgotten credentials
+- informal residual privileges
+- person-dependent offboarding
 
 ---
 
 # Governance Metrics
 
-För att styrningen ska kunna förbättras över tid bör vissa nyckeltal följas.
+To improve governance over time, certain key metrics should be tracked.
 
 ## Example Metrics
-- antal aktiva privilegierade identiteter
-- antal öppna undantag
-- antal försenade recertifieringar
-- antal badge-/credentialavvikelser
-- antal sekvensavvikelser i zonmodell
-- antal incidentrelaterade accessavsteg
-- tid till revocation vid offboarding
-- antal tillgångar utan tydlig owner
+
+- number of active privileged identities
+- number of open exceptions
+- number of overdue recertifications
+- number of badge / credential deviations
+- number of sequence deviations in the zone model
+- number of incident-related access deviations
+- time to revocation during offboarding
+- number of assets without a clear owner
 
 ---
 
 # Recommended Policy Statements
 
 ## Example Policy 1
-Varje säkerhetsrelevant zon, identitet, credential och tillgång ska ha en tydligt utsedd ägare.
+
+Every security-relevant zone, identity, credential, and asset must have a clearly designated owner.
 
 ## Example Policy 2
-Tilldelning av fysisk eller logisk åtkomst ska ske enligt definierade godkännandeflöden och vara spårbar till roll, syfte och beslut.
+
+Assignment of physical or logical access must follow defined approval workflows and be traceable to role, purpose, and decision.
 
 ## Example Policy 3
-Undantag från ordinarie säkerhetsmodell ska vara tidsbegränsade, godkända, loggade och obligatoriskt eftergranskade.
+
+Exceptions to the standard security model must be time-limited, approved, logged, and subject to mandatory post-review.
 
 ## Example Policy 4
-Privilegierad åtkomst och högklassad fysisk åtkomst ska recertifieras regelbundet enligt riskbaserad modell.
+
+Privileged access and high-classification physical access must be recertified regularly according to a risk-based model.
 
 ## Example Policy 5
-Offboarding ska omfatta både fysisk, logisk och asset-relaterad åtkomst och vara verifierad innan processen anses slutförd.
+
+Offboarding must cover physical, logical, and asset-related access and be verified before the process is considered complete.
 
 ---
 
 # Common Governance Failures
 
-Om governance saknas eller är svag uppstår ofta:
+If governance is missing or weak, the following often occur:
 
-- otydligt ägarskap
-- permanenta undantag
-- access som aldrig recertifieras
-- privilegier utan verkligt behov
-- bristande offboarding
-- för stark personberoende drift
-- bristande revisionsbarhet
-- stark teknik men svag kontrollkedja
+- unclear ownership
+- permanent exceptions
+- access that is never recertified
+- privileges without real need
+- inadequate offboarding
+- overly person-dependent operations
+- poor auditability
+- strong technology but a weak control chain
 
 ---
 
 # Recommended Next Steps
 
 ## 1. Create Ownership Matrix
-Dokumentera:
-- vilka objekt som finns
-- vem som äger dem
-- vem som godkänner förändringar
-- vem som granskar dem
+
+Document:
+
+- which objects exist
+- who owns them
+- who approves changes
+- who reviews them
 
 ## 2. Define Review Cycles
-Bestäm:
-- vad som ska recertifieras
-- hur ofta
-- av vem
-- hur åtgärder följs upp
+
+Decide:
+
+- what should be recertified
+- how often
+- by whom
+- how actions are followed up
 
 ## 3. Build Exception Workflow
-Skapa process för:
-- begäran
-- godkännande
-- tidsgräns
-- loggning
-- eftergranskning
+
+Create a process for:
+
+- request
+- approval
+- time limit
+- logging
+- post-review
 
 ## 4. Link Governance to Other Models
-Knyt denna modell till:
+
+Link this model to:
+
 - zone model
 - privileged access model
 - asset custody model
@@ -571,18 +653,20 @@ Knyt denna modell till:
 - incident / recovery model
 
 ## 5. Add Governance Reporting
-Definiera:
-- nyckeltal
-- uppföljningsformat
-- rapporteringsintervall
-- ansvar för uppföljning
+
+Define:
+
+- key metrics
+- follow-up format
+- reporting intervals
+- responsibility for follow-up
 
 ---
 
 # Final Note
 
-I en högsäker miljö är governance det som förvandlar starka kontroller till ett verkligt styrt system.
+In a high-security environment, governance is what turns strong controls into a genuinely governed system.
 
-Den centrala principen i denna modell är:
+The central principle of this model is:
 
-> **Säkerhet ska inte bara vara stark — den ska också vara ägd, godkänd, granskningsbar och styrbar över tid.**
+> **Security must not only be strong — it must also be owned, approved, reviewable, and governable over time.**
