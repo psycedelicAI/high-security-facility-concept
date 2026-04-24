@@ -2,59 +2,59 @@
 
 > Where identity, movement, zones, devices, surveillance, privilege, recovery, and governance become one security model.
 
-A conceptual high-security facility model combining physical security, zone logic, credential custody, device context, surveillance architecture, privileged access, recovery, and governance.
+A conceptual high-security facility model that combines physical security, zone logic, credential custody, device context, surveillance architecture, privileged access, recovery, and governance.
 
 ---
 
 ## Overview
 
-**High-Security Facility Concept** är en konceptuell modell för miljöer där hög kontroll, tydlig spårbarhet och stark separation mellan roller, zoner, credentials, devices och skyddade tillgångar är avsiktliga designval.
+**High-Security Facility Concept** is a conceptual model for environments where high control, clear traceability, and strong separation between roles, zones, credentials, devices, and protected assets are intentional design choices.
 
-Konceptet riktar sig främst mot:
+The concept is primarily aimed at:
 
-- skyddade serverhallar
-- säkerhetsklassade driftmiljöer
-- tekniska säkerhetszoner
-- miljöer med höga krav på OPSEC
-- verksamheter där fysisk, logisk och operativ säkerhet måste integreras tätt
+- protected data centers
+- security-classified operational environments
+- technical security zones
+- environments with high OPSEC requirements
+- organizations where physical, logical, and operational security must be tightly integrated
 
-Detta repo beskriver en modell där:
+This repository describes a model in which:
 
-- människor
-- fysisk rörelse
-- zoner
+- people
+- physical movement
+- zones
 - credentials
 - devices
 - surveillance
-- privilegier
-- incidenter
+- privileges
+- incidents
 - recovery
 - governance
 
-behandlas som delar av samma **trust architecture**.
+are treated as parts of the same **trust architecture**.
 
 ---
 
 ## Core Idea
 
-Hög säkerhet uppstår inte bara genom att kontrollera **vem** som har access, utan också genom att kontrollera:
+High security does not arise only from controlling **who** has access, but also from controlling:
 
-- var personen befinner sig
-- hur personen rör sig genom facilityn
-- vilken zon som nås
-- vilken credential som används
-- vilken enhet som används
-- hur facilityn övervakas
-- om aktiviteten sker i rätt kontext
-- hur avvikelser, incidenter och recovery hanteras
+- where the person is located
+- how the person moves through the facility
+- which zone is being accessed
+- which credential is being used
+- which device is being used
+- how the facility is monitored
+- whether the activity occurs in the correct context
+- how deviations, incidents, and recovery are handled
 
-> **Identitet, fysisk närvaro, rörelse, enheter, credentials, surveillance, privilegier och återställning måste hänga ihop för att skapa verklig hög säkerhet.**
+> **Identity, physical presence, movement, devices, credentials, surveillance, privileges, and recovery must be connected to achieve real high security.**
 
 ---
 
 ## What Makes This Concept Distinct
 
-Några av konceptets mest särskiljande delar är:
+Some of the concept’s most distinctive elements are:
 
 - Sequential Zone Access
 - Credential Custody by Design
@@ -70,42 +70,42 @@ Några av konceptets mest särskiljande delar är:
 
 ## 3D Threat Thinking
 
-Konceptet utgår inte från att hot enbart kommer via entréer eller marknivå.
+The concept does not assume that threats only come through entrances or at ground level.
 
-I stället tillämpas **3D Threat Thinking**, där facilityn förstås som en rumslig säkerhetsmiljö där intrång, närvaro och påverkan kan ske från flera riktningar och nivåer, inklusive:
+Instead, it applies **3D Threat Thinking**, where the facility is understood as a spatial security environment in which intrusion, presence, and impact may occur from multiple directions and levels, including:
 
-- takaccess
-- sidointrång
-- ovanliga eller icke-linjära angreppsvägar
-- strukturellt förbisedda accesspunkter
+- roof access
+- lateral intrusion
+- unusual or non-linear attack paths
+- structurally overlooked access points
 
-Detta breddar hotmodellen bortom traditionell tvådimensionell perimeterlogik.
+This expands the threat model beyond traditional two-dimensional perimeter logic.
 
 ---
 
 ## Relation to Zero Trust
 
-Konceptet bygger i första hand på:
+The concept is primarily built around:
 
-- fysisk närvaro
-- zonkontext
-- rörelselogik
-- enheters lokation
-- credential custody i fysisk miljö
-- surveillance som aktiv säkerhetsfunktion
+- physical presence
+- zone context
+- movement logic
+- device location
+- credential custody in the physical environment
+- surveillance as an active security function
 
-Det är därför inte primärt utformat som en traditionell Zero Trust-modell, och det förutsätter inte att organisationer saknar kännedom om Zero Trust.
+It is therefore not primarily designed as a traditional Zero Trust model, nor does it assume that organizations lack familiarity with Zero Trust.
 
-I stället kan konceptet förstås som en **facility-centrerad tillitsmodell** som kompletterar Zero Trust genom att tillföra starkare fysisk, rumslig och operativ kontext.
+Instead, the concept can be understood as a **facility-centered trust model** that complements Zero Trust by adding stronger physical, spatial, and operational context.
 
-Zero Trust-principer som:
+Zero Trust principles such as:
 
-- kontextbaserad tillit
-- segmentering
-- minsta privilegium
-- kontinuerlig validering
+- context-based trust
+- segmentation
+- least privilege
+- continuous validation
 
-är fullt kompatibla med modellen och kan integreras där det är relevant.
+are fully compatible with the model and can be integrated where relevant.
 
 ---
 
@@ -113,13 +113,13 @@ Zero Trust-principer som:
 
 **Assessment Reference:** `88 / 100`
 
-Konceptet ska i nuläget ses som:
+At this stage, the concept should be viewed as:
 
-- en stark konceptmodell
-- ett dokumenterat designunderlag
-- ett ramverk för vidare säkerhetsarkitektur
-- ett underlag för diskussion, förädling och visualisering
-- inte en färdig implementationsspecifikation
+- a strong conceptual model
+- a documented design foundation
+- a framework for further security architecture work
+- a basis for discussion, refinement, and visualization
+- not a finished implementation specification
 
 ---
 
@@ -142,13 +142,13 @@ Konceptet ska i nuläget ses som:
 
 ## Start Here
 
-Om du är ny till repot, börja här:
+If you are new to the repository, start here:
 
 - [`docs/index.md`](docs/index.md)
 - [`docs/executive-summary.md`](docs/executive-summary.md)
 - [`docs/one-pager.md`](docs/one-pager.md)
 - [`docs/concept.md`](docs/concept.md)
-- [`docs/faq.md`](docs/faq.md)
+- [`docs/FAQ.md`](docs/FAQ.md)
 - [`docs/diagrams.md`](docs/diagrams.md)
 
 ---
@@ -159,7 +159,7 @@ Om du är ny till repot, börja här:
 - [`docs/executive-summary.md`](docs/executive-summary.md)
 - [`docs/one-pager.md`](docs/one-pager.md)
 - [`docs/concept.md`](docs/concept.md)
-- [`docs/faq.md`](docs/faq.md)
+- [`docs/FAQ.md`](docs/FAQ.md)
 - [`docs/diagrams.md`](docs/diagrams.md)
 - [`docs/value-proposition.md`](docs/value-proposition.md)
 - [`docs/use-cases.md`](docs/use-cases.md)
@@ -188,20 +188,20 @@ Om du är ny till repot, börja här:
 
 ## Intended Environments
 
-Detta koncept är mest relevant för:
+This concept is most relevant for:
 
-- skyddade serverhallar
-- högsäker teknisk drift
-- säkerhetsklassade miljöer
-- facility security med stark koppling till IT-säkerhet
-- miljöer där insiderhot och avvikande rörelsemönster är realistiska risker
-- verksamheter där credentials, devices, surveillance och fysisk närvaro måste hållas under hög kontroll
+- protected data centers
+- high-security technical operations
+- security-classified environments
+- facility security with a strong connection to IT security
+- environments where insider threats and anomalous movement patterns are realistic risks
+- organizations where credentials, devices, surveillance, and physical presence must be kept under strict control
 
-Det är inte primärt utformat för:
+It is not primarily designed for:
 
-- vanliga kontorsmiljöer
-- lågfriktionsmiljöer
-- generisk standard-enterprise IT
+- standard office environments
+- low-friction environments
+- generic standard enterprise IT
 
 ---
 
@@ -209,24 +209,24 @@ Det är inte primärt utformat för:
 
 ```text
 .
-├── [README.md](https://README.md)
+├── README.md
 └── docs/
-    ├── [index.md](https://index.md)
-    ├── [executive-summary.md](https://executive-summary.md)
-    ├── [one-pager.md](https://one-pager.md)
-    ├── [concept.md](https://concept.md)
-    ├── [faq.md](https://faq.md)
-    ├── [diagrams.md](https://diagrams.md)
-    ├── [value-proposition.md](https://value-proposition.md)
-    ├── [use-cases.md](https://use-cases.md)
-    ├── [assessment.md](https://assessment.md)
-    ├── [roadmap.md](https://roadmap.md)
-    ├── [zone-model.md](https://zone-model.md)
-    ├── [privileged-access.md](https://privileged-access.md)
-    ├── [asset-custody.md](https://asset-custody.md)
-    ├── [maintenance-model.md](https://maintenance-model.md)
-    ├── [surveillance-model.md](https://surveillance-model.md)
-    ├── [governance-model.md](https://governance-model.md)
-    ├── [policy-baseline.md](https://policy-baseline.md)
-    ├── [recovery-model.md](https://recovery-model.md)
-    └── [incident-response.md](https://incident-response.md)
+    ├── index.md
+    ├── executive-summary.md
+    ├── one-pager.md
+    ├── concept.md
+    ├── FAQ.md
+    ├── diagrams.md
+    ├── value-proposition.md
+    ├── use-cases.md
+    ├── assessment.md
+    ├── roadmap.md
+    ├── zone-model.md
+    ├── privileged-access.md
+    ├── asset-custody.md
+    ├── maintenance-model.md
+    ├── surveillance-model.md
+    ├── governance-model.md
+    ├── policy-baseline.md
+    ├── recovery-model.md
+    └── incident-response.md
