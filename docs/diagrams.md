@@ -1,24 +1,25 @@
 # Diagrams – High-Security Facility Concept
 
-> Visuella översikter över centrala delar av High-Security Facility Concept.
+> Visual overviews of key parts of the High-Security Facility Concept.
 
 ---
 
 ## Purpose
 
-Detta dokument samlar enkla Mermaid-diagram för att visualisera konceptets viktigaste samband.
+This document collects simple Mermaid diagrams to visualize the most important relationships in the concept.
 
-Diagrammen är tänkta att:
-- göra konceptet lättare att förstå
-- stödja README, pitch och designreview
-- visa hur olika säkerhetsdomäner hänger ihop
-- ge en visuell ingång till dokumentpaketet
+The diagrams are intended to:
+
+- make the concept easier to understand
+- support the README, pitch, and design review
+- show how different security domains are connected
+- provide a visual entry point into the document set
 
 ---
 
 # 1. High-Level Concept Overview
 
-Detta diagram visar konceptet på hög nivå som ett sammanhängande system.
+This diagram shows the concept at a high level as one coherent system.
 
 ```mermaid
 flowchart TD
@@ -46,16 +47,17 @@ flowchart TD
 ```
 
 ### Notes
-- Identitet, credentials och devices utgör centrala tillitsbärare.
-- Zonkontext och rörelselogik påverkar hur tillit bedöms.
-- Skyddade teknikzoner fungerar som en central nod där flera säkerhetsdomäner möts.
-- Governance och recovery är integrerade delar av modellen, inte sidospår.
+
+- Identity, credentials, and devices act as core carriers of trust.
+- Zone context and movement logic influence how trust is assessed.
+- Protected technical zones function as a central node where multiple security domains meet.
+- Governance and recovery are integrated parts of the model, not side tracks.
 
 ---
 
 # 2. Zone Flow Diagram
 
-Detta diagram visar ett förenklat exempel på sekventiell fysisk passage genom facilityn.
+This diagram shows a simplified example of sequential physical passage through the facility.
 
 ```mermaid
 flowchart LR
@@ -75,15 +77,16 @@ flowchart LR
 ```
 
 ### Notes
-- Passage till högre zoner bygger på korrekt väg genom tidigare zoner.
-- Avvikande rörelse kan leda till containment eller verifiering.
-- Recovery-path används när ordinarie passage eller kontroll måste återställas.
+
+- Access to higher zones depends on the correct path through prior zones.
+- Deviating movement may lead to containment or verification.
+- The recovery path is used when normal passage or control needs to be restored.
 
 ---
 
 # 3. Incident and Recovery Lifecycle
 
-Detta diagram visar hur incidenthantering och recovery hänger ihop.
+This diagram shows how incident handling and recovery are connected.
 
 ```mermaid
 flowchart TD
@@ -100,15 +103,16 @@ flowchart TD
 ```
 
 ### Notes
-- Incidenter går inte direkt till återöppning eller normaldrift.
-- Recovery ska ske via definierat beslut och kontrollerade åtgärder.
-- Eftergranskning är en viktig del av lärandet och styrningen.
+
+- Incidents do not go directly back to reopening or normal operations.
+- Recovery should take place through a defined decision and controlled actions.
+- Post-incident review is an important part of learning and governance.
 
 ---
 
 # 4. Privileged Access Context Diagram
 
-Detta diagram visar hur privilegierad åtkomst separeras från vanlig användning och kopplas till starkare kontroll, loggning och governance.
+This diagram shows how privileged access is separated from normal use and linked to stronger control, logging, and governance.
 
 ```mermaid
 flowchart TD
@@ -153,28 +157,29 @@ flowchart TD
 ```
 
 ### Notes
-- Vanlig användning och privilegierad åtkomst hålls i separata kontexter.
-- Privilegierad åtkomst kräver dedikerad identitet, dedikerad enhet och stark autentisering.
-- Alla administrativa handlingar kopplas till loggning och governance review.
-- Break-glass finns som nödfunktion, men är uttryckligen avvikande, kontrollerad och granskningsbar.
+
+- Normal use and privileged access are kept in separate contexts.
+- Privileged access requires a dedicated identity, a dedicated device, and strong authentication.
+- All administrative actions are linked to logging and governance review.
+- Break-glass exists as an emergency function, but is explicitly exceptional, controlled, and reviewable.
 
 ---
 
 # Suggested Use
 
-Dessa diagram kan användas som:
+These diagrams can be used as:
 
-- översiktsmaterial i repo
-- stöd i `concept.md`
-- stöd i `executive-summary.md`
-- snabb visuell introduktion för nya läsare
-- underlag för vidare, mer detaljerade diagram
+- overview material in the repository
+- supporting material in `concept.md`
+- supporting material in `executive-summary.md`
+- a quick visual introduction for new readers
+- a foundation for more detailed diagrams later
 
 ---
 
 # Future Diagram Candidates
 
-Möjliga framtida diagram att lägga till:
+Possible future diagrams to add:
 
 - Credential Custody Flow
 - Technical Zone Operating States
@@ -185,6 +190,6 @@ Möjliga framtida diagram att lägga till:
 
 # Final Note
 
-Diagrammen i detta dokument är avsiktligt förenklade för att skapa snabb förståelse.
+The diagrams in this document are intentionally simplified to support rapid understanding.
 
-De ska inte ses som full implementationsdesign, utan som visuella representationer av konceptets kärnlogik.
+They should not be seen as full implementation design, but as visual representations of the core logic of the concept.
