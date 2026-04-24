@@ -1,6 +1,6 @@
 # Zone Model – High-Security Facility Concept
 
-> En modell för hur säkerhetszoner, sekventiell passage, rörelselogik, spatial hotförståelse och kontrollerad övergång mellan miljöer kan användas i en högsäker facility.
+> A model for how security zones, sequential passage, movement logic, spatial threat understanding, and controlled transitions between environments can be used in a high-security facility.
 
 ---
 
@@ -12,168 +12,188 @@
 | Subject | High-Security Facility Concept |
 | Type | Core Architecture Document |
 | Status | Draft |
-| Scope | Zonstruktur, passage, movement logic, avvikelsehantering, roof-aware zoning, skyddade övergångar |
+| Scope | Zone structure, passage, movement logic, deviation handling, roof-aware zoning, protected transitions |
 | Audience | Security architects, facility planners, physical security specialists, technical leads, reviewers |
 
 ---
 
 ## Purpose
 
-Detta dokument beskriver hur facilityn delas in i säkerhetszoner och hur rörelse mellan dessa zoner kan kontrolleras inom **High-Security Facility Concept**.
+This document describes how the facility is divided into security zones and how movement between these zones can be controlled within the **High-Security Facility Concept**.
 
-Syftet är att definiera en modell där:
+Its purpose is to define a model in which:
 
-- zoner representerar olika skyddsvärden
-- passage sker sekventiellt och kontrollerat
-- rörelsemönster i sig är säkerhetsrelevanta
-- vissa övergångar kräver särskild kontroll eller containment
-- avvikelser kan upptäckas och hanteras
-- hotmodellen förstås rumsligt och inte bara i två dimensioner
+- zones represent different protection values
+- passage takes place sequentially and under control
+- movement patterns are themselves security-relevant
+- some transitions require stronger control or containment
+- deviations can be detected and handled
+- the threat model is understood spatially and not only in two dimensions
 
-Zonmodellen är en central del av konceptets trust architecture eftersom fysisk närvaro, tillåten rörelse och platsbunden kontext påverkar hur tillit bedöms.
+The zone model is a central part of the concept’s trust architecture because physical presence, permitted movement, and location-bound context influence how trust is assessed.
 
 ---
 
 # Why a Zone Model Exists
 
-I högsäker miljö räcker det inte att veta att någon “har access”.
+In a high-security environment, it is not enough to know that someone “has access.”
 
-Det är också viktigt att förstå:
+It is also important to understand:
 
-- vilken zon personen befinner sig i
-- hur personen nådde zonen
-- om rörelsen följer förväntad sekvens
-- om närvaron är normal i den aktuella miljön
-- om rätt aktivitet sker på rätt plats
-- om någon har nått en känslig yta via en ovanlig eller icke-förväntad väg
+- which zone the person is in
+- how the person reached the zone
+- whether the movement follows the expected sequence
+- whether the presence is normal in the current environment
+- whether the right activity is taking place in the right location
+- whether someone has reached a sensitive surface through an unusual or unexpected path
 
-Utan zonlogik riskerar facilityn att reduceras till en samling enskilda dörrar och behörigheter utan tydlig fysisk tillitsmodell.
+Without zone logic, the facility risks being reduced to a collection of individual doors and authorizations without a clear physical trust model.
 
 ---
 
 # Design Philosophy
 
 ## Zones Represent Trust Context
-En zon är inte bara ett område i byggnaden, utan en säkerhetskontext med egna regler, förväntningar och skyddskrav.
+
+A zone is not only an area within the building, but a security context with its own rules, expectations, and protection requirements.
 
 ## Movement Has Security Meaning
-Hur någon rör sig genom facilityn är säkerhetsrelevant, inte bara var personen slutligen befinner sig.
+
+How someone moves through the facility is security-relevant, not only where the person ultimately ends up.
 
 ## Access Should Be Progressive
-Tillgång till mer känsliga områden ska normalt kräva passage genom tidigare kontrollpunkter och inte kunna ske genom ologiska genvägar.
+
+Access to more sensitive areas should normally require passage through prior control points and should not be possible through illogical shortcuts.
 
 ## Some Transitions Need Stronger Control
-Övergångar mellan vissa zoner kräver högre säkerhetsnivå, starkare verifiering, containment eller särskild syftesprövning.
+
+Transitions between certain zones require a higher security level, stronger verification, containment, or special purpose validation.
 
 ## Zones Must Reflect Real Risk, Not Just Floor Plans
-Zonstrukturen ska bygga på skyddsvärde, funktion, rörelserisk och angreppsyta — inte bara på byggnadens fysiska ritning.
+
+The zone structure must be based on protection value, function, movement risk, and attack surface — not only on the building’s physical floor plan.
 
 ## Spatial Threat Thinking Matters
-Hot mot facilityn ska inte förstås som enbart marknära eller tvådimensionella. Zonmodellen ska därför ta höjd för rumsliga angreppsvägar, inklusive tak, höjdrelaterade ytor och strukturellt förbisedda accesspunkter.
+
+Threats to the facility must not be understood as only ground-level or two-dimensional. The zone model must therefore account for spatial attack paths, including roofs, height-related surfaces, and structurally overlooked access points.
 
 ---
 
 # 3D Threat Thinking in the Zone Model
 
-Zonmodellen i detta koncept bygger på **3D Threat Thinking**.
+The zone model in this concept is based on **3D Threat Thinking**.
 
-Det innebär att facilityn inte enbart delas in efter rum, korridorer och entréer på marknivå, utan att även andra rumsliga ytor och åtkomstvägar kan behöva behandlas som säkerhetsrelevanta zoner eller zonnära riskytor.
+This means that the facility is not divided only according to rooms, corridors, and entrances at ground level, but that other spatial surfaces and access paths may also need to be treated as security-relevant zones or zone-adjacent risk surfaces.
 
-Detta inkluderar exempelvis:
+This includes, for example:
 
-- tak
-- takaccesspunkter
-- höjdrelaterade servicevägar
-- interna vertikala förbindelser
-- ovanliga bypass-vägar mellan yttre och inre miljö
+- roofs
+- roof access points
+- height-related service paths
+- internal vertical connections
+- unusual bypass routes between external and internal environments
 
-Den praktiska poängen är att skyddet inte får utgå från att angripare alltid rör sig enligt byggnadens avsedda användningsmönster.
+The practical point is that protection must not assume that attackers always move according to the building’s intended use pattern.
 
-Zonmodellen ska därför kunna stödja en hotförståelse där intrång kan ske:
+The zone model must therefore be able to support a threat understanding in which intrusion may occur:
 
-- från sidan
-- ovanifrån
-- genom strukturellt svaga övergångar
-- via ovanliga men högpåverkande accessvägar
+- from the side
+- from above
+- through structurally weak transitions
+- via unusual but high-impact access paths
 
 ---
 
 # Core Zone Types
 
-Följande zonkategorier är exempel på hur facilityn kan struktureras.
+The following zone categories are examples of how the facility can be structured.
 
 ## 1. External Perimeter Zone
-Yttre område runt byggnaden där närvaro, approach och perimeterbeteende kan observeras.
 
-Typiska egenskaper:
-- första upptäcktsyta
-- stöd för CCTV och FLIR
-- fordon- och personrörelse nära byggnad
-- tidig indikation på avvikande aktivitet
+External area around the building where presence, approach, and perimeter behavior can be observed.
+
+Typical characteristics:
+
+- first detection surface
+- support for CCTV and FLIR
+- vehicle and person movement near the building
+- early indication of anomalous activity
 
 ## 2. Entry Control Zone
-Område där initial access verifieras.
 
-Typiska egenskaper:
-- reception eller bevakad entré
-- första identitetskontroll
-- besöksstyrning
-- möjlighet till tidig avvisning eller eskalering
+Area where initial access is verified.
+
+Typical characteristics:
+
+- reception or guarded entrance
+- first identity check
+- visitor control
+- ability for early rejection or escalation
 
 ## 3. Controlled Transition Zone
-Övergångszon mellan lägre och högre kontrollerad miljö.
 
-Typiska egenskaper:
-- man-trap eller motsvarande passagekontroll
-- sekventiell verifiering
-- containment-möjlighet
-- tydlig gräns mellan mer öppen och mer skyddad yta
+Transition zone between lower-controlled and higher-controlled environments.
+
+Typical characteristics:
+
+- man-trap or equivalent passage control
+- sequential verification
+- containment capability
+- clear boundary between a more open and a more protected area
 
 ## 4. Internal Controlled Zone
-Intern zon med begränsad men normal verksamhetsrörelse.
 
-Typiska egenskaper:
-- arbetsytor eller interna passager
-- kontrollerad närvaro
-- inte full fri rörelse
-- förväntad men inte obegränsad aktivitet
+Internal zone with limited but normal operational movement.
+
+Typical characteristics:
+
+- work areas or internal passages
+- controlled presence
+- not fully unrestricted movement
+- expected but not unlimited activity
 
 ## 5. High-Security Zone
-Zon med högre skyddsvärde där närvaro ska vara mer restriktiv, mer motiverad och tydligare spårbar.
 
-Typiska egenskaper:
-- starkare passagekrav
-- lägre tolerans för avvikelser
-- starkare syftesbundenhet
-- högre krav på eskort, loggning eller kontroll
+Zone with higher protection value where presence should be more restrictive, more justified, and more clearly traceable.
+
+Typical characteristics:
+
+- stronger passage requirements
+- lower tolerance for deviations
+- stronger purpose-bound access
+- higher requirements for escorting, logging, or control
 
 ## 6. Protected Technical Zone
-Skyddad teknisk miljö där mänsklig närvaro normalt ska vara begränsad, motiverad och särskilt kontrollerad.
 
-Typiska egenskaper:
-- kritisk infrastruktur
-- högre krav på teknisk, fysisk och operativ kontroll
-- begränsad serviceaccess
-- tydlig koppling till maintenance, privileged access och incidenthantering
+Protected technical environment where human presence should normally be limited, justified, and especially controlled.
+
+Typical characteristics:
+
+- critical infrastructure
+- higher requirements for technical, physical, and operational control
+- limited service access
+- clear linkage to maintenance, privileged access, and incident handling
 
 ## 7. Roof and Elevated Access Zone
-Takyta eller annan höjdrelaterad yta som i högsäker miljö ska behandlas som en säkerhetsrelevant accessyta, inte som en neutral byggnadskomponent.
 
-Typiska egenskaper:
-- låg förväntad normalnärvaro
-- stark avvikelsekaraktär vid oplanerad aktivitet
-- behov av sensorer, övervakning och förstärkta accesspunkter
-- koppling till 3D Threat Thinking och ovanliga intrångsvägar
+Roof surface or other height-related surface that, in a high-security environment, should be treated as a security-relevant access surface rather than as a neutral building component.
+
+Typical characteristics:
+
+- low expected normal presence
+- strong deviation character in case of unplanned activity
+- need for sensors, surveillance, and reinforced access points
+- linkage to 3D Threat Thinking and unusual intrusion paths
 
 ---
 
 # Sequential Zone Access
 
-En central princip i modellen är att högre skyddszoner normalt ska nås genom korrekt sekvens.
+A central principle in the model is that higher-protection zones should normally be reached through the correct sequence.
 
-Det betyder att en person eller aktivitet bör kunna förstås i relation till tidigare passage genom relevanta kontrollpunkter.
+This means that a person or activity should be understandable in relation to prior passage through relevant control points.
 
-Exempel:
+Examples:
 
 - external perimeter → entry control
 - entry control → controlled transition
@@ -181,216 +201,224 @@ Exempel:
 - internal controlled zone → high-security zone
 - high-security zone → protected technical zone
 
-Detta stärker:
+This strengthens:
 
-- spårbarhet
-- tillitsbedömning
-- upptäckt av ologisk närvaro
-- containment vid avvikelse
+- traceability
+- trust assessment
+- detection of illogical presence
+- containment in case of deviation
 
-Sekventiell passage betyder inte att alla rörelser måste vara identiska, men att säkerhetsmodellen ska kunna skilja mellan:
+Sequential passage does not mean that all movement must be identical, but that the security model should be able to distinguish between:
 
-- normal förväntad väg
-- godkänt undantag
-- ologisk eller misstänkt väg
+- normal expected path
+- approved exception
+- illogical or suspicious path
 
 ---
 
 # Zone Transitions
 
-Övergången mellan zoner är ofta viktigare än själva zonytan.
+The transition between zones is often more important than the zone surface itself.
 
-Därför ska vissa övergångar ses som egna säkerhetskontroller.
+Some transitions must therefore be treated as security controls in their own right.
 
 ## Low-to-Medium Control Transition
-Övergångar från mer öppen till mer kontrollerad yta kräver grundläggande verifiering och tydlig passagekontroll.
+
+Transitions from a more open area to a more controlled area require basic verification and clear passage control.
 
 ## Medium-to-High Security Transition
-Övergångar till högsäker zon bör kräva starkare kontroll, högre säkerhetstolerans och tydligare koppling till syfte.
+
+Transitions into a high-security zone should require stronger control, higher security tolerance, and a clearer link to purpose.
 
 ## High-to-Technical Transition
-Övergång till skyddad teknikzon ska vara särskilt strikt eftersom närvaro där kan ha hög konsekvens.
+
+Transition into a protected technical zone must be especially strict because presence there may have high consequence.
 
 ## Roof-to-Interior Transition
-Övergångar mellan tak och inre miljö ska i högsäker facility behandlas som särskilt känsliga, eftersom de kan utgöra ovanliga bypass-vägar för intrång.
 
-Sådana övergångar bör:
+Transitions between the roof and the internal environment must, in a high-security facility, be treated as especially sensitive because they may form unusual bypass paths for intrusion.
 
-- förstärkas strukturellt
-- sensoreras
-- övervakas
-- ge larm vid oplanerad aktivitet
-- inte möjliggöra direkt och okontrollerad vidarepassage
+Such transitions should:
+
+- be structurally reinforced
+- be instrumented with sensors
+- be monitored
+- generate alarms on unplanned activity
+- not allow direct and uncontrolled onward passage
 
 ---
 
 # Movement Logic
 
-Rörelse i facilityn ska förstås som en säkerhetssignal.
+Movement within the facility must be understood as a security signal.
 
-Det innebär att systemet bör kunna skilja mellan:
+This means that the system should be able to distinguish between:
 
-- normal rörelse
-- ovanlig men legitim rörelse
-- avvikande rörelse
-- potentiellt fientlig eller otillåten rörelse
+- normal movement
+- unusual but legitimate movement
+- anomalous movement
+- potentially hostile or unauthorized movement
 
 ## Normal Movement
-Rörelse som följer förväntad väg, roll och syfte.
+
+Movement that follows the expected path, role, and purpose.
 
 ## Unusual but Legitimate Movement
-Rörelse som avviker från vardagsmönster men är planerad, godkänd eller förklarbar.
+
+Movement that deviates from everyday patterns but is planned, approved, or explainable.
 
 ## Suspicious Movement
-Rörelse som saknar tydlig förklaring, bryter sekvens eller når fel zon vid fel tid.
+
+Movement that lacks a clear explanation, breaks sequence, or reaches the wrong zone at the wrong time.
 
 ## High-Risk Movement
-Rörelse som indikerar försök att bypassa kontroll, nå skyddad yta via fel väg eller kombinera fysisk närvaro med misstänkt syfte.
+
+Movement that indicates an attempt to bypass control, reach a protected surface via the wrong path, or combine physical presence with suspicious intent.
 
 ---
 
 # Roof-Aware Movement Logic
 
-I en modell som bygger på 3D Threat Thinking måste rörelse även kunna förstås i relation till höjd och ovanliga accessvägar.
+In a model based on 3D Threat Thinking, movement must also be understood in relation to height and unusual access paths.
 
-Det innebär att:
+This means that:
 
-- aktivitet på tak normalt ska ha mycket låg baslinje
-- oplanerad närvaro på tak bör betraktas som stark avvikelse
-- rörelse från roof zone mot inre struktur ska behandlas som högriskhändelse
-- roof-related access ska kunna särskiljas från marknära normaltrafik
+- rooftop activity should normally have a very low baseline
+- unplanned rooftop presence should be treated as a strong deviation
+- movement from the roof zone toward the internal structure should be treated as a high-risk event
+- roof-related access should be distinguishable from normal ground-level traffic
 
-Detta gör att hotmodellen blir mindre beroende av tvådimensionell perimeterlogik.
+This makes the threat model less dependent on two-dimensional perimeter logic.
 
 ---
 
 # Containment and Verification
 
-När rörelse, passage eller zonnärvaro avviker från förväntad modell måste facilityn kunna reagera.
+When movement, passage, or zone presence deviates from the expected model, the facility must be able to respond.
 
-Det kan innebära:
+This may involve:
 
-- verifiering
-- tillfällig containment
-- manuell kontroll
-- larmeskalering
-- omdirigering
-- incidentklassning
+- verification
+- temporary containment
+- manual control
+- alarm escalation
+- redirection
+- incident classification
 
-Containment behöver inte alltid vara dramatisk fysisk låsning, men modellen ska kunna bromsa eller markera osäker passage så att tillit inte ges automatiskt.
+Containment does not always need to be dramatic physical lockdown, but the model must be able to slow or mark uncertain passage so that trust is not granted automatically.
 
 ---
 
 # Zone-Based Surveillance Integration
 
-Zonmodellen ska samverka med surveillance-modellen.
+The zone model must work together with the surveillance model.
 
-Det innebär att kamera- och sensorlogik bör stödja:
+This means that camera and sensor logic should support:
 
-- zonövergångar
-- sekventiell passage
-- upptäckt av avvikande rörelse
-- roof-related incidenter
-- snabb visuell verifiering av zonhändelser
+- zone transitions
+- sequential passage
+- detection of anomalous movement
+- roof-related incidents
+- rapid visual verification of zone events
 
-Exempel på särskilt viktiga kamerastödjepunkter:
+Examples of especially important camera support points:
 
-- entré
+- entrance
 - reception
 - man-trap
-- övergång till high-security zone
-- övergång till protected technical zone
+- transition into the high-security zone
+- transition into the protected technical zone
 - roof access points
-- taknära ytor och höjdrelaterade åtkomstpunkter
+- roof-adjacent surfaces and height-related access points
 
 ---
 
 # Zone Integrity
 
-Zonintegritet betyder att en zon faktiskt beter sig som den säkerhetsnivå den påstår sig vara.
+Zone integrity means that a zone actually behaves like the security level it claims to be.
 
-Det innebär att zonintegritet inte bara beror på dörrar eller lås, utan också på:
+This means that zone integrity depends not only on doors or locks, but also on:
 
-- passagekontroll
-- rörelselogik
+- passage control
+- movement logic
 - surveillance
-- sensorering
-- avvikelsehantering
-- disciplin i undantagshantering
-- skydd mot ovanliga bypass-vägar
+- sensing
+- deviation handling
+- discipline in exception handling
+- protection against unusual bypass paths
 
-Om ologiska vägar in i en zon tolereras förlorar zonen en del av sitt skyddsvärde även om formell accesskontroll finns.
+If illogical paths into a zone are tolerated, the zone loses part of its protection value even if formal access control exists.
 
 ---
 
 # Exception Handling
 
-Alla verkliga facilitymiljöer har undantag.
+All real facility environments have exceptions.
 
-Det kan exempelvis gälla:
+This may apply, for example, to:
 
 - service
 - maintenance
-- räddningsinsats
-- tillfällig omledning
-- särskilt godkänd takaccess
-- recovery-läge
+- emergency response
+- temporary rerouting
+- specially approved roof access
+- recovery mode
 
-Dessa undantag måste dock behandlas som just undantag och inte bli informell normalitet.
+These exceptions must, however, be treated as exceptions and must not become informal normality.
 
-Undantag bör därför:
+Exceptions should therefore:
 
-- vara dokumenterade
-- vara godkända
-- vara tids- eller syftesbegränsade
-- vara spårbara
-- kunna granskas i efterhand
+- be documented
+- be approved
+- be time- or purpose-limited
+- be traceable
+- be reviewable afterward
 
 ---
 
 # Governance Implications
 
-Zonmodellen kräver governance för att behålla sin styrka över tid.
+The zone model requires governance to retain its strength over time.
 
-Detta innefattar bland annat:
+This includes, among other things:
 
-- tydligt ägarskap för zonstruktur
-- definierade regler för passage mellan zoner
-- återkommande review av zonindelning
-- review av undantag och bypass-mönster
-- kontroll av att roof-related riskytor fortsatt hanteras
-- samordning mellan fysisk säkerhet, surveillance, drift och governancefunktioner
+- clear ownership of the zone structure
+- defined rules for passage between zones
+- recurring review of zone segmentation
+- review of exceptions and bypass patterns
+- confirmation that roof-related risk surfaces continue to be handled
+- coordination between physical security, surveillance, operations, and governance functions
 
 ---
 
 # Design Boundaries
 
-Detta dokument beskriver inte:
+This document does not describe:
 
-- full byggnadsteknisk projektering
-- exakta dörr- eller låsspecifikationer
-- fullständig brand- eller utrymningslogik
-- juridiska krav per jurisdiktion
-- full implementation av sensorsystem
-- detaljerad bemanningsmodell
+- full building-engineering design
+- exact door or lock specifications
+- complete fire or evacuation logic
+- legal requirements per jurisdiction
+- full implementation of sensor systems
+- detailed staffing model
 
-Dessa delar kräver separat projektering, specialistarbete och miljöspecifik anpassning.
+These aspects require separate design work, specialist input, and environment-specific adaptation.
 
 ---
 
 # Summary
 
-Zonmodellen i **High-Security Facility Concept** handlar inte bara om att dela in en byggnad i olika områden.
+The zone model in the **High-Security Facility Concept** is not only about dividing a building into different areas.
 
-Den handlar om att skapa en säkerhetsarkitektur där:
+It is about creating a security architecture in which:
 
-- plats har betydelse
-- rörelse har betydelse
-- övergångar har betydelse
-- avvikelser kan upptäckas
-- högre skyddsvärde kräver tydligare sekvens
-- även tak och höjdrelaterade ytor behandlas som relevanta delar av hotmodellen
+- location matters
+- movement matters
+- transitions matter
+- deviations can be detected
+- higher protection value requires clearer sequence
+- roofs and height-related surfaces are also treated as relevant parts of the threat model
 
-Den centrala idén är:
+The central idea is:
 
-> En högsäker facility blir starkare när zoner inte bara definieras geografiskt, utan fungerar som aktiva tillitskontexter där rörelse, övergång, avvikelse och rumslig hotförståelse hänger ihop.
+> A high-security facility becomes stronger when zones are not defined only geographically, but function as active trust contexts in which movement, transition, deviation, and spatial threat understanding are connected.
