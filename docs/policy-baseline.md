@@ -1,6 +1,6 @@
 # Policy Baseline – High-Security Facility Concept
 
-> Grundläggande policyprinciper för fysisk säkerhet, zonstyrning, credentials, privilegierad åtkomst, enhetskontroll, tekniska zoner, incidenthantering, recovery och governance i en högsäker teknisk anläggning.
+> Foundational policy principles for physical security, zone governance, credentials, privileged access, device control, technical zones, incident handling, recovery, and governance in a high-security technical facility.
 
 ---
 
@@ -12,368 +12,415 @@
 | Subject | High-Security Facility Concept |
 | Type | Security Policy Baseline / Concept Governance Foundation |
 | Status | Draft |
-| Scope | Baseline policy principles for physical, logical and operational security |
+| Scope | Baseline policy principles for physical, logical, and operational security |
 | Audience | Security architects, governance owners, facility planners, IT security leads, reviewers |
 
 ---
 
 ## Purpose
 
-Detta dokument definierar en **policy baseline** för High-Security Facility Concept.
+This document defines a **policy baseline** for the High-Security Facility Concept.
 
-Syftet är att formulera de grundläggande policykrav som ska gälla för hela modellen, så att konceptet inte bara består av designidéer och arkitekturprinciper, utan också av tydliga styrande utgångspunkter.
+Its purpose is to formulate the foundational policy requirements that should apply across the entire model, so that the concept does not consist only of design ideas and architectural principles, but also of clear governing assumptions.
 
-Denna baseline anger vad som ska betraktas som:
+This baseline defines what should be regarded as:
 
-- standardförväntan
-- miniminivå
-- obligatorisk säkerhetsriktning
-- grund för vidare detaljpolicy
+- the standard expectation
+- the minimum level
+- the mandatory security direction
+- the basis for further detailed policy
 
 ---
 
 ## Scope
 
-Policy-baselinen omfattar följande områden:
+The policy baseline covers the following areas:
 
-- fysisk säkerhet
-- zonindelning och rörelselogik
-- identiteter och credentials
-- badges och tokens
-- privilegierad åtkomst
-- klienter och devices
+- physical security
+- zone segmentation and movement logic
+- identities and credentials
+- badges and tokens
+- privileged access
+- clients and devices
 - asset custody
-- skyddade tekniska zoner
-- maintenance och change
-- incidenthantering
+- protected technical zones
+- maintenance and change
+- incident handling
 - recovery
-- governance, review och undantag
+- governance, review, and exceptions
 
 ---
 
 # Baseline Security Principles
 
 ## 1. Security Shall Be Layered
-Säkerheten ska byggas i flera lager och inte vila på en enskild kontroll.
 
-Det innebär att fysisk access, identitet, zonlogik, devices, privilegier och recovery ska samverka i en sammanhängande modell.
+Security must be built in multiple layers and must not depend on a single control.
+
+This means that physical access, identity, zone logic, devices, privileges, and recovery must work together in a coherent model.
 
 ---
 
 ## 2. Trust Shall Be Contextual
-Tillit ska inte enbart baseras på att en credential existerar eller att ett konto kan autentiseras.
 
-Tillit ska även påverkas av:
-- zon
-- rörelsemönster
+Trust must not be based only on the existence of a credential or the fact that an account can authenticate.
+
+Trust must also be influenced by:
+
+- zone
+- movement pattern
 - device context
-- roll
-- syfte
-- tidsfönster
-- säkerhetsstatus
+- role
+- purpose
+- time window
+- security status
 
 ---
 
 ## 3. High-Risk Actions Shall Require Higher Control
-Ju högre risk en aktivitet innebär, desto högre kontrollnivå ska krävas.
 
-Det gäller särskilt:
-- privilegierad administration
-- högklassad fysisk access
-- tekniskt arbete i skyddade zoner
-- undantag från normal policy
-- recovery och emergency access
+The higher the risk of an activity, the higher the level of control that must be required.
+
+This applies in particular to:
+
+- privileged administration
+- high-classification physical access
+- technical work in protected zones
+- exceptions to normal policy
+- recovery and emergency access
 
 ---
 
 ## 4. Security-Relevant Assets Shall Be Under Active Control
-Badges, tokens, adminenheter, känsliga laptops och andra säkerhetsrelevanta tillgångar ska hållas under aktiv kontroll, inte bara antagen kontroll.
+
+Badges, tokens, admin devices, sensitive laptops, and other security-relevant assets must be kept under active control, not merely assumed control.
 
 ---
 
 ## 5. Exceptions Shall Be Temporary and Controlled
-Undantag från ordinarie säkerhetsmodell ska vara:
-- motiverade
-- godkända
-- tidsbegränsade
-- loggade
-- eftergranskade
+
+Exceptions to the standard security model must be:
+
+- justified
+- approved
+- time-limited
+- logged
+- post-reviewed
 
 ---
 
 ## 6. Recovery Shall Preserve Security Intent
-Recovery och fallback får inte innebära att ordinarie säkerhetskrav överges permanent eller informellt.
+
+Recovery and fallback must not mean that ordinary security requirements are permanently or informally abandoned.
 
 ---
 
 ## 7. Governance Shall Be Explicit
-Alla centrala säkerhetskontroller ska ha tydligt ägarskap, godkännandeflöde och granskningsbarhet.
+
+All central security controls must have clear ownership, approval flow, and reviewability.
 
 ---
 
 # Physical Security Baseline
 
 ## Policy Statement
-Facilityn ska använda flera lager av fysisk säkerhet för att styra, begränsa och övervaka fysisk tillgång till anläggningens olika zoner.
+
+The facility must use multiple layers of physical security to govern, restrict, and monitor physical access to the facility’s different zones.
 
 ## Baseline Requirements
-- fysisk tillgång ska vara behovsstyrd
-- reception eller motsvarande kontrollpunkt ska finnas
-- övergång mellan zoner ska vara kontrollerad
-- högklassade zoner ska ha striktare fysisk accessmodell än öppna eller interna standardzoner
-- fysisk säkerhet ska stödja både prevention, detektion och containment
+
+- physical access must be need-based
+- a reception or equivalent control point must exist
+- transitions between zones must be controlled
+- high-classification zones must have a stricter physical access model than open or internal standard zones
+- physical security must support prevention, detection, and containment
 
 ---
 
 # Zone and Movement Baseline
 
 ## Policy Statement
-Fysisk rörelse inom facilityn ska betraktas som en säkerhetsparameter och omfattas av definierad policy.
+
+Physical movement within the facility must be treated as a security parameter and be subject to defined policy.
 
 ## Baseline Requirements
-- zoner ska klassificeras efter känslighet
-- varje zon ska ha definierat syfte och tillåten rollbaserad access
-- övergång mellan högre klassade zoner ska kunna loggas och granskas
-- sekventiell zonvalidering ska användas där skyddsvärdet motiverar det
-- avvikande rörelsemönster ska kunna flaggas och hanteras
+
+- zones must be classified by sensitivity
+- each zone must have a defined purpose and permitted role-based access
+- transitions into higher-classified zones must be loggable and reviewable
+- sequential zone validation must be used where the protection value justifies it
+- anomalous movement patterns must be detectable and manageable
 
 ---
 
 # Identity and Credential Baseline
 
 ## Policy Statement
-Fysisk och logisk identitet ska hanteras som säkerhetskritiska funktioner med tydlig koppling till roll, tillgång och ansvar.
+
+Physical and logical identity must be handled as security-critical functions with a clear link to role, access, and responsibility.
 
 ## Baseline Requirements
-- credentials ska vara personbundna eller spårbart tilldelade
-- credential lifecycle ska vara definierad
-- förlust, spärr och återutgivning ska hanteras genom kontrollerad process
-- credentials med högre risk ska ha högre skyddsnivå
-- identitetskontroller ska kunna stödja både normal access och recovery
+
+- credentials must be personally assigned or traceably allocated
+- the credential lifecycle must be defined
+- loss, revocation, and reissuance must be handled through a controlled process
+- higher-risk credentials must have a higher level of protection
+- identity controls must support both normal access and recovery
 
 ---
 
 # Badge and Token Baseline
 
 ## Policy Statement
-Badges, autentiseringstokens och liknande säkerhetsobjekt ska hanteras under tydlig chain of custody.
+
+Badges, authentication tokens, and similar security objects must be handled under a clear chain of custody.
 
 ## Baseline Requirements
-- badges ska som huvudregel inte lämna facilityn utan uttryckligt behov
-- återlämning och utebliven återlämning ska kunna följas upp
-- högprivilegierade tokens ska omfattas av starkare kontroll än standardobjekt
-- credential exposure utanför kontrollerad miljö ska ses som säkerhetsrelevant händelse
-- tillfälliga credentials ska vara tidsbegränsade och särskilt markerade
+
+- as a general rule, badges must not leave the facility without an explicit need
+- return and failure to return must be traceable and follow-up capable
+- highly privileged tokens must be subject to stronger control than standard objects
+- credential exposure outside the controlled environment must be treated as a security-relevant event
+- temporary credentials must be time-limited and clearly marked
 
 ---
 
 # Privileged Access Baseline
 
 ## Policy Statement
-Privilegerad åtkomst ska vara separerad från vanlig användning, starkt autentiserad, spårbar och begränsad till definierad kontext.
+
+Privileged access must be separated from normal use, strongly authenticated, traceable, and limited to a defined context.
 
 ## Baseline Requirements
-- adminidentiteter ska vara separata från standardanvändaridentiteter
-- privilegierad åtkomst ska endast tillåtas från godkända adminenheter eller definierad säker kontext
-- högprivilegierade funktioner ska skyddas starkare än standardfunktioner
-- bredast möjliga privilegier ska betraktas som undantag
-- break-glass ska vara särskilt definierat, skyddat och eftergranskat
+
+- admin identities must be separate from standard user identities
+- privileged access must be allowed only from approved admin devices or a defined secure context
+- highly privileged functions must be protected more strongly than standard functions
+- the broadest possible privileges must be treated as exceptions
+- break-glass must be explicitly defined, protected, and post-reviewed
 
 ---
 
 # Device and Endpoint Baseline
 
 ## Policy Statement
-Devices ska behandlas som säkerhetsbärare och omfattas av policy för roll, rörelse, användning och skyddsnivå.
+
+Devices must be treated as carriers of security and be subject to policy for role, movement, usage, and protection level.
 
 ## Baseline Requirements
-- olika deviceklasser ska kunna ha olika policy
-- högre tillitsnivå ska kräva högre kontroll
-- känsliga enheter ska inte användas i odefinierad eller blandad kontext
-- avvikande device movement ska kunna loggas och hanteras
-- devices med känslig funktion ska kunna isoleras eller återkallas enligt policy
+
+- different device classes must be able to have different policy
+- a higher trust level must require a higher level of control
+- sensitive devices must not be used in undefined or mixed context
+- anomalous device movement must be loggable and manageable
+- devices with sensitive function must be isolatable or retractable according to policy
 
 ---
 
 # Asset Custody Baseline
 
 ## Policy Statement
-Säkerhetskritiska tillgångar ska ha tydlig ägare, definierad förvaring och spårbar användning.
+
+Security-critical assets must have a clear owner, defined storage, and traceable use.
 
 ## Baseline Requirements
-- tillgångar ska vara klassificerade efter känslighet
-- custody-flöden ska finnas för utlämning, återlämning och avvikelse
-- RFID eller liknande stödmekanismer kan användas för synlighet och policytrigger
-- förlust eller ologisk förflyttning av känsliga tillgångar ska behandlas som säkerhetsrelevant händelse
-- flyttbara media ska omfattas av särskilt restriktiv policy
+
+- assets must be classified by sensitivity
+- custody workflows must exist for issuance, return, and deviation
+- RFID or similar support mechanisms may be used for visibility and policy triggers
+- loss or illogical movement of sensitive assets must be treated as a security-relevant event
+- removable media must be subject to a particularly restrictive policy
 
 ---
 
 # Technical Zone Baseline
 
 ## Policy Statement
-Skyddade tekniska zoner ska behandlas som särskilda miljöer med begränsad mänsklig närvaro och högre krav på syftesbunden åtkomst.
+
+Protected technical zones must be treated as special environments with limited human presence and stricter requirements for purpose-bound access.
 
 ## Baseline Requirements
-- teknikzoner ska inte betraktas som vanliga arbetsytor
-- mänsklig vistelse ska vara motiverad, tidsbunden och spårbar
-- service, change, incident och recovery ska hanteras enligt olika processlägen
-- större tekniskt arbete ska kräva tydlig change- eller recoverykontext
-- återgång till normal drift ska vara verifierad och dokumenterad
+
+- technical zones must not be treated as ordinary workspaces
+- human presence must be justified, time-bound, and traceable
+- service, change, incident, and recovery must be handled under different process states
+- major technical work must require a clear change or recovery context
+- return to normal operations must be verified and documented
 
 ---
 
 # Maintenance and Change Baseline
 
 ## Policy Statement
-Tekniskt arbete i skyddade zoner ska ske enligt definierad process och får inte bygga på informell eller otydlig åtkomst.
+
+Technical work in protected zones must take place according to a defined process and must not rely on informal or unclear access.
 
 ## Baseline Requirements
-- arbete ska vara kopplat till arbetsorder, incident eller change
-- deltagare ska vara identifierade och godkända
-- tillträde ska vara tidsbundet och syftesbundet
-- change ska ha tydligt ansvar och godkännande
-- rollback eller återställningsväg ska finnas där relevant
+
+- work must be tied to a work order, incident, or change
+- participants must be identified and approved
+- access must be time-bound and purpose-bound
+- change must have clear responsibility and approval
+- rollback or restoration path must exist where relevant
 
 ---
 
 # Incident Response Baseline
 
 ## Policy Statement
-Alla säkerhetsrelevanta avvikelser ska kunna klassificeras, begränsas, dokumenteras och följas upp genom definierad incidentprocess.
+
+All security-relevant deviations must be classifiable, containable, documentable, and follow-up capable through a defined incident process.
 
 ## Baseline Requirements
-- incidentkategorier ska vara definierade
-- fysisk och logisk kontext ska kunna korreleras
-- containment ska kunna prioriteras framför bekvämlighet
-- incidenter ska ha tydlig closure och eftergranskning
-- lärdomar ska kunna återföras till policy, styrning och design
+
+- incident categories must be defined
+- physical and logical context must be correlatable
+- containment must be prioritizable over convenience
+- incidents must have clear closure and post-review
+- lessons learned must be fed back into policy, governance, and design
 
 ---
 
 # Recovery Baseline
 
 ## Policy Statement
-Recovery ska vara definierad, kontrollerad och säkerhetsbevarande.
+
+Recovery must be defined, controlled, and security-preserving.
 
 ## Baseline Requirements
-- fallback-processer ska finnas för kritiska beroenden
-- credential recovery ska ske under kontroll
-- recovery ska inte skapa permanenta bypasser
-- återgång till normal drift ska vara explicit, verifierad och loggad
-- recoveryhändelser ska kunna granskas i efterhand
+
+- fallback processes must exist for critical dependencies
+- credential recovery must take place under control
+- recovery must not create permanent bypasses
+- return to normal operations must be explicit, verified, and logged
+- recovery events must be reviewable afterward
 
 ---
 
 # Governance Baseline
 
 ## Policy Statement
-Säkerhetsmodellen ska ha tydligt ägarskap, tydliga godkännandeflöden och regelbunden uppföljning.
+
+The security model must have clear ownership, clear approval flows, and regular follow-up.
 
 ## Baseline Requirements
-- alla centrala kontrollområden ska ha utsedd owner
-- godkännanden ska vara rollbaserade och dokumenterade
-- access och privilegier ska recertifieras regelbundet
-- undantag ska ha egen styrmodell
-- governance ska täcka både fysisk, logisk och operativ säkerhet
+
+- all central control areas must have a designated owner
+- approvals must be role-based and documented
+- access and privileges must be recertified regularly
+- exceptions must have their own governance model
+- governance must cover physical, logical, and operational security
 
 ---
 
 # Review and Recertification Baseline
 
 ## Policy Statement
-Tilldelad åtkomst, tillgångar och privilegier ska granskas regelbundet för att säkerställa fortsatt relevans.
+
+Assigned access, assets, and privileges must be reviewed regularly to ensure continued relevance.
 
 ## Baseline Requirements
-- fysisk access ska recertifieras
-- privilegierad åtkomst ska recertifieras med högre prioritet
-- temporära undantag ska följas upp innan eller vid utgång
-- tillgångar och credentials ska kunna inventeras och verifieras
-- reviewprocesser ska dokumenteras och vara åtgärdsbara
+
+- physical access must be recertified
+- privileged access must be recertified with higher priority
+- temporary exceptions must be followed up before or at expiry
+- assets and credentials must be inventoried and verifiable
+- review processes must be documented and actionable
 
 ---
 
 # Exception Baseline
 
 ## Policy Statement
-Undantag från säkerhetsmodellen ska vara synliga, tidsbundna och styrda.
+
+Exceptions to the security model must be visible, time-bound, and governed.
 
 ## Baseline Requirements
-- varje undantag ska ha motivering
-- varje undantag ska ha owner
-- varje undantag ska ha godkännande
-- varje undantag ska ha utgångstid eller aktiv omprövning
-- undantag ska eftergranskas när risknivån motiverar det
+
+- every exception must have a justification
+- every exception must have an owner
+- every exception must have an approval
+- every exception must have an expiry time or active reassessment
+- exceptions must be post-reviewed when the risk level justifies it
 
 ---
 
 # Compliance and Enforcement Baseline
 
 ## Policy Statement
-Policyer inom denna baseline ska vara styrande för design, drift och uppföljning i facilityn.
+
+Policies within this baseline must be governing for design, operations, and follow-up within the facility.
 
 ## Baseline Requirements
-- policybrott ska kunna upptäckas och hanteras
-- återkommande avvikelser ska kunna leda till styrningsåtgärd
-- revision och kontroll ska kunna verifiera efterlevnad
-- informella arbetssätt får inte ersätta definierad policy i känsliga områden
+
+- policy violations must be detectable and manageable
+- recurring deviations must be able to lead to governance action
+- audit and control must be able to verify compliance
+- informal ways of working must not replace defined policy in sensitive areas
 
 ---
 
 # Minimum Documentation Expectations
 
-För att policy-baselinen ska vara operativt användbar bör följande kompletterande dokument finnas eller tas fram:
+For the policy baseline to be operationally useful, the following supporting documents should exist or be developed:
 
-- zonmodell
-- privileged access-modell
-- asset custody-modell
-- maintenance-modell
-- recovery-modell
-- incident response-modell
-- governance-modell
+- zone model
+- privileged access model
+- asset custody model
+- maintenance model
+- recovery model
+- incident response model
+- governance model
 - roadmap
-- eventuella playbooks och undantagsrutiner
+- any relevant playbooks and exception procedures
 
 ---
 
 # Recommended Policy Statements
 
 ## Example Policy 1
-All fysisk, logisk och privilegierad åtkomst inom facilityn ska vara behovsstyrd, spårbar och knuten till definierad roll och kontext.
+
+All physical, logical, and privileged access within the facility must be need-based, traceable, and tied to a defined role and context.
 
 ## Example Policy 2
-Högklassade zoner, credentials och tillgångar ska omfattas av starkare kontrollnivå än standardmiljöer och standardroller.
+
+High-classification zones, credentials, and assets must be subject to a stronger level of control than standard environments and standard roles.
 
 ## Example Policy 3
-Undantag, recovery och emergency access ska vara uttryckligt definierade och får inte ersätta ordinarie styrmodell.
+
+Exceptions, recovery, and emergency access must be explicitly defined and must not replace the standard governance model.
 
 ## Example Policy 4
-Säkerhetskritiska tillgångar ska hållas under aktiv custody och får inte lämna kontrollerad miljö utan tydligt godkänt syfte.
+
+Security-critical assets must be kept under active custody and must not leave the controlled environment without a clearly approved purpose.
 
 ## Example Policy 5
-Governance, review och recertifiering ska vara en permanent del av säkerhetsmodellen och inte en separat efterhandsaktivitet.
+
+Governance, review, and recertification must be a permanent part of the security model and not a separate after-the-fact activity.
 
 ---
 
 # Common Policy Failures
 
-Om policy-baselinen saknas eller är svag uppstår ofta:
+If the policy baseline is missing or weak, the following often occur:
 
-- god design utan styrning
-- otydliga minimikrav
-- osäker tolkning mellan team
-- tillfälliga undantag som blir standard
-- låg konsekvens mellan fysisk och logisk säkerhet
-- svårt att granska efterlevnad
-- hög personberoende drift
+- good design without governance
+- unclear minimum requirements
+- uncertain interpretation across teams
+- temporary exceptions that become standard
+- low consistency between physical and logical security
+- difficulty auditing compliance
+- highly person-dependent operations
 
 ---
 
 # Recommended Next Steps
 
 ## 1. Create Domain-Specific Policy Documents
-Bryt ut detaljerade policyer för:
-- zoner
+
+Break out detailed policies for:
+
+- zones
 - privileged access
 - credentials
 - assets
@@ -382,40 +429,48 @@ Bryt ut detaljerade policyer för:
 - incident response
 
 ## 2. Define Mandatory vs Recommended Controls
-Markera vilka delar som är:
-- obligatoriska
-- rekommenderade
-- situationsberoende
+
+Mark which parts are:
+
+- mandatory
+- recommended
+- situation-dependent
 
 ## 3. Align Baseline With Governance
-Säkerställ att varje policyområde har:
+
+Ensure that each policy area has:
+
 - owner
 - approval chain
 - review cycle
 - exception path
 
 ## 4. Add Review Triggers
-Definiera när policy ska omprövas, exempelvis vid:
+
+Define when policy must be reassessed, for example in response to:
+
 - incident
-- större change
-- ny zonklassning
-- ny credentialtyp
-- förändrad riskbild
+- major change
+- new zone classification
+- new credential type
+- changed risk picture
 
 ## 5. Link Baseline to Implementation Planning
-Använd denna baseline som grund för:
-- kravarbete
-- arkitekturdetaljering
-- operativ modell
-- kontrollkartläggning
-- framtida design review
+
+Use this baseline as a foundation for:
+
+- requirements work
+- architecture detailing
+- operating model
+- control mapping
+- future design review
 
 ---
 
 # Final Note
 
-Policy-baselinen är till för att säkerställa att konceptets kärnidéer inte bara blir inspirerande, utan även styrande.
+The policy baseline exists to ensure that the concept’s core ideas do not remain merely inspiring, but also become governing.
 
-Den centrala principen i detta dokument är:
+The central principle of this document is:
 
-> **Hög säkerhet kräver inte bara stark design, utan också tydliga grundregler som gör modellen konsekvent, granskningsbar och hållbar över tid.**
+> **High security requires not only strong design, but also clear foundational rules that make the model consistent, reviewable, and sustainable over time.**
