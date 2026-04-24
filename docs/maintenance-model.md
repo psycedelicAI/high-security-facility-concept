@@ -1,6 +1,6 @@
 # Maintenance Model – High-Security Facility Concept
 
-> Konceptuell modell för service, underhåll, change-hantering och teknisk vistelse i skyddade tekniska zoner inom en högsäker anläggning.
+> Conceptual model for service, maintenance, change handling, and technical presence in protected technical zones within a high-security facility.
 
 ---
 
@@ -19,92 +19,100 @@
 
 ## Purpose
 
-Detta dokument beskriver en konceptuell modell för hur **service, underhåll och förändringsarbete** ska hanteras i skyddade tekniska zoner inom en högsäker anläggning.
+This document describes a conceptual model for how **service, maintenance, and change activities** should be handled in protected technical zones within a high-security facility.
 
-Målet är att säkerställa att:
+The goal is to ensure that:
 
-- tekniskt arbete sker under kontrollerade former
-- mänsklig närvaro i känsliga zoner begränsas
-- skillnaden mellan normaldrift, service och större change är tydlig
-- åtkomst till skyddad utrustning är behovsstyrd och spårbar
-- tekniska miljöer skyddas utan att förlora drift- och återställningsförmåga
+- technical work takes place under controlled conditions
+- human presence in sensitive zones is minimized
+- the difference between normal operations, service, and major change is clear
+- access to protected equipment is need-based and traceable
+- technical environments are protected without losing operational and recovery capability
 
 ---
 
 ## Scope
 
-Detta dokument omfattar:
+This document covers:
 
-- serverhallar
-- nätverksrum
-- skyddade tekniska utrymmen
-- kritisk server- och nätverksutrustning
-- fysisk teknisk åtkomst för service och underhåll
+- data halls
+- network rooms
+- protected technical spaces
+- critical server and network equipment
+- physical technical access for service and maintenance
 - maintenance windows
 - change mode
-- återgång till normaldrift
+- return to normal operations
 
 ---
 
 # Core Principles
 
 ## 1. Protected Technical Zones Are Not Normal Workspaces
-Tekniska skyddszoner ska inte betraktas som vanliga arbetsmiljöer där människor vistas kontinuerligt.
 
-De ska i stället ses som:
-- kontrollerade driftmiljöer
-- zoner för kortvarig teknisk åtkomst
-- utrymmen där närvaro ska vara motiverad, tidsbegränsad och spårbar
+Protected technical zones must not be treated as ordinary work environments where people remain continuously present.
+
+Instead, they should be treated as:
+
+- controlled operational environments
+- zones for short-duration technical access
+- spaces where presence must be justified, time-limited, and traceable
 
 ---
 
 ## 2. Minimize Human Presence
-Mänsklig närvaro i känsliga tekniska zoner ska hållas till ett minimum.
 
-Det innebär att:
-- onödiga fysiska besök ska undvikas
-- fjärradministration föredras när säkerhet och drift tillåter det
-- fysisk åtkomst ska kräva tydligt syfte
-- längre arbeten ska ske under kontrollerade driftlägen
+Human presence in sensitive technical zones must be kept to a minimum.
+
+This means that:
+
+- unnecessary physical visits should be avoided
+- remote administration is preferred when security and operations allow it
+- physical access must require a clear purpose
+- longer activities should take place under controlled operating states
 
 ---
 
 ## 3. Separate Routine Service From Planned Change
-Konceptet ska tydligt skilja mellan:
 
-- **normaldrift**
-- **kort serviceinsats**
-- **planerad change**
-- **incidentåtgärd**
-- **recovery / återställning**
+The concept must clearly distinguish between:
 
-Varje typ av aktivitet ska ha egen kontrollnivå, egen logik och egna godkännandekrav.
+- **normal operations**
+- **short service intervention**
+- **planned change**
+- **incident response**
+- **recovery / restoration**
+
+Each type of activity must have its own control level, logic, and approval requirements.
 
 ---
 
 ## 4. Access Must Be Purpose-Bound
-Teknisk åtkomst ska vara kopplad till:
 
-- syfte
-- arbetsorder
-- change-begäran
+Technical access must be tied to:
+
+- purpose
+- work order
+- change request
 - incident
-- tidsfönster
-- godkänd roll
+- time window
+- approved role
 
-Ingen fri eller otydlig rörelse i tekniska zoner ska accepteras.
+No unrestricted or unclear movement within technical zones should be accepted.
 
 ---
 
 ## 5. Maintenance Is a Security Event
-Fysiskt arbete i skyddad teknisk miljö ska betraktas som en säkerhetsrelevant aktivitet.
 
-Det innebär att:
-- aktivitet ska loggas
-- identitet ska verifieras
-- syfte ska dokumenteras
-- avvikelse ska kunna upptäckas
-- återgång till normaldrift ska vara kontrollerad
+Physical work in a protected technical environment must be treated as a security-relevant activity.
+
+This means that:
+
+- activity must be logged
+- identity must be verified
+- purpose must be documented
+- deviations must be detectable
+- return to normal operations must be controlled
 
 ---
 
@@ -113,210 +121,236 @@ Det innebär att:
 ## 1. Normal Operations Mode
 
 ### Description
-Facilityn kör i ordinarie driftläge.
+
+The facility is operating in its standard operating state.
 
 ### Characteristics
-- minimal mänsklig närvaro i skyddade teknikzoner
-- endast mycket begränsade serviceinsatser tillåtna
-- inga större förändringar utan formell övergång till annat läge
-- högsta skyddsnivå gäller för utrustning och access
+
+- minimal human presence in protected technical zones
+- only very limited service interventions are allowed
+- no major changes without a formal transition to another state
+- the highest level of protection applies to equipment and access
 
 ### Typical Allowed Activities
-- övervakad inspektion
-- kort fysisk kontroll
-- begränsade byten av enklare komponenter om policy tillåter
-- incidentverifiering under strikt kontroll
+
+- supervised inspection
+- short physical check
+- limited replacement of simple components if policy allows
+- incident verification under strict control
 
 ---
 
 ## 2. Limited Service Mode
 
 ### Description
-Avsett för korta, avgränsade tekniska uppgifter med låg förändringsgrad.
+
+Intended for short, bounded technical tasks with a low degree of change.
 
 ### Example Activities
-- byte av SFP
-- kontrollerat kabelbyte
-- verifiering av fysisk anslutning
-- enklare hårdvarukontroll
-- begränsad supportinsats
+
+- SFP replacement
+- controlled cable replacement
+- verification of physical connection
+- simple hardware inspection
+- limited support intervention
 
 ### Characteristics
-- kort vistelsetid
-- tydligt definierat syfte
-- endast godkända roller
-- ingen bred systemförändring
-- återgång till normaldrift utan full change-process om policy tillåter
+
+- short dwell time
+- clearly defined purpose
+- only approved roles
+- no broad system change
+- return to normal operations without a full change process if policy allows
 
 ### Security Requirements
-- arbetsuppgift ska vara registrerad
-- identitet ska verifieras
-- åtkomst ska vara tidsbunden
-- aktivitet ska loggas
-- avvikelse ska kunna generera säkerhetshändelse
+
+- the task must be registered
+- identity must be verified
+- access must be time-bound
+- activity must be logged
+- deviations must be able to generate a security event
 
 ---
 
 ## 3. Planned Change Mode
 
 ### Description
-Används när större tekniska förändringar ska utföras.
+
+Used when larger technical changes are to be carried out.
 
 ### Example Activities
-- större kabelomläggning
-- förändring av rackstruktur
-- utbyte av kritisk utrustning
-- planerat arbete som påverkar drift eller skyddsnivå
-- förändringar som kräver avstängning eller kontrollerad påverkan på system
+
+- major cable rework
+- changes to rack structure
+- replacement of critical equipment
+- planned work affecting operations or protection level
+- changes requiring shutdown or controlled impact on systems
 
 ### Characteristics
-- formell change-begäran
-- tydligt godkännande
-- definierat tidsfönster
-- tydlig ansvarig person
-- fördefinierad rollback eller återställningsstrategi
+
+- formal change request
+- clear approval
+- defined time window
+- clearly assigned responsible person
+- predefined rollback or restoration strategy
 
 ### Security Requirements
-- change måste vara godkänd innan arbete påbörjas
-- tillträde ska vara kopplat till change-id eller arbetsorder
-- endast godkända personer får delta
-- aktivitet ska loggas och kunna revideras
-- återgång till normaldrift ska kräva verifiering
+
+- the change must be approved before work begins
+- access must be tied to a change ID or work order
+- only approved persons may participate
+- activity must be logged and auditable
+- return to normal operations must require verification
 
 ---
 
 ## 4. Incident Response Mode
 
 ### Description
-Används vid säkerhetsincident, driftstörning eller annan händelse som kräver snabb teknisk åtkomst.
+
+Used in the event of a security incident, operational disruption, or other event requiring rapid technical access.
 
 ### Characteristics
-- hög prioritet
-- tillträde kan behöva beviljas snabbare än vid planerad change
-- avsteg från normal process kan tillåtas under strikt dokumentation
-- eftergranskning är obligatorisk
+
+- high priority
+- access may need to be granted faster than in planned change
+- deviations from the normal process may be allowed under strict documentation
+- post-review is mandatory
 
 ### Security Requirements
-- incident ska registreras
-- ansvarig funktion ska vara utsedd
-- all avvikande åtkomst ska loggas
-- eftergranskning ska ske
-- eventuellt break-glass-flöde ska kunna användas enligt separat policy
+
+- the incident must be registered
+- a responsible function must be assigned
+- all deviating access must be logged
+- post-review must take place
+- any break-glass flow must be usable according to separate policy
 
 ---
 
 ## 5. Recovery Mode
 
 ### Description
-Används när system, accessvägar eller facilityfunktioner måste återställas efter fel, incident eller planerad avstängning.
+
+Used when systems, access paths, or facility functions must be restored after failure, incident, or planned shutdown.
 
 ### Characteristics
-- fokus på säker återställning
-- vissa ordinarie begränsningar kan behöva justeras kontrollerat
-- ska vara tydligt separerad från vanlig drift
-- all aktivitet bör vara extra starkt dokumenterad
+
+- focus on secure restoration
+- some normal restrictions may need to be adjusted in a controlled way
+- must be clearly separated from ordinary operations
+- all activity should be documented especially strongly
 
 ---
 
 # Technical Zone Access Model
 
 ## General Rule
-Tillträde till skyddade tekniska zoner ska endast ges när följande är uppfyllt:
 
-- legitimt behov finns
-- korrekt roll eller arbetsorder finns
-- identitet har verifierats
-- tidsfönster är definierat
-- zon- och rörelsepolicy följs
-- avsedd aktivitet är dokumenterad
+Access to protected technical zones must be granted only when the following conditions are met:
+
+- a legitimate need exists
+- the correct role or work order exists
+- identity has been verified
+- the time window is defined
+- zone and movement policy are followed
+- the intended activity is documented
 
 ---
 
 ## Access Preconditions
-Före tillträde till känslig teknikzon bör följande vara tydligt:
 
-- vem som går in
-- varför personen går in
-- vilken utrustning som berörs
-- vilken zon som ska nås
-- hur länge vistelsen förväntas pågå
-- vem som ansvarar för aktiviteten
+Before entering a sensitive technical zone, the following should be clear:
+
+- who is entering
+- why the person is entering
+- which equipment is affected
+- which zone is to be accessed
+- how long the stay is expected to last
+- who is responsible for the activity
 
 ---
 
 ## Escort Considerations
-Escort kan krävas när:
-- besökare eller tredje part ska in i teknikzon
-- maintenance utförs av extern part
-- tillträde sker utanför normala mönster
-- känslighetsnivån motiverar extra kontroll
+
+Escort may be required when:
+
+- visitors or third parties are entering a technical zone
+- maintenance is performed by an external party
+- access takes place outside normal patterns
+- the sensitivity level justifies additional control
 
 ---
 
 # Human Presence Controls
 
 ## Short-Duration Principle
-I känsliga tekniska zoner bör mänsklig vistelse vara:
 
-- kort
-- motiverad
-- planerad
-- övervakad eller spårbar
-- begränsad till uppgiften
+In sensitive technical zones, human presence should be:
+
+- short
+- justified
+- planned
+- supervised or traceable
+- limited to the task
 
 ---
 
 ## Dwell Time Awareness
-Längre vistelsetid än förväntat kan utgöra:
-- operativ avvikelse
-- säkerhetsavvikelse
-- tecken på felaktig arbetsplanering
-- potentiellt incidentunderlag
 
-Därför bör modellen kunna stödja:
-- registrerad starttid
-- förväntad sluttid
-- avvikelseflagga vid överskriden vistelsetid
+A longer-than-expected dwell time may indicate:
+
+- an operational deviation
+- a security deviation
+- a sign of poor work planning
+- potential incident basis
+
+The model should therefore support:
+
+- recorded start time
+- expected end time
+- a deviation flag when dwell time is exceeded
 
 ---
 
 # Maintenance Workflow
 
 ## Example High-Level Flow
-1. behov identifieras
-2. aktivitet klassas som service, change, incident eller recovery
-3. rätt arbetsorder eller change skapas
-4. roller och deltagare verifieras
-5. tillträde beviljas inom definierat fönster
-6. arbete utförs
-7. aktivitet loggas
-8. resultat verifieras
-9. zon eller system återgår till normaldrift enligt process
-10. eftergranskning sker där det krävs
+
+1. need is identified
+2. activity is classified as service, change, incident, or recovery
+3. the correct work order or change is created
+4. roles and participants are verified
+5. access is granted within a defined window
+6. work is performed
+7. activity is logged
+8. results are verified
+9. the zone or system returns to normal operations according to process
+10. post-review takes place where required
 
 ---
 
 # Logging & Audit Requirements
 
-Följande bör loggas för tekniskt arbete i skyddade zoner:
+The following should be logged for technical work in protected zones:
 
-- identitet på deltagare
-- tid för inpassering
-- tid för utpassering
-- berörd zon
-- typ av aktivitet
-- change-id, incident-id eller arbetsorder
-- godkännande
-- avvikelser
-- återgång till drift
-- eventuella säkerhetseskorter
-- manuella overrides
+- identity of participants
+- entry time
+- exit time
+- affected zone
+- type of activity
+- change ID, incident ID, or work order
+- approval
+- deviations
+- return to operations
+- any security escorts
+- manual overrides
 
-Loggar bör kunna korreleras med:
-- accessloggar
+Logs should be correlatable with:
+
+- access logs
 - CCTV
-- change management-system
-- incidentregister
+- change management systems
+- incident register
 - asset records
 
 ---
@@ -324,92 +358,103 @@ Loggar bör kunna korreleras med:
 # Safety & Environmental Considerations
 
 ## Principle
-Skydd av teknik får aldrig ske utan tydlig modell för människors säkerhet.
 
-I tekniska skyddszoner med särskilda miljöförutsättningar måste följande vara definierat:
+Protection of technology must never take place without a clear model for human safety.
 
-- vem som får vistas där
-- under vilka förutsättningar
-- hur länge
-- när normal drift måste avbrytas inför större arbete
-- hur säkert inträde och utträde sker
-- hur nödläge hanteras
+In protected technical zones with special environmental conditions, the following must be defined:
+
+- who may be present there
+- under which conditions
+- for how long
+- when normal operations must be interrupted before larger work
+- how safe entry and exit take place
+- how emergency situations are handled
 
 ---
 
 ## Operational Interpretation
-För vissa skyddade teknikzoner kan det vara rimligt att:
-- endast kortvarig vistelse tillåts under normal drift
-- större arbeten kräver att system ställs i annat driftläge eller stängs av
-- all teknisk åtkomst sker under strikt process och ansvar
+
+For some protected technical zones, it may be reasonable that:
+
+- only short-duration presence is allowed during normal operations
+- larger work requires that systems be placed in another operating state or shut down
+- all technical access takes place under strict process and accountability
 
 ---
 
 # Change Approval Expectations
 
-Planerat förändringsarbete bör tydligt ange:
+Planned change work should clearly specify:
 
-- vad som ska göras
-- varför det ska göras
-- vilka system eller zoner som påverkas
-- vilka personer som deltar
-- när arbetet ska ske
-- vilka risker som finns
-- hur rollback eller återställning ska ske
-- vem som godkänt arbetet
+- what will be done
+- why it will be done
+- which systems or zones are affected
+- which persons are participating
+- when the work will take place
+- what risks exist
+- how rollback or restoration will take place
+- who approved the work
 
 ---
 
 # Return to Service / Return to Normal Operations
 
-Efter underhåll eller change bör återgång till normal drift inte vara implicit.
+After maintenance or change, return to normal operations should not be implicit.
 
-Den bör kräva:
-- verifiering att arbete är slutfört
-- bekräftelse att zonen åter är i rätt säkert läge
-- verifiering att system fungerar som avsett
-- stängning av eventuella tillfälliga undantag
-- dokumentation av avvikelser eller restpunkter
+It should require:
+
+- verification that the work is complete
+- confirmation that the zone is back in the correct secure state
+- verification that systems are functioning as intended
+- closure of any temporary exceptions
+- documentation of deviations or remaining issues
 
 ---
 
 # Recommended Policy Statements
 
 ## Example Policy 1
-Skyddade tekniska zoner ska inte användas som ordinarie arbetsytor och fysisk vistelse ska begränsas till godkända, syftesbundna aktiviteter.
+
+Protected technical zones must not be used as ordinary workspaces, and physical presence must be limited to approved, purpose-bound activities.
 
 ## Example Policy 2
-Tekniskt arbete i högsäker zon ska klassificeras som service, change, incident eller recovery och hanteras enligt respektive processmodell.
+
+Technical work in a high-security zone must be classified as service, change, incident, or recovery and handled according to the relevant process model.
 
 ## Example Policy 3
-Större förändringar i skyddade tekniska miljöer ska endast utföras under godkänt change-fönster och med definierad ansvarig funktion.
+
+Major changes in protected technical environments must only be carried out during an approved change window and with a defined responsible function.
 
 ## Example Policy 4
-Återgång till normal drift efter tekniskt arbete ska vara verifierad, dokumenterad och revisionsbar.
+
+Return to normal operations after technical work must be verified, documented, and auditable.
 
 ## Example Policy 5
-Tillträde till skyddad teknikzon ska vara tidsbundet, behovsstyrt och kopplat till arbetsorder, incident eller change.
+
+Access to a protected technical zone must be time-bound, need-based, and tied to a work order, incident, or change.
 
 ---
 
 # Common Risks If Poorly Managed
 
-Om maintenance-modellen är svag uppstår ofta:
+If the maintenance model is weak, the following often occur:
 
-- oplanerad eller otydlig fysisk närvaro i teknikzon
-- arbete utan tydligt syfte eller godkännande
-- osäker skillnad mellan snabb service och större change
-- dålig återgång till normaldrift
-- låg revisionsbarhet
-- säkerhetskontroller som kringgås under tekniskt arbete
-- personberoende drift i stället för styrd process
+- unplanned or unclear physical presence in a technical zone
+- work without clear purpose or approval
+- unclear distinction between quick service and major change
+- poor return to normal operations
+- low auditability
+- security controls bypassed during technical work
+- person-dependent operations instead of governed process
 
 ---
 
 # Recommended Next Steps
 
 ## 1. Define Activity Classes
-Skapa tydlig klassning för:
+
+Create clear classification for:
+
 - normal inspection
 - limited service
 - planned change
@@ -417,15 +462,19 @@ Skapa tydlig klassning för:
 - recovery activity
 
 ## 2. Build Technical Access Workflow
-Dokumentera:
-- hur tillträde begärs
-- hur det godkänns
-- hur det loggas
-- hur vistelsetid hanteras
-- hur avvikelser eskaleras
+
+Document:
+
+- how access is requested
+- how it is approved
+- how it is logged
+- how dwell time is handled
+- how deviations are escalated
 
 ## 3. Formalize Change Model
-Definiera:
+
+Define:
+
 - change ownership
 - approval chain
 - rollback expectations
@@ -433,26 +482,30 @@ Definiera:
 - return-to-service criteria
 
 ## 4. Add Safety Layer
-Beskriv:
-- tillåten mänsklig närvaro
-- nödlägeslogik
-- inträdes- och utträdesregler
-- hur skyddad teknikzon säkras inför större arbete
+
+Describe:
+
+- permitted human presence
+- emergency logic
+- entry and exit rules
+- how the protected technical zone is secured before larger work
 
 ## 5. Link With Other Models
-Koppla maintenance-modellen till:
-- zonmodell
-- privileged access-modell
-- asset custody-modell
+
+Link the maintenance model to:
+
+- zone model
+- privileged access model
+- asset custody model
 - incident response
-- governance och revision
+- governance and audit
 
 ---
 
 # Final Note
 
-I en högsäker teknisk anläggning är maintenance och change inte bara driftfrågor — de är säkerhetsfrågor.
+In a high-security technical facility, maintenance and change are not just operational matters — they are security matters.
 
-Den centrala principen i denna modell är därför:
+The central principle of this model is therefore:
 
-> **Tekniskt arbete i skyddad miljö ska vara syftesbundet, tidsbundet, kontrollerat och fullt revisionsbart.**
+> **Technical work in a protected environment must be purpose-bound, time-bound, controlled, and fully auditable.**
