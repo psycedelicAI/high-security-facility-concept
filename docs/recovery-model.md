@@ -1,6 +1,6 @@
 # Recovery Model – High-Security Facility Concept
 
-> Konceptuell modell för återställning, fallback, reservrutiner och kontrollerad återgång till normal drift i en högsäker teknisk anläggning.
+> Conceptual model for restoration, fallback, contingency routines, and controlled return to normal operations in a high-security technical facility.
 
 ---
 
@@ -19,158 +19,178 @@
 
 ## Purpose
 
-Detta dokument beskriver en konceptuell modell för **recovery** inom en högsäker teknisk anläggning.
+This document describes a conceptual model for **recovery** within a high-security technical facility.
 
-Målet är att säkerställa att miljön inte bara är hårt skyddad, utan också kan:
+The goal is to ensure that the environment is not only strongly protected, but can also:
 
-- återställas på ett säkert sätt
-- hantera avbrott och fel i kontrollsystem
-- fortsätta fungera under avvikande förhållanden
-- återgå till normal drift utan att säkerheten tappas
-- stödja incidenthantering utan att skapa okontrollerade undantag
+- be restored in a secure way
+- handle interruptions and failures in control systems
+- continue functioning under abnormal conditions
+- return to normal operations without losing security
+- support incident handling without creating uncontrolled exceptions
 
 ---
 
 ## Why Recovery Matters
 
-Ju mer kontrollerad och restriktiv en miljö är, desto viktigare blir recovery.
+The more controlled and restrictive an environment is, the more important recovery becomes.
 
-Utan recovery riskerar en högsäker modell att bli:
+Without recovery, a high-security model risks becoming:
 
-- operativt skör
-- beroende av informella nödlösningar
-- svår att återställa efter incident
-- sårbar för credential loss eller systemfel
-- stark i normaldrift men svag i avvikelseläge
+- operationally fragile
+- dependent on informal emergency workarounds
+- difficult to restore after incidents
+- vulnerable to credential loss or system failure
+- strong during normal operations but weak in abnormal states
 
-Recovery behövs därför för att säkerställa att:
-- skyddsnivån kan bibehållas även under störning
-- fallback inte blir permanent bypass
-- återställning är styrd, dokumenterad och revisionsbar
+Recovery is therefore needed to ensure that:
+
+- the protection level can be maintained even during disruption
+- fallback does not become a permanent bypass
+- restoration is governed, documented, and auditable
 
 ---
 
 # Recovery Objectives
 
-Recovery-modellen ska säkerställa att:
+The recovery model must ensure that:
 
-- kritiska funktioner kan återställas under kontrollerade former
-- förlorade eller otillgängliga credentials kan hanteras utan okontrollerad access
-- fel i passersystem eller identitetssystem inte leder till kaos eller improvisation
-- privilegierad återställning sker via definierade vägar
-- återgång till normal drift är verifierad
-- nödlägesåtkomst inte blir vardaglig genväg
+- critical functions can be restored under controlled conditions
+- lost or unavailable credentials can be handled without uncontrolled access
+- failures in access control systems or identity systems do not lead to chaos or improvisation
+- privileged restoration takes place through defined paths
+- return to normal operations is verified
+- emergency access does not become an everyday shortcut
 
 ---
 
 # Core Principles
 
 ## 1. Strong Security Requires Strong Recovery
-En hög skyddsnivå är bara hållbar om det finns en säker väg tillbaka från:
 
-- tekniska fel
-- förlorade credentials
-- incidenter
-- felaktiga spärrar
-- operativa avvikelser
+A high level of protection is sustainable only if there is a secure path back from:
+
+- technical failures
+- lost credentials
+- incidents
+- erroneous lockouts
+- operational deviations
 
 ---
 
 ## 2. Recovery Must Be Defined Before It Is Needed
-Recovery får inte bygga på improvisation.
 
-Det ska finnas definierade modeller för:
-- vem som får besluta
-- vilka vägar som får användas
-- hur åtkomst återställs
-- hur undantag dokumenteras
-- hur återgång till normal drift sker
+Recovery must not depend on improvisation.
+
+There must be defined models for:
+
+- who may decide
+- which paths may be used
+- how access is restored
+- how exceptions are documented
+- how return to normal operations takes place
 
 ---
 
 ## 3. Recovery Is Not the Same as Removing Controls
-Återställning ska inte innebära att säkerheten överges.
 
-Recovery ska i stället:
-- ersätta normal kontroll med kontrollerad reservlogik
-- vara tidsbegränsad
-- vara starkt loggad
-- vara kopplad till tydligt ansvar
+Recovery must not mean that security is abandoned.
+
+Instead, recovery must:
+
+- replace normal controls with controlled fallback logic
+- be time-limited
+- be strongly logged
+- be tied to clear accountability
 
 ---
 
 ## 4. Recovery Must Be Reviewable
-Alla recovery-relaterade aktiviteter ska kunna granskas i efterhand.
 
-Det gäller särskilt:
-- break-glass-användning
-- tillfälliga accessundantag
+All recovery-related activities must be reviewable afterward.
+
+This applies in particular to:
+
+- break-glass usage
+- temporary access exceptions
 - credential reset
-- återöppnade vägar
-- manuell override i fysisk eller logisk säkerhet
+- reopened paths
+- manual override in physical or logical security
 
 ---
 
 ## 5. Return to Normal Must Be Explicit
-Återgång till normal drift eller ordinarie kontrollmodell ska aldrig vara implicit.
 
-Den ska:
-- beslutas
-- verifieras
-- loggas
-- dokumenteras
-- kunna granskas i efterhand
+Return to normal operations or the ordinary control model must never be implicit.
+
+It must be:
+
+- decided
+- verified
+- logged
+- documented
+- reviewable afterward
 
 ---
 
 # Recovery Domains
 
 ## 1. Credential Recovery
-Exempel:
-- förlorad badge
-- förlorad YubiKey
-- skadad token
-- otillgänglig smartcard-lösning
-- blockerad adminidentitet
+
+Examples:
+
+- lost badge
+- lost YubiKey
+- damaged token
+- unavailable smartcard solution
+- blocked admin identity
 
 ---
 
 ## 2. Access Path Recovery
-Exempel:
-- passersystem fungerar inte
-- sekventiell zonlogik felar
-- fysisk kontrollpunkt är otillgänglig
-- användare fastnar i felaktigt accessläge
-- adminväg är inte tillgänglig
+
+Examples:
+
+- access control system is not functioning
+- sequential zone logic fails
+- physical control point is unavailable
+- user is stuck in an incorrect access state
+- admin path is unavailable
 
 ---
 
 ## 3. Device Recovery
-Exempel:
-- trasig adminlaptop
-- låst laptop
-- device deviation har utlöst kontroll
-- otillgänglig godkänd enhet
-- behov av ersättningsenhet
+
+Examples:
+
+- broken admin laptop
+- locked laptop
+- device deviation has triggered control
+- approved device is unavailable
+- replacement device is needed
 
 ---
 
 ## 4. Technical Operations Recovery
-Exempel:
-- change avbröts
-- tekniskt arbete orsakade driftfel
-- skyddad teknikzon måste återställas
-- återgång från maintenance mode eller incident mode
-- fysisk eller logisk kontroll måste återställas efter avvikelse
+
+Examples:
+
+- change was interrupted
+- technical work caused an operational failure
+- a protected technical zone must be restored
+- return from maintenance mode or incident mode
+- physical or logical control must be restored after a deviation
 
 ---
 
 ## 5. Governance Recovery
-Exempel:
-- otydlig ägare i pågående incident
-- behov av snabb undantagsgodkännande
-- tillfällig styrning under krisläge
-- återgång från nödläge till ordinarie governance
+
+Examples:
+
+- unclear ownership during an ongoing incident
+- need for rapid exception approval
+- temporary governance during crisis mode
+- return from emergency mode to ordinary governance
 
 ---
 
@@ -179,247 +199,283 @@ Exempel:
 ## Scenario 1 – Lost Badge
 
 ### Risk
-Användare kan inte genomföra ordinarie fysisk access, eller badge kan utgöra risk om den tappats utanför kontroll.
+
+The user cannot complete normal physical access, or the badge may represent a risk if it was lost outside control.
 
 ### Recovery Expectations
-- badge spärras omedelbart eller markeras som otillgänglig
-- användaren får inte automatiskt fri ersättningsaccess utan kontroll
-- tillfällig ersättningsprocess ska finnas
-- incident eller avvikelse ska loggas
-- ny credential ska utfärdas enligt definierad process
+
+- the badge is immediately revoked or marked as unavailable
+- the user does not automatically receive unrestricted replacement access without control
+- a temporary replacement process must exist
+- the incident or deviation must be logged
+- a new credential must be issued according to a defined process
 
 ### Minimum Controls
-- identitetsverifiering
-- loggning
-- tidsbegränsad ersättningsbehörighet
-- återkallelse av temporär credential när ordinarie credential återställts
+
+- identity verification
+- logging
+- time-limited replacement authorization
+- revocation of the temporary credential when the standard credential has been restored
 
 ---
 
 ## Scenario 2 – Lost or Unavailable YubiKey / Token
 
 ### Risk
-Ordinarie stark autentisering kan inte genomföras.
+
+Normal strong authentication cannot be performed.
 
 ### Recovery Expectations
-- token spärras eller markeras som komprometterad/otillgänglig
-- alternativ recovery-väg ska kräva hög kontrollnivå
-- privilegierad åtkomst ska inte “förenklas bort” för att lösa problemet
-- tillfällig recovery-token eller reservmetod ska hanteras enligt strikt process
+
+- the token is revoked or marked as compromised / unavailable
+- the alternative recovery path must require a high level of control
+- privileged access must not be “simplified away” to solve the problem
+- a temporary recovery token or fallback method must be handled under a strict process
 
 ### Minimum Controls
-- identitetsverifiering
-- godkännande av relevant ansvarig
-- stark loggning
-- tidsbegränsad återställningsmetod
-- eftergranskning vid privilegierad påverkan
+
+- identity verification
+- approval by the relevant responsible party
+- strong logging
+- time-limited recovery method
+- post-review if privileged impact exists
 
 ---
 
 ## Scenario 3 – Failed Sequential Zone Validation
 
 ### Risk
-Passersystemet anser att användaren saknar korrekt sekvens eller att zonlogiken blivit felaktig.
+
+The access control system determines that the user lacks the correct sequence or that the zone logic has become incorrect.
 
 ### Recovery Expectations
-- vidare passage ska normalt begränsas
-- säkerhetsfunktion ska kunna verifiera om det rör sig om:
-  - systemfel
-  - användarfel
-  - faktisk avvikelse
-- manuell reset eller kontrollerad återställning ska finnas
+
+- further passage should normally be restricted
+- the security function must be able to verify whether this is:
+  - a system fault
+  - a user error
+  - an actual deviation
+- manual reset or controlled restoration must exist
 
 ### Minimum Controls
-- händelsen loggas
-- säkerhetsverifiering krävs
-- återställning ska vara spårbar
-- fel får inte tysta framtida avvikelser
+
+- the event is logged
+- security verification is required
+- restoration must be traceable
+- the fault must not suppress future deviations
 
 ---
 
 ## Scenario 4 – Failed Admin Device
 
 ### Risk
-Ordinarie privilegierad administration kan inte utföras eftersom godkänd adminenhet är otillgänglig.
+
+Normal privileged administration cannot be performed because an approved admin device is unavailable.
 
 ### Recovery Expectations
-- ersättningsenhet ska endast användas om den är godkänd för rollen
-- improviserad admin från vanlig användarenhet ska inte vara standardlösning
-- administrativ återställning ska ske via definierad reservväg
+
+- a replacement device must only be used if it is approved for the role
+- improvised admin work from a standard user device must not be the default solution
+- administrative recovery must take place through a defined fallback path
 
 ### Minimum Controls
-- godkänd ersättningsenhet eller reservadminenhet
-- identitetsverifiering
-- loggad aktivering
-- tids- eller sessionsbunden användning
-- kontroll av att ersättningsvägen stängs efter användning
+
+- approved replacement device or backup admin device
+- identity verification
+- logged activation
+- time- or session-bound use
+- confirmation that the replacement path is closed after use
 
 ---
 
 ## Scenario 5 – Break-Glass Usage
 
 ### Risk
-Ordinarie kontrollväg räcker inte för att återställa kritisk funktion eller hantera incident.
+
+The normal control path is not sufficient to restore critical function or handle an incident.
 
 ### Recovery Expectations
-- break-glass ska användas endast vid legitimt och tydligt definierat behov
-- användning ska vara strikt skyddad, loggad och eftergranskad
-- break-glass får inte ersätta vardaglig adminmodell
+
+- break-glass must be used only for legitimate and clearly defined need
+- use must be strongly protected, logged, and post-reviewed
+- break-glass must not replace the everyday admin model
 
 ### Minimum Controls
-- tydlig aktiveringströskel
-- loggning av vem, varför, när och hur
-- begränsat scope där möjligt
-- obligatorisk eftergranskning
-- återställning till ordinarie modell snarast möjligt
+
+- clear activation threshold
+- logging of who, why, when, and how
+- limited scope where possible
+- mandatory post-review
+- restoration to the standard model as soon as possible
 
 ---
 
-## Scenario 6 – Passer/Identity System Failure
+## Scenario 6 – Access / Identity System Failure
 
 ### Risk
-Ett centralt kontrollsystem för fysisk access eller identitetsverifiering är delvis eller helt otillgängligt.
+
+A central control system for physical access or identity verification is partly or completely unavailable.
 
 ### Recovery Expectations
-- fallback ska finnas för att möjliggöra kontrollerad fortsatt drift
-- fallback får inte innebära fri access
-- manuell kontrollkedja ska kunna ta över där nödvändigt
+
+- fallback must exist to allow controlled continued operations
+- fallback must not mean unrestricted access
+- a manual control chain must be able to take over where necessary
 
 ### Minimum Controls
-- definierad manuell verifieringsprocess
-- säkerhetspersonal eller annan ansvarig funktion deltar
-- loggning av manuella beslut
-- temporär drift i reducerat men kontrollerat läge
-- kontrollerad återgång när systemet åter fungerar
+
+- defined manual verification process
+- security staff or another responsible function participates
+- logging of manual decisions
+- temporary operation in a reduced but controlled mode
+- controlled return when the system is functioning again
 
 ---
 
 ## Scenario 7 – Device Locked Due to Policy Trigger
 
 ### Risk
-En laptop har låsts på grund av avvikande rörelse, RFID-trigger eller annan policyhändelse.
+
+A laptop has been locked due to anomalous movement, an RFID trigger, or another policy event.
 
 ### Recovery Expectations
-- enheten ska inte återaktiveras automatiskt utan kontroll
-- avvikelsen ska utredas innan full återställning
-- återaktivering ska vara kopplad till identitet, enhet och bedömning
+
+- the device must not be reactivated automatically without control
+- the deviation must be investigated before full restoration
+- reactivation must be tied to identity, device, and assessment
 
 ### Minimum Controls
-- händelsen loggas
-- säkerhets- eller IT-funktion verifierar kontext
-- återställning godkänns enligt policy
-- eventuell fortsatt övervakning kan krävas efter upplåsning
+
+- the event is logged
+- the security or IT function verifies the context
+- restoration is approved according to policy
+- continued monitoring may be required after unlock
 
 ---
 
 ## Scenario 8 – Interrupted Change or Maintenance
 
 ### Risk
-Ett planerat tekniskt arbete avbryts eller leder till ofullständig återgång till drift.
+
+A planned technical activity is interrupted or leads to incomplete return to operations.
 
 ### Recovery Expectations
-- zon eller system ska inte lämnas i oklart mellanläge
-- rollback eller alternativ återställningsväg ska finnas
-- tillfälliga undantag ska stängas när arbetet avslutas eller avbryts
+
+- the zone or system must not be left in an unclear intermediate state
+- rollback or an alternative restoration path must exist
+- temporary exceptions must be closed when the work is completed or interrupted
 
 ### Minimum Controls
-- change-id eller arbetsorder kopplas till recovery
-- ansvarig funktion beslutar om rollback eller fortsatt recovery
-- dokumenterad verifiering innan återgång till ordinarie läge
+
+- change ID or work order is linked to recovery
+- the responsible function decides on rollback or continued recovery
+- documented verification before return to the standard state
 
 ---
 
 # Recovery Modes
 
 ## 1. Controlled Manual Recovery
-Används när automatisk eller ordinarie väg inte fungerar, men där manuell process fortfarande kan ske under kontroll.
+
+Used when the automatic or standard path does not work, but where a manual process can still take place under control.
 
 ### Typical Use
+
 - badge issue
-- sekvensreset
-- manuell accessverifiering
-- manuell device release
+- sequence reset
+- manual access verification
+- manual device release
 
 ---
 
 ## 2. Temporary Restricted Recovery
-Används när funktion måste återställas snabbt men bara under reducerat och strikt kontrollerat läge.
+
+Used when a function must be restored quickly, but only under a reduced and tightly controlled mode.
 
 ### Typical Use
-- tillfällig credential
-- tillfällig adminväg
-- fallback vid kontrollsystemfel
-- tillfällig drift i begränsat läge
+
+- temporary credential
+- temporary admin path
+- fallback during control system failure
+- temporary operation in restricted mode
 
 ---
 
 ## 3. Emergency Recovery
-Används vid kritisk incident eller allvarlig driftstörning där snabb återställning av kontroll eller funktion är nödvändig.
+
+Used during a critical incident or serious operational disruption where rapid restoration of control or function is necessary.
 
 ### Typical Use
+
 - break-glass
-- incidentrelaterad återtagning av kontroll
-- allvarligt systemfel
-- kritisk tillgänglighetsstörning
+- incident-related re-establishment of control
+- serious system failure
+- critical availability disruption
 
 ---
 
 # Recovery Decision Model
 
 ## Principle
-Recovery-beslut ska baseras på:
+
+Recovery decisions must be based on:
+
 - risk
-- påverkan
-- känslighetsnivå
-- vilken kontroll som fallerat
-- möjlighet till säker verifiering
-- behov av snabb återställning
+- impact
+- sensitivity level
+- which control has failed
+- ability to verify securely
+- need for rapid restoration
 
 ---
 
 ## Suggested Decision Questions
-- vad har gått fel?
-- vilken kontroll är påverkad?
-- kan normal process fortfarande användas?
-- finns definierad fallback?
-- krävs undantag eller emergency path?
-- vem måste godkänna?
-- hur återgår vi till normalmodell?
+
+- what has gone wrong?
+- which control is affected?
+- can the normal process still be used?
+- is there a defined fallback?
+- is an exception or emergency path required?
+- who must approve?
+- how do we return to the standard model?
 
 ---
 
 # Return to Normal Operations
 
 ## Purpose
-Efter recovery måste facilityn eller systemet återgå till normal kontrollerad drift.
+
+After recovery, the facility or system must return to normal controlled operations.
 
 ### This Should Include
-- stängning av tillfälliga undantag
-- återställning av ordinarie accessvägar
-- verifiering att credentials och system åter är i rätt tillstånd
-- kontroll av att reservrutiner inte ligger kvar
-- dokumentation av vad som gjordes
+
+- closure of temporary exceptions
+- restoration of standard access paths
+- verification that credentials and systems are back in the correct state
+- confirmation that fallback routines are not left in place
+- documentation of what was done
 
 ---
 
 ## Verification Questions
-- är ordinarie kontroll återställd?
-- finns tillfälliga behörigheter kvar?
-- finns tillfälliga devices eller tokens kvar i bruk?
-- är incident- eller recovery-läge avslutat?
-- är loggning komplett?
-- krävs eftergranskning eller ytterligare åtgärd?
+
+- has the standard control model been restored?
+- do any temporary authorizations remain?
+- are any temporary devices or tokens still in use?
+- has incident or recovery mode been closed?
+- is logging complete?
+- is post-review or further action required?
 
 ---
 
 # Recovery Logging & Audit Requirements
 
-Följande recovery-händelser bör loggas:
+The following recovery events should be logged:
 
 - credential recovery
-- manuell accessåterställning
-- sekvensreset
-- tillfällig credential issuance
+- manual access restoration
+- sequence reset
+- temporary credential issuance
 - admin device replacement
 - break-glass usage
 - fallback activation
@@ -427,66 +483,75 @@ Följande recovery-händelser bör loggas:
 - recovery-related approvals
 - recovery-related exceptions
 
-Loggning bör kunna korreleras mot:
-- identitet
-- enhet
-- zon
-- tid
-- ansvarig funktion
-- incident-id / change-id / exception-id
+Logging should be correlatable with:
+
+- identity
+- device
+- zone
+- time
+- responsible function
+- incident ID / change ID / exception ID
 
 ---
 
 # Governance Alignment
 
-Recovery-modellen ska vara direkt kopplad till governance-modellen.
+The recovery model must be directly linked to the governance model.
 
-Det innebär att följande ska vara definierat:
-- vem som får besluta om recovery
-- vem som får godkänna undantag
-- vem som får aktivera break-glass
-- vem som verifierar återgång till normal drift
-- vem som granskar recovery-händelser i efterhand
+This means that the following must be defined:
+
+- who may decide on recovery
+- who may approve exceptions
+- who may activate break-glass
+- who verifies return to normal operations
+- who reviews recovery events afterward
 
 ---
 
 # Recommended Policy Statements
 
 ## Example Policy 1
-Alla recovery-relaterade åtgärder ska utföras enligt definierad reservprocess och får inte bygga på informell eller permanent bypass av ordinarie säkerhetskontroller.
+
+All recovery-related actions must be performed according to a defined fallback process and must not rely on informal or permanent bypass of standard security controls.
 
 ## Example Policy 2
-Förlorade eller otillgängliga credentials ska hanteras via kontrollerad recovery-process med identitetsverifiering, loggning och tidsbegränsad ersättningslogik där tillämpligt.
+
+Lost or unavailable credentials must be handled through a controlled recovery process with identity verification, logging, and time-limited replacement logic where applicable.
 
 ## Example Policy 3
-Break-glass och andra nödlägesvägar ska vara starkt skyddade, sparsamt använda och obligatoriskt eftergranskade.
+
+Break-glass and other emergency paths must be strongly protected, used sparingly, and subject to mandatory post-review.
 
 ## Example Policy 4
-Återgång till normal drift efter recovery ska vara explicit beslutad, verifierad och dokumenterad.
+
+Return to normal operations after recovery must be explicitly decided, verified, and documented.
 
 ## Example Policy 5
-Fallback-lösningar får endast användas under definierade förutsättningar och ska avvecklas så snart ordinarie kontrollmodell är återställd.
+
+Fallback solutions may only be used under defined conditions and must be retired as soon as the standard control model has been restored.
 
 ---
 
 # Common Recovery Failures
 
-Om recovery-modellen är svag uppstår ofta:
+If the recovery model is weak, the following often occur:
 
-- improviserade reservlösningar
-- informella undantag som blir permanenta
-- svag spårbarhet i nödläge
-- för stor beroende av enskilda personer
-- förenklad access “bara för att få igång det”
-- otydlig återgång till normal drift
-- säkerhetsförsvagning efter incident
+- improvised fallback solutions
+- informal exceptions that become permanent
+- weak traceability during emergency situations
+- excessive dependence on individuals
+- simplified access “just to get it working”
+- unclear return to normal operations
+- weakened security after incidents
 
 ---
 
 # Recommended Next Steps
 
 ## 1. Create Recovery Playbooks
-Skapa konkreta playbooks för:
+
+Create concrete playbooks for:
+
 - lost badge
 - lost token
 - failed sequence
@@ -496,13 +561,17 @@ Skapa konkreta playbooks för:
 - locked endpoint due to policy event
 
 ## 2. Define Recovery Authorities
-Bestäm:
-- vem som får fatta vilka recovery-beslut
-- vem som kan godkänna tillfälliga undantag
-- vem som ansvarar för return to normal
+
+Decide:
+
+- who may make which recovery decisions
+- who may approve temporary exceptions
+- who is responsible for return to normal operations
 
 ## 3. Link Recovery to Other Models
-Koppla recovery-modellen till:
+
+Link the recovery model to:
+
 - governance model
 - privileged access model
 - zone model
@@ -511,24 +580,28 @@ Koppla recovery-modellen till:
 - asset custody model
 
 ## 4. Define Return-to-Normal Criteria
-Beskriv tydligt:
-- vad som krävs för att lämna recovery-läge
-- hur tillfälliga accesser stängs
-- hur verifiering sker
-- hur eftergranskning genomförs
+
+Describe clearly:
+
+- what is required to leave recovery mode
+- how temporary accesses are closed
+- how verification takes place
+- how post-review is conducted
 
 ## 5. Add Audit & Review Process
-Bestäm:
-- hur recovery-händelser granskas
-- vilka som ska följas upp särskilt
-- hur lärdomar förs tillbaka till modellen
+
+Decide:
+
+- how recovery events are reviewed
+- which ones require special follow-up
+- how lessons learned are fed back into the model
 
 ---
 
 # Final Note
 
-I en högsäker miljö är recovery inte ett undantag från säkerhet — det är en del av säkerheten.
+In a high-security environment, recovery is not an exception to security — it is part of security.
 
-Den centrala principen i denna modell är därför:
+The central principle of this model is therefore:
 
-> **Återställning ska vara kontrollerad, tidsbunden, spårbar och utformad för att återföra miljön till normal säker drift utan att skapa dolda bypasser.**
+> **Restoration must be controlled, time-bound, traceable, and designed to return the environment to normal secure operations without creating hidden bypasses.**
