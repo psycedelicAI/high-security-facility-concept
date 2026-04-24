@@ -1,20 +1,20 @@
 # High-Security Facility Concept Review
 
-> Konceptbedömning av en högsäker teknisk anläggning med fokus på fysisk säkerhet, zonindelning, accesskontroll, privileged access, endpoint security, OPSEC och insiderresistens.
+> Concept assessment of a high-security technical facility, with a focus on physical security, zone segmentation, access control, privileged access, endpoint security, OPSEC, and insider resistance.
 
 ---
 
 ## Overview
 
-Detta dokument beskriver en strukturerad säkerhetsbedömning av ett koncept för en **high-security facility**, främst riktad mot:
+This document describes a structured security assessment of a **high-security facility** concept, primarily aimed at:
 
-- skyddade serverhallar
-- tekniska säkerhetszoner
-- klassad driftmiljö
-- verksamheter där hög friktion är avsiktlig
-- miljöer där fysisk och logisk säkerhet måste samverka
+- protected data centers
+- technical security zones
+- classified operational environments
+- organizations where high friction is intentional
+- environments where physical and logical security must work together
 
-Bedömningen utgår från att konceptet är en **snabb mockup**, inte en färdig produktionsarkitektur.
+The assessment assumes that the concept is a **rapid mockup**, not a finished production architecture.
 
 ---
 
@@ -23,294 +23,336 @@ Bedömningen utgår från att konceptet är en **snabb mockup**, inte en färdig
 # **88 / 100**
 
 ### Summary
-Konceptet visar:
 
-- stark säkerhetsinstinkt
-- god förståelse för defense in depth
-- mycket bra tänk kring zoner och rörelsemönster
-- hög mognad inom insider threat / exfiltration resistance
-- relevant OPSEC-tänk för högsäker miljö
+The concept demonstrates:
 
-Det som främst saknas för en högre poäng är:
+- strong security instincts
+- a good understanding of defense in depth
+- very strong thinking around zones and movement patterns
+- high maturity in insider threat / exfiltration resistance
+- relevant OPSEC thinking for a high-security environment
+
+The main areas still missing for a higher score are:
 
 - governance
-- tydligare privileged access-modell
-- recovery- och fallback-processer
-- formalisering av policy, revision och ansvar
+- a clearer privileged access model
+- recovery and fallback processes
+- formalization of policy, audit, and ownership
 
 ---
 
 ## Assessment Context
 
-Denna bedömning bygger på att lösningen är avsedd för en **högsäker teknisk miljö** och inte för en vanlig kontorsmiljö.
+This assessment is based on the assumption that the solution is intended for a **high-security technical environment**, not for a normal office environment.
 
-Det innebär att följande antas vara acceptabelt:
+This means that the following are assumed to be acceptable:
 
-- hög friktion i accessflöden
-- dedikerade adminenheter
-- strikt zonindelning
-- kort mänsklig vistelse i vissa teknikzoner
-- fysiska kontroller som vore opraktiska i vanlig enterprise-miljö
+- high friction in access flows
+- dedicated admin devices
+- strict zone segmentation
+- short human presence in certain technical zones
+- physical controls that would be impractical in a typical enterprise environment
 
-Med andra ord: detta är ett koncept för **skyddad drift**, inte för allmän företags-IT.
+In other words: this is a concept for **protected operations**, not for general corporate IT.
 
 ---
 
 # Score Breakdown
 
 ## 1. Defense in Depth — **9.5 / 10**
-Konceptet använder flera lager av skydd:
 
-- fysisk perimeter
-- reception och kontrollpunkter
+The concept uses multiple layers of protection:
+
+- physical perimeter
+- reception and control points
 - man-traps
-- badge- och identitetskontroll
-- biometriska faktorer
+- badge and identity control
+- biometric factors
 - FIDO2 / YubiKey
-- segmenterade klienter
-- dedikerade adminmiljöer
+- segmented clients
+- dedicated admin environments
 - asset tracking
-- nätsegmentering
-- sekventiell zonmodell
+- network segmentation
+- sequential zone model
 
 ### Strengths
-- stark lagerstruktur
-- fysisk och logisk säkerhet kopplas ihop
-- tydligt tänk i flera oberoende skyddsskikt
+
+- strong layered structure
+- physical and logical security are connected
+- clear thinking in multiple independent protective layers
 
 ### Improvement Areas
-- vissa kontroller behöver tydligare gränsdragning
-- risk för komplexitet om flera mekanismer löser samma problem
+
+- some controls need clearer boundaries
+- there is a risk of complexity if multiple mechanisms solve the same problem
 
 ---
 
 ## 2. Physical Security Architecture — **9 / 10**
-Den fysiska säkerhetsmodellen är stark och genomtänkt.
+
+The physical security model is strong and well thought through.
 
 ### Strengths
+
 - man-traps
-- reception som credential control point
-- säkerhetspersonal
-- zonklassning
-- badges stannar i facility
-- begränsad mänsklig närvaro i teknikzoner
-- tydlig fysisk separering mellan olika säkerhetsnivåer
+- reception as a credential control point
+- security staff
+- zone classification
+- badges remain inside the facility
+- limited human presence in technical zones
+- clear physical separation between different security levels
 
 ### Improvement Areas
-- anti-tailgating bör formaliseras ytterligare
-- fail-safe / fail-secure-logik behöver beskrivas
-- utrymnings- och interlock-logik bör dokumenteras
+
+- anti-tailgating should be formalized further
+- fail-safe / fail-secure logic needs to be described
+- evacuation and interlock logic should be documented
 
 ---
 
 ## 3. Zone Model & Movement Discipline — **9.5 / 10**
-En av konceptets starkaste delar.
+
+One of the strongest parts of the concept.
 
 ### Core Idea
-Högre klassade zoner kräver att användaren passerat föregående zoner i rätt ordning. Detta skapar:
 
-- sekventiell accessvalidering
-- bättre spårbarhet
-- avvikelsedetektering
-- motstånd mot informella genvägar
+Higher-classified zones require that the user has passed through prior zones in the correct order. This creates:
+
+- sequential access validation
+- better traceability
+- deviation detection
+- resistance to informal shortcuts
 
 ### Example Zoning
-- **Zone A / B** — entré, gäster, öppnare ytor
-- **Zone C** — intern kontorszon
-- **Zone D** — känsligare administrativ / executive zon
-- **Zone E / F** — IT, admins, security, OPSEC, kritiska funktioner
+
+- **Zone A / B** — entry, visitors, more open areas
+- **Zone C** — internal office zone
+- **Zone D** — more sensitive administrative / executive zone
+- **Zone E / F** — IT, admins, security, OPSEC, critical functions
 
 ### Strengths
-- kontrollerar inte bara *om* någon får access, utan *hur* personen tog sig dit
-- bra modell för högklassade områden
-- stödjer anomalidetektion och eskort vid avvikelser
+
+- controls not only *whether* someone gets access, but *how* the person got there
+- a strong model for high-classification areas
+- supports anomaly detection and escorted handling in case of deviations
 
 ### Improvement Areas
-- godkända passagevägar måste definieras per roll
-- sekvensfel behöver tydlig återställning
-- undantag och nödläge måste hanteras säkert
+
+- approved passage paths must be defined per role
+- sequence failures need clear recovery handling
+- exceptions and emergencies must be handled securely
 
 ---
 
 ## 4. Identity & Authentication — **8.5 / 10**
-Bra nivå på identitets- och autentiseringsmodellen.
+
+A good level of maturity in the identity and authentication model.
 
 ### Strengths
-- FIDO2 / YubiKey används konsekvent
-- fysisk access och systemaccess hålls isär
-- olika skyddsnivåer beroende på risk
-- högre privilegier kräver starkare kontroll
+
+- FIDO2 / YubiKey is used consistently
+- physical access and system access are kept separate
+- different protection levels are applied depending on risk
+- higher privileges require stronger controls
 
 ### Improvement Areas
-- credential lifecycle behöver beskrivas tydligare
-- fallback vid förlorade tokens eller biometrifel behöver definieras
-- tydligare regler för när biometri är krav respektive komplement
+
+- the credential lifecycle needs to be described more clearly
+- fallback for lost tokens or biometric failure needs to be defined
+- clearer rules are needed for when biometrics are mandatory versus supplementary
 
 ---
 
 ## 5. Privileged Access Management — **7.5 / 10**
-Bra riktning, men inte fullt mogen ännu.
+
+Good direction, but not fully mature yet.
 
 ### Strengths
-- adminåtkomst ska ske från särskilda enheter
-- dokumentation före känsliga åtgärder
-- stark autentisering för privilegierade funktioner
-- admin behandlas som en separat och högre riskklass
+
+- administrative access should take place from dedicated devices
+- documentation is required before sensitive actions
+- strong authentication for privileged functions
+- admin is treated as a separate and higher-risk class
 
 ### Improvement Areas
-- modellen med ett aktivt globalt adminkonto är inte optimal
-- personbundna privilegierade identiteter vore starkare
-- just-in-time / just-enough-admin bör övervägas tydligare
-- break-glass behöver formaliseras
+
+- the model with one active global admin account is not optimal
+- personally assigned privileged identities would be stronger
+- just-in-time / just-enough-admin should be considered more explicitly
+- break-glass needs to be formalized
 
 ---
 
 ## 6. Endpoint Security — **9 / 10**
-Klientmodellen är mycket stark.
+
+The client model is very strong.
 
 ### Strengths
-- olika laptopklasser för olika roller
-- adminlaptops särskiljs från vanliga klienter
-- fysisk kontroll av enheter
-- klienttyp speglar säkerhetsnivå och funktion
-- tydligt tänk kring attackyta och exfiltration
+
+- different laptop classes for different roles
+- admin laptops are separated from standard clients
+- physical control of devices
+- client type reflects security level and function
+- clear thinking around attack surface and exfiltration
 
 ### Improvement Areas
-- patchning, service och återställning behöver beskrivas bättre
-- hårdvarulivscykel och supportmodell bör definieras
-- vissa restriktioner kräver tydlig operativ modell
+
+- patching, servicing, and recovery need to be described better
+- the hardware lifecycle and support model should be defined
+- some restrictions require a clear operational model
 
 ---
 
 ## 7. Asset Tracking & Credential Custody — **9.5 / 10**
-En ovanligt stark del av konceptet.
+
+An unusually strong part of the concept.
 
 ### Laptop RFID Usage
-RFID används för:
 
-- realtidspositionering
+RFID is used for:
+
+- real-time positioning
 - asset tracking
 - policy enforcement
-- auto-lock om enhet lämnar tillåtet område
+- auto-lock if a device leaves the permitted area
 
-Detta är en mycket bättre användning än att använda RFID som primär identitet.
+This is a much better use than treating RFID as a primary identity mechanism.
 
 ### Badge Custody Model
-Badges lämnas kvar i facility, vilket ger:
 
-- bättre OPSEC
-- mindre risk för extern exponering
-- mindre social engineering-risk
-- enklare offboarding
-- färre problem med glömda eller tappade badges
+Badges remain inside the facility, which provides:
+
+- better OPSEC
+- lower risk of external exposure
+- lower social engineering risk
+- easier offboarding
+- fewer problems with forgotten or lost badges
 
 ### Improvement Areas
-- utlämning/återlämning av badges behöver formaliseras
-- avvikelsehantering för ej återlämnade credentials behövs
-- gäst- och konsultflöden bör beskrivas separat
+
+- badge issuance / return needs to be formalized
+- deviation handling for unreturned credentials is needed
+- visitor and contractor flows should be described separately
 
 ---
 
 ## 8. Insider Threat / Exfiltration Resistance — **9.5 / 10**
-En av konceptets absolut starkaste kategorier.
+
+One of the concept’s strongest categories overall.
 
 ### Strengths
-- privata mobiler hålls utanför känsliga zoner
-- lockers används som kontrollpunkt
-- devices får inte flyttas fritt
-- red zones begränsar vilka objekt som får tas med in
-- konsultroller särskiljs
-- dokumentförstörelse finns med i säkerhetstänket
-- badges hålls inom anläggningen
+
+- personal mobile phones are kept outside sensitive zones
+- lockers are used as a control point
+- devices are not allowed to move freely
+- red zones restrict which objects may be brought in
+- contractor roles are differentiated
+- document destruction is part of the security model
+- badges are kept within the facility
 
 ### Improvement Areas
-- DLP-modell kan formaliseras bättre
-- removable media policy bör beskrivas tydligare
-- incidentflöde vid policybrott behöver definieras
+
+- the DLP model could be formalized better
+- removable media policy should be described more clearly
+- the incident flow for policy violations needs to be defined
 
 ---
 
 ## 9. Operational Viability in High-Security Context — **8 / 10**
-Konceptet är driftbart i rätt typ av miljö.
+
+The concept is operationally viable in the right type of environment.
 
 ### Important Note
-Den här poängen gäller för en miljö där:
 
-- säkerhetsdisciplin är norm
-- hög friktion är accepterad
-- personalen är tränad
-- processer följs konsekvent
+This score applies to an environment where:
 
-I en vanlig kontorsmiljö hade detta fått lägre poäng. I en högsäker teknisk miljö är det betydligt mer rimligt.
+- security discipline is the norm
+- high friction is accepted
+- staff are trained
+- processes are followed consistently
+
+In a normal office environment, this would score lower. In a high-security technical environment, it is significantly more reasonable.
 
 ### Strengths
-- kontrollerna känns avsiktliga
-- zonerna har intern logik
-- skyddsnivån matchar målmiljön
+
+- the controls feel intentional
+- the zones have internal logic
+- the protection level matches the target environment
 
 ### Improvement Areas
-- recovery-flöden saknas delvis
-- undantagshantering behöver formaliseras
-- bemanning, övning och operativ träning bör beskrivas
+
+- recovery flows are partly missing
+- exception handling needs to be formalized
+- staffing, exercises, and operational training should be described
 
 ---
 
 ## 10. Governance, Policy & Auditability — **7 / 10**
-Det tydligaste förbättringsområdet.
+
+The clearest improvement area.
 
 ### Current State
-Konceptet är starkt som säkerhetsidé, men ännu inte fullt utvecklat som styrmodell.
+
+The concept is strong as a security idea, but not yet fully developed as a governance model.
 
 ### Missing or Underdefined
-- rollägarskap
+
+- role ownership
 - access recertification
-- undantagsgodkännande
-- joiner / mover / leaver-processer
-- policyhierarki
-- revisionsansvar
-- ansvarsmatris
+- exception approval
+- joiner / mover / leaver processes
+- policy hierarchy
+- audit ownership
+- responsibility matrix
 
 ### Assessment
-Bra säkerhetstänk, men styrningen runt lösningen behöver formaliseras.
+
+Good security thinking, but the governance around the solution needs to be formalized.
 
 ---
 
 ## 11. Maintenance / Change / Technical Zone Logic — **8.5 / 10**
-Teknikzonslogiken är starkare efter förtydligandet att vissa skydd gäller serverhallar och annan teknisk utrustning, inte vanliga arbetsytor.
+
+The technical zone logic is stronger after the clarification that some controls apply to data halls and other technical equipment, not to ordinary workspaces.
 
 ### Strengths
-- skiljer mellan normaldrift, kort serviceinsats och större change
-- större arbeten sker först efter kontrollerad avstängning eller change mode
-- modellen passar tekniska skyddszoner bättre än allmän arbetsmiljö
+
+- distinguishes between normal operations, short service interventions, and major changes
+- larger work takes place only after controlled shutdown or change mode
+- the model fits protected technical zones better than general work environments
 
 ### Improvement Areas
-- maintenance mode behöver definieras tydligare
-- change approval och återgång till drift bör dokumenteras
-- loggning av fysiskt teknikarbete bör finnas
+
+- maintenance mode needs to be defined more clearly
+- change approval and return to operations should be documented
+- logging of physical technical work should exist
 
 ---
 
 ## 12. Concept Maturity & Security Instinct — **9 / 10**
-Det här är huvudorsaken till att totalpoängen blir hög.
+
+This is the main reason why the overall score is high.
 
 ### Why It Scores High
-Konceptet visar:
 
-- god hotbildsförståelse
-- stark OPSEC-instinkt
-- tydlig förståelse för fysisk/logisk segmentering
-- insikt om insiderproblematik
-- förståelse för att rörelsemönster är en del av trust-modellen
+The concept demonstrates:
+
+- good threat understanding
+- strong OPSEC instincts
+- a clear understanding of physical / logical segmentation
+- insight into insider-related risk
+- understanding that movement patterns are part of the trust model
 
 ### Improvement Areas
-Nästa steg är att översätta detta till:
+
+The next step is to translate this into:
 
 - policy
 - process
-- ansvar
-- undantagshantering
-- diagram
-- drift- och recovery-modell
+- responsibility
+- exception handling
+- diagrams
+- operations and recovery model
 
 ---
 
@@ -338,139 +380,158 @@ Nästa steg är att översätta detta till:
 # Top 5 Strengths
 
 ## 1. Zone Logic & Sequential Movement Control
-En mycket stark och mogen idé. Ger bättre kontroll över hur personer rör sig genom facilityn, inte bara om de har access.
+
+A very strong and mature idea. It provides better control over how people move through the facility, not just whether they have access.
 
 ## 2. Insider Threat & OPSEC Awareness
-Konceptet tar interna hot, social engineering och informationsläckage på allvar.
+
+The concept takes internal threats, social engineering, and information leakage seriously.
 
 ## 3. Asset Tracking
-RFID används klokt som spårnings- och policyverktyg, inte som ensam identitetsmekanism.
+
+RFID is used intelligently as a tracking and policy tool, not as a standalone identity mechanism.
 
 ## 4. Role & Device Separation
-Admin, power users, users och konsulter behandlas olika. Det visar hög mognad.
+
+Admins, power users, users, and consultants are treated differently. This demonstrates high maturity.
 
 ## 5. Distinction Between Office Zones and Protected Technical Zones
-Det gör konceptet betydligt mer trovärdigt och relevant för högsäker drift.
+
+This makes the concept significantly more credible and relevant for high-security operations.
 
 ---
 
 # Top 5 Weaknesses
 
 ## 1. Governance & Ownership
-Ansvar, godkännanden och recertifiering behöver definieras.
+
+Responsibilities, approvals, and recertification need to be defined.
 
 ## 2. Privileged Access Design
-Det finns utrymme för starkare modell kring personbunden privilegiering och temporär elevation.
+
+There is room for a stronger model around personally assigned privilege and temporary elevation.
 
 ## 3. Recovery & Fallback
-Förlorade badges, trasiga tokens, sekvensfel och fel på adminenheter måste ha tydliga playbooks.
+
+Lost badges, broken tokens, sequence failures, and failures in admin devices must have clear playbooks.
 
 ## 4. Life Safety / Emergency Mode
-Nödlägeslogik, evakuering, interlocks och fail-safe/fail-secure måste dokumenteras noggrant.
+
+Emergency logic, evacuation, interlocks, and fail-safe / fail-secure must be documented carefully.
 
 ## 5. Operational Formalization
-Många bra idéer finns, men de behöver omsättas till verkliga processer och styrda rutiner.
+
+Many good ideas are present, but they need to be translated into real processes and governed routines.
 
 ---
 
 # Why This Is Not Yet a 92–95
 
-För att nå 90+ behöver konceptet gå från **stark säkerhetsidé** till **formell, styrd och revisionsbar säkerhetsarkitektur**.
+To reach 90+, the concept must move from a **strong security idea** to a **formal, governed, and auditable security architecture**.
 
-Det kräver bland annat:
+This requires, among other things:
 
-- tydliga policyer
-- roll- och ansvarsmatriser
-- recertifiering av access
+- clear policies
+- role and responsibility matrices
+- access recertification
 - recovery playbooks
-- undantagshantering
-- formell privileged access-modell
+- exception handling
+- a formal privileged access model
 - maintenance workflows
 - credential lifecycle management
-- revisionspunkter
+- audit points
 
 ---
 
 # Recommended Next Steps
 
 ## 1. Define Zone Policies
-Dokumentera för varje zon:
 
-- syfte
-- känslighetsnivå
-- tillåtna roller
-- tillåtna passersekvenser
-- undantag
+Document for each zone:
+
+- purpose
+- sensitivity level
+- permitted roles
+- permitted passage sequences
+- exceptions
 
 ## 2. Create an Ownership Matrix
-Beskriv:
 
-- vem som äger accessregler
-- vem som godkänner undantag
-- vem som reviderar tillgångar
-- vem som hanterar incidenter
+Describe:
+
+- who owns the access rules
+- who approves exceptions
+- who reviews assets
+- who handles incidents
 
 ## 3. Strengthen Privileged Access
-Bygg ut modellen med:
 
-- personliga adminkonton
-- temporär elevation
+Expand the model with:
+
+- personal admin accounts
+- temporary elevation
 - break-glass
-- stark revisionsspårning
+- strong audit traceability
 
 ## 4. Write Recovery Playbooks
-Skapa processer för:
 
-- förlorad badge
-- förlorad YubiKey
-- sekvensfel i passersystem
-- låst laptop
-- trasig adminlaptop
-- fel i biometriksystem
+Create processes for:
+
+- lost badge
+- lost YubiKey
+- sequence failure in the access system
+- locked laptop
+- broken admin laptop
+- failure in the biometric system
 
 ## 5. Formalize Technical Zone Operations
-Definiera:
 
-- normaldrift
+Define:
+
+- normal operations
 - service mode
 - change mode
-- avstängning
-- återgång till drift
+- shutdown
+- return to operations
 
 ## 6. Document Credential Custody
-Badge, tokens, adminenheter och andra säkerhetsobjekt bör ha tydlig chain of custody.
+
+Badges, tokens, admin devices, and other security objects should have a clear chain of custody.
 
 ## 7. Build an Audit & Review Process
-Bestäm:
 
-- hur ofta access granskas
-- vem som granskar
-- hur avvikelser dokumenteras
-- hur policyer revideras
+Decide:
+
+- how often access is reviewed
+- who performs the review
+- how deviations are documented
+- how policies are revised
 
 ---
 
 # Final Conclusion
 
-Detta är en **stark high-security-konceptskiss** med mycket bra tänk kring:
+This is a **strong high-security concept sketch** with very good thinking around:
 
-- fysisk/logisk segmentering
+- physical / logical segmentation
 - OPSEC
-- insiderhot
-- rörelsedisciplin
+- insider threats
+- movement discipline
 - credential custody
-- skydd av tekniska zoner
+- protection of technical zones
 
-Det är tydligt att konceptet inte bara staplar kontroller, utan försöker bygga en **sammanhängande trust model** för en skyddad anläggning.
+It is clear that the concept does not merely stack controls, but attempts to build a **coherent trust model** for a protected facility.
 
 ## Final Verdict
-> En stark high-security-konceptskiss med ovanligt bra förståelse för fysisk/logisk segmentering, OPSEC och insiderproblematik. Trovärdig som tidig design för skyddad teknikmiljö, men behöver policy-, governance- och recoverylager för att bli verkligt mogen.
+
+> A strong high-security concept sketch with an unusually good understanding of physical/logical segmentation, OPSEC, and insider-related risk. Credible as an early design for a protected technical environment, but it needs policy, governance, and recovery layers to become truly mature.
 
 ## Short Version
-> **88 / 100 — skarp, säkerhetsmogen, men ännu inte fullt formaliserad.**
+
+> **88 / 100 — sharp, security-mature, but not yet fully formalized.**
 
 ---
 
 # License / Usage Note
 
-Detta dokument är en konceptuell bedömning och bör användas som underlag för vidare design, policyarbete och arkitekturformalisering — inte som färdig implementationsspecifikation.
+This document is a conceptual assessment and should be used as a basis for further design, policy work, and architectural formalization — not as a finished implementation specification.
