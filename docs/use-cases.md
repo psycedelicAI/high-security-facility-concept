@@ -1,6 +1,6 @@
 # Use Cases – High-Security Facility Concept
 
-> Exempel på miljöer, behov och situationer där High-Security Facility Concept kan vara relevant som modell för högsäker fysisk, logisk och operativ säkerhet.
+> Examples of environments, needs, and situations in which the High-Security Facility Concept may be relevant as a model for high-security physical, logical, and operational security.
 
 ---
 
@@ -19,29 +19,33 @@
 
 ## Purpose
 
-Detta dokument beskriver typiska **use cases** för High-Security Facility Concept.
+This document describes typical **use cases** for the High-Security Facility Concept.
 
-Syftet är att visa:
-- i vilka typer av miljöer konceptet passar
-- vilka problem det hjälper till att adressera
-- vilka delar av modellen som är särskilt relevanta i olika scenarier
-- varför konceptet är mer lämpat för vissa miljöer än andra
+Its purpose is to show:
+
+- the types of environments in which the concept fits
+- the problems it helps address
+- which parts of the model are particularly relevant in different scenarios
+- why the concept is more suitable for some environments than for others
 
 ---
 
 # Use Case 1 – Protected Data Center / Secure Server Hall
 
 ## Scenario
-En organisation driver eller planerar en serverhall med höga krav på fysisk säkerhet, teknisk kontroll, begränsad mänsklig närvaro och tydlig separering mellan drift, service och säkerhetsfunktioner.
+
+An organization operates or plans a data center with high requirements for physical security, technical control, limited human presence, and clear separation between operations, service, and security functions.
 
 ## Security Challenges
-- skydda kritisk teknik från obehörig fysisk åtkomst
-- begränsa mänsklig närvaro i känsliga teknikzoner
-- säkerställa att rätt personer når rätt utrustning
-- hantera maintenance, change och recovery utan att tappa kontroll
-- skydda credentials, devices och adminvägar
+
+- protect critical technology from unauthorized physical access
+- limit human presence in sensitive technical zones
+- ensure that the right people reach the right equipment
+- handle maintenance, change, and recovery without losing control
+- protect credentials, devices, and admin paths
 
 ## Relevant Concept Elements
+
 - protected technical zones
 - maintenance model
 - privileged access separation
@@ -50,27 +54,32 @@ En organisation driver eller planerar en serverhall med höga krav på fysisk s�
 - recovery model
 
 ## Why the Concept Fits
-Konceptet är särskilt väl anpassat till denna miljö eftersom det:
-- skiljer mellan normalyta och teknikzon
-- behandlar tekniska zoner som särskilda säkerhetsmiljöer
-- stödjer hög friktion där skyddsvärdet motiverar det
-- integrerar drift och säkerhet bättre än traditionell dörr- och badge-logik
+
+The concept is especially well suited to this environment because it:
+
+- separates normal areas from technical zones
+- treats technical zones as special security environments
+- supports high friction where the protection value justifies it
+- integrates operations and security better than traditional door-and-badge logic
 
 ---
 
 # Use Case 2 – Security-Classified Operations Environment
 
 ## Scenario
-En verksamhet hanterar känslig information, säkerhetsklassade funktioner eller annan verksamhet där OPSEC och insiderresistens är centrala krav.
+
+An organization handles sensitive information, security-classified functions, or other activities where OPSEC and insider resistance are central requirements.
 
 ## Security Challenges
-- förhindra exponering av credentials utanför facilityn
-- upptäcka avvikande intern rörelse
-- kontrollera vilka enheter som får användas var
-- minimera informella genvägar
-- skapa hög spårbarhet utan att förlita sig på en enda kontrollpunkt
+
+- prevent exposure of credentials outside the facility
+- detect anomalous internal movement
+- control which devices may be used where
+- minimize informal shortcuts
+- create high traceability without relying on a single control point
 
 ## Relevant Concept Elements
+
 - credential custody
 - sequential zone access
 - device trust
@@ -79,27 +88,32 @@ En verksamhet hanterar känslig information, säkerhetsklassade funktioner eller
 - governance model
 
 ## Why the Concept Fits
-Konceptet passar denna miljö eftersom det utgår från att:
-- fysisk rörelse är säkerhetsrelevant
-- credentials är skyddsobjekt
-- insiderhot inte bara är ett IT-problem
-- kontext måste vägas in i tillitsbedömningen
+
+The concept fits this environment because it assumes that:
+
+- physical movement is security-relevant
+- credentials are protected security objects
+- insider threats are not only an IT problem
+- context must be factored into the trust assessment
 
 ---
 
 # Use Case 3 – Privileged Administration Environment
 
 ## Scenario
-En organisation behöver en tydligt avgränsad miljö för administrativ åtkomst till känsliga system, där adminaktiviteter måste vara starkt autentiserade, spårbara och separerade från vanlig användaranvändning.
+
+An organization needs a clearly bounded environment for administrative access to sensitive systems, where admin activities must be strongly authenticated, traceable, and separated from normal user behavior.
 
 ## Security Challenges
-- förhindra admin från vanliga användarenheter
-- skydda högprivilegierade identiteter
-- skapa tydligare revisionsspår för adminåtgärder
-- minska risken för credential misuse
-- hantera emergency access utan att underminera normal modell
+
+- prevent admin activity from standard user devices
+- protect highly privileged identities
+- create clearer audit trails for administrative actions
+- reduce the risk of credential misuse
+- handle emergency access without undermining the normal model
 
 ## Relevant Concept Elements
+
 - privileged access model
 - dedicated admin devices
 - recovery model
@@ -108,27 +122,32 @@ En organisation behöver en tydligt avgränsad miljö för administrativ åtkoms
 - technical zone logic
 
 ## Why the Concept Fits
-Konceptet passar bra eftersom det tydligt separerar:
-- användarroll från adminroll
-- vardagsenhet från adminenhet
-- normal access från högprivilegierad åtkomst
-- ordinarie administration från break-glass och recovery
+
+The concept fits well because it clearly separates:
+
+- the user role from the admin role
+- the everyday device from the admin device
+- normal access from highly privileged access
+- standard administration from break-glass and recovery
 
 ---
 
 # Use Case 4 – High-Security Facility With Controlled Device Movement
 
 ## Scenario
-En verksamhet behöver kontrollera inte bara människor och credentials, utan även hur devices rör sig inom och ut ur facilityn.
+
+An organization needs to control not only people and credentials, but also how devices move within and out of the facility.
 
 ## Security Challenges
-- förhindra att känsliga laptops lämnar tillåtet område
-- upptäcka otillåten device movement
-- koppla deviceanvändning till roll och zon
-- minska risken för exfiltration via utrustning
-- säkerställa att admin- eller specialenheter används i rätt kontext
+
+- prevent sensitive laptops from leaving the permitted area
+- detect unauthorized device movement
+- tie device usage to role and zone
+- reduce the risk of exfiltration through equipment
+- ensure that admin or special-purpose devices are used in the correct context
 
 ## Relevant Concept Elements
+
 - asset custody model
 - device trust
 - RFID-based asset visibility
@@ -137,27 +156,32 @@ En verksamhet behöver kontrollera inte bara människor och credentials, utan ä
 - policy baseline
 
 ## Why the Concept Fits
-Konceptet är starkt här eftersom det ser devices som:
-- säkerhetsobjekt
-- bärare av tillit
-- delar av den övergripande säkerhetsmodellen
 
-Inte bara som neutrala arbetsverktyg.
+The concept is strong here because it sees devices as:
+
+- security objects
+- carriers of trust
+- parts of the overall security model
+
+not merely as neutral work tools.
 
 ---
 
 # Use Case 5 – Facility With Sequential Zone Enforcement
 
 ## Scenario
-En anläggning har zoner med olika känslighetsgrad och behöver kunna upptäcka när personer rör sig genom facilityn på ett sätt som avviker från förväntad eller tillåten passageordning.
+
+A facility has zones with different sensitivity levels and needs to detect when people move through the facility in a way that deviates from the expected or permitted passage order.
 
 ## Security Challenges
-- traditionell accesskontroll visar bara att en dörr öppnats
-- otillåtna genvägar eller ologiska rörelser blir svåra att upptäcka
-- interna avvikelser kan döljas i normal badge-användning
-- spårbarhet saknar djup
+
+- traditional access control only shows that a door was opened
+- unauthorized shortcuts or illogical movement become difficult to detect
+- internal deviations can be hidden within normal badge usage
+- traceability lacks depth
 
 ## Relevant Concept Elements
+
 - zone model
 - sequential validation
 - anomaly detection logic
@@ -165,27 +189,32 @@ En anläggning har zoner med olika känslighetsgrad och behöver kunna upptäcka
 - governance and exception handling
 
 ## Why the Concept Fits
-Detta är en av konceptets starkaste use cases, eftersom sekventiell zonvalidering är en kärnidé i modellen.
 
-Det ger:
-- bättre förståelse för *hur* någon tog sig till en zon
-- bättre upptäckt av avvikande rörelsemönster
-- starkare koppling mellan fysisk rörelse och tillit
+This is one of the concept’s strongest use cases, because sequential zone validation is a core idea in the model.
+
+It provides:
+
+- better understanding of *how* someone reached a zone
+- better detection of anomalous movement patterns
+- a stronger link between physical movement and trust
 
 ---
 
 # Use Case 6 – High-Security Maintenance and Change Environment
 
 ## Scenario
-Tekniskt arbete i skyddade zoner behöver ske under stark kontroll, med tydlig skillnad mellan snabb service, större förändringar, recovery och incidenthantering.
+
+Technical work in protected zones must take place under strong control, with a clear distinction between quick service, larger changes, recovery, and incident handling.
 
 ## Security Challenges
-- otydlig gräns mellan service och change
-- risk att tekniskt arbete blir informell bypass för säkerhetskontroller
-- svårigheter att återgå säkert till normal drift
-- låg spårbarhet kring vem som gjort vad i teknikzonen
+
+- unclear boundary between service and change
+- risk that technical work becomes an informal bypass of security controls
+- difficulty returning safely to normal operations
+- low traceability around who did what in the technical zone
 
 ## Relevant Concept Elements
+
 - maintenance model
 - recovery model
 - incident response
@@ -193,27 +222,32 @@ Tekniskt arbete i skyddade zoner behöver ske under stark kontroll, med tydlig s
 - zone model
 
 ## Why the Concept Fits
-Konceptet är relevant eftersom det uttryckligen hanterar:
-- olika driftlägen
-- syftesbunden teknisk åtkomst
-- change-fönster
-- återgång till normal drift
-- begränsad mänsklig närvaro i känsliga teknikzoner
+
+The concept is relevant because it explicitly handles:
+
+- different operating states
+- purpose-bound technical access
+- change windows
+- return to normal operations
+- limited human presence in sensitive technical zones
 
 ---
 
 # Use Case 7 – Insider-Risk-Sensitive Environment
 
 ## Scenario
-En verksamhet vill stärka skyddet mot interna policybrott, genvägar, credential misuse, otydlig devicehantering eller annan intern avvikelse som inte nödvändigtvis är ett klassiskt externt angrepp.
+
+An organization wants to strengthen protection against internal policy violations, shortcuts, credential misuse, unclear device handling, or other internal deviations that are not necessarily classic external attacks.
 
 ## Security Challenges
-- insiders kan redan ha viss legitim access
-- små policybrott kan bli normaliserade
-- credentials och devices kan missbrukas utan att direkt trigga traditionella kontroller
-- fysisk och logisk kontext granskas inte tillsammans
+
+- insiders may already have some legitimate access
+- small policy violations can become normalized
+- credentials and devices can be misused without directly triggering traditional controls
+- physical and logical context are not reviewed together
 
 ## Relevant Concept Elements
+
 - credential custody
 - device trust
 - sequential zone logic
@@ -222,26 +256,31 @@ En verksamhet vill stärka skyddet mot interna policybrott, genvägar, credentia
 - governance and recertification
 
 ## Why the Concept Fits
-Konceptet är starkt här eftersom det inte bara fokuserar på “obehörig person utifrån”, utan på:
-- avvikelse från förväntat beteende
-- intern rörelsedisciplin
-- kontextbaserad tillit
-- tydlig spårbarhet över flera domäner
+
+The concept is strong here because it focuses not only on “unauthorized external persons,” but on:
+
+- deviation from expected behavior
+- internal movement discipline
+- context-based trust
+- clear traceability across multiple domains
 
 ---
 
 # Use Case 8 – Conceptual Security Architecture for New Facility Design
 
 ## Scenario
-En organisation eller partner vill utforma en ny högsäker anläggning och behöver ett konceptuellt ramverk som binder ihop fysisk säkerhet, credentials, devices, tekniska zoner och driftprocesser.
+
+An organization or partner wants to design a new high-security facility and needs a conceptual framework that ties together physical security, credentials, devices, technical zones, and operational processes.
 
 ## Security Challenges
-- risk att designarbetet blir silobaserat
-- fysisk säkerhet planeras separat från IT-drift
-- drift, recovery och maintenance kommer in för sent
-- governance och incidenthantering blir eftertanke
+
+- risk that the design process becomes silo-based
+- physical security is planned separately from IT operations
+- operations, recovery, and maintenance enter too late
+- governance and incident handling become an afterthought
 
 ## Relevant Concept Elements
+
 - concept model
 - executive summary
 - assessment
@@ -251,74 +290,82 @@ En organisation eller partner vill utforma en ny högsäker anläggning och beh�
 - roadmap
 
 ## Why the Concept Fits
-Konceptet är användbart som tidigt arkitekturramverk eftersom det:
-- skapar en gemensam modell för flera säkerhetsdomäner
-- hjälper till att identifiera samband tidigt
-- stödjer designreview och vidare kravarbete
-- gör det lättare att resonera om helhet, inte bara komponenter
+
+The concept is useful as an early architectural framework because it:
+
+- creates a shared model across multiple security domains
+- helps identify relationships early
+- supports design review and further requirements work
+- makes it easier to reason about the whole, not just components
 
 ---
 
 # Use Case 9 – Strategic Discussion or Innovation Framework
 
 ## Scenario
-En säkerhetsfunktion, arkitekt eller intern innovationsgrupp behöver ett koncept att resonera kring för att utveckla nästa generations skyddad driftmiljö eller facility security.
+
+A security function, architect, or internal innovation group needs a concept to think with in order to develop the next generation of protected operational environments or facility security.
 
 ## Security Challenges
-- svårt att diskutera helhetslösningar med bara enskilda tekniker
-- svårt att skapa gemensamt språk mellan fysisk säkerhet, IT och governance
-- idéer fastnar i detaljdebatt utan övergripande modell
+
+- difficult to discuss holistic solutions using only individual technologies
+- difficult to create shared language between physical security, IT, and governance
+- ideas get stuck in detail debates without an overall model
 
 ## Relevant Concept Elements
-- [concept.md](https://concept.md)
-- [executive-summary.md](https://executive-summary.md)
-- [value-proposition.md](https://value-proposition.md)
-- [roadmap.md](https://roadmap.md)
-- [assessment.md](https://assessment.md)
+
+- [`concept.md`](concept.md)
+- [`executive-summary.md`](executive-summary.md)
+- [`value-proposition.md`](value-proposition.md)
+- [`roadmap.md`](roadmap.md)
+- [`assessment.md`](assessment.md)
 
 ## Why the Concept Fits
-Konceptet fungerar bra som diskussionsram därför att det:
-- ger språk för att koppla ihop flera säkerhetsområden
-- synliggör designprinciper
-- visar hur olika kontroller kan samverka i samma modell
-- skapar ett underlag för vidare förädling eller intern innovation
+
+The concept works well as a discussion framework because it:
+
+- provides language for connecting multiple security domains
+- makes design principles visible
+- shows how different controls can work together in the same model
+- creates a foundation for further refinement or internal innovation
 
 ---
 
 # Where the Concept Is Less Suitable
 
-Konceptet är mindre lämpligt för miljöer där:
+The concept is less suitable for environments where:
 
-- användarbekvämlighet måste prioriteras mycket högt
-- låg friktion är viktigare än strikt kontroll
-- fysisk rörelse inte är särskilt säkerhetsrelevant
-- credentials och devices naturligt måste röra sig fritt
-- organisationen saknar förmåga eller vilja att upprätthålla stark governance
+- user convenience must be prioritized very highly
+- low friction matters more than strict control
+- physical movement is not especially security-relevant
+- credentials and devices naturally need to move freely
+- the organization lacks the ability or willingness to maintain strong governance
 
-Exempel:
-- generiska kontorsmiljöer
-- lågkänsliga verksamheter
-- bred standardiserad företags-IT utan skyddad facilitylogik
+Examples:
+
+- generic office environments
+- low-sensitivity operations
+- broad standardized corporate IT without protected facility logic
 
 ---
 
 # Cross-Use-Case Value
 
-Oavsett use case återkommer samma kärnvärde i konceptet:
+Regardless of the use case, the same core value recurs in the concept:
 
-- fysisk och logisk säkerhet binds ihop
-- credentials hålls under starkare kontroll
-- devices och rörelse blir säkerhetsrelevanta parametrar
-- högprivilegierad åtkomst separeras tydligare
-- recovery och incidenthantering byggs in i modellen
-- governance gör konceptet hållbart över tid
+- physical and logical security are tied together
+- credentials are kept under stronger control
+- devices and movement become security-relevant parameters
+- highly privileged access is more clearly separated
+- recovery and incident handling are built into the model
+- governance makes the concept sustainable over time
 
 ---
 
 # Final Note
 
-High-Security Facility Concept är inte främst ett koncept för “alla miljöer”, utan för rätt miljöer — där skyddsvärdet är högt, avvikelsekostnaden är hög och där kontroll, spårbarhet och kontext är viktigare än bekvämlighet.
+The High-Security Facility Concept is not primarily a concept for “all environments,” but for the right environments — where the protection value is high, the cost of deviation is high, and where control, traceability, and context matter more than convenience.
 
-Den centrala idén bakom use cases i detta dokument är:
+The central idea behind the use cases in this document is:
 
-> **Konceptet är mest värdefullt i miljöer där fysisk rörelse, credentials, devices, privilegier och teknisk drift måste förstås som delar av samma säkerhetsproblem.**
+> **The concept is most valuable in environments where physical movement, credentials, devices, privileges, and technical operations must be understood as parts of the same security problem.**
