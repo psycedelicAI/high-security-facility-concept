@@ -1,3 +1,8 @@
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
 # High-Security Facility Concept
 
 > Where identity, movement, zones, devices, surveillance, privilege, recovery, and governance become one security model.
