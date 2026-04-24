@@ -1,6 +1,6 @@
 # Surveillance Model – High-Security Facility Concept
 
-> En modell för hur CCTV, termisk övervakning, anti-tamper-placering, roof security, 3D Threat Thinking och operativa incidentvyer kan integreras i en högsäker facilitymiljö.
+> A model for how CCTV, thermal surveillance, anti-tamper placement, roof security, 3D Threat Thinking, and operational incident views can be integrated into a high-security facility environment.
 
 ---
 
@@ -19,130 +19,140 @@
 
 ## Purpose
 
-Detta dokument beskriver hur övervakning kan utformas som en integrerad del av **High-Security Facility Concept**.
+This document describes how surveillance can be designed as an integrated part of the **High-Security Facility Concept**.
 
-Syftet är att formulera principer för:
+Its purpose is to formulate principles for:
 
-- yttre CCTV-placering
-- termisk övervakning / FLIR
-- ömsesidig kameratäckning
-- tamper-resistant och tamper-evident design
-- roof security och taksensorering
-- zonbaserade incidentvyer
-- operativ användbarhet vid larm och incident
+- external CCTV placement
+- thermal surveillance / FLIR
+- mutual camera coverage
+- tamper-resistant and tamper-evident design
+- roof security and rooftop sensing
+- zone-based incident views
+- operational usability during alarms and incidents
 
-Målet är att övervakningssystemet inte bara ska “finnas”, utan vara utformat för att:
+The goal is for the surveillance system not merely to “exist,” but to be designed to:
 
-- upptäcka
-- verifiera
-- övervaka egna kontrollpunkter
-- stödja snabb operatörsrespons
-- bidra till spårbarhet, containment och recovery
+- detect
+- verify
+- monitor its own control points
+- support rapid operator response
+- contribute to traceability, containment, and recovery
 
 ---
 
 # Surveillance Philosophy
 
-Övervakning i en högsäker facility ska inte ses som en passiv inspelningsfunktion.
+Surveillance in a high-security facility must not be seen as a passive recording function.
 
-I denna modell är surveillance i stället:
+In this model, surveillance is instead:
 
-- en aktiv säkerhetskontroll
-- en del av facilityns trust architecture
-- ett stöd för incidentdetektion och verifiering
-- ett skydd även för andra skyddskontroller
-- ett verktyg för snabb situationsförståelse under press
+- an active security control
+- part of the facility’s trust architecture
+- support for incident detection and verification
+- protection even for other security controls
+- a tool for rapid situational understanding under pressure
 
-Det innebär att kameror inte bara ska ge generell täckning, utan också placeras och grupperas så att de:
+This means that cameras should not only provide general coverage, but should also be placed and grouped so that they:
 
-- minskar blinda vinklar
-- gör sabotage svårare
-- övervakar egna kamerapositioner
-- ger redundans
-- stödjer snabb operativ fokus vid incident
-- stödjer en rumslig hotmodell där intrång inte bara antas ske på marknivå
+- reduce blind spots
+- make sabotage more difficult
+- monitor their own camera positions
+- provide redundancy
+- support rapid operational focus during incidents
+- support a spatial threat model in which intrusion is not assumed to occur only at ground level
 
 ---
 
 # 3D Threat Thinking in Surveillance
 
-I denna modell utformas surveillance utifrån **3D Threat Thinking**.
+In this model, surveillance is designed according to **3D Threat Thinking**.
 
-Det innebär att hotbilden inte förstås som en platt eller tvådimensionell perimeterfråga, utan som en rumslig säkerhetsutmaning där intrång, närvaro och påverkan kan ske från flera riktningar och nivåer.
+This means that the threat model is not understood as a flat or two-dimensional perimeter problem, but as a spatial security challenge in which intrusion, presence, and impact can occur from multiple directions and levels.
 
-För surveillance innebär detta att kameralogik och sensorer inte bara ska täcka:
+For surveillance, this means that camera logic and sensors should not only cover:
 
-- entréer
-- fasader
-- marknära rörelsevägar
+- entrances
+- facades
+- ground-level movement paths
 
-utan också ta höjd för:
+but must also account for:
 
-- takaccess
-- höjdrelaterade angreppsvägar
-- ovanliga eller icke-linjära approach paths
-- strukturellt förbisedda ytor
-- sabotage mot själva övervakningssystemet
+- roof access
+- height-related attack paths
+- unusual or non-linear approach paths
+- structurally overlooked surfaces
+- sabotage against the surveillance system itself
 
-Detta gör att övervakningsmodellen blir bättre anpassad för högsäker miljö där angripare inte förväntas följa normala accessvägar.
+This makes the surveillance model better suited to high-security environments where attackers are not expected to follow normal access routes.
 
 ---
 
 # Core Principles
 
 ## 1. Surveillance Is Part of Security Control, Not Just Observation
-Kamerasystemet ska behandlas som en aktiv del av säkerhetsmodellen, inte enbart som ett efterhandsstöd.
+
+The camera system must be treated as an active part of the security model, not only as a retrospective support function.
 
 ## 2. Cameras Should Help Protect Cameras
-Kritiska kamerapositioner bör övervakas av andra kameror för att göra manipulation, täckning eller skadegörelse svårare att genomföra obemärkt.
+
+Critical camera positions should be monitored by other cameras to make manipulation, covering, or damage more difficult to perform unnoticed.
 
 ## 3. Different Camera Types Have Different Roles
-Standard CCTV och termiska sensorer / FLIR bör användas med olika men kompletterande syften.
+
+Standard CCTV and thermal sensors / FLIR should be used for different but complementary purposes.
 
 ## 4. External Coverage Should Be Designed for Tamper Resistance
-Yttre kameror bör placeras så att sabotageförsök mot en enskild kamera kan observeras av andra sensorer eller kameror.
+
+External cameras should be placed so that sabotage attempts against one individual camera can be observed by other sensors or cameras.
 
 ## 5. Roof Areas Are Security-Relevant Surfaces
-Tak och takrelaterade accesspunkter ska behandlas som säkerhetsrelevanta ytor och inte som byggnadstekniska sidofrågor.
+
+Roofs and roof-related access points must be treated as security-relevant surfaces, not as side issues of building engineering.
 
 ## 6. Operator Speed Matters
-Övervakning måste kunna användas effektivt i incidentläge. Rätt information ska snabbt kunna visas utan tung manuell navigering.
+
+Surveillance must be usable effectively in incident conditions. The right information must be quickly available without heavy manual navigation.
 
 ## 7. Surveillance Should Follow Zone Logic
-Kamerastruktur och kameravyer bör spegla facilityns säkerhetszoner och kritiska accesspunkter.
+
+Camera structure and camera views should reflect the facility’s security zones and critical access points.
 
 ---
 
 # Surveillance Layers
 
 ## Layer 1 – Standard CCTV
-Standard CCTV används främst för:
 
-- visuell bekräftelse
-- identifikation
-- händelseförlopp
-- övervakning av monteringspunkter
-- detektion av sabotage mot andra kameror
-- uppföljning av rörelse runt fasad, entré och accesspunkter
+Standard CCTV is used primarily for:
+
+- visual confirmation
+- identification
+- event reconstruction
+- monitoring of mounting points
+- detection of sabotage against other cameras
+- follow-up of movement around facades, entrances, and access points
 
 ## Layer 2 – Thermal / FLIR
-FLIR eller annan termisk övervakning används främst för:
 
-- perimeterdetektion
-- mörkerkapacitet
-- upptäckt vid låg sikt
-- upptäckt av personer nära fasad eller yttre skyddslinje
-- komplement till vanlig visuell övervakning
-- detektion i ytor där traditionell visuell övervakning är svagare
+FLIR or other thermal surveillance is used primarily for:
+
+- perimeter detection
+- nighttime capability
+- detection in low visibility
+- detection of persons near the facade or outer protective line
+- complementing normal visual surveillance
+- detection in areas where traditional visual surveillance is weaker
 
 ## Layer 3 – Overwatch / Elevated Control
-Högre placerade kameror används för:
 
-- övergripande överblick
-- övervakning av kritiska lägre kameror
-- nedåtriktad kontroll av kameraområden
-- extra vinkel vid sabotage, incident eller rörelse nära byggnad
-- stöd för roof security och övervakning av höjdrelaterade ytor
+Higher-mounted cameras are used for:
+
+- overall overview
+- monitoring of critical lower-mounted cameras
+- downward oversight of camera areas
+- additional angle during sabotage, incident, or movement near the building
+- support for roof security and monitoring of height-related surfaces
 
 ---
 
@@ -150,61 +160,63 @@ Högre placerade kameror används för:
 
 ## Design Intent
 
-Yttre kameror ska inte enbart placeras för att “täcka hörn” eller ge generell perimeterbild.
+External cameras should not be placed only to “cover corners” or provide a general perimeter image.
 
-I denna modell ska externa kameror även bidra till att övervaka:
+In this model, external cameras should also help monitor:
 
-- varandra
-- sina monteringspunkter
-- närliggande approach paths
-- försök till fysisk manipulation eller skadegörelse
+- each other
+- their mounting points
+- nearby approach paths
+- attempts at physical manipulation or damage
 
 ## Mutual Oversight Pairing
 
-Ett rekommenderat mönster är att använda sidoplacerade kameror som visuellt korsövervakar varandra.
+A recommended pattern is to use side-mounted cameras that visually cross-monitor each other.
 
 ### Side Camera A
-- placeras på ena sidan av byggnaden eller fasadytan
-- riktas mot motsatt sida
-- ska täcka fasadyta, rörelseväg och den andra kamerans position
+
+- placed on one side of the building or facade surface
+- directed toward the opposite side
+- should cover the facade surface, movement path, and the position of the other camera
 
 ### Side Camera B
-- placeras på motsatt sida
-- riktas tillbaka mot första sidan
-- ska täcka fasadyta, rörelseväg och den första kamerans position
 
-Detta skapar:
+- placed on the opposite side
+- directed back toward the first side
+- should cover the facade surface, movement path, and the position of the first camera
 
-- ömsesidig övervakning
-- bättre redundans
-- högre motståndskraft mot sabotage mot enskild kamera
-- bättre sannolikhet att fånga manipulation, täckning eller approach
+This creates:
+
+- mutual surveillance
+- better redundancy
+- greater resistance to sabotage against a single camera
+- better probability of capturing manipulation, covering, or approach
 
 ## Elevated Overwatch Camera
 
-En tredje kamera bör i kritiska lägen placeras högre upp, exempelvis nära takkant eller annan skyddad höjdposition.
+A third camera should, in critical cases, be placed higher up, for example near the roof edge or another protected elevated position.
 
-Denna kamera ska:
+This camera should:
 
-- se ned mot de sidoplacerade kamerorna
-- övervaka området där sabotage eller manipulation kan ske
-- ge ytterligare vinkel för verifiering
-- minska beroendet av endast två sidovyer
+- look down toward the side-mounted cameras
+- monitor the area where sabotage or manipulation may occur
+- provide an additional angle for verification
+- reduce dependence on only two side views
 
-Detta skapar ett enklare men starkt anti-tamper-arrangemang där kameror inte lämnas oövervakade.
+This creates a simple but strong anti-tamper arrangement in which cameras are not left unmonitored.
 
 ## Practical Interpretation
 
-Målet är inte att varje byggnad alltid måste använda exakt samma geometri.
+The goal is not that every building must always use exactly the same geometry.
 
-Målet är att kameraplacering ska följa principen:
+The goal is that camera placement should follow the principle of:
 
-- ömsesidig täckning
-- övervakning av kamerapositioner
-- minimering av enkelpunktsförlust
-- förbättrad sabotageupptäckt
+- mutual coverage
+- monitoring of camera positions
+- minimization of single points of failure
+- improved sabotage detection
 
-Detta bör därför ses som en designprincip, inte som en absolut layoutregel.
+This should therefore be seen as a design principle, not an absolute layout rule.
 
 ---
 
@@ -212,39 +224,39 @@ Detta bör därför ses som en designprincip, inte som en absolut layoutregel.
 
 ## Role of FLIR
 
-Termiska kameror bör användas som ett kompletterande lager snarare än som ersättning för vanliga CCTV-kameror.
+Thermal cameras should be used as a complementary layer rather than as a replacement for standard CCTV cameras.
 
-De är särskilt användbara för:
+They are particularly useful for:
 
-- perimeterövervakning i mörker
-- upptäckt av rörelse vid låg eller varierande belysning
-- övervakning av skuggade eller svårbelysta ytor
-- tidig indikation på närvaro nära fasad eller yttre skyddslinje
-- stöd för upptäckt i rumsliga angreppsvägar där visuell kamera inte alltid räcker
+- perimeter monitoring in darkness
+- movement detection in low or varying lighting
+- monitoring of shadowed or difficult-to-illuminate areas
+- early indication of presence near the facade or outer protective line
+- support for detection along spatial attack paths where visual cameras are not always sufficient
 
 ## Corner Placement
 
-I denna modell kan termiska kameror med fördel placeras i byggnadens hörn, där de kan bidra med:
+In this model, thermal cameras may advantageously be placed at building corners, where they can contribute:
 
-- bred perimeteröversikt
-- värmebaserad detektion från flera riktningar
-- stöd till vanlig CCTV
-- förbättrad upptäckt i ytterområden
+- broad perimeter overview
+- heat-based detection from multiple directions
+- support to standard CCTV
+- improved detection in outer areas
 
-Till skillnad från standard-CCTV, som i vissa fall bör placeras för ömsesidig anti-tamper-övervakning, kan FLIR i högre grad användas för att förstärka perimeterdetektion från hörnpositioner.
+Unlike standard CCTV, which in some cases should be placed for mutual anti-tamper surveillance, FLIR can to a greater extent be used to strengthen perimeter detection from corner positions.
 
 ## Sensor Complementarity
 
-Standard CCTV och FLIR ska ses som kompletterande:
+Standard CCTV and FLIR should be seen as complementary:
 
-- CCTV ger bättre visuell verifiering och detalj
-- FLIR ger bättre upptäckt i vissa ljus- och väderförhållanden
+- CCTV provides better visual verification and detail
+- FLIR provides better detection in certain lighting and weather conditions
 
-Tillsammans ger de:
+Together they provide:
 
-- bättre upptäckt
-- bättre verifiering
-- bättre robusthet i varierande förhållanden
+- better detection
+- better verification
+- better robustness in varying conditions
 
 ---
 
@@ -252,116 +264,118 @@ Tillsammans ger de:
 
 ## Roof as a Security-Relevant Surface
 
-Taket ska i högsäker miljö behandlas som en säkerhetsrelevant yta, inte som en neutral byggnadskomponent.
+In a high-security environment, the roof must be treated as a security-relevant surface, not as a neutral building component.
 
-Det betyder att taket ska förstås som en möjlig:
+This means that the roof must be understood as a possible:
 
-- intrångsväg
-- sabotageyta
-- observationspunkt
-- åtkomstväg till skyddade strukturer
-- bypass av traditionell marknära perimeterlogik
+- intrusion path
+- sabotage surface
+- observation point
+- access route to protected structures
+- bypass of traditional ground-level perimeter logic
 
 ## Why Roof Security Matters
 
-I vissa högriskmiljöer kan angripare använda ovanliga eller asymmetriska intrångsvägar, inklusive takaccess.
+In some high-risk environments, attackers may use unusual or asymmetric intrusion paths, including roof access.
 
-Därför ska säkerhetsmodellen inte utgå från att hot enbart kommer via:
+The security model must therefore not assume that threats come only via:
 
-- huvudentréer
-- marknivå
-- förväntade accesspunkter
+- main entrances
+- ground level
+- expected access points
 
-I stället måste även höjdrelaterade och strukturellt förbisedda vägar behandlas som realistiska riskytor.
+Instead, height-related and structurally overlooked paths must also be treated as realistic risk surfaces.
 
 ## Roof Access Hardening
 
-Takrelaterade öppningar och accesspunkter bör utformas med starkt skydd.
+Roof-related openings and access points should be designed with strong protection.
 
-Det kan inkludera:
+This may include:
 
-- förstärkta takluckor eller servicetillträden
-- tamper-resistant accesspunkter
-- fördröjande barriärer
-- kontrollerade övergångspunkter mellan tak och inre ytor
-- strukturell förstärkning där hotbilden motiverar det
+- reinforced roof hatches or service entries
+- tamper-resistant access points
+- delaying barriers
+- controlled transition points between the roof and interior spaces
+- structural hardening where the threat model justifies it
 
-Principen är att även om någon når taket ska detta inte innebära enkel eller direkt vidareaccess till skyddad inre miljö.
+The principle is that even if someone reaches the roof, this must not mean easy or direct further access into the protected internal environment.
 
 ## Roof Sensors
 
-Takytor och kritiska takaccesspunkter bör kunna sensoreras.
+Roof surfaces and critical roof access points should be capable of being instrumented with sensors.
 
-Exempel på relevanta kontrollmekanismer:
+Examples of relevant control mechanisms:
 
-- rörelsedetektion
-- närvarodetektion
-- tamper-sensorer på luckor eller accesspunkter
-- vibrationsindikering där det är relevant
-- larmkoppling för oplanerad aktivitet på tak
+- motion detection
+- presence detection
+- tamper sensors on hatches or access points
+- vibration indication where relevant
+- alarm linkage for unplanned rooftop activity
 
-Det viktiga är att taket får:
+What matters is that the roof has:
 
-- detektion
-- larmbarhet
-- verifieringsmöjlighet
-- operativ responskoppling
+- detection
+- alarm capability
+- ability to verify
+- linkage to operational response
 
 ## Roof Surveillance
 
-Övervakningen av tak bör stödjas genom:
+Roof monitoring should be supported through:
 
-- höjdplacerade kameror
-- relevanta siktlinjer mot takkant och åtkomstvägar
-- termiska sensorer där det förbättrar upptäcktsförmågan
-- kameravinklar som kan verifiera aktivitet på eller mot tak
+- elevated cameras
+- relevant sightlines toward the roof edge and access paths
+- thermal sensors where they improve detection capability
+- camera angles that can verify activity on or toward the roof
 
-Oplanerad närvaro på tak i högsäker miljö bör som huvudregel behandlas som stark avvikelse tills motsatsen verifierats.
+As a general rule, unplanned rooftop presence in a high-security environment should be treated as a strong deviation until verified otherwise.
 
 ---
 
 # Tamper-Resistant and Tamper-Evident Surveillance
 
-Full tamper-proof övervakning är sällan realistisk.
+Fully tamper-proof surveillance is rarely realistic.
 
-Därför bör modellen i första hand sträva efter att vara:
+The model should therefore primarily strive to be:
 
 - tamper-resistant
 - tamper-evident
 
-Det betyder att kamerasystemet ska utformas så att manipulation blir:
+This means that the camera system should be designed so that manipulation becomes:
 
-- svårare att genomföra
-- lättare att upptäcka
-- lättare att verifiera i efterhand
+- harder to perform
+- easier to detect
+- easier to verify afterward
 
 ## Tamper-Resistant Measures
-Exempel på principer:
 
-- korsövervakning mellan kameror
-- högt placerade overwatch-kameror
-- skyddade monteringspunkter där möjligt
-- flera vinklar mot kritiska angreppspunkter
-- kombination av visuell och termisk detektion
-- övervakning av roof access och höjdrelaterade ytor
+Examples of principles:
+
+- cross-monitoring between cameras
+- elevated overwatch cameras
+- protected mounting points where possible
+- multiple angles toward critical attack points
+- combination of visual and thermal detection
+- monitoring of roof access and height-related surfaces
 
 ## Tamper-Evident Measures
-Exempel på principer:
 
-- sabotageförsök fångas av annan kamera
-- plötslig kameraförlust kopplas till larm eller operatörsindikering
-- händelseförlopp kan rekonstrueras från fler än en kameravinkel
-- aktivitet mot takrelaterade kontrollpunkter blir synlig i logik och övervakning
+Examples of principles:
+
+- sabotage attempts are captured by another camera
+- sudden camera loss is linked to an alarm or operator indication
+- event sequence can be reconstructed from more than one camera angle
+- activity against roof-related control points becomes visible in both surveillance and control logic
 
 ---
 
 # Surveillance by Zone and Function
 
-Övervakning bör organiseras utifrån facilityns zoner och kritiska funktioner, inte enbart utifrån tekniska kameranamn.
+Surveillance should be organized according to the facility’s zones and critical functions, not only according to technical camera names.
 
-Det innebär att kameror bör kopplas till områden som exempelvis:
+This means that cameras should be tied to areas such as:
 
-- entré
+- entrance
 - reception
 - man-trap
 - perimeter north / south / east / west
@@ -371,12 +385,12 @@ Det innebär att kameror bör kopplas till områden som exempelvis:
 - internal control zone
 - protected technical zone
 
-Detta förbättrar:
+This improves:
 
-- operativ användbarhet
-- incidentfokus
-- utbildning av operatörer
-- gemensam begreppsanvändning mellan säkerhet, drift och ledning
+- operational usability
+- incident focus
+- operator training
+- shared terminology between security, operations, and management
 
 ---
 
@@ -384,45 +398,45 @@ Detta förbättrar:
 
 ## Purpose
 
-Vid incident ska operatör inte behöva bygga sin situationsbild manuellt från grunden.
+During an incident, the operator should not need to build situational awareness manually from scratch.
 
-Systemet bör därför stödja fördefinierade kameravyer eller presets kopplade till särskilda områden och funktioner.
+The system should therefore support predefined camera views or presets tied to specific areas and functions.
 
 ## Example: Entrance Focus
 
-Om en incident upptäcks vid entrén ska operatören snabbt kunna aktivera en förkonfigurerad vy som visar:
+If an incident is detected at the entrance, the operator should be able to quickly activate a preconfigured view showing:
 
-- alla relevanta entrékameror
-- närliggande fasadkameror
-- eventuell termisk täckning
-- approach paths mot entrén
-- övergripande vy över närliggande zon
+- all relevant entrance cameras
+- nearby facade cameras
+- any thermal coverage
+- approach paths toward the entrance
+- an overall view of the nearby zone
 
-Detta bör kunna ske genom en mycket snabb operativ handling, exempelvis en dedikerad knapp eller preset-aktivering.
+This should be possible through a very fast operational action, for example a dedicated button or preset activation.
 
 ## Example: Roof Focus
 
-Om aktivitet eller larm uppstår på taket ska operatören snabbt kunna växla till en roof preset som visar:
+If activity or an alarm occurs on the roof, the operator should be able to quickly switch to a roof preset showing:
 
-- relevanta takkameror
-- närliggande övervakningskameror
-- taknära FLIR- eller termiska feeds där sådana finns
-- närliggande fasadvyer som kan fånga approach eller flyktväg
-- åtkomstpunkter mellan tak och inre struktur
+- relevant roof cameras
+- nearby surveillance cameras
+- roof-adjacent FLIR or thermal feeds where available
+- nearby facade views that can capture approach or escape path
+- access points between the roof and the internal structure
 
 ## Benefits
 
-Fördefinierade incidentvyer förbättrar:
+Predefined incident views improve:
 
-- responstid
-- fokus
-- situationsförståelse
-- förmåga att samordna åtgärder
-- minskad kognitiv belastning vid stress
+- response time
+- focus
+- situational understanding
+- ability to coordinate actions
+- reduced cognitive load under stress
 
 ## Recommended Preset Examples
 
-Följande typer av zon- eller funktionspresets bör övervägas:
+The following types of zone or function presets should be considered:
 
 - Entrance
 - Reception
@@ -440,81 +454,81 @@ Följande typer av zon- eller funktionspresets bör övervägas:
 
 # Operator Usability Under Pressure
 
-Övervakningssystem i högsäker miljö måste fungera under stress, inte bara i normaldrift.
+Surveillance systems in a high-security environment must work under stress, not only during normal operations.
 
-Det innebär att designen bör stödja:
+This means that the design should support:
 
-- snabb växling mellan relevanta vyer
-- logiska kameragrupper
-- tydliga namn och zonetiketter
-- enkel eskalering från generell vy till fokusvy
-- minimerad tid för att hitta rätt kameror
+- rapid switching between relevant views
+- logical camera groups
+- clear names and zone labels
+- simple escalation from general view to focus view
+- minimized time to locate the correct cameras
 
-En övervakningslösning som tekniskt sett har många kameror men som är långsam att använda under incident ger lägre operativt värde.
+A surveillance solution that technically has many cameras but is slow to use during an incident provides lower operational value.
 
 ---
 
 # Incident Integration
 
-Surveillance ska vara integrerad med incidentarbetet och inte leva som ett isolerat sidospår.
+Surveillance must be integrated with incident work and not live as an isolated side track.
 
-Kameradata och kameravyer bör kunna stödja:
+Camera data and camera views should be able to support:
 
-- snabb verifiering av larm
-- bedömning av rörelse eller närvaro
-- containment-beslut
-- operatörsstöd till väktare eller responsfunktion
-- efteranalys och rekonstruktion
-- recovery och återgång till normal drift
+- rapid alarm verification
+- assessment of movement or presence
+- containment decisions
+- operator support to guards or response functions
+- post-analysis and reconstruction
+- recovery and return to normal operations
 
 ---
 
 # Governance Considerations
 
-Surveillance-modellen bör också styras genom tydlig governance.
+The surveillance model should also be governed through clear governance.
 
-Detta bör inkludera:
+This should include:
 
-- definierat ägarskap för kameralogik och placering
-- återkommande review av kameratäckning
-- review av blinda zoner och sabotageexponering
-- kontroll av att presets fortfarande motsvarar verklig layout
-- dokumenterade principer för ändringar i kamerastruktur
-- samordning mellan fysisk säkerhet, IT, facility och incidentansvariga
+- defined ownership of camera logic and placement
+- recurring review of camera coverage
+- review of blind zones and sabotage exposure
+- confirmation that presets still reflect the real layout
+- documented principles for changes to camera structure
+- coordination between physical security, IT, facility, and incident-responsible functions
 
 ---
 
 # Design Boundaries
 
-Detta dokument beskriver inte:
+This document does not describe:
 
-- exakta kameramodeller
-- specifik linstyp eller sensorval
-- inspelningspolicy i detalj
-- lagringstid / retention i detalj
-- juridiska eller regulatoriska krav för kameraövervakning
-- fullständig installationsritning
-- fullständig byggteknisk projektering av takskydd
+- exact camera models
+- specific lens type or sensor choice
+- recording policy in detail
+- storage time / retention in detail
+- legal or regulatory requirements for camera surveillance
+- complete installation drawings
+- complete building-engineering design of roof protection
 
-Dessa delar kräver separat projektering, juridisk bedömning och miljöspecifik anpassning.
+These aspects require separate design work, legal assessment, and environment-specific adaptation.
 
 ---
 
 # Summary
 
-Surveillance i denna modell handlar inte bara om att spela in vad som händer.
+Surveillance in this model is not only about recording what happens.
 
-Det handlar om att bygga en övervakningsarkitektur som:
+It is about building a surveillance architecture that:
 
-- stöder facilityns trust model
-- skyddar även sina egna kontrollpunkter
-- använder både visuell och termisk detektion
-- minskar sabotageexponering
-- tar höjd för hot i flera rumsliga dimensioner
-- inkluderar tak och höjdrelaterade accessvägar i hotmodellen
-- ger operatörer snabb fokus vid incident
-- stärker detektion, verifiering och spårbarhet
+- supports the facility’s trust model
+- protects its own control points
+- uses both visual and thermal detection
+- reduces sabotage exposure
+- accounts for threats across multiple spatial dimensions
+- includes the roof and height-related access paths in the threat model
+- gives operators rapid focus during incidents
+- strengthens detection, verification, and traceability
 
-Den centrala idén är:
+The central idea is:
 
-> Övervakning ska inte bara se vad som händer runt byggnaden, utan också bidra till att skydda själva övervakningssystemet, täcka hot i 3D och ge snabb, användbar situationsförståelse när något faktiskt händer.
+> Surveillance should not only see what happens around the building, but also help protect the surveillance system itself, cover threats in 3D, and provide rapid, usable situational understanding when something actually happens.
