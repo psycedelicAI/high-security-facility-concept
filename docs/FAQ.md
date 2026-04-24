@@ -1,330 +1,330 @@
 # FAQ – High-Security Facility Concept
 
-> Vanliga frågor och korta svar om High-Security Facility Concept, dess syfte, avgränsning, relation till Zero Trust och praktiska användning.
+> Common questions and short answers about the High-Security Facility Concept, its purpose, scope, relationship to Zero Trust, and practical use.
 
 ---
 
 ## What is this?
 
-High-Security Facility Concept är en konceptuell modell för högsäker teknisk miljö där fysisk säkerhet, zonlogik, credentials, devices, privilegierad åtkomst, incidenthantering, recovery och governance behandlas som delar av samma säkerhetssystem.
+The High-Security Facility Concept is a conceptual model for high-security technical environments in which physical security, zone logic, credentials, devices, privileged access, incident handling, recovery, and governance are treated as parts of the same security system.
 
 ---
 
 ## Is this a product?
 
-Nej.
+No.
 
-Detta är inte en färdig produkt utan ett koncept, ett designunderlag och ett ramverk för vidare säkerhetsarkitektur, diskussion och förädling.
+This is not a finished product, but rather a concept, a design foundation, and a framework for further security architecture, discussion, and refinement.
 
 ---
 
 ## Is this an implementation guide?
 
-Nej.
+No.
 
-Dokumentationen beskriver principer, modeller och riktning, men är inte en färdig implementationsspecifikation.
+The documentation describes principles, models, and direction, but it is not a complete implementation specification.
 
-Verklig implementation skulle kräva:
+A real-world implementation would require:
 
-- miljöspecifika krav
-- specialistgranskning
-- teknisk detaljering
-- policyarbete
-- operativ anpassning
-- juridisk och regulatorisk anpassning där relevant
+- environment-specific requirements
+- specialist review
+- technical detailing
+- policy development
+- operational adaptation
+- legal and regulatory alignment where relevant
 
 ---
 
 ## What is the core idea?
 
-Kärnidén är att hög säkerhet inte bara beror på vem som har access, utan också på:
+The core idea is that high security does not depend only on who has access, but also on:
 
-- var personen befinner sig
-- hur personen kom dit
-- vilken zon som nås
-- vilken enhet som används
-- vilken credential som används
-- om aktiviteten sker i rätt kontext
-- hur avvikelser, incidenter och recovery hanteras
+- where the person is located
+- how the person got there
+- which zone is being accessed
+- which device is being used
+- which credential is being used
+- whether the activity is taking place in the correct context
+- how deviations, incidents, and recovery are handled
 
 ---
 
 ## What makes this concept different?
 
-Några av de mest särskiljande delarna är:
+Some of its most distinctive elements are:
 
-- sekventiell zonaccess
-- credential custody som säkerhetskontroll
-- device location som säkerhetsparameter
-- tydlig separation mellan normalyta och skyddad teknikzon
-- separering mellan vanlig användning och privilegierad åtkomst
-- recovery och governance som del av konceptets kärna
+- sequential zone access
+- credential custody as a security control
+- device location as a security parameter
+- clear separation between normal workspace and protected technical zones
+- separation between regular use and privileged access
+- recovery and governance as part of the core of the concept
 
 ---
 
 ## Is this a Zero Trust model?
 
-Inte i klassisk eller snäv IT-bemärkelse.
+Not in the classic or narrow IT sense.
 
-Konceptet bygger primärt på:
+The concept is primarily based on:
 
-- fysisk närvaro
-- zonkontext
-- rörelselogik
-- enheters lokation
-- credential custody i fysisk miljö
+- physical presence
+- zone context
+- movement logic
+- device location
+- credential custody in the physical environment
 
-Det är därför mer korrekt att säga att modellen är **kompatibel med Zero Trust-principer**, snarare än att den enbart är en Zero Trust-modell.
+For that reason, it is more accurate to say that the model is **compatible with Zero Trust principles** rather than being only a Zero Trust model.
 
 ---
 
 ## How does it relate to Zero Trust?
 
-Zero Trust kan integreras i konceptet, men är inte dess enda eller primära utgångspunkt.
+Zero Trust can be integrated into the concept, but it is not the concept’s only or primary starting point.
 
-Konceptet utgår från fysisk och operativ kontext och tillför därför ett lager som ofta är svagare representerat i traditionella Zero Trust-implementationer.
+The concept starts from physical and operational context and therefore adds a layer that is often less represented in traditional Zero Trust implementations.
 
-Detta gäller särskilt:
+This is especially true for:
 
-- fysisk rörelse
-- sekventiell zonvalidering
-- credential custody i facilitymiljö
-- device location som säkerhetsparameter
-- skyddade tekniska zoner
+- physical movement
+- sequential zone validation
+- credential custody in facility environments
+- device location as a security parameter
+- protected technical zones
 
-Kort uttryckt:
+In short:
 
-- konceptet försöker inte ersätta Zero Trust
-- konceptet förutsätter inte att Zero Trust är okänt
-- konceptet tillför en starkare fysisk och operativ dimension till tillitsmodellen
+- the concept does not try to replace Zero Trust
+- the concept does not assume Zero Trust is unknown
+- the concept adds a stronger physical and operational dimension to the trust model
 
 ---
 
 ## Does the concept assume organizations already know Zero Trust?
 
-Ja, i praktiken.
+Yes, in practice.
 
-Konceptet är inte byggt på antagandet att organisationer saknar kännedom om Zero Trust. I stället utgår modellen från att många redan känner till eller använder Zero Trust-principer i någon form.
+The concept is not built on the assumption that organizations are unfamiliar with Zero Trust. Instead, the model assumes that many organizations already know or use Zero Trust principles in some form.
 
-Det unika här är inte att introducera Zero Trust som idé, utan att tillföra en facility-centrerad modell där fysisk närvaro, rörelselogik och enheters lokation får större betydelse.
+What is unique here is not the introduction of Zero Trust as an idea, but the addition of a facility-centered model in which physical presence, movement logic, and device location carry greater weight.
 
 ---
 
 ## Why is physical presence so central?
 
-Därför att i högsäker facilitymiljö är fysisk närvaro inte bara ett resultat av access, utan en del av tillitsbedömningen.
+Because in a high-security facility environment, physical presence is not only a result of access, but also part of the trust assessment.
 
-Det spelar roll:
+What matters is:
 
-- var personen är
-- hur personen tog sig dit
-- om närvaron är normal eller avvikande
-- om rätt aktivitet sker i rätt zon
+- where the person is
+- how the person got there
+- whether the presence is normal or anomalous
+- whether the right activity is taking place in the right zone
 
-Detta gör fysisk kontext till en säkerhetsparameter, inte bara till bakgrundsinformation.
+This makes physical context a security parameter, not just background information.
 
 ---
 
 ## Why is movement logic so important?
 
-Därför att säkerhet inte bara handlar om att en dörr kan öppnas, utan också om hur någon rör sig genom miljön.
+Because security is not only about whether a door can be opened, but also about how someone moves through the environment.
 
-Sekventiell passage och rörelselogik gör det lättare att:
+Sequential passage and movement logic make it easier to:
 
-- förstå hur någon nådde en viss zon
-- upptäcka avvikande rörelsemönster
-- begränsa informella genvägar
-- stärka spårbarhet i högklassade miljöer
+- understand how someone reached a specific zone
+- detect anomalous movement patterns
+- limit informal shortcuts
+- strengthen traceability in high-assurance environments
 
 ---
 
 ## Why are badges and tokens treated so strictly?
 
-Därför att badges, tokens och liknande objekt inte bara är praktiska verktyg, utan säkerhetsobjekt.
+Because badges, tokens, and similar objects are not just practical tools, but security objects.
 
-Om de lämnar kontrollerad miljö eller hanteras slarvigt ökar risken för:
+If they leave the controlled environment or are handled carelessly, the risk increases for:
 
-- förlust
-- exponering
+- loss
+- exposure
 - social engineering
 - credential misuse
-- svår offboarding
-- oklar custody
+- difficult offboarding
+- unclear custody
 
-Därför bygger konceptet på tydlig kontroll och aktiv custody.
+For that reason, the concept relies on clear control and active custody.
 
 ---
 
 ## Why are devices treated as security objects?
 
-Därför att devices bär:
+Because devices carry:
 
 - data
-- identitet
-- tillit
-- åtkomstmöjlighet
-- operativ risk
+- identity
+- trust
+- access capability
+- operational risk
 
-I högsäker miljö räcker det därför inte att bara se devices som arbetsverktyg. Deras placering, rörelse och användningskontext blir också säkerhetsrelevanta.
+In a high-security environment, it is therefore not sufficient to view devices only as work tools. Their location, movement, and usage context also become security-relevant.
 
 ---
 
 ## Why is device location important?
 
-Därför att en enhets säkerhetsbetydelse inte bara avgörs av dess konfiguration, utan också av var den befinner sig och i vilken kontext den används.
+Because the security significance of a device is not determined only by its configuration, but also by where it is located and in what context it is used.
 
-En enhet som används i fel zon, lämnar kontrollerad miljö eller rör sig på ett ologiskt sätt kan vara ett tecken på:
+A device used in the wrong zone, leaving the controlled environment, or moving in an illogical way may be a sign of:
 
-- policyavvikelse
+- policy deviation
 - credential misuse
-- otillåten dataexponering
-- svag asset control
-- förhöjd insider-risk
+- unauthorized data exposure
+- weak asset control
+- elevated insider risk
 
 ---
 
 ## Does the concept assume insider risk?
 
-Ja.
+Yes.
 
-Konceptet utgår från att risk inte bara finns utanför facilityn, utan även kan uppstå genom:
+The concept assumes that risk does not exist only outside the facility, but may also arise through:
 
-- misstag
-- policyavvikelser
-- genvägar
+- mistakes
+- policy deviations
+- shortcuts
 - credential misuse
-- avvikande intern rörelse
-- felaktig hantering av devices eller privilegier
+- anomalous internal movement
+- improper handling of devices or privileges
 
-Det gör insiderresistens till en viktig del av modellen.
+This makes insider resistance an important part of the model.
 
 ---
 
 ## Why is privileged access separated so clearly?
 
-Därför att administrativ åtkomst innebär högre risk än vanlig användning.
+Because administrative access carries higher risk than normal usage.
 
-Konceptet behandlar därför admin som en egen trust class, med krav på:
+The concept therefore treats admin as its own trust class, with requirements for:
 
-- separata identiteter
-- separata enheter
-- stark autentisering
-- tydligare loggning
-- högre kontrollnivå
+- separate identities
+- separate devices
+- strong authentication
+- clearer logging
+- a higher level of control
 - governance review
 
 ---
 
 ## What is break-glass in this context?
 
-Break-glass syftar på särskilt definierad emergency access när ordinarie åtkomstmodell inte räcker, till exempel vid allvarlig incident eller kritisk återställning.
+Break-glass refers to specially defined emergency access when the normal access model is not sufficient, for example during a serious incident or critical recovery.
 
-I konceptet ska break-glass vara:
+In this concept, break-glass should be:
 
-- uttryckligt definierad
-- begränsad
-- starkt skyddad
-- loggad
-- eftergranskad
-- tydligt separerad från normal administration
+- explicitly defined
+- limited
+- strongly protected
+- logged
+- post-reviewed
+- clearly separated from normal administration
 
 ---
 
 ## Why are technical zones treated differently from normal workspaces?
 
-För att skyddade tekniska zoner inte är vanliga arbetsmiljöer.
+Because protected technical zones are not ordinary work environments.
 
-De innehåller ofta kritisk infrastruktur, känsliga system eller funktioner där:
+They often contain critical infrastructure, sensitive systems, or functions where:
 
-- mänsklig närvaro bör minimeras
-- service måste vara syftesbunden
-- maintenance och change måste styras
-- incidenter måste hanteras kontrollerat
-- recovery behöver vara planerad
+- human presence should be minimized
+- servicing must be purpose-bound
+- maintenance and change must be governed
+- incidents must be handled in a controlled way
+- recovery needs to be planned
 
 ---
 
 ## Is recovery really part of security here?
 
-Ja.
+Yes.
 
-I högsäker miljö räcker det inte att bygga stark kontroll för normal drift. Man måste också ha en säker modell för:
+In a high-security environment, it is not enough to build strong control for normal operations. You also need a secure model for:
 
 - credential loss
-- systemfel
-- adminproblem
-- incidentläge
+- system failure
+- admin issues
+- incident conditions
 - break-glass
-- återgång till normal drift
+- return to normal operations
 
-Recovery är därför en integrerad del av säkerheten, inte ett separat sidospår.
+Recovery is therefore an integrated part of security, not a separate side track.
 
 ---
 
 ## Why is governance included in the core concept?
 
-Därför att stark design utan tydligt ägarskap, review och undantagshantering sällan förblir stark över tid.
+Because strong design rarely remains strong over time without clear ownership, review, and exception handling.
 
-Governance behövs för att:
+Governance is needed to:
 
-- tydliggöra ansvar
-- hantera undantag
-- recertifiera access och privilegier
-- koppla incidentlärdomar tillbaka till modellen
-- säkerställa att säkerhetsnivån inte urholkas gradvis
+- clarify responsibility
+- handle exceptions
+- recertify access and privileges
+- feed incident lessons back into the model
+- ensure that the security level does not gradually erode
 
 ---
 
 ## Is this meant for all organizations?
 
-Nej.
+No.
 
-Konceptet är främst relevant för miljöer med höga skyddskrav, till exempel:
+The concept is primarily relevant for environments with high protection requirements, such as:
 
-- skyddade serverhallar
-- säkerhetsklassade driftmiljöer
-- tekniska säkerhetszoner
-- verksamheter med höga krav på OPSEC
-- miljöer där insiderhot och avvikande rörelsemönster är realistiska risker
+- protected data centers
+- security-classified operational environments
+- technical security zones
+- organizations with high OPSEC requirements
+- environments where insider threats and anomalous movement patterns are realistic risks
 
-Det är inte primärt tänkt för:
+It is not primarily intended for:
 
-- vanliga kontorsmiljöer
-- lågfriktionsmiljöer
-- generell standard-enterprise IT
-- miljöer där stark governance inte kan upprätthållas
+- standard office environments
+- low-friction environments
+- general standard enterprise IT
+- environments where strong governance cannot be maintained
 
 ---
 
 ## Why is friction part of the concept?
 
-I högsäker miljö är låg friktion inte alltid målet.
+In a high-security environment, low friction is not always the goal.
 
-I vissa fall är det önskvärt att:
+In some cases, it is desirable that:
 
-- access kräver flera steg
-- credentials inte lämnar facilityn
-- rörelse är kontrollerad
-- adminvägar är separata
-- högre risk kräver tydligt högre kontroll
+- access requires multiple steps
+- credentials do not leave the facility
+- movement is controlled
+- admin paths are separated
+- higher risk requires clearly higher control
 
-Friktion används därför som en avsiktlig säkerhetsmekanism där skyddsvärdet motiverar det.
+Friction is therefore used as an intentional security mechanism where the protection value justifies it.
 
 ---
 
 ## Is the concept complete?
 
-Nej, inte i betydelsen färdig slutmodell eller implementation.
+No, not in the sense of being a final model or implementation.
 
-Det är däremot en relativt mogen konceptskiss med dokumenterad struktur, tydlig riktning och flera kompletterande dokument inom arkitektur, policy, governance, recovery, use cases och diagram.
+However, it is a relatively mature concept draft with documented structure, clear direction, and multiple supporting documents across architecture, policy, governance, recovery, use cases, and diagrams.
 
 ---
 
 ## What stage is the concept in?
 
-Konceptet befinner sig i ett tidigt men strukturerat stadium.
+The concept is currently in an early but structured stage.
 
-Det finns nu bland annat:
+At this point, it includes, among other things:
 
 - executive summary
 - one-pager
@@ -343,21 +343,21 @@ Det finns nu bland annat:
 - incident response model
 - use cases
 
-Det gör att konceptet är väl positionerat för vidare förädling.
+This means the concept is well positioned for further refinement.
 
 ---
 
 ## Can this be extended further?
 
-Ja.
+Yes.
 
-Naturliga nästa steg kan vara:
+Natural next steps could include:
 
-- fler diagram
-- access review model
-- exception handling model
-- break-glass model
-- visitor / contractor model
+- more diagrams
+- an access review model
+- an exception handling model
+- a break-glass model
+- a visitor / contractor model
 - policy refinement
 - implementation-oriented design layers
 
@@ -365,6 +365,6 @@ Naturliga nästa steg kan vara:
 
 ## What is the shortest way to describe the concept?
 
-Ett möjligt kort svar är:
+One possible short answer is:
 
-> Ett facility-centrerat säkerhetskoncept där identitet, fysisk närvaro, rörelse, enheter, credentials, privilegier och recovery behandlas som delar av samma tillitsmodell.
+> A facility-centered security concept in which identity, physical presence, movement, devices, credentials, privileges, and recovery are treated as parts of the same trust model.
