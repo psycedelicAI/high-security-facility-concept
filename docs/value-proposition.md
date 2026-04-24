@@ -1,6 +1,6 @@
 # Value Proposition – High-Security Facility Concept
 
-> Varför High-Security Facility Concept är relevant, vilket problem det adresserar och vilket strategiskt värde det kan skapa i miljöer med höga säkerhetskrav.
+> Why the High-Security Facility Concept is relevant, which problem it addresses, and what strategic value it can create in environments with high security requirements.
 
 ---
 
@@ -19,266 +19,285 @@
 
 ## Purpose
 
-Detta dokument beskriver det strategiska värdet i **High-Security Facility Concept**.
+This document describes the strategic value of the **High-Security Facility Concept**.
 
-Målet är att tydliggöra:
+The goal is to clarify:
 
-- vilket problem konceptet försöker lösa
-- varför traditionella modeller ofta inte räcker
-- vilken nytta ett mer sammanhängande säkerhetskoncept kan skapa
-- varför detta är särskilt relevant i högsäker teknisk miljö
+- which problem the concept is trying to solve
+- why traditional models are often not sufficient
+- what benefit a more coherent security concept can create
+- why this is particularly relevant in a high-security technical environment
 
 ---
 
 # The Core Problem
 
-Många organisationer med höga säkerhetskrav har investerat i flera enskilda skyddsmekanismer, men lider ändå av grundläggande brister i hur dessa fungerar tillsammans.
+Many organizations with high security requirements have invested in multiple individual protection mechanisms, yet still suffer from fundamental weaknesses in how these mechanisms work together.
 
-Vanliga problem är till exempel:
+Common problems include, for example:
 
-- fysisk säkerhet och IT-säkerhet styrs separat
-- credentials hanteras som vardagsobjekt i stället för säkerhetsobjekt
-- rörelsemönster inne i facilityn granskas inte tillräckligt
-- privilegierad åtkomst sker från fel kontext eller fel enheter
-- devices saknar tillräcklig koppling till zon, roll och policy
-- tekniska skyddszoner saknar tydlig skillnad mellan drift, service och change
-- recovery och incidenthantering bygger på improvisation snarare än design
-- undantag blir informella och permanenta i stället för kontrollerade
+- physical security and IT security are governed separately
+- credentials are handled as everyday objects rather than security objects
+- movement patterns inside the facility are not reviewed sufficiently
+- privileged access takes place from the wrong context or the wrong devices
+- devices lack sufficient linkage to zone, role, and policy
+- protected technical zones lack a clear distinction between operations, service, and change
+- recovery and incident handling depend on improvisation rather than design
+- exceptions become informal and permanent instead of controlled
 
-Det leder till att säkerheten i praktiken kan vara svagare än vad de enskilda kontrollerna antyder.
+This leads to a situation where security in practice may be weaker than the individual controls suggest.
 
 ---
 
 # The Opportunity
 
-Det finns ett tydligt värde i att flytta fokus från:
+There is clear value in shifting the focus away from:
 
-- isolerade säkerhetsprodukter
-- punktvisa accessregler
-- generella policies utan kontext
+- isolated security products
+- point-specific access rules
+- generic policies without context
 
-till en modell där säkerheten i stället bygger på sambandet mellan:
+toward a model in which security instead depends on the relationship between:
 
-- identitet
-- fysisk rörelse
-- zon
+- identity
+- physical movement
+- zone
 - credential
-- enhet
-- privilegienivå
-- driftläge
-- incident- och recovery-förmåga
+- device
+- privilege level
+- operating state
+- incident and recovery capability
 
-Det är här High-Security Facility Concept positionerar sig.
+This is where the High-Security Facility Concept positions itself.
 
 ---
 
 # Core Value Proposition
 
-## High-Security Facility Concept skapar värde genom att:
+## The High-Security Facility Concept creates value by:
 
-- knyta ihop fysisk och logisk säkerhet i en gemensam modell
-- göra rörelse och kontext till en del av tillitsbedömningen
-- behandla badges, tokens och devices som säkerhetsobjekt med custody-krav
-- separera privilegierad åtkomst från vardaglig användning
-- skapa tydligare skydd för högklassade tekniska zoner
-- bygga in recovery och incidenthantering som en del av designen
-- minska beroendet av informella genvägar och personberoende lösningar
+- connecting physical and logical security into a shared model
+- making movement and context part of the trust assessment
+- treating badges, tokens, and devices as security objects with custody requirements
+- separating privileged access from everyday use
+- creating clearer protection for high-classification technical zones
+- building recovery and incident handling into the design
+- reducing dependence on informal shortcuts and person-dependent solutions
 
 ---
 
 # Strategic Benefits
 
 ## 1. Better Control Over High-Risk Access
-Konceptet ger bättre kontroll över känslig åtkomst genom att inte bara fråga:
 
-> “Har personen ett kort eller konto?”
+The concept provides better control over sensitive access by not only asking:
 
-utan också:
+> “Does the person have a card or account?”
 
-- är personen i rätt zon?
-- kom personen dit på rätt sätt?
-- används rätt enhet?
-- sker detta inom rätt kontext?
-- är detta väntat eller avvikande?
+but also:
 
-Det skapar en starkare och mer verklighetsnära tillitsmodell.
+- is the person in the correct zone?
+- did the person get there the correct way?
+- is the correct device being used?
+- is this happening in the correct context?
+- is this expected or anomalous?
+
+This creates a stronger and more reality-based trust model.
 
 ---
 
 ## 2. Reduced Exposure of Sensitive Credentials
-Genom credential custody och tydligare asset control minskar konceptet risken för att känsliga objekt:
 
-- tappas bort
-- glöms hemma
-- exponeras i offentlig miljö
-- missbrukas i fel kontext
-- blir svåra att återta vid offboarding
+Through credential custody and stronger asset control, the concept reduces the risk that sensitive objects:
 
-Detta har både säkerhetsmässigt och operativt värde.
+- are lost
+- are forgotten at home
+- are exposed in public environments
+- are misused in the wrong context
+- become difficult to retrieve during offboarding
+
+This has both security and operational value.
 
 ---
 
 ## 3. Stronger Protection Against Insider Deviation
-Många säkerhetsmodeller är byggda främst för att stoppa externa angripare, men svagare mot:
 
-- informella genvägar
-- policybrott
+Many security models are built mainly to stop external attackers, but are weaker against:
+
+- informal shortcuts
+- policy violations
 - credential misuse
-- felaktig device movement
-- otydliga adminflöden
-- avvikande intern rörelse
+- improper device movement
+- unclear admin flows
+- anomalous internal movement
 
-Konceptet adresserar dessa risker mer direkt genom:
-- zonsekvens
+The concept addresses these risks more directly through:
+
+- zone sequence
 - asset custody
 - device policy
-- adminseparation
-- incident- och recoverykoppling
+- admin separation
+- incident and recovery linkage
 
 ---
 
 ## 4. Improved Traceability and Auditability
-När identitet, zon, device, credential och syfte kopplas ihop blir det lättare att:
 
-- förstå vad som hände
-- spåra avvikelser
-- granska access
-- bedöma undantag
-- analysera incidenter
-- verifiera att kontroller fungerar som avsett
+When identity, zone, device, credential, and purpose are linked together, it becomes easier to:
 
-Det ger bättre grund för både drift, säkerhet och revision.
+- understand what happened
+- trace deviations
+- review access
+- assess exceptions
+- analyze incidents
+- verify that controls are functioning as intended
+
+This provides a stronger foundation for operations, security, and audit.
 
 ---
 
 ## 5. More Mature Operations in Protected Technical Environments
-Konceptet skapar inte bara skydd, utan försöker även stödja mogen drift i skyddade miljöer genom att definiera:
 
-- skillnad mellan normaldrift, service, change och recovery
-- särskilda regler för tekniska zoner
-- tydligare ansvar kring privilegierad administration
-- styrd återgång till normal drift
+The concept does not only create protection, but also aims to support mature operations in protected environments by defining:
 
-Detta gör konceptet mer användbart över tid än modeller som bara fokuserar på access i snäv mening.
+- the difference between normal operations, service, change, and recovery
+- special rules for technical zones
+- clearer accountability for privileged administration
+- governed return to normal operations
+
+This makes the concept more useful over time than models that focus only on access in a narrow sense.
 
 ---
 
 # Why Traditional Models Often Fall Short
 
-Traditionella modeller fokuserar ofta på enskilda komponenter:
+Traditional models often focus on individual components:
 
-- dörrar
-- kort
+- doors
+- cards
 - MFA
-- VLAN
+- VLANs
 - SIEM
 - policies
-- serverhallsskydd
+- data hall protection
 
-Problemet är att dessa ofta implementeras utan att någon definierar hur de ska fungera tillsammans som ett enhetligt system.
+The problem is that these are often implemented without anyone defining how they should function together as a coherent system.
 
-Resultatet kan bli:
-- stark perimeter men svag intern spårbarhet
-- bra tokens men dålig credential custody
-- bra adminpolicy men fel klientkontext
-- stark fysisk miljö men svag recovery
-- hårda regler men otydliga undantag
+The result may be:
 
-High-Security Facility Concept försöker istället beskriva **hur helheten hänger ihop**.
+- a strong perimeter but weak internal traceability
+- good tokens but poor credential custody
+- a good admin policy but the wrong client context
+- a strong physical environment but weak recovery
+- strict rules but unclear exceptions
+
+The High-Security Facility Concept instead tries to describe **how the whole fits together**.
 
 ---
 
 # Differentiators
 
-Det som särskiljer konceptet är kombinationen av följande idéer:
+What differentiates the concept is the combination of the following ideas:
 
 ## Sequential Zone Validation
-Tillträde till högre zoner bygger inte bara på behörighet, utan också på korrekt fysisk passage.
+
+Access to higher zones is based not only on authorization, but also on correct physical passage.
 
 ## Credential Custody by Design
-Badges och andra känsliga credentials hålls under kontrollerad förvaring, inte i privatlivet utan tydligt behov.
+
+Badges and other sensitive credentials are kept under controlled custody, not in private life without a clear need.
 
 ## Device Trust as a Security Parameter
-Enheter behandlas som säkerhetsbärare, inte bara arbetsverktyg.
+
+Devices are treated as carriers of security, not just work tools.
 
 ## Protected Technical Zone Logic
-Serverhallar och tekniska skyddszoner behandlas som särskilda miljöer, inte som vanliga arbetsplatser.
+
+Data halls and protected technical zones are treated as special environments, not as ordinary workplaces.
 
 ## Privileged Access Separation
-Administrativa handlingar sker i annan kontext än vanlig användning.
+
+Administrative actions take place in a different context than normal use.
 
 ## Recovery and Governance as Core Design Elements
-Återställning och styrning byggs in i modellen från början i stället för att läggas till i efterhand.
+
+Recovery and governance are built into the model from the start rather than added afterward.
 
 ---
 
 # Business and Strategic Relevance
 
-Även om konceptet är säkerhetsdrivet finns det tydlig strategisk nytta i att tänka på detta sätt.
+Even though the concept is security-driven, there is clear strategic value in thinking this way.
 
 ## Potential Strategic Gains
-- högre trovärdighet i känsliga miljöer
-- tydligare säkerhetspositionering
-- bättre grund för designreview och vidare arkitektur
-- minskat beroende av informella arbetssätt
-- starkare kontroll över tillgångar och credentials
-- bättre förutsättningar för uppföljning och förbättring
 
-För organisationer eller aktörer som vill profilera sig inom högsäker drift, säkerhetsarkitektur eller skyddade teknikmiljöer kan detta vara ett differentierande koncept.
+- higher credibility in sensitive environments
+- clearer security positioning
+- a better foundation for design review and further architecture
+- reduced dependence on informal ways of working
+- stronger control over assets and credentials
+- better conditions for follow-up and improvement
+
+For organizations or actors that want to position themselves in high-security operations, security architecture, or protected technical environments, this can be a differentiating concept.
 
 ---
 
 # Intended Stakeholder Value
 
 ## For Security Leadership
-- starkare helhetssyn på skydd
-- bättre koppling mellan policy och verklig rörelse / användning
-- bättre förutsättningar för revision och uppföljning
+
+- stronger end-to-end view of protection
+- better linkage between policy and actual movement / usage
+- better conditions for audit and follow-up
 
 ## For Facility Security
-- starkare kontroll över zoner, credentials och rörelsemönster
-- bättre stöd för eskort, avvikelsehantering och fysisk spårbarhet
+
+- stronger control over zones, credentials, and movement patterns
+- better support for escorting, deviation handling, and physical traceability
 
 ## For IT / Infrastructure
-- tydligare separation av admin, user och technical operations
-- bättre kontroll över devices och tekniska zoner
-- starkare recovery- och change-tänk
+
+- clearer separation of admin, user, and technical operations
+- better control over devices and technical zones
+- stronger recovery and change thinking
 
 ## For Governance / Audit
-- tydligare ägarskap
-- bättre möjlighet till recertifiering
-- starkare incident- och undantagsspårbarhet
+
+- clearer ownership
+- better ability to perform recertification
+- stronger incident and exception traceability
 
 ---
 
 # Current Maturity and Value Timing
 
-Konceptet ska i nuläget inte ses som en färdig produkt, utan som:
+At this stage, the concept should not be seen as a finished product, but as:
 
-- en stark konceptmodell
-- ett underlag för vidare förädling
-- en möjlig grund för arkitektur, rådgivning eller vidare paketering
+- a strong conceptual model
+- a basis for further refinement
+- a possible foundation for architecture, advisory work, or further packaging
 
-Det strategiska värdet finns därför redan nu i att konceptet:
-- samlar idéerna i en struktur
-- gör dem diskutabla och bedömbara
-- visar riktning
-- skapar grund för vidare professionalisering
+The strategic value already exists now in the fact that the concept:
+
+- brings the ideas together into a structure
+- makes them discussable and assessable
+- shows direction
+- creates a foundation for further professionalization
 
 ---
 
 # Key Message
 
-Den viktigaste poängen med detta koncept är inte att det föreslår “mer säkerhet” i allmän mening.
+The most important point of this concept is not that it proposes “more security” in a general sense.
 
-Det viktiga är att det föreslår en mer **sammanhängande** säkerhetsmodell, där tillit inte avgörs av en enda punktkontroll utan av samspelet mellan:
+What matters is that it proposes a more **coherent** security model, in which trust is not determined by a single point control, but by the interaction between:
 
-- identitet
-- rörelse
-- zon
+- identity
+- movement
+- zone
 - device
 - credential
-- privilegium
+- privilege
 - incident
 - recovery
 
@@ -286,8 +305,8 @@ Det viktiga är att det föreslår en mer **sammanhängande** säkerhetsmodell, 
 
 # Final Value Statement
 
-**High-Security Facility Concept** skapar värde genom att flytta säkerhet från isolerade kontrollpunkter till en mer integrerad modell för hur högsäker verksamhet faktiskt fungerar i praktiken.
+The **High-Security Facility Concept** creates value by moving security away from isolated control points toward a more integrated model of how high-security operations actually function in practice.
 
-Den centrala värdeidén är:
+The central value idea is:
 
-> **När identitet, rörelse, credentials, devices, privilegier och återställning behandlas som delar av samma system blir säkerheten inte bara starkare — den blir också mer begriplig, mer spårbar och mer styrbar över tid.**
+> **When identity, movement, credentials, devices, privileges, and recovery are treated as parts of the same system, security becomes not only stronger — but also more understandable, more traceable, and more governable over time.**
