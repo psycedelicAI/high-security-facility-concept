@@ -1,6 +1,6 @@
 # Privileged Access Model – High-Security Facility Concept
 
-> Konceptuell modell för privilegierad åtkomst i en högsäker teknisk anläggning, med fokus på rollseparation, dedikerade adminvägar, stark autentisering, kontroll av adminsessioner och revisionsbarhet.
+> Conceptual model for privileged access in a high-security technical facility, with a focus on role separation, dedicated admin paths, strong authentication, control of admin sessions, and auditability.
 
 ---
 
@@ -19,446 +19,504 @@
 
 ## Purpose
 
-Detta dokument beskriver en konceptuell modell för **privilegerad åtkomst** i en högsäker teknisk miljö.
+This document describes a conceptual model for **privileged access** in a high-security technical environment.
 
-Målet är att definiera principer för:
+The goal is to define principles for:
 
-- vilka typer av privilegierade roller som finns
-- hur privilegierad åtkomst ska ske
-- vilka enheter och miljöer som får användas
-- hur stark autentisering ska tillämpas
-- hur förhöjda rättigheter ska kontrolleras
-- hur spårbarhet och revision ska säkerställas
-- hur nödlägesåtkomst bör hanteras
+- what types of privileged roles exist
+- how privileged access should take place
+- which devices and environments may be used
+- how strong authentication should be applied
+- how elevated rights should be controlled
+- how traceability and audit should be ensured
+- how emergency access should be handled
 
 ---
 
 ## Design Goals
 
-Den privilegierade åtkomstmodellen ska uppnå följande:
+The privileged access model should achieve the following:
 
-- skydda högriskfunktioner bättre än vanlig användaråtkomst
-- tydligt separera administrativ aktivitet från vardagsanvändning
-- göra privilegierad aktivitet personbunden, spårbar och revisionsbar
-- minska risken för credential misuse
-- försvåra lateral movement mellan roller och miljöer
-- säkerställa att administration sker från rätt miljö, med rätt identitet, under rätt förutsättningar
-- möjliggöra strikt kontroll utan att förlora recovery-förmåga
+- protect high-risk functions better than normal user access
+- clearly separate administrative activity from everyday use
+- make privileged activity person-bound, traceable, and auditable
+- reduce the risk of credential misuse
+- make lateral movement between roles and environments more difficult
+- ensure that administration takes place from the correct environment, with the correct identity, under the correct conditions
+- enable strict control without losing recovery capability
 
 ---
 
 # Core Principles
 
 ## 1. Admin Is a Separate Trust Class
-Administrativ åtkomst ska behandlas som en **egen riskklass**, inte som en förlängning av vanlig användaråtkomst.
 
-Det innebär att:
-- adminidentiteter ska vara separata från användaridentiteter
-- administrativa åtgärder ska ha högre kontrollnivå
-- adminsessioner ska ske i särskilt definierad miljö
+Administrative access must be treated as a **separate risk class**, not as an extension of normal user access.
+
+This means that:
+
+- admin identities must be separate from user identities
+- administrative actions must have a higher level of control
+- admin sessions must take place in a specially defined environment
 
 ---
 
 ## 2. No Privileged Access From Standard User Devices
-Vanliga användarenheter ska inte användas för högprivilegierad administration.
 
-Privilegerad åtkomst ska endast tillåtas från:
-- dedikerade adminenheter
-- godkända tekniska zoner eller definierade adminvägar
-- miljöer med rätt skyddsnivå, loggning och kontroll
+Standard user devices must not be used for highly privileged administration.
+
+Privileged access must be allowed only from:
+
+- dedicated admin devices
+- approved technical zones or defined admin paths
+- environments with the correct level of protection, logging, and control
 
 ---
 
 ## 3. Strong Authentication Is Mandatory
-Privilegerad åtkomst ska kräva stark autentisering.
 
-Exempel:
-- lösenord eller passphrase
+Privileged access must require strong authentication.
+
+Examples:
+
+- password or passphrase
 - FIDO2 / YubiKey
-- eventuellt ytterligare faktor i särskilt känsliga miljöer
-- roll- och kontextbunden kontroll
+- potentially an additional factor in especially sensitive environments
+- role- and context-bound control
 
 ---
 
 ## 4. Privileges Should Be Specific, Not Broad by Default
-Huvudprincipen ska vara:
-- minsta möjliga privilegium
-- tidsbegränsad åtkomst när möjligt
-- rollbunden administrativ behörighet
-- så få permanenta högprivilegierade rättigheter som möjligt
+
+The main principle should be:
+
+- least possible privilege
+- time-limited access where possible
+- role-bound administrative authorization
+- as few permanent highly privileged rights as possible
 
 ---
 
 ## 5. Admin Activity Must Be Traceable
-Varje privilegierad handling ska i möjligaste mån kunna kopplas till:
+
+Every privileged action should, as far as possible, be attributable to:
 
 - person
-- enhet
-- tidpunkt
-- syfte
-- godkännande eller change/referens
-- berört system eller zon
+- device
+- point in time
+- purpose
+- approval or change / reference
+- affected system or zone
 
 ---
 
 ## 6. Emergency Access Must Exist, But Be Exceptional
-Nödlägesåtkomst ska finnas, men:
-- vara strikt skyddad
-- användas sällan
-- vara tydligt definierad
-- generera omedelbar revision och uppföljning
+
+Emergency access must exist, but it must:
+
+- be strongly protected
+- be used rarely
+- be clearly defined
+- generate immediate audit and follow-up
 
 ---
 
 # Role Model
 
 ## Standard User
-Vanlig användaridentitet för daglig användning.
+
+Standard user identity for daily use.
 
 ### Characteristics
-- används för normala arbetsuppgifter
-- ska inte ha privilegierade administrativa rättigheter
-- får inte användas för känsliga administrativa funktioner
+
+- used for normal work tasks
+- must not have privileged administrative rights
+- must not be used for sensitive administrative functions
 
 ---
 
 ## Power User
-Utökad men begränsad funktion för vissa arbetsuppgifter.
+
+Expanded but limited function for certain work tasks.
 
 ### Characteristics
-- kan ha vissa förhöjda rättigheter inom snävt scope
-- ska inte ersätta riktig adminroll
-- ska inte ha bred infrastruktur- eller säkerhetsadministration
+
+- may have some elevated rights within a narrow scope
+- must not replace a real admin role
+- must not have broad infrastructure or security administration
 
 ### Example Use Cases
-- applikationsnära driftuppgifter
-- begränsad lokal systemhantering
-- godkända tekniska specialuppgifter
+
+- application-adjacent operational tasks
+- limited local system management
+- approved technical specialist tasks
 
 ---
 
 ## Admin
-Dedikerad administrativ roll för teknisk eller systemnära förvaltning.
+
+Dedicated administrative role for technical or system-adjacent administration.
 
 ### Characteristics
-- separat identitet från vanlig användaridentitet
-- används endast från dedikerad adminenhet
-- stark autentisering obligatorisk
-- åtkomst begränsas efter ansvar och scope
+
+- separate identity from normal user identity
+- used only from a dedicated admin device
+- strong authentication is mandatory
+- access is restricted by responsibility and scope
 
 ### Example Areas
-- serveradministration
-- identitetsadministration
-- nätverksadministration
-- systemsupport i högsäker miljö
+
+- server administration
+- identity administration
+- network administration
+- system support in a high-security environment
 
 ---
 
 ## Security Admin
-Särskilt känslig adminroll för säkerhetsfunktioner.
+
+Especially sensitive admin role for security functions.
 
 ### Characteristics
-- högre skyddsnivå än vanlig admin
-- striktare åtkomstkrav
-- endast från definierade säkra miljöer
-- utökad revision och övervakning
+
+- higher protection level than normal admin
+- stricter access requirements
+- only from defined secure environments
+- enhanced audit and monitoring
 
 ### Example Areas
-- säkerhetssystem
-- OPSEC-relevanta funktioner
-- accesskontrollsystem
-- logg- och revisionsplattformar
+
+- security systems
+- OPSEC-relevant functions
+- access control systems
+- logging and audit platforms
 
 ---
 
 ## Break-Glass / Emergency Role
-Särskild nödlägesroll som endast används när ordinarie modell inte räcker.
+
+Special emergency role used only when the standard model is insufficient.
 
 ### Characteristics
-- används vid incident, allvarlig störning eller recovery-behov
-- ska vara hårt skyddad
-- ska vara separat från ordinarie adminflöden
-- användning ska utlösa omedelbar uppföljning
+
+- used during incidents, serious disruption, or recovery need
+- must be strongly protected
+- must be separate from standard admin flows
+- use must trigger immediate follow-up
 
 ---
 
 # Privileged Device Model
 
 ## Dedicated Admin Devices
-Privilegerad administration ska endast få utföras från **dedikerade adminenheter**.
+
+Privileged administration must only be performed from **dedicated admin devices**.
 
 ### Principles
-- adminenheten ska inte vara en vanlig arbetsstation
-- enheten ska användas för administration, inte vardaglig användning
-- separata roller ska ha separata enhetsprofiler där motiverat
-- enheten ska omfattas av högre skyddsnivå än vanliga klienter
+
+- the admin device must not be an ordinary workstation
+- the device must be used for administration, not everyday work
+- separate roles should have separate device profiles where justified
+- the device must be subject to a higher level of protection than normal clients
 
 ### Expected Controls
-- stark inloggning
-- hög hårdningsnivå
-- tydlig loggning
-- begränsad programvaruyta
-- kontrollerad nätverksåtkomst
-- tydlig koppling mellan användare, enhet och administrativ funktion
+
+- strong login
+- high hardening level
+- clear logging
+- limited software surface
+- controlled network access
+- clear linkage between user, device, and administrative function
 
 ---
 
 ## No Mixed-Use Principle
-En och samma enhet bör inte användas för både:
 
-- vardaglig kommunikation
-- normal webbanvändning
-- dokumenthantering
-- privilegierad administration
+The same device should not be used for both:
 
-Detta minskar risken att en komprometterad vardagsmiljö påverkar känsliga administrationsflöden.
+- everyday communication
+- normal web usage
+- document handling
+- privileged administration
+
+This reduces the risk that a compromised everyday environment affects sensitive administrative flows.
 
 ---
 
 # Authentication Model
 
 ## Standard Requirements for Privileged Access
-Privilegerad åtkomst bör minst kräva:
 
-- personlig administrativ identitet
-- stark hemlighet eller passphrase
-- FIDO2 / YubiKey eller likvärdig hårdvarubaserad faktor
-- godkänd adminenhet
-- tillåten nätverks- och zonkontext
+Privileged access should require at minimum:
+
+- personal administrative identity
+- strong secret or passphrase
+- FIDO2 / YubiKey or equivalent hardware-based factor
+- approved admin device
+- permitted network and zone context
 
 ---
 
 ## Contextual Requirements
-För särskilt känsliga funktioner kan ytterligare krav gälla, exempelvis:
 
-- särskild zon
-- särskild adminväg
-- dokumenterat change-id eller ärende
-- ytterligare approval
-- övervakad session
+For especially sensitive functions, additional requirements may apply, such as:
+
+- special zone
+- special admin path
+- documented change ID or case reference
+- additional approval
+- monitored session
 
 ---
 
 # Access Elevation Model
 
 ## Preferred Principle
-Förhöjda rättigheter bör ges enligt principen:
 
-- rätt person
-- rätt roll
-- rätt enhet
-- rätt tidsfönster
-- rätt ändamål
+Elevated rights should be granted according to the principle of:
+
+- the right person
+- the right role
+- the right device
+- the right time window
+- the right purpose
 
 ---
 
 ## Permanent vs Temporary Privilege
+
 ### Permanent Privilege
-Ska hållas till ett minimum och endast finnas där det är tydligt motiverat.
+
+Must be kept to a minimum and exist only where clearly justified.
 
 ### Temporary Privilege
-Föredras där möjligt och bör:
-- vara tidsbegränsad
-- vara kopplad till uppgift eller change
-- loggas tydligt
-- kunna återkallas snabbt
+
+Preferred where possible and should be:
+
+- time-limited
+- tied to a task or change
+- clearly logged
+- quickly revocable
 
 ---
 
 ## Scope Control
-Privilegier bör så långt möjligt begränsas efter:
+
+Privileges should, as far as possible, be limited by:
 
 - system
-- zon
-- funktion
-- tid
-- roll
-- ansvar
+- zone
+- function
+- time
+- role
+- responsibility
 
-Målet är att undvika att ett konto eller en roll får mer makt än vad uppgiften kräver.
+The goal is to avoid giving an account or role more power than the task requires.
 
 ---
 
 # Session Control & Oversight
 
 ## Logging Expectations
-Privilegerad aktivitet bör kunna korreleras mot:
 
-- användaridentitet
-- adminidentitet
-- enhet
-- inloggningstid
-- åtgärd eller uppgift
+Privileged activity should be correlatable with:
+
+- user identity
+- admin identity
+- device
+- login time
+- action or task
 - change ticket / approval
-- berört system
+- affected system
 
 ---
 
 ## Oversight Principles
-För särskilt känsliga åtgärder bör modellen stödja:
 
-- tydlig sessionstart och sessionslut
-- extra loggning
-- manuell uppsikt där motiverat
-- eftergranskning av högriskaktiviteter
+For especially sensitive actions, the model should support:
+
+- clear session start and session end
+- additional logging
+- manual oversight where justified
+- post-review of high-risk activities
 
 ---
 
 ## Administrative Intent
-Innan känsliga privilegierade åtgärder utförs bör det framgå:
 
-- vad som ska göras
-- varför det ska göras
-- i vilken miljö
-- under vilken change eller begäran
-- av vem
+Before sensitive privileged actions are performed, it should be clear:
 
-Detta stärker både spårbarhet och ansvar.
+- what will be done
+- why it will be done
+- in which environment
+- under which change or request
+- by whom
+
+This strengthens both traceability and accountability.
 
 ---
 
 # Global Admin / Highest Privilege Considerations
 
 ## Design Position
-Bredast möjliga privilegier ska betraktas som **undantag**, inte normal arbetsmetod.
+
+The broadest possible privileges must be treated as **exceptions**, not as the normal way of working.
 
 ### Recommended Principles
-- så få sådana identiteter som möjligt
-- starkast möjliga skydd
-- användning endast vid verkligt behov
-- högsta nivå av loggning och uppföljning
-- inte användas för rutinmässig administration om lägre nivå räcker
+
+- as few such identities as possible
+- the strongest possible protection
+- use only when there is a genuine need
+- the highest level of logging and follow-up
+- not used for routine administration if a lower level is sufficient
 
 ---
 
 ## Shared vs Personal Privileged Identity
-En delad högprivilegierad identitet kan uppfattas som enkel att kontrollera om den bara används i övervakad miljö, men personbundna privilegierade identiteter ger normalt bättre:
 
-- ansvar
-- revisionsspår
-- attributering
+A shared highly privileged identity may seem easy to control if it is used only in a monitored environment, but personally assigned privileged identities normally provide better:
+
+- accountability
+- audit trail
+- attribution
 - least privilege
 
-Därför bör huvudprincipen vara:
-- personliga adminidentiteter i vardagen
-- särskilda nödläges- eller break-glass-identiteter som undantag
+The main principle should therefore be:
+
+- personal admin identities in everyday use
+- special emergency or break-glass identities as exceptions
 
 ---
 
 # Break-Glass Model
 
 ## Purpose
-Break-glass ska användas när:
-- normal administrativ väg inte fungerar
-- incident kräver snabb återställning
-- ordinarie privilegierade identiteter inte räcker
-- kritisk tillgång till system måste återtas
+
+Break-glass should be used when:
+
+- the normal administrative path does not work
+- an incident requires rapid restoration
+- standard privileged identities are not sufficient
+- critical access to systems must be regained
 
 ---
 
 ## Design Requirements
-Break-glass ska:
-- vara hårt skyddat
-- vara dokumenterat
-- vara separat från vardagsadministration
-- granskas efter varje användning
-- kunna spärras, återställas och recertifieras
+
+Break-glass must:
+
+- be strongly protected
+- be documented
+- be separate from everyday administration
+- be reviewed after every use
+- be revocable, restorable, and recertifiable
 
 ---
 
 ## Governance Expectations
-Varje användning av break-glass bör:
-- motiveras
-- loggas
-- granskas
-- rapporteras till relevant ansvarig funktion
+
+Every use of break-glass should be:
+
+- justified
+- logged
+- reviewed
+- reported to the relevant responsible function
 
 ---
 
 # Administrative Zone Considerations
 
-Privilegerad administration bör vara kopplad till definierade zoner och eller godkända accessvägar.
+Privileged administration should be tied to defined zones and/or approved access paths.
 
-Exempel:
-- vanlig användarzon ska inte ge direkt adminmöjlighet
-- känsliga administrativa funktioner bör kräva högre klassad zon
-- vissa funktioner bör bara vara möjliga från skyddad teknisk eller administrativ miljö
+Examples:
 
-Detta stärker sambandet mellan:
-- identitet
-- enhet
-- fysisk kontext
-- tillåten handling
+- a normal user zone must not provide direct admin capability
+- sensitive administrative functions should require a higher-classified zone
+- some functions should only be possible from a protected technical or administrative environment
+
+This strengthens the relationship between:
+
+- identity
+- device
+- physical context
+- permitted action
 
 ---
 
 # Auditability Requirements
 
-För att modellen ska vara stark i praktiken bör följande kunna granskas:
+For the model to be strong in practice, it should be possible to review:
 
-- vem som begärde privilegierad åtkomst
-- vem som fick privilegierad åtkomst
-- från vilken enhet
-- från vilken zon eller adminväg
-- med vilken autentiseringsnivå
-- under vilken tidsperiod
-- mot vilket system
-- med vilket syfte eller changeunderlag
-- vilka avvikelser som uppstod
+- who requested privileged access
+- who was granted privileged access
+- from which device
+- from which zone or admin path
+- with which authentication level
+- during which time period
+- to which system
+- for which purpose or change basis
+- which deviations occurred
 
 ---
 
 # Recovery & Fallback Considerations
 
-Privileged access-modellen måste hantera situationer som:
+The privileged access model must handle situations such as:
 
-- förlorad YubiKey
-- trasig adminenhet
-- otillgänglig ordinarie adminväg
+- lost YubiKey
+- broken admin device
+- unavailable standard admin path
 - credential compromise
-- behov av snabb återställning under incident
+- need for rapid restoration during an incident
 
-Detta kräver tydliga playbooks och godkända undantagsrutiner.
+This requires clear playbooks and approved exception procedures.
 
 ---
 
 # Recommended Policy Statements
 
 ## Example Policy 1
-Privilegerad åtkomst ska ske med separat administrativ identitet och får inte utföras från standardanvändarenheter.
+
+Privileged access must take place with a separate administrative identity and must not be performed from standard user devices.
 
 ## Example Policy 2
-Administrativa åtgärder i högsäker miljö ska endast tillåtas från godkända adminenheter och inom definierad fysisk och logisk kontext.
+
+Administrative actions in a high-security environment must only be allowed from approved admin devices and within a defined physical and logical context.
 
 ## Example Policy 3
-Starkt autentiserad, personbunden och revisionsbar åtkomst ska vara huvudmodell för privilegierad administration.
+
+Strongly authenticated, person-bound, and auditable access must be the primary model for privileged administration.
 
 ## Example Policy 4
-Bredast möjliga privilegier ska betraktas som undantag och användas endast när lägre privilegienivå inte är tillräcklig.
+
+The broadest possible privileges must be treated as exceptions and used only when a lower privilege level is not sufficient.
 
 ## Example Policy 5
-Break-glass-åtkomst ska vara separat definierad, hårt skyddad och obligatoriskt eftergranskad efter varje användning.
+
+Break-glass access must be separately defined, strongly protected, and subject to mandatory post-review after every use.
 
 ---
 
 # Common Risks If Poorly Designed
 
-Om privileged access-modellen implementeras dåligt uppstår ofta:
+If the privileged access model is poorly implemented, the following often occur:
 
-- delade adminkonton utan tydligt ansvar
-- för breda permanenta rättigheter
-- admin från fel enheter
-- svag återställningsförmåga
-- låg spårbarhet
-- överberoende av informella rutiner
-- otydlig gräns mellan användar- och adminaktivitet
+- shared admin accounts without clear accountability
+- overly broad permanent rights
+- admin activity from the wrong devices
+- weak recovery capability
+- low traceability
+- overdependence on informal routines
+- unclear boundary between user and admin activity
 
 ---
 
 # Recommended Next Steps
 
 ## 1. Define Admin Role Catalog
-Skapa tydlig rollkatalog för:
+
+Create a clear role catalog for:
+
 - user
 - power user
 - admin
@@ -466,39 +524,47 @@ Skapa tydlig rollkatalog för:
 - emergency / break-glass
 
 ## 2. Map Privileges to Scope
-Beskriv:
-- vilka system som hör till vilken roll
-- vilka roller som kräver vilken enhet
-- vilka privilegier som får vara permanenta respektive tillfälliga
+
+Describe:
+
+- which systems belong to which role
+- which roles require which device
+- which privileges may be permanent versus temporary
 
 ## 3. Formalize Admin Device Classes
-Dokumentera:
-- vilka adminenheter som finns
-- vilka som får använda dem
-- vilka skyddsnivåer som gäller
-- hur de skiljer sig från vanliga klienter
+
+Document:
+
+- which admin devices exist
+- who may use them
+- which protection levels apply
+- how they differ from standard clients
 
 ## 4. Create Recovery Playbooks
-Definiera processer för:
-- förlorad token
-- trasig adminenhet
-- spärrad adminidentitet
+
+Define processes for:
+
+- lost token
+- broken admin device
+- blocked admin identity
 - emergency access
 - credential compromise
 
 ## 5. Establish Audit & Review Model
-Bestäm:
-- vad som ska loggas
-- hur adminaktivitet granskas
-- hur avvikelser hanteras
-- hur privilegier recertifieras
+
+Determine:
+
+- what must be logged
+- how admin activity is reviewed
+- how deviations are handled
+- how privileges are recertified
 
 ---
 
 # Final Note
 
-Privileged access är ett av de områden där facilityns säkerhetsnivå i praktiken avgörs. En stark fysisk miljö kan snabbt försvagas om privilegierad åtkomst inte är personbunden, kontrollerad och revisionsbar.
+Privileged access is one of the areas where the facility’s real security level is determined in practice. A strong physical environment can quickly be weakened if privileged access is not person-bound, controlled, and auditable.
 
-Den centrala principen i denna modell är därför:
+The central principle of this model is therefore:
 
-> **Privilegerad åtkomst ska vara separat, starkt skyddad, kontextbunden och fullt spårbar.**
+> **Privileged access must be separate, strongly protected, context-bound, and fully traceable.**
