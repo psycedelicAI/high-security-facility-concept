@@ -1,237 +1,158 @@
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-
 # High-Security Facility Concept
 
-> Where identity, movement, zones, devices, surveillance, privilege, recovery, and governance become one security model.
+A concept repository exploring how a high-security facility can be designed as a **trust architecture** for controlled physical and operational environments.
 
-A conceptual high-security facility model that combines physical security, zone logic, credential custody, device context, surveillance architecture, privileged access, recovery, and governance.
+This project focuses on how security emerges from the interaction between:
 
----
-
-## Overview
-
-**High-Security Facility Concept** is a conceptual model for environments where high control, clear traceability, and strong separation between roles, zones, credentials, devices, and protected assets are intentional design choices.
-
-The concept is primarily aimed at:
-
-- protected data centers
-- security-classified operational environments
-- technical security zones
-- environments with high OPSEC requirements
-- organizations where physical, logical, and operational security must be tightly integrated
-
-This repository describes a model in which:
-
-- people
-- physical movement
+- identity
+- movement
 - zones
 - credentials
 - devices
 - surveillance
-- privileges
-- incidents
-- recovery
+- privileged access
 - governance
+- incident handling
+- recovery
+- signaling
+- passive fire resilience
 
-are treated as parts of the same **trust architecture**.
+Rather than treating physical security as a checklist of disconnected controls, this concept approaches the facility as a structured system in which trust, access, visibility, resilience, and response must work together.
 
 ---
 
 ## Core Idea
 
-High security does not arise only from controlling **who** has access, but also from controlling:
+The central idea behind this project is that security in a high-risk environment should not depend only on whether someone has access rights.
 
-- where the person is located
-- how the person moves through the facility
-- which zone is being accessed
-- which credential is being used
-- which device is being used
-- how the facility is monitored
-- whether the activity occurs in the correct context
-- how deviations, incidents, and recovery are handled
+It should also depend on factors such as:
 
-> **Identity, physical presence, movement, devices, credentials, surveillance, privileges, and recovery must be connected to achieve real high security.**
+- where a person is
+- how they arrived there
+- which zone they are entering
+- which credential or device is being used
+- whether the movement is expected
+- whether privileged actions are isolated and governed
+- whether anomalies can be detected, verified, and reviewed
+- whether the environment remains resilient during incident or failure conditions
 
----
-
-## What Makes This Concept Distinct
-
-Some of the concept’s most distinctive elements are:
-
-- Sequential Zone Access
-- Credential Custody by Design
-- Device Location as Security Context
-- Separation of Normal and Privileged Paths
-- Protected Technical Zone Logic
-- Surveillance with Operational Purpose
-- 3D Threat Thinking
-- Recovery by Design
-- Governance as a Core Security Function
+In that sense, this project can be understood as a conceptual model for **trust architecture in high-security physical and operational environments**.
 
 ---
 
-## 3D Threat Thinking
+## What This Repository Covers
 
-The concept does not assume that threats only come through entrances or at ground level.
+The repository currently explores topics such as:
 
-Instead, it applies **3D Threat Thinking**, where the facility is understood as a spatial security environment in which intrusion, presence, and impact may occur from multiple directions and levels, including:
-
-- roof access
-- lateral intrusion
-- unusual or non-linear attack paths
-- structurally overlooked access points
-
-This expands the threat model beyond traditional two-dimensional perimeter logic.
-
----
-
-## Relation to Zero Trust
-
-The concept is primarily built around:
-
-- physical presence
-- zone context
-- movement logic
-- device location
-- credential custody in the physical environment
-- surveillance as an active security function
-
-It is therefore not primarily designed as a traditional Zero Trust model, nor does it assume that organizations lack familiarity with Zero Trust.
-
-Instead, the concept can be understood as a **facility-centered trust model** that complements Zero Trust by adding stronger physical, spatial, and operational context.
-
-Zero Trust principles such as:
-
-- context-based trust
-- segmentation
-- least privilege
-- continuous validation
-
-are fully compatible with the model and can be integrated where relevant.
+- zone-based facility design
+- sequential movement logic
+- surveillance architecture
+- asset and credential custody
+- privileged access separation
+- maintenance and governance models
+- incident response and recovery
+- use cases and value proposition
+- incident lighting
+- alarm and signaling architecture
+- passive fire resilience
+- compatibility between high security and life safety
 
 ---
 
-## Current Status
+## Design Perspective
 
-**Assessment Reference:** `88 / 100`
+This project is intentionally:
 
-At this stage, the concept should be viewed as:
+- **concept-first**
+- **vendor-neutral**
+- **architecture-oriented**
+- **security-focused**
+- **systems-driven**
 
-- a strong conceptual model
-- a documented design foundation
-- a framework for further security architecture work
-- a basis for discussion, refinement, and visualization
-- not a finished implementation specification
+It is not intended to prescribe specific products, brands, or implementation stacks.
 
----
+Instead, it is an exploration of how a facility may be structured so that:
 
-## Key Themes
-
-- Defense in Depth
-- Sequential Zone Access
-- Credential Custody
-- Device Trust & Asset Control
-- Surveillance Architecture
-- 3D Threat Thinking
-- Privileged Access Separation
-- Protected Technical Zones
-- OPSEC by Design
-- Incident Readiness
-- Recovery by Design
-- Governance and Reviewability
+- trust is contextual
+- movement is meaningful
+- privileged paths are isolated
+- surveillance supports understanding, not just recording
+- alarms preserve meaning
+- resilience is built into the environment itself
 
 ---
 
-## Start Here
+## Document Structure
 
-If you are new to the repository, start here:
+The project is organized through markdown documents in the `docs/` directory.
 
-- [`docs/index.md`](docs/index.md)
-- [`docs/executive-summary.md`](docs/executive-summary.md)
-- [`docs/one-pager.md`](docs/one-pager.md)
-- [`docs/concept.md`](docs/concept.md)
-- [`docs/FAQ.md`](docs/FAQ.md)
-- [`docs/diagrams.md`](docs/diagrams.md)
+Main areas include:
 
----
+- concept overview
+- executive summary
+- zone model
+- surveillance model
+- privileged access
+- governance and policy baseline
+- recovery and incident response
+- use cases
+- value proposition
+- supporting architecture documents for lighting, signaling, and fire resilience
 
-## Documentation Structure
-
-### Overview and Positioning
-- [`docs/executive-summary.md`](docs/executive-summary.md)
-- [`docs/one-pager.md`](docs/one-pager.md)
-- [`docs/concept.md`](docs/concept.md)
-- [`docs/FAQ.md`](docs/FAQ.md)
-- [`docs/diagrams.md`](docs/diagrams.md)
-- [`docs/value-proposition.md`](docs/value-proposition.md)
-- [`docs/use-cases.md`](docs/use-cases.md)
-
-### Assessment and Development
-- [`docs/assessment.md`](docs/assessment.md)
-- [`docs/roadmap.md`](docs/roadmap.md)
-
-### Core Architecture
-- [`docs/zone-model.md`](docs/zone-model.md)
-- [`docs/privileged-access.md`](docs/privileged-access.md)
-- [`docs/asset-custody.md`](docs/asset-custody.md)
-- [`docs/maintenance-model.md`](docs/maintenance-model.md)
-- [`docs/surveillance-model.md`](docs/surveillance-model.md)
-
-### Governance, Policy and Resilience
-- [`docs/governance-model.md`](docs/governance-model.md)
-- [`docs/policy-baseline.md`](docs/policy-baseline.md)
-- [`docs/recovery-model.md`](docs/recovery-model.md)
-- [`docs/incident-response.md`](docs/incident-response.md)
-
-### Visual Documentation
-- [`docs/diagrams.md`](docs/diagrams.md)
+See [`docs/index.md`](docs/index.md) for the full document map.
 
 ---
 
-## Intended Environments
+## Current Positioning
 
-This concept is most relevant for:
+At its current stage, this repository is best understood as:
 
-- protected data centers
-- high-security technical operations
-- security-classified environments
-- facility security with a strong connection to IT security
-- environments where insider threats and anomalous movement patterns are realistic risks
-- organizations where credentials, devices, surveillance, and physical presence must be kept under strict control
+> A conceptual trust architecture framework for high-security facilities and other controlled environments.
 
-It is not primarily designed for:
+The concept has been developed primarily around high-security technical environments, but some of its principles may also have adaptation potential for other controlled settings where:
 
-- standard office environments
-- low-friction environments
-- generic standard enterprise IT
+- zones matter
+- movement matters
+- trust is contextual
+- access must remain governable
+- life safety and containment must coexist
 
 ---
 
-## Repository Structure
+## Repository Status
 
-```text
-.
-├── README.md
-└── docs/
-    ├── index.md
-    ├── executive-summary.md
-    ├── one-pager.md
-    ├── concept.md
-    ├── FAQ.md
-    ├── diagrams.md
-    ├── value-proposition.md
-    ├── use-cases.md
-    ├── assessment.md
-    ├── roadmap.md
-    ├── zone-model.md
-    ├── privileged-access.md
-    ├── asset-custody.md
-    ├── maintenance-model.md
-    ├── surveillance-model.md
-    ├── governance-model.md
-    ├── policy-baseline.md
-    ├── recovery-model.md
-    └── incident-response.md
+**Status:** Active concept development
+
+This repository is an evolving architecture concept, not a finalized implementation blueprint.
+
+Documents may continue to expand as the model develops in areas such as:
+
+- trust architecture framing
+- signaling logic
+- life-safety compatibility
+- recovery and resilience
+- adaptation to additional environment types
+
+---
+
+## Why This Project Exists
+
+This project exists to explore a simple but powerful question:
+
+> What would a high-security facility look like if it were designed as a coherent trust architecture rather than as a collection of isolated controls?
+
+That question sits at the center of the repository.
+
+---
+
+## Author
+
+Created by **Kalle Pettersson**
+
+GitHub: [psycedelicAI](https://github.com/psycedelicAI)
+
+---
+
+## Notes
+
+This repository contains conceptual material intended for architectural thinking, structured exploration, and documentation. It should not be interpreted as implementation guidance, legal advice, or certified engineering design.
