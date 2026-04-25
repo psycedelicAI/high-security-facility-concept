@@ -1,265 +1,163 @@
-# Documentation Index – High-Security Facility Concept
+# Documentation Index
 
-> Navigation overview for the documentation in the High-Security Facility Concept repository.
+This index provides an overview of the documents that make up the **High-Security Facility Concept** repository.
 
----
+The project explores how a high-security facility can be understood as a **trust architecture** for controlled physical and operational environments.
 
-## Purpose
-
-This document serves as an index to the repository documentation and helps the reader quickly find the right material depending on purpose.
-
-It is especially useful for:
-
-- getting a quick overview
-- finding the right document based on role or interest
-- understanding how the documentation fits together
-- navigating between concept, architecture, governance, visuals, and operations
+Rather than treating security as a set of isolated controls, the repository is structured around models for access, movement, surveillance, governance, resilience, signaling, and life-safety compatibility.
 
 ---
 
-# Start Here
+## Reading Paths
 
-If you are new to the concept, start here:
+Depending on what you want to understand, different reading paths may be useful.
 
-1. [`executive-summary.md`](executive-summary.md)
-2. [`one-pager.md`](one-pager.md)
-3. [`concept.md`](concept.md)
-4. [`faq.md`](faq.md)
-5. [`diagrams.md`](diagrams.md)
-
----
-
-# Core Overview Documents
-
-### [`executive-summary.md`](executive-summary.md)
-
-Short, decision-maker-friendly summary of the concept.
-
-### [`one-pager.md`](one-pager.md)
-
-Short, pitch-friendly overview that quickly explains what the concept is and why it is relevant.
-
-### [`concept.md`](concept.md)
-
-The main document for the concept’s vision, philosophy, design principles, 3D Threat Thinking, and strategic positioning.
-
-### [`faq.md`](faq.md)
-
-Common questions and short answers about the concept’s purpose, scope, relationship to Zero Trust, and practical use.
-
-### [`diagrams.md`](diagrams.md)
-
-Visual Mermaid diagrams that provide a quick overview of the concept’s structure, zone flows, incident / recovery lifecycle, and privileged access.
-
----
-
-# Strategic and Framing Documents
-
-### [`value-proposition.md`](value-proposition.md)
-
-Describes the problem the concept addresses and the strategic value it can create.
-
-### [`use-cases.md`](use-cases.md)
-
-Shows the types of environments in which the concept fits and why.
-
-### [`assessment.md`](assessment.md)
-
-Full concept assessment with strengths, weaknesses, maturity level, and recommended improvement areas.
-
-### [`roadmap.md`](roadmap.md)
-
-Roadmap for how the concept can be further developed in maturity, visualization, and professional validation.
-
----
-
-# Core Architecture Documents
-
-### [`zone-model.md`](zone-model.md)
-
-Describes the zone structure, sequential passage, movement logic, roof-aware zoning, and how 3D Threat Thinking affects the physical trust model.
-
-### [`privileged-access.md`](privileged-access.md)
-
-Describes the model for privileged access, admin identities, admin devices, strong authentication, and break-glass-related logic.
-
-### [`asset-custody.md`](asset-custody.md)
-
-Describes the handling of badges, tokens, laptops, media, and other security-critical assets.
-
-### [`maintenance-model.md`](maintenance-model.md)
-
-Describes maintenance, change, service activities, and operations in protected technical zones.
-
-### [`surveillance-model.md`](surveillance-model.md)
-
-Describes CCTV, FLIR, anti-tamper placement, roof security, incident presets, and surveillance as an active security function.
-
----
-
-# Governance, Policy and Resilience
-
-### [`governance-model.md`](governance-model.md)
-
-Describes ownership, responsibilities, approvals, recertification, and exceptions.
-
-### [`policy-baseline.md`](policy-baseline.md)
-
-Defines baseline policy principles for the entire security model.
-
-### [`recovery-model.md`](recovery-model.md)
-
-Describes fallback, restoration, recovery paths, and return to normal operations.
-
-### [`incident-response.md`](incident-response.md)
-
-Describes incident classification, containment, investigation, recovery linkage, and post-review.
-
----
-
-# Visual Documentation
-
-### [`diagrams.md`](diagrams.md)
-
-Collection of Mermaid diagrams for the high-level overview, zone flow, incident / recovery, and privileged access.
-
----
-
-# Suggested Reading by Goal
-
-## If You Want a Quick Overview
-
+### For a quick overview
+Start with:
 - [`executive-summary.md`](executive-summary.md)
 - [`one-pager.md`](one-pager.md)
-- [`diagrams.md`](diagrams.md)
-
-## If You Want to Understand the Concept Deeply
-
 - [`concept.md`](concept.md)
-- [`faq.md`](faq.md)
-- [`value-proposition.md`](value-proposition.md)
-- [`assessment.md`](assessment.md)
 
-## If You Want the Architecture
-
+### For the core architecture
+Continue with:
 - [`zone-model.md`](zone-model.md)
+- [`surveillance-model.md`](surveillance-model.md)
 - [`privileged-access.md`](privileged-access.md)
 - [`asset-custody.md`](asset-custody.md)
-- [`maintenance-model.md`](maintenance-model.md)
-- [`surveillance-model.md`](surveillance-model.md)
-
-## If You Want Governance and Operational Maturity
-
 - [`governance-model.md`](governance-model.md)
-- [`policy-baseline.md`](policy-baseline.md)
 - [`recovery-model.md`](recovery-model.md)
+
+### For operational and supporting layers
+Then review:
 - [`incident-response.md`](incident-response.md)
-
-## If You Want Applicability and Positioning
-
+- [`maintenance-model.md`](maintenance-model.md)
+- [`policy-baseline.md`](policy-baseline.md)
 - [`use-cases.md`](use-cases.md)
 - [`value-proposition.md`](value-proposition.md)
-- [`one-pager.md`](one-pager.md)
-- [`faq.md`](faq.md)
+- [`roadmap.md`](roadmap.md)
 
-## If You Want the Visual View First
-
-- [`diagrams.md`](diagrams.md)
-- [`one-pager.md`](one-pager.md)
-- [`executive-summary.md`](executive-summary.md)
-
----
-
-# Suggested Reading by Role
-
-## Decision-Maker / Executive
-
-- [`executive-summary.md`](executive-summary.md)
-- [`one-pager.md`](one-pager.md)
-- [`value-proposition.md`](value-proposition.md)
-- [`diagrams.md`](diagrams.md)
-
-## Security Architect
-
-- [`concept.md`](concept.md)
-- [`assessment.md`](assessment.md)
-- [`zone-model.md`](zone-model.md)
-- [`privileged-access.md`](privileged-access.md)
-- [`surveillance-model.md`](surveillance-model.md)
-- [`policy-baseline.md`](policy-baseline.md)
-
-## Facility Security / Physical Security
-
-- [`zone-model.md`](zone-model.md)
-- [`surveillance-model.md`](surveillance-model.md)
-- [`asset-custody.md`](asset-custody.md)
-- [`incident-response.md`](incident-response.md)
-- [`governance-model.md`](governance-model.md)
-
-## IT / Infrastructure / Operations
-
-- [`privileged-access.md`](privileged-access.md)
-- [`maintenance-model.md`](maintenance-model.md)
-- [`recovery-model.md`](recovery-model.md)
-- [`incident-response.md`](incident-response.md)
-- [`surveillance-model.md`](surveillance-model.md)
-
-## Governance / Audit / Review
-
-- [`governance-model.md`](governance-model.md)
-- [`policy-baseline.md`](policy-baseline.md)
-- [`assessment.md`](assessment.md)
-- [`recovery-model.md`](recovery-model.md)
+### For newer supporting architecture areas
+Also see:
+- [`incident-lighting.md`](incident-lighting.md)
+- [`alarm-and-signaling-model.md`](alarm-and-signaling-model.md)
+- [`passive-fire-resilience.md`](passive-fire-resilience.md)
 
 ---
 
-# Current Documentation Scope
+## Core Documents
 
-The current document set covers, among other things:
+### [`concept.md`](concept.md)
+Defines the main concept and overall framing of the facility model.
 
-- executive summary
-- one-pager
-- concept description
-- FAQ
-- diagrams
-- strategic value
-- use cases
-- assessment
-- roadmap
-- zone model
-- privileged access
-- asset custody
-- maintenance
-- surveillance
-- governance
-- policy baseline
-- recovery
-- incident response
+### [`executive-summary.md`](executive-summary.md)
+Provides a concise high-level summary of the concept.
+
+### [`one-pager.md`](one-pager.md)
+A compact overview suitable for fast reading or sharing.
+
+### [`FAQ.md`](FAQ.md)
+Addresses likely questions about scope, purpose, and interpretation.
+
+### [`assessment.md`](assessment.md)
+Provides a structured evaluation-oriented view of the concept.
+
+### [`diagrams.md`](diagrams.md)
+Intended to support visual explanation of the concept and its structure.
 
 ---
 
-# Recommended Next Additions
+## Core Architecture Models
 
-Possible future documents or enhancements:
+### [`zone-model.md`](zone-model.md)
+Describes the zoning logic of the facility and how controlled movement across zones supports trust and security.
 
-- Credential Custody Flow diagram
-- Technical Zone Operating States diagram
-- Governance and Policy Relationships diagram
-- access review model
-- exception handling model
-- break-glass model
-- visitor / contractor model
+### [`surveillance-model.md`](surveillance-model.md)
+Explains how surveillance supports visibility, anomaly interpretation, and facility awareness.
+
+### [`privileged-access.md`](privileged-access.md)
+Defines how privileged access should be separated, constrained, and governed.
+
+### [`asset-custody.md`](asset-custody.md)
+Covers the role of credentials, devices, and controlled assets as trust-bearing objects.
+
+### [`governance-model.md`](governance-model.md)
+Describes governance as a core part of the security architecture rather than a secondary function.
+
+### [`policy-baseline.md`](policy-baseline.md)
+Defines baseline policy assumptions that support the overall concept.
 
 ---
 
-# Final Note
+## Operational Resilience and Response
 
-This index is intended to make the repository easier to use as the documentation grows.
+### [`incident-response.md`](incident-response.md)
+Describes how the facility should react to incidents in a controlled and reviewable way.
 
-The goal is to make the concept more:
+### [`recovery-model.md`](recovery-model.md)
+Explains how the facility returns from abnormal conditions to controlled normal operations.
 
-- navigable
-- understandable
-- presentable
-- visually accessible
-- professional
+### [`maintenance-model.md`](maintenance-model.md)
+Describes how maintenance should be performed without undermining trust or security boundaries.
+
+### [`roadmap.md`](roadmap.md)
+Tracks future concept development directions and next conceptual steps.
+
+---
+
+## Use and Positioning Documents
+
+### [`use-cases.md`](use-cases.md)
+Provides practical examples of how the concept may apply in different situations.
+
+### [`value-proposition.md`](value-proposition.md)
+Explains why the concept may be valuable and how it differs from fragmented security thinking.
+
+---
+
+## Supporting Architecture Extensions
+
+### [`incident-lighting.md`](incident-lighting.md)
+Explores how incident lighting, flood illumination, and directed lighting can support surveillance, verification, and perimeter awareness.
+
+### [`alarm-and-signaling-model.md`](alarm-and-signaling-model.md)
+Defines how alarms and signals should remain semantically distinct across life-safety, security, technical, and controlled-state events.
+
+### [`passive-fire-resilience.md`](passive-fire-resilience.md)
+Describes how compartmentation, low-fuel interior philosophy, smoke-aware thinking, and suppression-compatible architecture support fire resilience.
+
+---
+
+## Repository Development Notes
+
+This repository is an evolving concept project.
+
+New documents may continue to extend the concept into areas such as:
+
+- trust architecture framing
+- life-safety compatibility
+- visual signaling
+- cross-domain adaptation
+- resilience modeling
+- additional operational layers
+
+---
+
+## Suggested Reading Sequence
+
+For readers who want a logical progression:
+
+1. [`executive-summary.md`](executive-summary.md)
+2. [`concept.md`](concept.md)
+3. [`zone-model.md`](zone-model.md)
+4. [`surveillance-model.md`](surveillance-model.md)
+5. [`privileged-access.md`](privileged-access.md)
+6. [`asset-custody.md`](asset-custody.md)
+7. [`governance-model.md`](governance-model.md)
+8. [`recovery-model.md`](recovery-model.md)
+9. [`incident-response.md`](incident-response.md)
+10. [`incident-lighting.md`](incident-lighting.md)
+11. [`alarm-and-signaling-model.md`](alarm-and-signaling-model.md)
+12. [`passive-fire-resilience.md`](passive-fire-resilience.md)
+13. [`use-cases.md`](use-cases.md)
+14. [`value-proposition.md`](value-proposition.md)
+15. [`roadmap.md`](roadmap.md)
