@@ -45,11 +45,15 @@ Also see:
 - [`alarm-and-signaling-model.md`](alarm-and-signaling-model.md)
 - [`passive-fire-resilience.md`](passive-fire-resilience.md)
 
+### For evaluation and review material
+Also review:
+- [`Concept-Evaluation-Scorecard.md`](Concept-Evaluation-Scorecard.md)
+- [`AI-Report-Review.md`](AI-Report-Review.md)
+
 ### For strategic and supporting material
 Finally review:
 - [`use-cases.md`](use-cases.md)
 - [`value-proposition.md`](value-proposition.md)
-- [`assessment.md`](assessment.md)
 - [`roadmap.md`](roadmap.md)
 - [`FAQ.md`](FAQ.md)
 - [`diagrams.md`](diagrams.md)
@@ -75,9 +79,6 @@ Describes the threat landscape the concept is intended to resist, constrain, det
 
 ### [`FAQ.md`](FAQ.md)
 Addresses likely questions about the project’s purpose, interpretation, and scope.
-
-### [`assessment.md`](assessment.md)
-Provides a structured evaluation-oriented view of the concept.
 
 ### [`diagrams.md`](diagrams.md)
 Supports visual explanation of the concept and its architectural relationships.
@@ -144,6 +145,19 @@ Describes how compartmentation, low-fuel material philosophy, smoke-aware design
 
 ---
 
+## Evaluation and Review Material
+
+### [`Concept-Evaluation-Scorecard.md`](Concept-Evaluation-Scorecard.md)
+Provides an independent TwinMind AI score-based evaluation of the concept across architectural, operational, strategic, and structural dimensions.
+
+### [`AI-Report-Review.md`](AI-Report-Review.md)
+Provides an independent TwinMind AI narrative review of the concept’s quality, coherence, maturity, and positioning.
+
+### [`assessment.md`](assessment.md)
+Provides additional structured concept assessment material.
+
+---
+
 ## Strategic and Supporting Documents
 
 ### [`use-cases.md`](use-cases.md)
@@ -181,10 +195,11 @@ For readers who want a structured progression through the repository:
 18. [`incident-lighting.md`](incident-lighting.md)
 19. [`alarm-and-signaling-model.md`](alarm-and-signaling-model.md)
 20. [`passive-fire-resilience.md`](passive-fire-resilience.md)
-21. [`use-cases.md`](use-cases.md)
-22. [`value-proposition.md`](value-proposition.md)
-23. [`assessment.md`](assessment.md)
-24. [`roadmap.md`](roadmap.md)
+21. [`Concept-Evaluation-Scorecard.md`](Concept-Evaluation-Scorecard.md)
+22. [`AI-Report-Review.md`](AI-Report-Review.md)
+23. [`use-cases.md`](use-cases.md)
+24. [`value-proposition.md`](value-proposition.md)
+25. [`roadmap.md`](roadmap.md)
 
 ---
 
@@ -195,9 +210,10 @@ This repository is an evolving concept architecture project.
 As the concept matures, future additions may continue to refine areas such as:
 
 - cross-domain adaptation
-- visual architecture and diagrams
-- review workflows
+- diagrams and visual modeling
 - trust-state transitions
+- review workflows
+- anomaly interpretation
 - governance depth
 - resilience modeling
 - human interpretability under stress
