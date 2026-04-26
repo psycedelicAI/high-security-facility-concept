@@ -32,7 +32,7 @@ The central idea behind this project is that security in a high-risk environment
 It should also depend on factors such as:
 
 - who the actor is
-- what kind of role they hold
+- what role they hold
 - where they are
 - how they arrived there
 - which zone they are entering
@@ -45,6 +45,23 @@ It should also depend on factors such as:
 - whether trust can be restored after abnormal states
 
 In that sense, this repository can be understood as a conceptual model for **trust architecture in high-security physical and operational environments**.
+
+---
+
+## Documentation Structure
+
+The repository is organized under [`docs/`](docs/) using the following structure:
+
+- [`docs/foundational/`](docs/foundational/)
+- [`docs/architecture/`](docs/architecture/)
+- [`docs/operations/`](docs/operations/)
+- [`docs/extensions/`](docs/extensions/)
+- [`docs/strategy/`](docs/strategy/)
+- [`docs/evaluation/`](docs/evaluation/)
+
+For the full document map, see:
+
+- [`docs/index.md`](docs/index.md)
 
 ---
 
@@ -107,65 +124,54 @@ High security should remain compatible with life safety, fire resilience, and su
 
 ---
 
-## Repository Structure
-
-The project is organized through markdown documents in the `docs/` directory.
-
-The repository includes:
-
-- foundational concept documents
-- core architecture models
-- operational and governance models
-- supporting trust architecture documents
-- resilience, signaling, and fire-related extensions
-- public-facing overview and positioning material
-
-See [`docs/index.md`](docs/index.md) for the full documentation map.
-
----
-
 ## Current Document Areas
 
-The repository currently includes documents covering:
+### Foundational
+Core framing and conceptual grounding:
+- [`docs/foundational/concept.md`](docs/foundational/concept.md)
+- [`docs/foundational/executive-summary.md`](docs/foundational/executive-summary.md)
+- [`docs/foundational/one-pager.md`](docs/foundational/one-pager.md)
+- [`docs/foundational/design-principles.md`](docs/foundational/design-principles.md)
+- [`docs/foundational/threat-model.md`](docs/foundational/threat-model.md)
+- [`docs/foundational/FAQ.md`](docs/foundational/FAQ.md)
+- [`docs/foundational/diagrams.md`](docs/foundational/diagrams.md)
 
-### Foundational and Overview Material
-- concept overview
-- executive summary
-- one-pager
-- FAQ
-- diagrams
-- assessment
+### Architecture
+Core trust and security architecture models:
+- [`docs/architecture/zone-model.md`](docs/architecture/zone-model.md)
+- [`docs/architecture/surveillance-model.md`](docs/architecture/surveillance-model.md)
+- [`docs/architecture/identity-and-actor-model.md`](docs/architecture/identity-and-actor-model.md)
+- [`docs/architecture/trust-state-model.md`](docs/architecture/trust-state-model.md)
+- [`docs/architecture/privileged-access.md`](docs/architecture/privileged-access.md)
+- [`docs/architecture/asset-custody.md`](docs/architecture/asset-custody.md)
+- [`docs/architecture/governance-model.md`](docs/architecture/governance-model.md)
+- [`docs/architecture/policy-baseline.md`](docs/architecture/policy-baseline.md)
 
-### Core Architecture
-- zone model
-- surveillance model
-- privileged access
-- asset custody
-- governance model
-- policy baseline
+### Operations
+Operational resilience, reviewability, and controlled continuity:
+- [`docs/operations/incident-response.md`](docs/operations/incident-response.md)
+- [`docs/operations/degraded-operations-model.md`](docs/operations/degraded-operations-model.md)
+- [`docs/operations/recovery-model.md`](docs/operations/recovery-model.md)
+- [`docs/operations/maintenance-model.md`](docs/operations/maintenance-model.md)
+- [`docs/operations/audit-and-review-model.md`](docs/operations/audit-and-review-model.md)
 
-### Trust and Security Interpretation
-- threat model
-- design principles
-- identity and actor model
-- trust state model
+### Extensions
+Supporting architecture extensions:
+- [`docs/extensions/incident-lighting.md`](docs/extensions/incident-lighting.md)
+- [`docs/extensions/alarm-and-signaling-model.md`](docs/extensions/alarm-and-signaling-model.md)
+- [`docs/extensions/passive-fire-resilience.md`](docs/extensions/passive-fire-resilience.md)
 
-### Operational Resilience
-- incident response
-- degraded operations model
-- recovery model
-- maintenance model
-- audit and review model
+### Strategy
+Use, positioning, and future direction:
+- [`docs/strategy/use-cases.md`](docs/strategy/use-cases.md)
+- [`docs/strategy/value-proposition.md`](docs/strategy/value-proposition.md)
+- [`docs/strategy/roadmap.md`](docs/strategy/roadmap.md)
 
-### Supporting Architecture Extensions
-- incident lighting
-- alarm and signaling model
-- passive fire resilience
-
-### Supporting Strategic Material
-- use cases
-- value proposition
-- roadmap
+### Evaluation
+Independent assessment and review material:
+- [`docs/evaluation/assessment.md`](docs/evaluation/assessment.md)
+- [`docs/evaluation/Concept-Evaluation-Scorecard.md`](docs/evaluation/Concept-Evaluation-Scorecard.md)
+- [`docs/evaluation/AI-Report-Review.md`](docs/evaluation/AI-Report-Review.md)
 
 ---
 
