@@ -1,6 +1,6 @@
 # High-Security Facility Concept
 
-A concept repository exploring how a high-security facility can be designed as a **trust architecture** for controlled physical and operational environments.
+A concept repository exploring how a high-security facility can be designed as a trust architecture for controlled physical and operational environments.
 
 This project focuses on how security emerges from the interaction between:
 
@@ -21,7 +21,7 @@ This project focuses on how security emerges from the interaction between:
 - passive fire resilience
 - life-safety compatibility
 
-Rather than treating physical security as a checklist of disconnected controls, this concept approaches the facility as a structured system in which trust, access, visibility, resilience, and response must work together.
+Rather than treating physical security as a checklist of disconnected controls, this concept approaches the facility as a structured system in which trust, access, visibility, resilience, interpretation, and response must work together.
 
 ---
 
@@ -41,27 +41,30 @@ It should also depend on factors such as:
 - whether the context justifies trust
 - whether privileged actions remain constrained and reviewable
 - whether anomalies can be detected, interpreted, and investigated
+- whether incorrect presence can still be controlled after initial entry
 - whether the facility remains governable during degraded conditions
 - whether trust can be restored after abnormal states
 
-In that sense, this repository can be understood as a conceptual model for **trust architecture in high-security physical and operational environments**.
+In that sense, this repository can be understood as a conceptual model for trust architecture in high-security physical and operational environments.
+
+A core implication of this model is that security must remain effective even after the first access decision has failed, been bypassed, or been weakened by human error, informal behavior, or social engineering.
 
 ---
 
 ## Documentation Structure
 
-The repository is organized under [`docs/`](docs/) using the following structure:
+The repository is organized under `docs/` using the following structure:
 
-- [`docs/foundational/`](docs/foundational/)
-- [`docs/architecture/`](docs/architecture/)
-- [`docs/operations/`](docs/operations/)
-- [`docs/extensions/`](docs/extensions/)
-- [`docs/strategy/`](docs/strategy/)
-- [`docs/evaluation/`](docs/evaluation/)
+- `docs/foundational/`
+- `docs/architecture/`
+- `docs/operations/`
+- `docs/extensions/`
+- `docs/strategy/`
+- `docs/evaluation/`
 
 For the full document map, see:
 
-- [`docs/index.md`](docs/index.md)
+- `docs/index.md`
 
 ---
 
@@ -81,6 +84,9 @@ The repository currently explores topics such as:
 - degraded operations
 - audit and review
 - incident response and recovery
+- post-access trust control
+- badge and zone mismatch interpretation
+- AI-assisted context interpretation
 - use cases and value proposition
 - incident lighting
 - alarm and signaling architecture
@@ -91,7 +97,7 @@ The repository currently explores topics such as:
 
 ## Key Architectural Themes
 
-Several architectural themes run throughout the repository:
+Several architectural themes run throughout the repository.
 
 ### Contextual Trust
 Trust is not treated as binary or permanent.  
@@ -104,6 +110,18 @@ Path, timing, and zone sequence influence trust interpretation.
 ### Zone-Based Security Logic
 Zones are not just map sections.  
 They represent meaningful differences in trust expectation, consequence, and control level.
+
+### Post-Access Trust Control
+Security must remain effective even after initial access has already occurred.  
+Incorrect or weakly justified presence must still be detectable, interpretable, and controllable after entry.
+
+### Badge and Zone Interpretation
+Badge category, visible presence, and zone context can be used to support faster recognition of anomalous presence.  
+A mismatch between badge category and zone does not automatically prove malicious intent, but it should trigger verification, challenge, or escalation.
+
+### AI as an Interpretation Layer
+AI can strengthen the model by helping detect contextual mismatch between badge category, actor type, movement sequence, zone, and expected purpose.  
+In this concept, AI is not limited to credential validation, but can also support trust interpretation and anomaly escalation.
 
 ### Privilege as a Distinct Risk Layer
 Privileged access is treated as separate from ordinary access and subject to stronger governance and review.
@@ -122,56 +140,66 @@ Operations under reduced confidence should remain governed and controlled.
 ### Security with Survivability
 High security should remain compatible with life safety, fire resilience, and survivability under abnormal conditions.
 
+### Full Incident Means Full Control
+When trust failure becomes serious enough to qualify as a full incident, the environment should shift from normal trust-based operation to a full-control response posture with constrained movement, stronger verification, and security-led control.
+
 ---
 
 ## Current Document Areas
 
 ### Foundational
 Core framing and conceptual grounding:
-- [`docs/foundational/concept.md`](docs/foundational/concept.md)
-- [`docs/foundational/executive-summary.md`](docs/foundational/executive-summary.md)
-- [`docs/foundational/one-pager.md`](docs/foundational/one-pager.md)
-- [`docs/foundational/design-principles.md`](docs/foundational/design-principles.md)
-- [`docs/foundational/threat-model.md`](docs/foundational/threat-model.md)
-- [`docs/foundational/FAQ.md`](docs/foundational/FAQ.md)
-- [`docs/foundational/diagrams.md`](docs/foundational/diagrams.md)
+
+- `docs/foundational/concept.md`
+- `docs/foundational/executive-summary.md`
+- `docs/foundational/one-pager.md`
+- `docs/foundational/design-principles.md`
+- `docs/foundational/threat-model.md`
+- `docs/foundational/FAQ.md`
+- `docs/foundational/diagrams.md`
 
 ### Architecture
 Core trust and security architecture models:
-- [`docs/architecture/zone-model.md`](docs/architecture/zone-model.md)
-- [`docs/architecture/surveillance-model.md`](docs/architecture/surveillance-model.md)
-- [`docs/architecture/identity-and-actor-model.md`](docs/architecture/identity-and-actor-model.md)
-- [`docs/architecture/trust-state-model.md`](docs/architecture/trust-state-model.md)
-- [`docs/architecture/privileged-access.md`](docs/architecture/privileged-access.md)
-- [`docs/architecture/asset-custody.md`](docs/architecture/asset-custody.md)
-- [`docs/architecture/governance-model.md`](docs/architecture/governance-model.md)
-- [`docs/architecture/policy-baseline.md`](docs/architecture/policy-baseline.md)
+
+- `docs/architecture/zone-model.md`
+- `docs/architecture/surveillance-model.md`
+- `docs/architecture/identity-and-actor-model.md`
+- `docs/architecture/trust-state-model.md`
+- `docs/architecture/privileged-access.md`
+- `docs/architecture/asset-custody.md`
+- `docs/architecture/governance-model.md`
+- `docs/architecture/policy-baseline.md`
+- `docs/architecture/post-access-trust-control.md`
 
 ### Operations
 Operational resilience, reviewability, and controlled continuity:
-- [`docs/operations/incident-response.md`](docs/operations/incident-response.md)
-- [`docs/operations/degraded-operations-model.md`](docs/operations/degraded-operations-model.md)
-- [`docs/operations/recovery-model.md`](docs/operations/recovery-model.md)
-- [`docs/operations/maintenance-model.md`](docs/operations/maintenance-model.md)
-- [`docs/operations/audit-and-review-model.md`](docs/operations/audit-and-review-model.md)
+
+- `docs/operations/incident-response.md`
+- `docs/operations/degraded-operations-model.md`
+- `docs/operations/recovery-model.md`
+- `docs/operations/maintenance-model.md`
+- `docs/operations/audit-and-review-model.md`
 
 ### Extensions
 Supporting architecture extensions:
-- [`docs/extensions/incident-lighting.md`](docs/extensions/incident-lighting.md)
-- [`docs/extensions/alarm-and-signaling-model.md`](docs/extensions/alarm-and-signaling-model.md)
-- [`docs/extensions/passive-fire-resilience.md`](docs/extensions/passive-fire-resilience.md)
+
+- `docs/extensions/incident-lighting.md`
+- `docs/extensions/alarm-and-signaling-model.md`
+- `docs/extensions/passive-fire-resilience.md`
 
 ### Strategy
 Use, positioning, and future direction:
-- [`docs/strategy/use-cases.md`](docs/strategy/use-cases.md)
-- [`docs/strategy/value-proposition.md`](docs/strategy/value-proposition.md)
-- [`docs/strategy/roadmap.md`](docs/strategy/roadmap.md)
+
+- `docs/strategy/use-cases.md`
+- `docs/strategy/value-proposition.md`
+- `docs/strategy/roadmap.md`
 
 ### Evaluation
 Independent assessment and review material:
-- [`docs/evaluation/assessment.md`](docs/evaluation/assessment.md)
-- [`docs/evaluation/Concept-Evaluation-Scorecard.md`](docs/evaluation/Concept-Evaluation-Scorecard.md)
-- [`docs/evaluation/AI-Report-Review.md`](docs/evaluation/AI-Report-Review.md)
+
+- `docs/evaluation/assessment.md`
+- `docs/evaluation/Concept-Evaluation-Scorecard.md`
+- `docs/evaluation/AI-Report-Review.md`
 
 ---
 
@@ -179,7 +207,7 @@ Independent assessment and review material:
 
 At its current stage, this repository is best understood as:
 
-> A conceptual trust architecture framework for high-security facilities and other controlled environments.
+**A conceptual trust architecture framework for high-security facilities and other controlled environments.**
 
 It has been developed primarily around high-security technical environments, but parts of the model may also have adaptation potential in other contexts where:
 
@@ -189,13 +217,14 @@ It has been developed primarily around high-security technical environments, but
 - oversight must remain meaningful
 - privileged actions require discipline
 - degraded states must remain governable
+- post-entry anomalies must remain controllable
 - life safety and control must coexist
 
 ---
 
 ## Repository Status
 
-**Status:** Active concept development
+**Status: Active concept development**
 
 This repository is an evolving concept architecture project, not a finalized engineering blueprint.
 
@@ -209,6 +238,8 @@ The project is continuing to mature in areas such as:
 - signaling semantics
 - resilience and survivability
 - reviewability and governance discipline
+- post-access trust control
+- AI-assisted anomaly interpretation
 
 ---
 
@@ -220,13 +251,18 @@ This project exists to explore a simple but powerful question:
 
 That question remains at the center of the repository.
 
+A related question also follows from that framing:
+
+> What happens when the first access decision was wrong, but security still has to hold?
+
+That question increasingly shapes the project’s thinking around movement, anomaly interpretation, challenge culture, and incident control.
+
 ---
 
 ## Author
 
-Created by **Kalle Pettersson**
-
-GitHub: [psycedelicAI](https://github.com/psycedelicAI)
+Created by **Kalle Pettersson**  
+GitHub: `psycedelicAI`
 
 ---
 
@@ -238,4 +274,6 @@ This repository is published under the **MIT License**.
 
 ## Notes
 
-This repository contains conceptual material intended for architectural thinking, structured exploration, and documentation. It should not be interpreted as implementation guidance, legal advice, or certified engineering design.
+This repository contains conceptual material intended for architectural thinking, structured exploration, and documentation.
+
+It should not be interpreted as implementation guidance, legal advice, or certified engineering design.
