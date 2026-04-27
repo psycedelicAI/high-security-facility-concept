@@ -7,7 +7,7 @@
 ## Document Information
 
 | Field | Value |
-|---||---|
+|---|---|
 | Document | Zones, Movement, and Custody |
 | Subject | High-Security Facility Concept |
 | Type | Whitepaper Core Section |
@@ -23,7 +23,7 @@ This section explains how the **High-Security Facility Concept** treats zones, m
 
 Its purpose is to show that high-security environments cannot be understood adequately through identity and access decisions alone. Trust also depends on how space is structured, how movement unfolds across that structure, and whether people, devices, and credentials remain under legitimate custody throughout their transitions.
 
-Within this concept, zones are not passive areas, movement is not neutral transit, and custody is not an administrative detail. All three shape whether trust remains justified.
+Within this concept, zones are not passive areas, movement is not neutral transit, and custody is not merely an administrative detail. All three influence whether trust remains justified.
 
 ---
 
@@ -33,9 +33,9 @@ The central idea of this section is:
 
 > In high-security environments, trust is shaped not only by who an actor is, but by where that actor is, how movement occurs across trust boundaries, and whether credentials, devices, and authority remain under legitimate custody.
 
-This principle means that a security architecture must interpret spatial progression and control continuity, not merely entry permission.
+This principle means that a security architecture must interpret spatial progression and continuity of control, not merely entry permission.
 
-A person, device, or credential may be legitimate in one zone, under one custody condition, and in one movement sequence, but become more uncertain, more restricted, or more review-sensitive in another.
+A person, device, or credential may be legitimate in one zone, under one custody condition, and within one movement sequence, but become more uncertain, more restricted, or more review-sensitive in another.
 
 ---
 
@@ -151,7 +151,7 @@ Movement gives the architecture temporal and spatial meaning.
 
 One of the concept’s distinguishing ideas is that trust should often be interpreted through **sequential zone validation** rather than isolated access events.
 
-This means that legitimacy is strengthened or weakened not only by the current zone, but by the sequence through which that zone was reached.
+This means that legitimacy is strengthened or weakened not only by the current zone, but also by the sequence through which that zone was reached.
 
 A sequence may indicate:
 
@@ -196,7 +196,7 @@ Within this concept, custody answers questions such as:
 
 - who currently controls the credential or device
 - whether that control is authorized
-- whether control remained continuous
+- whether control has remained continuous
 - whether transfer occurred legitimately
 - whether physical and operational possession remain aligned
 - whether the current custody condition supports continued trust
@@ -217,20 +217,20 @@ A credential may remain technically valid while its trust meaning becomes weaker
 
 - it is carried by the wrong person
 - it has been transferred informally
-- it is used outside expected movement sequence
-- it appears in a zone inconsistent with current role or task
+- it is used outside the expected movement sequence
+- it appears in a zone inconsistent with the current role or task
 - its use occurs during degraded confidence conditions
 - its possession cannot be reconstructed clearly after the fact
 
 This means that credential security is not only about issuance and revocation. It is also about preserving legitimate custody over time and across movement.
 
-The concept therefore treats custody by design as an architectural concern rather than just an administrative control.
+The concept therefore treats custody by design as an architectural concern rather than merely an administrative control.
 
 ---
 
 ## Device Custody and Device Location
 
-Devices are also trust-relevant because their meaning depends not only on identity, but on custody and location.
+Devices are also trust-relevant because their meaning depends not only on identity, but also on custody and location.
 
 A device may be:
 
