@@ -188,6 +188,35 @@ That makes movement a central part of trust architecture.
 
 ---
 
+## Post-Access Trust Interpretation
+
+This concept does not assume that legitimacy is fully resolved once an actor has passed an initial access point.
+
+In high-security environments, incorrect or weakly justified presence may still occur after entry through:
+
+- tailgating
+- social engineering
+- informal admission
+- mistaken access approval
+- weak escort discipline
+- technically valid credentials used in the wrong context
+
+This means that trust must continue to be interpreted after entry.
+
+A person who was allowed into the facility may still become anomalous because:
+
+- the badge category does not match the zone
+- the actor type does not fit the protected space
+- the movement sequence is inconsistent with expected progression
+- no valid escort, work purpose, or contextual justification is present
+- the surrounding trust conditions no longer support continued legitimacy
+
+The architecture therefore treats post-access interpretation as a core requirement rather than an optional follow-up step.
+
+This strengthens the model by ensuring that security does not collapse simply because the first access decision was incorrect.
+
+---
+
 ## Why Custody Matters
 
 Custody is a crucial part of the model because trust is often carried not only by persons, but by credentials, devices, tools, tokens, keys, and authority-bearing artifacts.
@@ -274,6 +303,39 @@ This is one of the clearest examples of why zone meaning must be treated archite
 
 ---
 
+## Badge, Zone, and Challenge Logic
+
+In some environments, visible badge category may support faster recognition of context mismatch inside the facility.
+
+If badges remain under controlled custody and do not circulate freely outside the environment, badge differentiation can help personnel detect when presence appears inconsistent with the zone.
+
+Examples may include:
+
+- a general internal badge appearing in a protected technical zone
+- a technical badge appearing in a zone where technical presence is not normally justified
+- an actor moving through a zone sequence that does not match badge category or role expectation
+
+In such cases, the mismatch does not automatically prove malicious intent.  
+But it does create a condition that should trigger contextual verification.
+
+That verification may include questions such as:
+
+- What are you doing here?
+- Who approved this presence?
+- Are you escorted?
+- What task are you performing?
+- Which operational contact is responsible for this access?
+
+This matters because challenge should not be treated as interpersonal awkwardness or optional caution.  
+In a high-security environment, challenge is part of trust maintenance.
+
+Badge category therefore does not determine trust on its own.  
+Its value lies in helping humans recognize when trust may need to be re-evaluated.
+
+This logic can also be strengthened through AI-assisted interpretation, where badge category, zone, movement sequence, and operational context are evaluated together in order to detect anomalies, trigger verification, or support escalation into incident handling.
+
+---
+
 ## Custody and Continuity of Trust
 
 Custody matters because trust can degrade even without explicit intrusion.
@@ -331,13 +393,16 @@ Identity gains trust meaning partly through zone context, movement sequence, and
 Movement into sensitive or technical zones may change the significance of privileged authority.
 
 ### Relation to governance and reviewability
-Zone transitions, custody changes, and anomalous movement may require stronger attribution and review.
+Zone transitions, custody changes, anomalous movement, and post-access mismatch may require stronger attribution and review.
 
 ### Relation to degraded operations
 When confidence narrows, movement and custody may need to become more tightly controlled.
 
 ### Relation to recovery
 Trust restoration may depend on reconstructing where actors, credentials, and devices moved, and under whose custody they remained.
+
+### Relation to post-access trust control
+This section helps explain why trust must continue to be interpreted after entry, especially when badge category, movement sequence, or zone context no longer align with expected legitimacy.
 
 This section therefore serves as one of the architecture’s main bridges between spatial structure and trust interpretation.
 
@@ -365,6 +430,12 @@ Device identity matters, but device location and custody do not materially affec
 ### Rejected assumption 6:
 Sensitive spaces can be governed adequately without sequential interpretation of progression and authority.
 
+### Rejected assumption 7:
+Once inside the environment, anomalous presence can be treated as a secondary issue rather than a core trust concern.
+
+### Rejected assumption 8:
+Badge category may support entry control, but should not support contextual verification inside protected space.
+
 These assumptions are too weak for a high-security trust architecture.
 
 ---
@@ -378,6 +449,11 @@ Because of this model, the concept may favor:
 - stronger architectural treatment of custody for credentials and devices
 - protected technical zones with tighter contextual requirements
 - movement-aware anomaly interpretation
+- continued trust interpretation after entry, not only at entry points
+- badge-zone mismatch as a trigger for contextual verification
+- human challenge as a normal security function in anomalous presence conditions
+- AI-assisted interpretation of badge category, movement, and zone context
+- stronger escalation paths from anomaly to incident when post-access trust fails
 - stronger continuity controls around transfer, possession, and authority
 - reviewable histories of transitions, custody changes, and zone progression
 - tighter movement constraints under degraded conditions
@@ -393,6 +469,9 @@ Within the **High-Security Facility Concept**, zones are not treated as passive 
 Zones are meaningful trust boundaries.  
 Movement carries sequence and legitimacy meaning.  
 Custody affects whether credentials, devices, and authority remain trustworthy across space and time.
+
+Trust must also remain interpretable after entry.  
+Anomalous presence inside a protected environment must still be detectable, challengeable, and controllable when badge category, movement, role, or zone context no longer align.
 
 The central idea is:
 
