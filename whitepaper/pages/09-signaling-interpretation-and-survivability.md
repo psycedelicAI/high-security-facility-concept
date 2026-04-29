@@ -124,7 +124,7 @@ A high-security architecture becomes stronger when it is not only controlled, bu
 
 ## Interpretation as Part of Security
 
-This concept treats **interpretation** as a security function.
+This concept treats interpretation as a security function.
 
 That does not mean trust should depend on subjective judgment alone. It means that a controlled environment must support meaningful interpretation of events, states, and anomalies.
 
@@ -148,6 +148,125 @@ This is especially important when:
 - later review depends on understanding what the operators perceived at the time
 
 Interpretation is therefore not a weakness in the model. It is part of what the model must support clearly and structurally.
+
+---
+
+## Signals as Trust-Relevant Indicators
+
+Within this concept, signals are not limited to alarms in the narrow sense.
+
+A signal may include:
+
+- a badge presented in an unusual zone
+- an actor appearing in a protected area under weak justification
+- a movement sequence inconsistent with expected progression
+- a surveillance view showing unexplained presence
+- a technical state change affecting trust assumptions
+- an emergency override or degraded-state condition
+- a mismatch between visible presence and expected role or authority
+
+This matters because trust-relevant conditions often emerge through combinations of weak signals rather than through one isolated event.
+
+A valid badge in the wrong zone, a known actor moving through an unusual path, or an unexplained presence during narrowed trust conditions may all carry security meaning even if no single signal proves malicious intent on its own.
+
+The architecture is therefore stronger when signals are interpreted in context rather than treated as isolated events.
+
+---
+
+## Badge, Zone, and Signal Meaning
+
+One important example of trust-relevant signaling is the mismatch between badge category and zone.
+
+If a badge category appears in a zone where that category is not normally expected, this should not be treated as visually interesting but operationally irrelevant.
+
+It should be treated as a signal.
+
+Examples may include:
+
+- a general internal badge in a protected technical zone
+- a technical badge in a zone where technical activity is not normally justified
+- an unescorted presence where escort expectation applies
+- a badge category whose observed location conflicts with role, timing, or current operational condition
+
+Such conditions do not automatically establish hostile intent.  
+But they do create an interpretive burden.
+
+The surrounding architecture should therefore support the ability to distinguish between:
+
+- expected presence
+- unusual but explainable presence
+- context mismatch
+- anomaly requiring verification
+- incident-level trust failure
+
+This is one of the reasons signaling and interpretation cannot be separated from movement, zone logic, and actor legitimacy.
+
+---
+
+## AI-Assisted Interpretation
+
+The concept can be strengthened further through AI-assisted interpretation.
+
+In this role, AI is not limited to validating whether a credential is technically valid.  
+It can also help interpret whether the surrounding context supports continued trust.
+
+This may include evaluating:
+
+- badge category
+- actor type
+- current zone
+- movement sequence
+- escort status
+- operational timing
+- work order or approval context
+- current trust condition
+- relationship between observed presence and expected role
+
+This makes AI an **interpretation layer**, not only an access layer.
+
+Its role is to help determine whether:
+
+- the observed presence is normal
+- the condition is unusual but explainable
+- a context mismatch exists
+- verification should be triggered
+- escalation should begin
+- incident logic should replace normal trust assumptions
+
+This does not eliminate human judgment.  
+It supports faster, more structured, and more reviewable interpretation when conditions become complex.
+
+---
+
+## Interpretation and Escalation
+
+Interpretation in this model is not passive.  
+Its purpose is to support appropriate escalation.
+
+A trustworthy environment should not merely observe anomalies.  
+It should be able to move from signal to meaning, and from meaning to action.
+
+This means that the architecture should support transitions such as:
+
+- signal detected
+- condition interpreted
+- severity classified
+- response path selected
+- reviewability preserved
+
+This progression matters because not all anomalies should trigger the same reaction.
+
+Some conditions may require:
+
+- simple verification
+- operator awareness
+- temporary restriction
+- local challenge
+- security notification
+- incident creation
+- full-control response posture
+
+A signal architecture that preserves meaning is therefore valuable not only for awareness, but also for disciplined escalation.
 
 ---
 
@@ -197,7 +316,7 @@ This is one reason signaling belongs inside the wider trust architecture.
 
 ## Why Security and Life-Safety Signals Must Remain Distinct
 
-One of the important architectural concerns in this concept is that **security, technical, and life-safety signaling must remain meaningfully distinct**.
+One of the important architectural concerns in this concept is that security, technical, and life-safety signaling must remain meaningfully distinct.
 
 This is critical because these signals may imply different:
 
@@ -222,9 +341,57 @@ The concept therefore favors signaling architectures in which meaning is preserv
 
 ---
 
+## Signals That Trigger Incident Logic
+
+Some signals should not remain at the level of passive observation.
+
+When a signal strongly indicates that trust conditions may no longer hold, the architecture should be able to shift from anomaly interpretation to incident logic.
+
+This may occur when:
+
+- badge category and zone conflict under conditions where no legitimate explanation is present
+- movement sequence is inconsistent with protected-zone expectations
+- repeated verification failure occurs
+- surveillance, badge, and contextual signals reinforce one another
+- an actor cannot justify presence credibly
+- the condition appears during degraded or narrowed-trust operation
+- continuation of ambiguity would itself create security risk
+
+At that point, the environment should no longer treat the issue merely as an interesting anomaly.
+
+It should treat it as a condition requiring active control.
+
+---
+
+## Full Incident Means Full Control
+
+A central principle connected to this signaling model is:
+
+> Full incident means full control.
+
+Once a signal pattern is interpreted strongly enough to qualify as a full incident, the environment should shift from ordinary trust-based operation to a full-control response posture.
+
+This may include:
+
+- immediate verification of identity and purpose
+- constrained movement
+- security-led intervention
+- stronger surveillance focus
+- review of nearby actors, devices, or credentials
+- temporary containment of the affected area
+- incident-based override of normal assumptions
+- preservation of reconstructable evidence and decision history
+
+This principle matters because a high-security environment should not remain semantically uncertain once trust failure becomes clear.
+
+The point of signaling is not merely to announce conditions.  
+It is to help the environment transition into the correct control logic when required.
+
+---
+
 ## Survivability as an Architectural Concern
 
-The concept treats **survivability** as part of the wider trust architecture.
+The concept treats survivability as part of the wider trust architecture.
 
 This means survivability is not merely a code-compliance side issue or a separate engineering discipline with no conceptual link to trust.
 
@@ -246,7 +413,7 @@ The architecture must therefore preserve both controlled security meaning and cr
 
 ## Passive Fire Resilience and Security Coherence
 
-One of the concept’s more distinctive extensions is its treatment of **passive fire resilience** as part of the wider architectural model.
+One of the concept’s more distinctive extensions is its treatment of passive fire resilience as part of the wider architectural model.
 
 This includes ideas such as:
 
@@ -275,7 +442,7 @@ This is consistent with the broader principle that a trustworthy environment mus
 
 ## Operator Clarity Under Stress
 
-The concept increasingly emphasizes **operator clarity**.
+The concept increasingly emphasizes operator clarity.
 
 This is important because high-security environments often depend on human interpretation at critical moments, especially when conditions become abnormal.
 
@@ -348,7 +515,7 @@ It makes the architecture:
 - more coherent across technical, operational, and physical layers
 - more credible as a model for real high-security environments
 
-It also helps distinguish the concept from simpler security models that focus only on barriers, credentials, and permissions while leaving semantic clarity and survivability largely outside the core framework.
+It also helps distinguish the concept from simpler security models that focus only on barriers, credentials, and permissions while leaving semantic clarity, post-access interpretation, and survivability largely outside the core framework.
 
 This broader integration supports the project’s identity as a trust architecture rather than a narrow control scheme.
 
@@ -360,6 +527,9 @@ This section connects directly to several other architectural layers.
 
 ### Relation to zones, movement, and custody
 Signals and surveillance help interpret whether movement, presence, and custody remain legitimate in context.
+
+### Relation to post-access trust control
+This section helps explain how badge-zone mismatch, anomalous presence, and weakly justified movement become security-relevant signals that may trigger verification, escalation, or incident response.
 
 ### Relation to privilege, governance, and reviewability
 Signal meaning affects how authority is exercised, how exceptions are understood, and how later review interprets the environment’s state.
@@ -399,6 +569,12 @@ Operator understanding under stress is an implementation detail rather than a co
 ### Rejected assumption 6:
 Emergency conditions justify semantic ambiguity as long as activity continues.
 
+### Rejected assumption 7:
+A badge-zone mismatch is merely an access detail rather than a meaningful signal requiring interpretation.
+
+### Rejected assumption 8:
+AI should only validate credentials rather than help interpret trust-relevant context.
+
 These assumptions are too weak for a serious high-security trust architecture.
 
 ---
@@ -412,6 +588,10 @@ Because of this model, the concept may favor:
 - surveillance designed to support interpretation rather than visibility alone
 - signaling structures that preserve meaning under degraded conditions
 - architectural treatment of operator clarity under stress
+- badge-zone mismatch as a meaningful signal rather than a trivial exception
+- AI-assisted interpretation of badge category, zone, movement, and contextual legitimacy
+- stronger progression from signal to verification, escalation, and incident logic
+- full-control response when trust failure becomes incident-grade
 - passive fire resilience as part of wider trust-preserving design
 - smoke-aware and compartment-aware thinking in survivability-sensitive environments
 - recovery models that include restoration of interpretability and signal credibility
@@ -426,6 +606,7 @@ Within the **High-Security Facility Concept**, signaling is not treated as simpl
 
 Signals must preserve meaning.  
 Surveillance must support interpretation.  
+Badge, zone, and contextual mismatch must be readable as trust-relevant conditions.  
 Survivability must remain compatible with high-security trust logic.
 
 The central idea is:
