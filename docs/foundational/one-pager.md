@@ -120,9 +120,6 @@ The concept should currently be regarded as:
 - a documented design foundation
 - a possible basis for further security architecture, advisory work, or packaging
 
-### Assessment Reference
-
-**88 / 100**
 
 ---
 
