@@ -171,9 +171,6 @@ The concept should be seen as:
 - not a finished implementation specification
 - not a finished product
 
-### Current Assessment Reference
-
-**88 / 100**
 
 This reflects:
 
