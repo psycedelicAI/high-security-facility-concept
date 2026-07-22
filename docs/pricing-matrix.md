@@ -1,139 +1,116 @@
-# High-Security Facility Pricing Matrix
+# High-Security Facility Pricing Framework
 
 ## Mockup Concept for Future Project Estimation
 
-This repository contains a conceptual pricing matrix for high-security facility projects.  
-The model shows how threat level, facility size, number of floors, and number of sites affect estimated project pricing.
+This document presents a **conceptual pricing framework** for projects based on the High-Security Facility concept.
 
-All values are shown in **USD**.
+It is designed to show how trust architecture, zone logic, movement flow, governance, and site complexity can affect project pricing.
 
----
-
-## Pricing Formula
-
-**Total Price = Base Fee × Threat Multiplier × Size Multiplier × Floor Multiplier × Site Multiplier**
+All prices are shown in **USD** and represent estimated ranges for planning purposes only.  
+This is a **mockup**, not a formal quote.
 
 ---
 
-## Base Fee
+## Service Tiers
 
-| Item | Value |
-|---|---:|
-| Base Fee | $100,000 |
+| Tier | Description | Typical Scope | Base Fee Range |
+|------|-------------|---------------|----------------|
+| **Concept & Planning** | High-level framework, design principles, threat framing, and roadmap | Executive summary, zone model, trust logic, concept documentation | **$95,000 – $145,000** |
+| **Full Architecture & Governance** | Detailed trust architecture, operational model, policy baseline, and recovery structure | All Concept deliverables + privileged access model, degraded operations, escalation logic, governance model | **$225,000 – $395,000** |
+| **Enterprise / Multi-Site Program** | Full program across multiple sites with implementation support and coordination | All previous + multi-site structure, training frameworks, escalation procedures, ongoing governance support | **$650,000 – $1,500,000+** |
 
 ---
 
-## Threat Model Matrix
+## Pricing Adjustment Matrix
+
+Use the matrix below to adjust the base fee according to project complexity.
+
+**Formula:**  
+**Adjusted Price = Base Fee × Threat Multiplier × Size Multiplier × Floor Multiplier × Site Multiplier**
+
+### Threat Level
 
 | Threat Level | Multiplier | Description |
-|---|---:|---|
-| Low | 1.0 | Standard security environment |
-| Medium | 1.2 | Elevated security needs |
-| High | 1.5 | Strong access control / monitoring |
-| Critical | 1.8 | Very sensitive or high-risk environment |
+|--------------|------------|-----------|
+| Low          | 1.0        | Standard commercial environment |
+| Medium       | 1.25       | Elevated security requirements |
+| High         | 1.55       | Strong access control, monitoring, and privileged operations |
+| Critical     | 2.0        | Critical infrastructure or high-consequence environment |
 
----
+### Facility Size
 
-## Facility Size Matrix
+| Size         | Multiplier | Description |
+|--------------|------------|-----------|
+| Small        | 1.0        | Compact / single building |
+| Medium       | 1.2        | Moderate footprint |
+| Large        | 1.45       | Significant area or multiple buildings |
+| Very Large   | 1.75       | Campus-scale or highly complex layout |
 
-| Facility Size | Multiplier | Description |
-|---|---:|---|
-| Small | 1.0 | Compact footprint |
-| Medium | 1.15 | Moderate area |
-| Large | 1.3 | Significant footprint |
-| Very Large | 1.5 | Campus-scale or complex footprint |
+### Floor Complexity
 
----
+| Floors       | Multiplier | Description |
+|--------------|------------|-----------|
+| 1 Floor      | 1.0        | Simple single-level layout |
+| 2–3 Floors   | 1.1        | Moderate vertical movement |
+| 4–6 Floors   | 1.25       | Increased coordination complexity |
+| 7+ Floors    | 1.4        | High structural and security layering |
 
-## Floor Matrix
+### Number of Sites
 
-| Floors | Multiplier | Description |
-|---|---:|---|
-| 1 Floor | 1.0 | Simple layout |
-| 2–3 Floors | 1.05 | Some vertical complexity |
-| 4–6 Floors | 1.15 | More access and coordination complexity |
-| 7+ Floors | 1.25 | High structural and security complexity |
-
----
-
-## Site Matrix
-
-| Number of Sites | Multiplier | Description |
-|---|---:|---|
-| 1 Site | 1.0 | Single location |
-| 2 Sites | 1.15 | Extra coordination |
-| 3 Sites | 1.3 | Multi-site complexity |
-| 4+ Sites | 1.5 | Heavy coordination load |
+| Sites        | Multiplier | Description |
+|--------------|------------|-----------|
+| 1 Site       | 1.0        | Single location |
+| 2 Sites      | 1.25       | Multi-location coordination |
+| 3 Sites      | 1.5        | Moderate multi-site complexity |
+| 4+ Sites     | 1.8        | Enterprise-scale coordination |
 
 ---
 
 ## Automatic Escalation Rules
 
-A site should be upgraded to at least **Medium** if it contains:
-
-- server room or root access
-- privileged technical access
-- escorted access zones
-- sensitive infrastructure
-- operationally critical systems
-
-A site should be upgraded to **High** if it contains:
-
-- multiple critical points
-- broader technical control areas
-- several privileged zones
-- high-value or high-risk operations
-
-A site should be upgraded to **Critical** if compromise would cause:
-
-- serious operational disruption
-- major security incident
-- safety risk
-- high-value infrastructure exposure
+- Any project involving **privileged technical zones, server rooms, or critical infrastructure** must be classified at minimum as **Medium**.
+- Multiple critical zones or high-value operations should be classified at minimum as **High**.
+- If compromise could cause major operational, safety, or mission impact, classify as **Critical**.
 
 ---
 
 ## Example Calculations
 
-### Example A
-- Threat: Medium = 1.2
-- Size: Medium = 1.15
-- Floors: 2–3 = 1.05
-- Sites: 1 = 1.0
+### Example A — Mid-scale
+Base: $280,000 | Threat: Medium (1.25) | Size: Medium (1.2) | Floors: 2–3 (1.1) | Sites: 1 (1.0)
 
-**$100,000 × 1.2 × 1.15 × 1.05 × 1.0 = $144,900**
+**$280,000 × 1.25 × 1.2 × 1.1 × 1.0 = $462,000**
 
 ---
 
-### Example B
-- Threat: High = 1.5
-- Size: Large = 1.3
-- Floors: 4–6 = 1.15
-- Sites: 2 = 1.15
+### Example B — Large / Complex
+Base: $320,000 | Threat: High (1.55) | Size: Large (1.45) | Floors: 4–6 (1.25) | Sites: 2 (1.25)
 
-**$100,000 × 1.5 × 1.3 × 1.15 × 1.15 = $257,662.50**
+**$320,000 × 1.55 × 1.45 × 1.25 × 1.25 ≈ $1,120,000**
 
 ---
 
-### Example C
-- Threat: Critical = 1.8
-- Size: Very Large = 1.5
-- Floors: 7+ = 1.25
-- Sites: 3 = 1.3
+### Example C — Enterprise Critical
+Base: $750,000 | Threat: Critical (2.0) | Size: Very Large (1.75) | Floors: 7+ (1.4) | Sites: 4 (1.8)
 
-**$100,000 × 1.8 × 1.5 × 1.25 × 1.3 = $438,750**
+**Significantly above $2M**  
+Custom scoping required.
+
+---
+
+## Important Notes
+
+- Prices are estimates for consulting, architecture, and conceptual design services using the High-Security Facility concept.
+- Final pricing depends on scope, travel, workshops, integration depth, timeline, and site count.
+- This is **not** a quote for physical construction, hardware, or implementation.
+- Deliverables focus on the trust architecture, movement logic, operational structure, and governance layers.
 
 ---
 
 ## Purpose
 
-This project is a conceptual mockup intended to show how future project scope can influence pricing.  
-It is not a final commercial quote.
+This framework demonstrates how project scale, risk, and complexity influence pricing while staying true to the structured, systems-oriented nature of the High-Security Facility concept.
 
 ---
 
-## Notes
-
-- All prices are shown in **USD**
-- The model is intended for demonstration and planning
-- Multipliers can be adjusted depending on future project complexity
+**Status:** Conceptual mockup – Not a formal quote.
