@@ -15,281 +15,196 @@ Collectively referred to as the **"Parties."**
 
 ---
 
-## 1. Purpose
+## 1. Definitions
 
-The purpose of this Agreement is to define the terms under which the Provider shall deliver conceptual, strategic, architectural, governance, and pricing-related services for a high-security facility project.
-
-The services under this Agreement are intended for **planning, estimation, design, analysis, and conceptual development purposes only**.
-
-This Agreement does **not** include physical construction, hardware procurement, installation, or operational deployment unless expressly stated in a written Statement of Work ("SOW") or addendum signed by both Parties.
+- **"Services"** means the conceptual, strategic, architectural, governance, and pricing-related services provided by the Provider under this Agreement.
+- **"Deliverables"** means any documents, diagrams, frameworks, models, or other materials delivered by the Provider.
+- **"SOW"** means a Statement of Work, project appendix, or written confirmation signed or agreed to by both Parties.
+- **"Confidential Information"** means any non-public information disclosed by one Party to the other.
 
 ---
 
-## 2. Scope of Services
+## 2. Purpose
 
-Depending on the applicable project tier and written scope, the Provider may perform one or more of the following services:
+The purpose of this Agreement is to define the terms under which the Provider shall deliver high-level conceptual, strategic, architectural, governance, and pricing services for high-security facility projects.
 
-### 2.1 Concept & Planning
-- High-level project framing
-- Threat modeling
+The Services are provided **solely for planning, estimation, design, analysis, and conceptual development purposes**. This Agreement does **not** cover physical construction, hardware procurement, installation, or operational deployment unless expressly included in a signed SOW.
+
+---
+
+## 3. Scope of Services
+
+The Provider may deliver services across the following categories, as specified in the applicable SOW:
+
+### 3.1 Concept & Planning
+- High-level project framing and threat modeling
 - Trust architecture principles
 - Zone logic and movement flow concepts
 - Initial roadmap and documentation
 
-### 2.2 Full Architecture & Governance
-- Detailed trust architecture
-- Operational model design
-- Policy baseline development
-- Escalation and recovery logic
-- Governance framework
-- Privileged access model
+### 3.2 Full Architecture & Governance
+- Detailed trust architecture and operational model design
+- Policy baseline, escalation, and recovery logic
+- Governance framework and privileged access model
 - Degraded operations planning
 
-### 2.3 Enterprise / Multi-Site Program
-- Multi-site coordination
-- Cross-site governance structure
-- Training framework design
-- Implementation support planning
-- Program-level escalation procedures
-- Long-term governance support
+### 3.3 Enterprise / Multi-Site Program
+- Multi-site coordination and governance
+- Training framework and implementation support planning
+- Long-term governance and escalation procedures
 
-### 2.4 Pricing Framework / Mockup Development
-- Conceptual pricing matrix
-- Tiered project structure
-- Complexity multipliers
-- Escalation rules
-- Scenario modeling
-- Estimation framework documentation
+### 3.4 Pricing Framework & Mockups
+- Conceptual pricing matrices and tiered structures
+- Scenario modeling and estimation frameworks
 
 ---
 
-## 3. Deliverables
+## 4. Deliverables
 
-Deliverables may include, but are not limited to:
-
-- Project overview documents
-- Concept diagrams
-- Trust architecture framework
-- Zone and movement logic model
-- Pricing model or estimation matrix
-- Threat classification framework
-- Governance and escalation documentation
-- Summary reports and recommendations
-- Planning notes and presentation materials
-- Mockup release notes or concept documentation
-
-All deliverables shall be defined in the applicable SOW, project appendix, or written email confirmation between the Parties.
+All Deliverables will be defined in the applicable SOW. They may include project overviews, concept diagrams, architecture frameworks, pricing models, threat classifications, governance documents, and recommendations.
 
 ---
 
-## 4. Project Classification
+## 5. Project Classification & Pricing
 
-Projects shall be classified according to one or more of the following factors:
-
-- Threat level
-- Facility size
-- Number of floors
-- Number of sites
-- Operational sensitivity
-- Privileged access requirements
-- Critical infrastructure exposure
-
-The Parties acknowledge that any project involving privileged technical zones, server rooms, or critical infrastructure shall be classified **at minimum as Medium threat level**.
-
-Projects containing multiple critical zones, sensitive operational dependencies, or high-value operations may be classified as **High or Critical**.
-
----
-
-## 5. Pricing Framework
-
-### 5.1 Service Tiers
-- Concept & Planning
-- Full Architecture & Governance
-- Enterprise / Multi-Site Program
-
-### 5.2 Pricing Formula
-
-Unless otherwise agreed in writing:
+Projects will be classified based on threat level, size, complexity, and sensitivity. Pricing shall be calculated as:
 
 **Adjusted Price = Base Fee × Threat Multiplier × Size Multiplier × Floor Multiplier × Site Multiplier**
 
-### 5.3 Currency
-All pricing, fees, refunds, and cancellation amounts shall be denominated in **USD**.
+All amounts are in **United States Dollars (USD)** unless otherwise agreed. Pricing estimates are non-binding unless expressly stated as a fixed-fee offer in writing.
 
-### 5.4 Pricing Estimates
-Any pricing matrix, quote, or calculation shared by the Provider is **conceptual** unless expressly marked as a binding fixed-fee offer in writing.
-
-### 5.5 Payment Structure
-
-Unless otherwise agreed in the SOW:
-
-- **50%** due upon signing or project commencement
-- **25%** due at the mid-point milestone
-- **25%** due upon final delivery
-
-For larger engagements, milestone billing may be used instead of the standard split.
+**Payment Terms** (unless otherwise agreed in SOW):  
+- 50% upon signing / commencement  
+- 25% at mid-point milestone  
+- 25% upon final delivery
 
 ---
 
 ## 6. Change Requests
 
-Any change to scope, deliverables, schedule, assumptions, or pricing must be documented **in writing**. 
-
-If the Client requests additional work outside the agreed scope, the Provider may revise the timeline, pricing, deliverables, or require an amended SOW or new addendum. No change shall be binding unless confirmed in writing by both Parties.
+Any changes to scope, deliverables, schedule, or pricing must be agreed in writing via an amended SOW or addendum.
 
 ---
 
 ## 7. Client Responsibilities
 
-The Client shall provide, in a timely manner:
-- Project requirements
-- Relevant site information
-- Access to stakeholders
-- Necessary approvals
-- Clarifications and feedback
-- Security constraints and operational limitations
-
-Delays caused by missing or delayed Client input may result in schedule extensions or re-pricing.
+The Client shall provide timely access to requirements, site information, stakeholders, and feedback. Delays caused by the Client may result in adjusted timelines and/or re-pricing.
 
 ---
 
 ## 8. Provider Responsibilities
 
-The Provider shall:
-- Perform services in a professional manner
-- Use reasonable skill and care
-- Deliver agreed outputs according to scope
-- Maintain confidentiality
-- Communicate material risks, blockers, or scope issues in a timely manner
-
-The Provider does **not** guarantee any particular operational, security, business, or technical outcome unless expressly agreed in writing.
+The Provider shall perform the Services with reasonable skill and care and maintain confidentiality. The Provider does **not** guarantee any specific operational, security, or business outcome.
 
 ---
 
-## 9. Confidentiality
+## 9. Intellectual Property
 
-Both Parties agree to keep confidential all non-public information shared during the project, including security architecture, site details, operational procedures, pricing assumptions, technical documentation, and sensitive facility logic.
+- Pre-existing IP of each Party remains its property.
+- Custom Deliverables created specifically for the Client become the Client’s property upon **full payment**.
+- The Provider retains rights to its methodologies, templates, know-how, and non-client-specific materials.
 
-This confidentiality obligation **survives termination** of the Agreement.
+The Client is granted a worldwide, perpetual license to use the Deliverables for internal purposes.
 
 ---
 
-## 10. Intellectual Property
+## 10. Confidentiality
 
-Unless otherwise agreed in writing:
-- Pre-existing intellectual property remains the property of the originating Party.
-- Custom deliverables created specifically under this Agreement become the property of the Client upon **full payment**.
-- The Provider retains rights to general methodologies, know-how, templates, and non-client-specific frameworks.
+Both Parties shall keep Confidential Information strictly confidential. This obligation survives termination of the Agreement for a period of **7 years** (or indefinitely for trade secrets).
 
 ---
 
 ## 11. Security and Access
 
-Where the project involves sensitive environments, the Provider agrees to comply with the Client’s reasonable security protocols (access control, escort requirements, secure communication, etc.).
-
-The Client shall only grant access to information reasonably necessary for the Provider to perform the services.
+The Provider shall comply with the Client’s reasonable security protocols. The Client shall only provide access to information reasonably necessary for the Services.
 
 ---
 
-## 12. Liability Limitations
+## 12. Compliance
 
-To the fullest extent permitted by law:
-- The Provider shall not be liable for indirect, incidental, special, or consequential damages.
-- The Provider’s total liability shall not exceed the amount paid under the applicable SOW.
-- The Provider is not responsible for implementation failures, third-party failures, or Client decisions based on conceptual materials.
-
-Nothing in this Agreement excludes liability that cannot legally be excluded.
+The Client represents that it will comply with all applicable export control, sanctions, and anti-corruption laws (including FCPA and UK Bribery Act). The Provider may suspend Services if it reasonably believes continued performance would violate such laws.
 
 ---
 
-## 13. Term
+## 13. Data Protection
 
-This Agreement shall remain in effect for **[6 months]** from the Effective Date, unless terminated earlier. The term may be extended by written agreement of both Parties.
-
----
-
-## 14. Termination
-
-Either Party may terminate this Agreement by providing written notice.
-
-### 14.1 Termination Without Cause
-Subject to the cancellation and compensation terms below.
-
-### 14.2 Termination For Cause
-Material breach, confidentiality violation, unlawful conduct, or non-payment allows the non-breaching Party to retain all rights and remedies under law.
-
-### 14.3 Itemized Closeout
-Upon termination, the Provider shall provide an itemized summary of completed work, time spent, deliverables produced, and approved expenses.
+Each Party shall comply with applicable data protection laws (including GDPR where relevant). The Client shall ensure it has the right to share any personal data with the Provider.
 
 ---
 
-## 15. Stage-Based Cancellation and Refund Terms
+## 14. Liability Limitations
 
-### 15.1 Stage 1 — Before Work Commences
-Provider retains **10%** of the total project fee as a non-refundable cancellation charge. Remaining prepaid amounts (less earned fees/expenses) shall be refunded.
-
-### 15.2 Stage 2 — After Kickoff / Early Work
-Provider retains **25%** or the value of work completed, whichever is greater.
-
-### 15.3 Stage 3 — After Substantial Performance
-Provider retains **50%** or the value of work completed, whichever is greater.
-
-### 15.4 Stage 4 — Near Completion
-Provider retains **75% or more**, depending on work completed and milestone status.
-
-### 15.5 General
-- Completed work is payable in full.
-- Approved expenses are reimbursed in full.
-- Refunds (if any) issued within **30 days** of termination.
-
-### 15.6 Symmetry
-These terms apply equally whether the Client or the Provider terminates without cause.
+To the maximum extent permitted by law:
+- The Provider shall not be liable for indirect, consequential, or punitive damages.
+- The Provider’s total liability shall not exceed the total fees paid by the Client under the applicable SOW.
+- The Provider is not responsible for implementation, third-party actions, or decisions made by the Client based on conceptual materials.
 
 ---
 
-## 16. Mutual Good-Faith Protection
+## 15. Term & Termination
 
-This Agreement protects both Parties from unreasonable cancellation while recognizing reserved time, opportunity cost, work performed, and project commitment. Neither Party may use termination to avoid payment for work already completed.
+This Agreement has an initial term of **[12 months]** from the Effective Date and auto-renews unless terminated.
 
----
-
-## 17. Independent Contractor
-
-The Provider is an independent contractor and not an employee, partner, agent, or joint venturer of the Client.
+Either Party may terminate:
+- For convenience with **30 days** written notice (subject to Section 16).
+- For cause immediately upon material breach.
 
 ---
 
-## 18. Governing Law
+## 16. Stage-Based Cancellation & Refund Terms
 
-This Agreement shall be governed by the laws of **[Jurisdiction]**. Disputes shall be resolved in the courts or arbitration forum of that jurisdiction.
+- **Before Work Commences**: Provider retains **10%** cancellation fee.
+- **After Kickoff but before first major deliverable**: Retains **25%** or value of work performed (whichever greater).
+- **After Substantial Performance**: Retains **50%** or value of work performed.
+- **Near Completion**: Retains **75%+** depending on progress.
 
----
-
-## 19. Dispute Resolution
-
-The Parties agree to first attempt good-faith negotiation. If unresolved, they may proceed to mediation or other permitted dispute resolution methods.
-
----
-
-## 20. Entire Agreement
-
-This Agreement, together with any SOW, appendix, or addendum, constitutes the entire agreement between the Parties and supersedes all prior understandings. Amendments must be in writing and signed by both Parties.
+Completed work and approved expenses are payable in full. Refunds, if any, will be issued within 30 days.
 
 ---
 
-## 21. Severability
+## 17. Force Majeure
 
-If any provision is held invalid, the remaining provisions remain in full force and effect.
-
----
-
-## 22. Notices
-
-All notices shall be sent to the addresses/emails listed above and are deemed given upon email transmission or receipt by certified mail.
+Neither Party shall be liable for delays or failure to perform due to events beyond reasonable control (including acts of God, war, sanctions, pandemics, or government restrictions).
 
 ---
 
-## 23. Signatures
+## 18. Taxes
+
+Client is responsible for all applicable taxes, VAT/GST, and withholding taxes. If withholding is required, Client shall gross up payments so the Provider receives the full invoiced amount.
+
+---
+
+## 19. Independent Contractor
+
+The Provider is an independent contractor. Nothing in this Agreement creates an employment, partnership, or agency relationship.
+
+---
+
+## 20. Governing Law & Dispute Resolution
+
+This Agreement shall be governed by the laws of **England and Wales**. Any disputes shall be finally resolved by arbitration under the Rules of the International Chamber of Commerce (ICC) by one or more arbitrators. The seat of arbitration shall be **Singapore**. The language shall be English.
+
+---
+
+## 21. Local Law Adaptation
+
+The Parties acknowledge that this Agreement may be reviewed and amended by the Client’s legal counsel to comply with mandatory local laws. Any such modifications shall be made in a written addendum and shall not materially alter the core commercial intent unless mutually agreed.
+
+---
+
+## 22. Entire Agreement & Severability
+
+This Agreement (including any SOW) constitutes the entire understanding between the Parties. Amendments must be in writing and signed by both Parties. If any provision is held invalid, the remainder shall remain in effect.
+
+---
+
+## 23. Notices
+
+Notices shall be sent to the addresses/emails above and are deemed given upon receipt.
+
+---
+
+## 24. Signatures
 
 **IN WITNESS WHEREOF**, the Parties have executed this Agreement as of the Effective Date.
 
