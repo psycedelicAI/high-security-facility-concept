@@ -1,42 +1,46 @@
 # FAQ – High-Security Facility Concept
 
-> Frequently asked questions about the High-Security Facility Concept repository, its framing, scope, and architectural direction.
+> Common questions and concise answers about the High-Security Facility Concept, its framing, scope, relationship to Zero Trust, physical trust logic, operational resilience, and repository structure.
 
 ---
 
-## General Overview
+## Overview
 
 ### What is the High-Security Facility Concept?
 
-The High-Security Facility Concept is a conceptual trust architecture framework for high-security physical and operational environments. It explores how identity, movement, zones, privilege, surveillance, degraded operations, reviewability, and survivability interact within a controlled environment.
+The High-Security Facility Concept is a conceptual trust architecture framework for high-security physical and operational environments. It treats identity, movement, zones, privilege, surveillance, degraded operations, recovery, governance, and survivability as parts of one coherent security model.
 
 ### Is this a product?
 
-No. This repository is not a product catalog, vendor offering, or final implementation package. It is a conceptual and architectural body of work intended to structure thinking about high-security environments.
+No. This repository is not a finished product, vendor offering, or implementation package. It is a conceptual and architectural body of work.
 
-### Is this a security checklist?
+### Is this an implementation guide?
 
-No. A checklist lists controls. This repository focuses on how controls work together as a coherent trust architecture.
+No. The documentation describes principles, models, and direction, but it is not a complete implementation specification. A real-world deployment would require environment-specific requirements, specialist review, technical detailing, policy development, and legal and regulatory alignment where relevant.
+
+### What is the core idea?
+
+The core idea is that high security does not depend only on who has access, but also on where the actor is, how they got there, which zone is being accessed, which device is being used, whether the activity is occurring in the correct context, and how deviations, incidents, and recovery are handled.
 
 ### What problem is the repository trying to solve?
 
-It is trying to model how a high-security environment should remain legible, governable, and controlled when access, movement, presence, or operational conditions no longer fit ordinary assumptions.
+It is trying to model how a high-security environment should remain legible, governable, and controlled when access, movement, presence, or operating conditions no longer fit ordinary assumptions.
 
 ### Who is the intended audience?
 
-The repository is intended for architectural review, conceptual development, security-minded discussion, and future collaboration with people who understand high-security facilities, operational governance, and physical trust logic.
+The repository is intended for conceptual review, structured discussion, security-minded architecture work, and future collaboration with people who understand high-security facilities, operational governance, and physical trust logic.
 
 ---
 
-## Positioning and Framing
+## Positioning
 
-### Is this just zero trust applied to physical security?
+### Is this just Zero Trust applied to physical security?
 
-No. Zero trust is an important influence and shares some principles with the concept, such as contextual trust and least privilege. However, this repository extends beyond zero trust by treating the facility itself as a physical trust architecture where movement, zones, degraded operations, reviewability, and survivability are explicit parts of the model.
+No. There is clear overlap with Zero Trust in contextual trust, least privilege, and re-evaluation. But this repository goes further by treating the facility itself as a physical trust architecture, where movement, zones, degraded operations, reviewability, and survivability are explicit parts of the model.
 
 ### How is this different from normal physical security thinking?
 
-Normal physical security often focuses on control points, access devices, alarms, and barriers. This concept focuses on how those elements form a broader trust architecture, where space, behavior, privilege, and operational state all carry meaning.
+Normal physical security often focuses on control points, barriers, and devices. This concept focuses on how those elements form a broader trust architecture, where space, behavior, privilege, and operational state all carry meaning.
 
 ### What makes this concept distinct?
 
@@ -47,7 +51,7 @@ Its distinctive features include:
 - zones are meaningful trust boundaries
 - privilege is separate from identity
 - degraded operations are explicitly modeled
-- reviewability is treated as part of security
+- reviewability is part of security
 - signaling semantics are preserved
 - survivability and passive fire resilience are included in the wider model
 
@@ -73,11 +77,11 @@ It means trust can change in degrees rather than being a simple yes/no state. Th
 
 ### Why separate identity from privilege?
 
-Identity answers who the actor is. Privilege answers what the actor may do. Privilege is treated as a higher-risk layer because it can expand access, override controls, and affect broader system behavior.
+Identity answers who the actor is. Privilege answers what the actor may do. Privilege is a higher-risk layer because it can expand access, override controls, and affect broader system behavior.
 
 ### What does “privilege is a higher-risk layer” mean?
 
-It means that authority should not be granted implicitly just because someone is identified. Privilege must be explicitly governed, limited, reviewable, and revocable.
+It means authority should not be granted implicitly just because someone is identified. Privilege must be explicitly governed, limited, reviewable, and revocable.
 
 ### Can a subject be known but still restricted?
 
@@ -102,7 +106,6 @@ Expected movement is movement that the current identity, role, zone, timing, and
 ### How does one know whether movement is expected?
 
 By comparing the movement against contextual signals such as:
-
 - identity
 - role
 - zone
@@ -141,7 +144,7 @@ It means the facility continues to operate in a narrowed, governed, and reviewab
 
 ### What does “degraded operations should preserve controlled continuity rather than collapsing into ambiguity” mean?
 
-It means that reduced confidence should not produce undefined behavior. The facility should remain governed, legible, and controllable rather than becoming vague or ad hoc.
+It means reduced confidence should not produce undefined behavior. The facility should remain governed, legible, and controllable rather than becoming vague or ad hoc.
 
 ### Why is this important?
 
@@ -305,7 +308,7 @@ It is broader than either alone. It is a physical trust architecture with ideas 
 
 ### Is there anything genuinely new here?
 
-The repository’s novelty is in how it combines familiar security ideas into a broader physical trust architecture: contextual trust, zone meaning, movement interpretation, degraded operations, reviewability, and survivability as one coherent model.
+The repository’s novelty is in how it combines familiar security ideas into a broader physical trust architecture: contextual trust, zone meaning, movement interpretation, degraded continuity, reviewability, and survivability as one coherent model.
 
 ### Is this a fixed or finished model?
 
@@ -317,7 +320,7 @@ No. The repository is evolving. It is a living concept body that is being refine
 
 ### Why is the repository organized into folders?
 
-The structure helps separate foundational material, architecture, operations, extensions, strategy, evaluation, and commercial material so the repository is easier to navigate and understand.
+The structure helps separate foundational material, architecture, operations, extensions, strategy, evaluation, commercial material, and long-form external framing so the repository is easier to navigate and understand.
 
 ### What belongs in foundational?
 
@@ -347,13 +350,17 @@ Evaluation contains assessment, review, and scorecard-style documents.
 
 Commercial documents include pricing, contract, and related delivery or service framing.
 
+### What belongs in whitepaper?
+
+Whitepaper contains long-form external framing that explains the concept at a broader level.
+
 ---
 
 ## Comparison and Clarification
 
-### What should I say if someone says this is just zero trust?
+### What should I say if someone says this is just Zero Trust?
 
-You can say that there is clear overlap with zero trust in contextual trust, least privilege, and continuous re-evaluation, but your concept goes further by treating a physical facility as a trust architecture with explicit zone meaning, movement semantics, degraded operations, and survivability concerns.
+You can say that there is clear overlap with Zero Trust in contextual trust, least privilege, and re-evaluation, but your concept goes further by treating a physical facility as a trust architecture with explicit zone meaning, movement semantics, degraded operations, and survivability concerns.
 
 ### What should I say if someone says it’s just physical security?
 
@@ -362,6 +369,10 @@ You can say that it is rooted in physical security, but it is more than a contro
 ### What should I say if someone asks what is new?
 
 You can say the novelty is not any one control, but the way the repository integrates trust gradients, movement interpretation, zone logic, degraded continuity, reviewability, and survivability into one model.
+
+### What should I say if someone says the idea is too abstract?
+
+You can say that the repository is intentionally conceptual, but it is grounded in physical threat reasoning and operational structure rather than abstract theory alone.
 
 ---
 
