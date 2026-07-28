@@ -1,16 +1,14 @@
 # Documentation Index
 
-> A structured overview of the High-Security Facility Concept repository and its current document set.
+> A concise map of the High-Security Facility Concept repository.
 
 ---
 
 ## Purpose
 
-This index provides a structured map of the repository’s documentation.
+This index helps readers navigate the repository by grouping documents according to their role in the concept.
 
-Its purpose is to make the document set easier to navigate by grouping the material according to its role in the concept. The repository is organized not as a flat collection of notes, but as a coherent body of work spanning foundational framing, architecture, operations, extensions, strategy, and evaluation.
-
-The document set covers not only initial trust and access logic, but also how the environment should remain interpretable, governable, and controllable when access, movement, or presence no longer fit expected conditions.
+The repository is organized as a structured body of work rather than a flat note collection. It covers foundational framing, architecture, operations, extensions, strategy, evaluation, and commercial material.
 
 ---
 
@@ -24,93 +22,111 @@ The repository is organized under `docs/` using the following structure:
 - `extensions/`
 - `strategy/`
 - `evaluation/`
+- `commercial/`
+- `whitepaper/`
 
 ---
 
 ## Foundational
 
-Core framing and conceptual grounding for the repository.
+Core framing and conceptual grounding.
 
-- [concept.md](foundational/concept.md) — The main concept description for the High-Security Facility Concept and its overall trust architecture framing.
-- [executive-summary.md](foundational/executive-summary.md) — A concise high-level summary of the concept, its purpose, and its architectural direction.
-- [one-pager.md](foundational/one-pager.md) — A short-form introduction intended for quick overview, briefing, or lightweight sharing.
-- [design-principles.md](foundational/design-principles.md) — Core design principles that shape the logic, posture, and intent of the concept.
-- [threat-model.md](foundational/threat-model.md) — The conceptual threat framing for the facility and the kinds of conditions the model is designed to resist, constrain, detect, interpret, or recover from.
-- [FAQ.md](foundational/FAQ.md) — Clarifications, recurring questions, and concise conceptual answers.
-- [diagrams.md](foundational/diagrams.md) — Visual overview material and diagram guidance supporting the concept’s structure and communication.
+- [concept.md](foundational/concept.md) — Main concept framing and trust-architecture overview.
+- [executive-summary.md](foundational/executive-summary.md) — Short high-level summary of the concept.
+- [one-pager.md](foundational/one-pager.md) — Brief introduction for quick sharing.
+- [design-principles.md](foundational/design-principles.md) — Core principles shaping the model.
+- [threat-model.md](foundational/threat-model.md) — Conceptual threat framing and resistance model.
+- [FAQ.md](foundational/FAQ.md) — Frequently asked questions and concise answers.
+- [diagrams.md](foundational/diagrams.md) — Visual overview material and diagram guidance.
 
 ---
 
 ## Architecture
 
-Core trust and security architecture models.
+Core trust and security models.
 
-- [zone-model.md](architecture/zone-model.md) — Defines how the facility is divided into meaningful protection zones and how zones function as trust-relevant boundaries.
-- [surveillance-model.md](architecture/surveillance-model.md) — Describes surveillance as an active visibility, interpretation, verification, and response-supporting function.
-- [identity-and-actor-model.md](architecture/identity-and-actor-model.md) — Explains how actor type, role, legitimacy, and contextual trust affect how presence is interpreted.
-- [trust-state-model.md](architecture/trust-state-model.md) — Models how trust can narrow, degrade, suspend, and recover rather than remain binary.
-- [privileged-access.md](architecture/privileged-access.md) — Describes how privileged identities, devices, and actions are separated and governed as elevated-risk functions.
-- [asset-custody.md](architecture/asset-custody.md) — Explains how credentials, devices, and other trust-bearing assets must remain under controlled custody.
-- [governance-model.md](architecture/governance-model.md) — Defines the governance structure that keeps the concept durable, accountable, reviewable, and policy-anchored.
-- [policy-baseline.md](architecture/policy-baseline.md) — Establishes baseline policy expectations across trust, access, review, exception handling, and control.
-- [post-access-trust-control.md](architecture/post-access-trust-control.md) — Describes how the model detects, interprets, and controls incorrect or unjustified presence after initial access has failed, been bypassed, or been contextually misused.
+- [zone-model.md](architecture/zone-model.md) — Meaningful zones and trust boundaries.
+- [surveillance-model.md](architecture/surveillance-model.md) — Surveillance as interpretation and response support.
+- [identity-and-actor-model.md](architecture/identity-and-actor-model.md) — Actor type, legitimacy, and contextual trust.
+- [trust-state-model.md](architecture/trust-state-model.md) — Graded trust states and transitions.
+- [privileged-access.md](architecture/privileged-access.md) — Privileged identities, devices, and actions.
+- [asset-custody.md](architecture/asset-custody.md) — Controlled custody of trust-bearing assets.
+- [governance-model.md](architecture/governance-model.md) — Accountability, policy, and review structure.
+- [policy-baseline.md](architecture/policy-baseline.md) — Baseline expectations for access and control.
+- [post-access-trust-control.md](architecture/post-access-trust-control.md) — Control of unjustified presence after access.
 
 ---
 
 ## Operations
 
-Operational resilience, controlled continuity, and reviewability.
+Operational resilience, control, and recovery.
 
-- [incident-response.md](operations/incident-response.md) — Describes how the environment detects, classifies, contains, and responds to incidents.
-- [degraded-operations-model.md](operations/degraded-operations-model.md) — Defines how the facility remains governable when trust, systems, or operating assumptions are weakened but not fully collapsed.
-- [recovery-model.md](operations/recovery-model.md) — Explains how trust, control, and operational legitimacy are restored after disruption or incident.
-- [maintenance-model.md](operations/maintenance-model.md) — Describes how maintenance and technical work should occur under controlled and reviewable conditions.
-- [audit-and-review-model.md](operations/audit-and-review-model.md) — Defines how reconstructability, accountability, reviewability, and follow-up are maintained across the concept.
+- [incident-response.md](operations/incident-response.md) — Incident detection, containment, and response.
+- [degraded-operations-model.md](operations/degraded-operations-model.md) — Controlled continuity under reduced confidence.
+- [recovery-model.md](operations/recovery-model.md) — Restoration of trust and operational legitimacy.
+- [maintenance-model.md](operations/maintenance-model.md) — Controlled and reviewable maintenance work.
+- [audit-and-review-model.md](operations/audit-and-review-model.md) — Reconstructability and accountability.
 
 ---
 
 ## Extensions
 
-Supporting architecture extensions that strengthen realism, signaling, and survivability.
+Supporting models for realism, signaling, and survivability.
 
-- [incident-lighting.md](extensions/incident-lighting.md) — Explores how lighting can support detection, interpretation, safety, and control during abnormal conditions.
-- [alarm-and-signaling-model.md](extensions/alarm-and-signaling-model.md) — Describes how alarm semantics and signaling categories should remain meaningful and distinguishable.
-- [passive-fire-resilience.md](extensions/passive-fire-resilience.md) — Explains how passive fire resilience supports survivability, containment, and architectural seriousness in high-security environments.
+- [incident-lighting.md](extensions/incident-lighting.md) — Lighting for detection and control during abnormal conditions.
+- [alarm-and-signaling-model.md](extensions/alarm-and-signaling-model.md) — Clear alarm categories and signaling meaning.
+- [passive-fire-resilience.md](extensions/passive-fire-resilience.md) — Passive fire resilience and survivability support.
+- [controlled-decoy-access-layer.md](extensions/controlled-decoy-access-layer.md) — Controlled exposure and concealed response logic.
 
 ---
 
 ## Strategy
 
-Use, positioning, interpretation, and future direction.
+Positioning, use, and future direction.
 
-- [use-cases.md](strategy/use-cases.md) — Example use cases showing where and how the concept may be relevant.
-- [value-proposition.md](strategy/value-proposition.md) — Explains the concept’s strategic value, differentiation, and public-facing relevance.
-- [roadmap.md](strategy/roadmap.md) — Describes likely development directions, maturity progression, and future expansion areas.
+- [use-cases.md](strategy/use-cases.md) — Example situations where the concept is relevant.
+- [value-proposition.md](strategy/value-proposition.md) — Strategic value and public framing.
+- [roadmap.md](strategy/roadmap.md) — Likely development direction and maturity path.
 
 ---
 
 ## Evaluation
 
-Independent assessment, reflection, and review material.
+Assessment and review material.
 
-- [assessment.md](evaluation/assessment.md) — A broader evaluative document reviewing the concept’s strengths, structure, and development direction.
-- [Concept-Evaluation-Scorecard.md](evaluation/Concept-Evaluation-Scorecard.md) — A structured category-based conceptual evaluation of the repository as an architecture project.
-- [AI-Report-Review.md](evaluation/AI-Report-Review.md) — Review-oriented material reflecting on AI-generated assessment and interpretation of the concept.
+- [assessment.md](evaluation/assessment.md) — Broader conceptual assessment.
+- [Concept-Evaluation-Scorecard.md](evaluation/Concept-Evaluation-Scorecard.md) — Category-based evaluation scorecard.
+- [AI-Report-Review.md](evaluation/AI-Report-Review.md) — Review material based on AI-generated evaluation.
+
+---
+
+## Commercial
+
+Commercial framing and delivery support.
+
+- [pricing-matrix.md](commercial/pricing-matrix.md) — Conceptual pricing framework and estimation logic.
+- [master-services-agreement.md](commercial/master-services-agreement.md) — Draft commercial agreement for concept services.
+
+---
+
+## Whitepaper
+
+Long-form external framing.
+
+- [whitepaper.md](whitepaper/whitepaper.md) — Long-form overview of the concept and its broader framing.
 
 ---
 
 ## Reading Paths
 
-Depending on the reader’s purpose, the repository can be approached through different paths.
-
-### For a quick conceptual overview
+### Quick overview
 Start with:
 
 - [foundational/one-pager.md](foundational/one-pager.md)
 - [foundational/executive-summary.md](foundational/executive-summary.md)
 - [foundational/concept.md](foundational/concept.md)
 
-### For core architecture understanding
+### Core architecture
 Continue with:
 
 - [architecture/zone-model.md](architecture/zone-model.md)
@@ -118,9 +134,8 @@ Continue with:
 - [architecture/trust-state-model.md](architecture/trust-state-model.md)
 - [architecture/post-access-trust-control.md](architecture/post-access-trust-control.md)
 - [architecture/privileged-access.md](architecture/privileged-access.md)
-- [architecture/asset-custody.md](architecture/asset-custody.md)
 
-### For operational control and resilience
+### Operations and resilience
 Continue with:
 
 - [operations/incident-response.md](operations/incident-response.md)
@@ -128,47 +143,57 @@ Continue with:
 - [operations/recovery-model.md](operations/recovery-model.md)
 - [operations/audit-and-review-model.md](operations/audit-and-review-model.md)
 
-### For signaling, survivability, and supporting extensions
+### Extensions and supporting models
 See:
 
 - [extensions/alarm-and-signaling-model.md](extensions/alarm-and-signaling-model.md)
 - [extensions/incident-lighting.md](extensions/incident-lighting.md)
 - [extensions/passive-fire-resilience.md](extensions/passive-fire-resilience.md)
+- [extensions/controlled-decoy-access-layer.md](extensions/controlled-decoy-access-layer.md)
 
-### For strategic framing and external positioning
+### Strategy and positioning
 See:
 
 - [strategy/value-proposition.md](strategy/value-proposition.md)
 - [strategy/use-cases.md](strategy/use-cases.md)
 - [strategy/roadmap.md](strategy/roadmap.md)
 
-### For evaluation and concept review
+### Evaluation and review
 See:
 
 - [evaluation/assessment.md](evaluation/assessment.md)
 - [evaluation/Concept-Evaluation-Scorecard.md](evaluation/Concept-Evaluation-Scorecard.md)
 - [evaluation/AI-Report-Review.md](evaluation/AI-Report-Review.md)
 
+### Commercial material
+See:
+
+- [commercial/pricing-matrix.md](commercial/pricing-matrix.md)
+- [commercial/master-services-agreement.md](commercial/master-services-agreement.md)
+
+### Whitepaper
+See:
+
+- [whitepaper/whitepaper.md](whitepaper/whitepaper.md)
+
 ---
 
 ## Current Documentation Direction
 
-At this stage, the document set reflects a repository that is evolving from a strong conceptual archive into a more mature and coherent architecture body of work.
+The repository is evolving into a more mature and coherent architecture body of work.
 
-The structure increasingly supports:
+It now supports:
 
 - trust architecture framing
-- contextual interpretation of access and presence
-- movement- and zone-aware security logic
-- post-access trust control
+- contextual access interpretation
+- movement- and zone-aware logic
 - controlled continuity under degraded conditions
-- reviewability and governance discipline
-- externally readable concept presentation
+- reviewability and governance
+- public methodology with private client-specific delivery
+- external-facing concept presentation
 
 ---
 
 ## Notes
 
-This documentation set is conceptual in nature.
-
-It is intended to support architectural thinking, structured discussion, review, and further development. It should not be interpreted as a finalized implementation blueprint, certified engineering specification, or jurisdiction-specific compliance design.
+This documentation set is conceptual. It is intended for structured discussion, review, and further development, not as a final implementation blueprint or jurisdiction-specific compliance design.
