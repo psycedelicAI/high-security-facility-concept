@@ -1,6 +1,6 @@
 # High-Security Facility Concept
 
-> A concept for a high-security technical facility in which physical presence, zone logic, credential custody, device context, privileged access, recovery, surveillance, and governance operate as one coherent system.
+> A conceptual model for designing high-security facilities as coherent trust architectures in which physical presence, movement, zones, credentials, devices, privilege, surveillance, recovery, and governance operate as one system.
 
 ---
 
@@ -12,28 +12,29 @@
 | Subject | High-Security Facility Concept |
 | Type | Core Concept Description |
 | Status | Draft |
-| Scope | Vision, principles, conceptual structure, design intent, strategic framing |
-| Audience | Security architects, facility planners, technical leads, decision-makers, reviewers |
+| Scope | Conceptual framing, design philosophy, trust logic, spatial security, and operational grounding |
+| Audience | Security architects, facility planners, technical leads, and decision-makers |
 
 ---
 
 ## Purpose
 
-This document describes the core of the **High-Security Facility Concept**.
+This document defines the core of the **High-Security Facility Concept**.
 
-Its purpose is to articulate the concept’s central idea, design philosophy, and scope, and to explain how physical security, movement logic, credentials, devices, privileged access, technical zones, surveillance, recovery, and governance can be understood as parts of the same trust model.
+Its purpose is to explain the project’s central idea: that high-security environments should be understood as **trust architectures**, not as collections of disconnected controls.
 
-The document is intended to serve as the repository’s main concept description and as a reference point for the rest of the documentation.
+The concept describes how physical security, movement logic, credential custody, device context, privileged access, technical zones, surveillance, incident response, recovery, and governance can be treated as parts of the same architecture.
 
 ---
 
-# Concept Summary
+## Core Concept
 
-The **High-Security Facility Concept** is a model for environments where high security cannot be reduced to individual controls such as doors, badges, MFA, cameras, or network segmentation in isolation.
+The **High-Security Facility Concept** is a model for environments where security cannot be reduced to isolated controls such as doors, badges, cameras, MFA, or network segmentation alone.
 
 Instead, the concept is based on the idea that trust in a high-security environment is shaped by the relationship between:
 
 - identity
+- actor type
 - physical presence
 - movement
 - zone
@@ -45,22 +46,25 @@ Instead, the concept is based on the idea that trust in a high-security environm
 - recovery
 - governance
 
-This means that the question is not only **who** has access, but also:
+The question is therefore not only **who** has access, but also:
 
-- where the person is located
-- how the person got there
-- which device is being used
-- whether the correct credential is being used in the correct context
-- whether the activity is taking place in the correct operational mode
-- whether movement patterns and access are normal or anomalous
-- whether the facility is monitored in a way that supports rapid detection and sabotage detection
-- how the model behaves during incidents, exceptions, and recovery
+- where the actor is located
+- how the actor got there
+- which zone is being accessed
+- which credential or device is being used
+- whether the movement is expected
+- whether the context justifies trust
+- whether privileged actions remain constrained and reviewable
+- whether anomalies can be detected and interpreted
+- whether incorrect presence can still be controlled after initial entry
+- whether the facility remains governable during degraded conditions
+- whether trust can be restored after abnormal states
 
-The concept is therefore not primarily a collection of products or technical controls, but a **trust architecture** for high-security facility environments.
+The concept is therefore not primarily a collection of products or controls, but a **facility-centered trust architecture**.
 
 ---
 
-# Why This Concept Exists
+## Why This Concept Exists
 
 Many security environments have strong point controls, but weaker connections between them.
 
@@ -71,79 +75,48 @@ Common gaps arise between:
 - credentials and custody
 - devices and physical location
 - admin policy and actual administrative context
-- surveillance and real operational incident response
-- operations and security governance
+- surveillance and real operational response
+- operations and governance
 - incident handling and recovery
-- security design and governance
+- security design and human behavior
 
-The result is often an environment that appears strong on paper, but in practice contains informal shortcuts, unclear exceptions, or weak internal traceability.
+The result is often an environment that appears strong on paper, but in practice contains informal shortcuts, weak traceability, or unclear exceptions.
 
-This concept exists to reduce those gaps by describing a more coherent model in which physical, logical, and operational security are understood as parts of the same problem.
+This concept exists to reduce those gaps by describing a more coherent model in which physical, logical, and operational security are understood as parts of the same system.
 
 ---
 
-# Design Philosophy
+## Design Philosophy
 
-The concept is built around a number of core ideas:
+The concept is built around a number of core ideas.
 
-## Security Is a System, Not a Point Control
+### Security Is a System, Not a Point Control
 No single control should carry trust on its own. Security emerges from how multiple controls interact.
 
-## Physical Context Matters
+### Physical Context Matters
 In a high-security facility environment, physical presence, passage order, and actual location are security-relevant parameters, not just practical logistics.
 
-## Trust Must Be Contextual
+### Trust Must Be Contextual
 Trust should be assessed based on role, zone, device, credential, movement pattern, surveillance context, and operational context — not only on the existence of an identity or badge.
 
-## Friction Can Be a Security Feature
+### Friction Can Be a Security Feature
 In some environments, low friction is not the goal. Higher security may require more steps, clearer separation, and stronger custody.
 
-## High-Risk Functions Need Separation
+### High-Risk Functions Need Separation
 Privileged administration, technical zone access, break-glass, and recovery must be treated as distinct contexts with stronger controls.
 
-## Recovery Is Part of Security
+### Recovery Is Part of Security
 A strong model must work not only during normal operations, but also during incidents, loss, failure, exceptions, and recovery.
 
-## Governance Makes Security Durable
+### Governance Makes Security Durable
 Without clear ownership, review, exception handling, and policy anchoring, even good design becomes fragile over time.
 
-## Surveillance Must Support Detection and Action
+### Surveillance Must Support Detection and Action
 Surveillance should not only be used for retrospective review, but also support rapid detection, sabotage indication, and operational focus during incidents.
 
 ---
 
-# Relation to Zero Trust
-
-The concept is primarily based on:
-
-- physical presence
-- zone context
-- movement logic
-- device location
-- credential custody in the physical environment
-- surveillance as an operational security function
-
-This means that the model does not assume that Zero Trust is a new or unfamiliar idea for organizations working with high security.
-
-Instead, the concept assumes that many organizations already know or use Zero Trust principles to varying degrees, especially in identity, network, application access, and device posture.
-
-This concept therefore does not attempt to replace Zero Trust, but rather adds a stronger physical, spatial, and operational dimension to the trust model.
-
-## Conceptual Position
-
-The model is based on the idea that trust in a high-security environment is strongly influenced by:
-
-- where a person is located
-- how the person got there
-- where a device is located
-- which zone is being accessed
-- what the purpose is
-- whether movement and usage follow an expected pattern
-- how surveillance, detection, and incident visibility support actual control
-
-These are questions that often fall outside, or are only partly covered by, more traditional Zero Trust implementations.
-
-## Zero Trust Compatibility
+## Relation to Zero Trust
 
 The concept is highly compatible with Zero Trust principles, especially in areas such as:
 
@@ -154,9 +127,7 @@ The concept is highly compatible with Zero Trust principles, especially in areas
 - reduced trust in internal default positions
 - stronger control of privileged access
 
-Zero Trust can therefore be layered on top of or integrated with this model without difficulty.
-
-## Practical Interpretation
+However, the concept does not attempt to simply restate Zero Trust. It extends trust logic into the physical and operational domain, where movement, zones, credential custody, device location, and surveillance carry additional meaning.
 
 In short:
 
@@ -165,11 +136,9 @@ In short:
 - it is a facility-centered trust model with strong physical, spatial, and operational grounding
 - Zero Trust acts as a compatible and reinforcing layer where relevant
 
-The practical point is that, in this model, high security is not determined only by identity and system access, but also by physical context, controlled movement, surveillance capability, and the position of devices within the facility.
-
 ---
 
-# 3D Threat Thinking
+## 3D Threat Thinking
 
 **3D Threat Thinking** means that the facility’s threat model is not understood as a flat or two-dimensional perimeter issue, but as a spatial security challenge in which intrusion, presence, and impact can occur from multiple directions and levels.
 
@@ -194,86 +163,89 @@ This strengthens, among other things:
 
 ---
 
-# Core Concept Components
+## Core Components
 
-## 1. Identity
+### 1. Identity
 Identities are central, but not sufficient on their own. Trust is not built solely on accounts or badges, but on how the identity behaves in the correct context.
 
-## 2. Physical Presence
+### 2. Actor Type
+Different actor types carry different assumptions, limits, and trust expectations.
+
+### 3. Physical Presence
 Physical presence in the facility is a security-relevant factor. Being in a certain zone is not only a result of access, but also part of the trust assessment.
 
-## 3. Zone Model
+### 4. Zone Model
 The facility is divided into zones with different protection value and different requirements for passage, purpose, and permitted activity.
 
-## 4. Movement Logic
+### 5. Movement Logic
 How someone moves through the facility is security-relevant. Sequential passage and deviation detection are central mechanisms in the model.
 
-## 5. Credentials
+### 6. Credentials
 Badges, tokens, and other credentials are treated as security objects, not just user aids.
 
-## 6. Credential Custody
+### 7. Credential Custody
 Credentials must be kept under active control, with clear rules for storage, issuance, return, revocation, and incident handling.
 
-## 7. Devices
+### 8. Devices
 Devices carry data, identity, and trust. Their status, role, and location affect the security assessment.
 
-## 8. Device Context
+### 9. Device Context
 It is not only which device is used that matters, but also where it is located and whether it is used in the correct environment.
 
-## 9. Surveillance
+### 10. Surveillance
 Surveillance is treated as an active security function that should support detection, verification, anti-tamper logic, and rapid operational response.
 
-## 10. Protected Technical Zones
+### 11. Protected Technical Zones
 Data halls and other protected technical zones are treated as special environments with limited human presence and stricter requirements for purpose-bound access.
 
-## 11. Privileged Access
+### 12. Privileged Access
 Administrative access is separated from normal use through separate identities, separate devices, strong authentication, and clearer governance.
 
-## 12. Maintenance and Change
+### 13. Maintenance and Change
 Technical work in protected zones must occur in a defined context, not through informal shortcuts or unclear operational states.
 
-## 13. Incident Response
+### 14. Incident Response
 Deviations must be detectable, classifiable, containable, and linkable to both physical and logical context.
 
-## 14. Recovery
+### 15. Recovery
 Recovery is a planned part of the model and includes backup paths, restoration, fallback, and return to normal operations.
 
-## 15. Governance
+### 16. Governance
 Governance ties the concept together through ownership, policy, review, recertification, exception handling, and follow-up.
 
 ---
 
-# What Makes the Concept Distinct
+## What Makes the Concept Distinct
 
 The following elements are especially distinctive:
 
-## Sequential Zone Validation
+### Sequential Zone Validation
 Access to higher-protection zones is based not only on authorization, but also on correct physical passage.
 
-## Credential Custody by Design
+### Credential Custody by Design
 Badges and other sensitive credentials are kept under controlled custody instead of being treated as everyday objects.
 
-## Device Location as a Security Parameter
+### Device Location as a Security Parameter
 Device placement and movement are treated as part of the security model.
 
-## Separation of Normal and Privileged Context
+### Separation of Normal and Privileged Context
 Normal use and privileged administration are treated as different trust classes.
 
-## Protected Technical Zone Logic
+### Protected Technical Zone Logic
 Technical zones are modeled as special operational and security environments, not ordinary workspaces.
 
-## Surveillance With Operational Purpose
+### Surveillance With Operational Purpose
 Surveillance is used not only for recording or retrospective review, but to protect control points, detect sabotage, and support rapid response.
 
-## 3D Threat Thinking
+### 3D Threat Thinking
 The facility is understood as a spatial security environment in which threats can come from multiple directions, levels, and structurally overlooked paths — not only through expected ground-level entrances.
 
-## Recovery and Governance as Core Design Elements
+### Recovery and Governance as Core Design Elements
 Recovery, governance, and post-review are built in from the start.
 
 ---
 
-# Intended Use Environments
+## Intended Use Environments
 
 The concept is primarily relevant for:
 
@@ -293,7 +265,7 @@ The concept is less suitable for:
 
 ---
 
-# Concept Maturity
+## Concept Maturity
 
 At this stage, the concept should be understood as:
 
@@ -321,7 +293,7 @@ There is already a clear structure around:
 
 ---
 
-# Design Intent
+## Design Intent
 
 This concept does not try to maximize convenience or generic usability.
 
@@ -339,7 +311,7 @@ Instead, the design intent is to create a model for environments where:
 
 ---
 
-# Strategic Value
+## Strategic Value
 
 The strategic value of the concept lies in the fact that it:
 
@@ -356,7 +328,7 @@ This makes the concept useful both as a discussion foundation and as a basis for
 
 ---
 
-# Limits and Boundaries
+## Limits and Boundaries
 
 This document does not describe:
 
@@ -372,10 +344,10 @@ These aspects require separate work, environment-specific adaptation, and furthe
 
 ---
 
-# Final Concept Statement
+## Final Concept Statement
 
 The **High-Security Facility Concept** is a facility-centered trust model for high-security technical environments in which identity, physical presence, movement, zones, credentials, devices, surveillance, privileges, incidents, recovery, and governance are treated as parts of the same security architecture.
 
 The central idea is:
 
-> **High security becomes stronger when trust is determined not only by who someone is, but also by where they are, how they move, which device they use, which credential they carry, how the facility is monitored, and how the model handles deviation, recovery, and governance over time.**
+> High security becomes stronger when trust is determined not only by who someone is, but also by where they are, how they move, which device they use, which credential they carry, how the facility is monitored, and how the model handles deviation, recovery, and governance over time.
