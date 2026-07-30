@@ -1,6 +1,6 @@
 # Threat Model – High-Security Facility Concept
 
-> A conceptual threat model describing the types of adversarial, unauthorized, anomalous, and failure-related conditions that the High-Security Facility Concept is intended to resist, constrain, detect, or recover from.
+> A conceptual threat model describing the adversarial, unauthorized, anomalous, environmental, and failure-related conditions that the High-Security Facility Concept is intended to resist, constrain, detect, interpret, or recover from.
 
 ---
 
@@ -12,7 +12,7 @@
 | Subject | High-Security Facility Concept |
 | Type | Supporting Security Architecture Document |
 | Status | Draft |
-| Scope | Threat categories, adversarial conditions, misuse paths, insider risk, operational degradation, anomaly interpretation, trust-relevant threat framing |
+| Scope | Threat categories, adversarial conditions, misuse paths, insider risk, operational degradation, anomaly interpretation, exposure weighting, trust-relevant threat framing |
 | Audience | Security architects, facility planners, risk thinkers, physical security specialists, governance owners, incident response designers |
 
 ---
@@ -21,10 +21,9 @@
 
 This document defines the conceptual threat landscape for the **High-Security Facility Concept**.
 
-Its purpose is to clarify what kinds of risks, misuse paths, hostile actions, anomalous conditions, and operational failures the concept is intended to address.
+Its purpose is to clarify what kinds of risks, misuse paths, hostile actions, anomalous conditions, environmental hazards, and operational failures the concept is intended to address.
 
-The concept is not built around a single threat type.  
-It is designed for environments where trust must remain meaningful despite a mixture of:
+The concept is not built around a single threat type. It is designed for environments where trust must remain meaningful despite a mixture of:
 
 - unauthorized access attempts
 - insider misuse
@@ -35,9 +34,10 @@ It is designed for environments where trust must remain meaningful despite a mix
 - operational degradation
 - incident-state confusion
 - physical intrusion
+- environmental hazard
 - partial trust failure
 
-For that reason, the threat model must include not only direct attack, but also misuse of legitimacy, ambiguity, and environmental weakness.
+For that reason, the threat model must include not only direct attack, but also misuse of legitimacy, ambiguity, environmental weakness, and site exposure.
 
 ---
 
@@ -57,8 +57,38 @@ This means threats may emerge from:
 - technical blind spots
 - weak governance
 - environmental design weaknesses
+- public exposure and target visibility
+- high-consequence facility type
 
 The model therefore treats threat as something broader than perimeter breach alone.
+
+---
+
+# Threat Profile Drivers
+
+Threat severity is not determined only by threat type. It is also shaped by the context of the facility itself.
+
+The model treats threat severity as a function of both adversarial behavior and site context.
+
+A threat is interpreted through factors such as:
+
+- public accessibility
+- visibility from the outside
+- ease of approach
+- ease of reconnaissance
+- building type
+- organizational sensitivity
+- operational consequence of compromise
+- likely attacker interest
+- likelihood of opportunistic or targeted attention
+
+This means a low-exposure storage environment and a highly visible law-enforcement facility should not be assigned the same threat weight, even if some threat categories overlap.
+
+### Example interpretation
+- A storage warehouse with no windows and low public exposure may present a lower overall threat profile.
+- A law enforcement facility in the middle of town may present a much higher profile because it is more visible, more sensitive, and more likely to attract deliberate attention.
+
+This is an important part of the model because the same category of threat can have very different severity depending on the site’s exposure and purpose.
 
 ---
 
@@ -338,6 +368,7 @@ The concept can also be understood in terms of how trust fails.
 - governance allows unsafe exceptions
 - signals create the wrong response
 - recovery does not restore trustworthy normal state
+- exposure and target value attract more risk than the model accounted for
 
 This matters because the concept is not built only around stopping entry.  
 It is built around preserving meaningful trust conditions.
@@ -393,6 +424,7 @@ Because of this threat model, the facility concept places strong emphasis on:
 - resilience during degraded conditions
 - compatibility between high security and life safety
 - governance as a control layer, not a paperwork layer
+- exposure-aware risk weighting
 
 ---
 
@@ -400,10 +432,10 @@ Because of this threat model, the facility concept places strong emphasis on:
 
 Within the **High-Security Facility Concept**, threat is not defined only as forced intrusion.
 
-The concept assumes that trust can fail through misuse, ambiguity, weak oversight, degraded visibility, signaling confusion, governance failure, privileged abuse, and environmental escalation.
+The concept assumes that trust can fail through misuse, ambiguity, weak oversight, degraded visibility, signaling confusion, governance failure, privileged abuse, environmental escalation, and the site’s exposure and sensitivity profile.
 
 The central idea is:
 
-> A high-security facility should be designed not only to resist entry, but to resist trust degradation across movement, privilege, visibility, signaling, governance, and survivability.
+> A high-security facility should be designed not only to resist entry, but to resist trust degradation across movement, privilege, visibility, signaling, governance, survivability, and site exposure.
 
 This broader threat framing is what gives the concept much of its architectural depth.
