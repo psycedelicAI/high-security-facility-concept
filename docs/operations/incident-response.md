@@ -1,6 +1,6 @@
 # Incident Response Model – High-Security Facility Concept
 
-> Conceptual model for incident handling in a high-security technical facility, with a focus on physical security, credential-related events, zone deviations, privileged access, technical incidents, and controlled return to normal operations.
+> A controlled incident-response model for detecting, interpreting, containing, escalating, and recovering from security, operational, technical, and life-safety events.
 
 ---
 
@@ -9,608 +9,967 @@
 | Field | Value |
 |---|---|
 | Document | Incident Response Model |
-| Subject | High-Security Facility Concept |
-| Type | Security Operations / Incident Handling Concept |
-| Status | Draft |
-| Scope | Physical incidents, access anomalies, credential misuse, technical security events, escalation, containment, recovery alignment |
-| Audience | Security architects, facility planners, security operations, infrastructure leads, governance owners |
+| Subject | Incident detection, interpretation, containment, escalation, and recovery |
+| Type | Operations Model |
+| Status | Conceptual |
+| Scope | Security incidents, communications compromise, anomalous movement, access violations, degraded operations, and life-safety interaction |
+| Related Areas | Trust-State Model, Surveillance, Master Watcher, Watchers, Facility Coordinates, Contextual Authorization, Degraded Operations, Recovery, Audit and Review |
+| Parent Concept | High-Security Facility Concept |
 
 ---
 
 ## Purpose
 
-This document describes a conceptual model for incident response within a high-security technical facility.
+This document defines how the facility should detect, classify, interpret, contain, escalate, document, and recover from incidents.
 
-The goal is to ensure that incidents:
+The model treats an incident as more than an alarm event.
 
-- are detected early
-- are classified consistently
-- are handled according to a defined process
-- are contained before they spread or worsen
-- lead to controlled recovery
-- are documented, reviewed, and translated into improvement
+An incident may involve a change in:
 
----
+- trust
+- identity confidence
+- movement legitimacy
+- zone legitimacy
+- credential status
+- device status
+- communication confidence
+- operational continuity
+- life-safety condition
+- governance or control
 
-## Why Incident Response Matters
+The response should therefore remain connected to:
 
-In a high-security environment, incident handling is not just a technical function, but a central part of the facility’s security model.
-
-Incidents can arise across multiple domains at the same time:
-
-- physical access
-- zone logic
-- credential custody
-- admin activity
-- protected technical zones
-- devices and assets
-- insider behavior
-- operational deviations
-
-A strong incident model is therefore needed to:
-
-- connect physical and logical security
-- create clear escalation paths
-- avoid improvised crisis handling
-- enable rapid but controlled response
-- support governance and recovery
+```text
+Detection
+→ Interpretation
+→ Classification
+→ Assignment
+→ Containment
+→ Escalation
+→ Recovery
+→ Review
+```
 
 ---
 
-## Incident Response Objectives
+## Core Principle
 
-The incident response model must ensure that:
+> **An incident is a change in the facility’s trust or operating condition that requires controlled interpretation and response.**
 
-- deviations are detected and classified quickly
-- the right function is involved for the right type of incident
-- containment happens without unnecessary delay
-- privileged or sensitive access can be restricted when needed
-- physical and logical impact are assessed together
-- incidents lead to post-review and lessons learned
-- normal operations are restored without lingering hidden exceptions
+The facility should not respond only to isolated signals.
+
+It should evaluate:
+
+- what occurred
+- where it occurred
+- who or what is involved
+- whether the activity is authorized
+- whether the activity is consistent with purpose and context
+- whether the event is expanding
+- whether communication can be trusted
+- whether life safety is affected
+- which response authority applies
 
 ---
 
-# Core Principles
+## Incident Categories
 
-## 1. An Incident Is Any Meaningful Deviation From Trusted State
+The facility may classify incidents into categories such as:
 
-An incident does not have to mean a confirmed intrusion.
+### Security Incident
 
-It can also be:
+Examples:
 
+- unauthorized access
+- anomalous movement
+- badge and zone mismatch
+- suspected insider activity
+- forced passage
+- suspicious presence
+- post-access trust failure
+
+### Communications Incident
+
+Examples:
+
+- stolen radio
+- suspected radio monitoring
+- compromised communication channel
+- lost patrol display
+- incorrect directional-code state
+- failed task delivery
+
+### Credential or Ticket Incident
+
+Examples:
+
+- copied QR
+- revoked ticket presentation
+- identity mismatch
+- expired ticket
 - credential loss
-- anomalous movement patterns
-- sequence failure in the zone model
-- unauthorized device movement
-- unplanned admin activity
-- unauthorized presence in a sensitive zone
-- failure in control systems
-- unclear or unauthorized recovery activity
+- unauthorized credential use
+- escort separation
+- ticket and observed context mismatch
 
----
-
-## 2. Physical and Logical Signals Must Be Correlated
-
-In this environment, incident assessment should not separate physical and logical security unnecessarily.
+### Device or Asset Incident
 
 Examples:
 
-- unauthorized device movement can be both a physical and logical incident
-- a badge anomaly can coincide with admin activity
-- a zone deviation can indicate credential misuse or tailgating
+- unexpected device
+- unauthorized tool
+- missing asset
+- device compromise
+- asset leaving the approved route
+- scanner or transfer-media loss
 
----
-
-## 3. Containment Comes Before Comfort
-
-When a serious incident is suspected, priority must be placed on:
-
-- limiting further impact
-- stopping unauthorized movement
-- locking or isolating affected objects
-- preventing escalation
-
-Convenience or rapid restoration must not take precedence over control at an early stage.
-
----
-
-## 4. Incident Handling Must Be Proportionate
-
-Not all incidents require a full crisis response.
-
-The response must be:
-
-- risk-based
-- proportionate
-- defined according to sensitivity and impact
-- escalatable when new information emerges
-
----
-
-## 5. Every Incident Must End in a Defined State
-
-An incident must not simply “fade out.”
-
-It must end through:
-
-- containment
-- recovery
-- return to normal operations or transition to continued mitigation mode
-- documentation
-- post-review
-
----
-
-# Incident Categories
-
-## 1. Physical Access Incident
+### Technical Incident
 
 Examples:
 
-- unauthorized entry
-- tailgating
-- door forced or manipulated
-- unauthorized presence in a zone
-- deviation in reception or man-trap
+- camera failure
+- access-control failure
+- sensor failure
+- Master Watcher failure
+- database or metadata failure
+- synchronization failure
+- degraded control-room capability
 
----
-
-## 2. Zone Sequence / Movement Incident
-
-Examples:
-
-- attempt to reach a high-classification zone without correct passage
-- sequence failure in D/E/F zones
-- illogical physical movement
-- user registered in the wrong zone without a reasonable path there
-
----
-
-## 3. Credential Incident
+### Life-Safety Incident
 
 Examples:
 
-- lost badge
-- lost token
-- suspected stolen credential
-- credential used in an unusual pattern
-- failure to return a badge or token
+- fire
+- smoke
+- medical emergency
+- immediate violence
+- structural danger
+- hazardous release
+- evacuation or rescue requirement
+
+Life safety takes priority over covert communication and ordinary security tasking.
 
 ---
 
-## 4. Device / Asset Incident
+## Incident Detection
 
-Examples:
+Incidents may be detected through:
 
-- laptop leaves the permitted area
-- RFID-triggered policy deviation
-- unauthorized device separation
-- unknown or misplaced device in a sensitive zone
-- suspected tampering with a security-critical device
+- access-control events
+- ticket validation
+- credential mismatch
+- device mismatch
+- camera observation
+- movement analysis
+- Watcher report
+- patrol guard report
+- silent alarm
+- communications anomaly
+- asset-tracking event
+- environmental sensor
+- human observation
+- system inference
+- external notification
 
----
+No single signal should automatically determine intent.
 
-## 5. Privileged Access Incident
+Signals should be interpreted together with:
 
-Examples:
-
-- admin activity outside the approved process
-- admin login from the wrong device or wrong zone
-- unannounced use of a highly privileged account
-- suspected misuse of a privileged identity
-- illogical or unauthorized break-glass use
-
----
-
-## 6. Technical Security Incident
-
-Examples:
-
-- technical protection fails
-- failure in the access control system
-- failure in zone validation
-- critical operational disruption in a protected technical zone
-- unclear impact after maintenance or change
-
----
-
-## 7. Insider / Policy Violation Incident
-
-Examples:
-
-- deliberate circumvention of process
-- unauthorized movement of sensitive equipment
-- policy violation related to credential custody
-- repeated shortcuts in security-critical flows
-- attempts to avoid logging or traceability
+- identity
+- actor type
+- role
+- location
+- movement
+- time
+- purpose
+- zone
+- device
+- credential
+- escort
+- current operational state
+- confidence
 
 ---
 
-# Incident Severity Levels
+## Initial Event Record
 
-## Severity 1 – Low
-
-### Example
-
-- single deviation without clear impact
-- suspected user error in a low-classification zone
-- quickly explainable minor deviation
-
-### Typical Response
-
-- log
-- verify
-- restore if necessary
-- follow up if the pattern recurs
-
----
-
-## Severity 2 – Medium
-
-### Example
-
-- sequence failure in a higher zone
-- credential missing or used abnormally
-- device policy deviation
-- unplanned but limited admin activity
-
-### Typical Response
-
-- containment of the affected object or path
-- security verification
-- documentation
-- manual assessment of further action
-
----
-
-## Severity 3 – High
-
-### Example
-
-- suspected unauthorized presence in a high-classification zone
-- possible credential misuse
-- potential insider activity
-- unannounced or illogical privileged access
-- impact on a protected technical zone
-
-### Typical Response
-
-- immediate containment
-- security escalation
-- isolation of object, identity, or device
-- incident management is activated
-- recovery is planned in a controlled manner
-
----
-
-## Severity 4 – Critical
-
-### Example
-
-- confirmed or strongly suspected compromise of a high-security zone
-- serious manipulation of access or admin controls
-- combined physical and logical incident
-- critical impact on a protected operational environment
-- serious break-glass misuse situation
-
-### Typical Response
-
-- full incident escalation
-- physical and logical containment in parallel
-- possible activation of emergency mode
-- broader management involvement
-- mandatory post-review and governance action
-
----
-
-# Incident Lifecycle
-
-## 1. Detection
-
-An incident may be detected through:
-
-- access control systems
-- sequence logic
-- RFID or device tracking
-- admin logs
-- CCTV
-- security staff
-- user reporting
-- change / maintenance deviation
-- monitoring or other security signals
-
----
-
-## 2. Triage
-
-When an event is detected, it must be quickly assessed based on:
-
-- type of deviation
-- sensitive zone or asset
-- whether a physical / logical correlation exists
-- impact on operations and security
-- risk of further escalation
-
----
-
-## 3. Containment
-
-Containment may include:
-
-- blocking further passage
-- locking a device
-- revoking a credential
-- restricting privileged access
-- requiring escort
-- placing a zone or system into a controlled state
-- switching to recovery or incident mode
-
----
-
-## 4. Investigation
-
-The investigation must determine:
-
-- what actually happened
-- which objects, identities, or zones were affected
-- whether the incident is a mistake, policy violation, or attack
-- whether additional controls must be activated
-- whether recovery is needed
-
----
-
-## 5. Recovery
-
-Once containment has been achieved, restoration must take place through a defined recovery model, not through informal reopening.
-
-This may include:
-
-- credential replacement
-- sequence reset
-- device recovery
-- admin recovery
-- return to service in a protected technical zone
-
----
-
-## 6. Closure
-
-An incident should be closed only when:
-
-- containment is complete
-- recovery has been verified
-- temporary exceptions have been removed
-- documentation is complete
-- the owner or responsible function has approved closure
-
----
-
-## 7. Post-Incident Review
-
-The post-review must assess:
-
-- root cause
-- control weakness
-- process deviation
-- whether improvement to the zone model, governance, PAM, or custody is required
-- whether policy or training needs adjustment
-
----
-
-# Incident Response by Domain
-
-## Physical Access Incidents
-
-### Typical Actions
-
-- stop further passage
-- verify person and movement pattern
-- secure the zone
-- review CCTV and access logs
-- escalate in case of unauthorized or unexplained presence
-
----
-
-## Credential Incidents
-
-### Typical Actions
-
-- revoke or flag the credential
-- assess the level of exposure
-- review recent usage
-- decide on a temporary replacement process
-- link the case to the recovery flow
-
----
-
-## Device / Asset Incidents
-
-### Typical Actions
-
-- log the deviation
-- lock or isolate the device
-- verify the physical context
-- determine whether it is a mistake, policy violation, or theft risk
-- decide whether wipe, retrieval, or continued isolation is required
-
----
-
-## Privileged Access Incidents
-
-### Typical Actions
-
-- stop or restrict privileged activity
-- secure the relevant identity and admin path
-- review change / approval / purpose
-- escalate faster than for a normal user incident
-- link the case to governance and recovery
-
----
-
-## Technical Zone Incidents
-
-### Typical Actions
-
-- assess whether the operating state must change
-- secure the affected zone
-- limit human presence
-- verify whether maintenance or change is in progress
-- restore the technical zone through a defined process
-
----
-
-# Escalation Model
-
-## Escalation Should Be Triggered By
-
-- higher sensitivity in zone or asset
-- combination of multiple deviation signals
-- privileged impact
-- suspected insider behavior
-- impact on protected operations
-- need for emergency mode or break-glass
-
----
-
-## Example Escalation Path
-
-- detection
-- local verification
-- security escalation
-- technical escalation where needed
-- governance / owner involvement
-- recovery authority involvement
-- post-incident review and control improvement
-
----
-
-# Coordination With Other Models
-
-The incident response model must be directly linked to:
-
-- `zone-model.md`
-- `privileged-access.md`
-- `asset-custody.md`
-- `maintenance-model.md`
-- `recovery-model.md`
-- `governance-model.md`
-
-This is important because incidents in this environment often cross multiple domains at the same time.
-
----
-
-# Logging & Evidence Requirements
-
-The following should be logged or preserved as incident evidence:
-
-- access logs
-- zone sequence events
-- badge and credential anomalies
-- device movement events
-- admin logs
-- change / maintenance linkages
-- CCTV events
-- manual overrides
-- recovery actions
-- decisions, approvals, and exceptions
-
----
-
-# Recommended Policy Statements
-
-## Example Policy 1
-
-All security-relevant deviations in the physical or logical control model must be assessed according to a defined incident process.
-
-## Example Policy 2
-
-Incident handling in a high-security environment must correlate physical access, credential status, device state, and privileged activity where such relationships are relevant.
-
-## Example Policy 3
-
-Containment must be prioritized over convenience when an incident affects a high-classification zone, privileged access, or a security-critical asset.
-
-## Example Policy 4
-
-Recovery after an incident must take place according to a defined recovery model and must not rely on informal reopening of access or control.
-
-## Example Policy 5
-
-Every incident must end with defined closure and post-review in proportion to the incident’s severity.
-
----
-
-# Common Incident Response Failures
-
-If the incident model is weak, the following often occur:
-
-- escalation happens too late
-- operations are prioritized over containment
-- poor linkage between physical and logical investigation
-- unclear responsibility chain
-- informal restoration without a recovery process
-- insufficient documentation
-- no learning after incidents
-- the same type of deviation recurs without improvement
-
----
-
-# Recommended Next Steps
-
-## 1. Define Incident Categories in Detail
-
-Break out clearer classification for:
-
-- physical access
-- credential events
-- asset events
-- privileged access events
-- technical zone incidents
-- insider / policy violations
-
-## 2. Create Triage Matrix
-
-Create a matrix that links:
+The first event record should capture, where possible:
 
 - event type
-- sensitivity level
+- time
+- source
+- facility
+- operational floor
+- coordinate
+- local sector
 - zone
-- initial containment
-- escalation
-- recovery path
+- affected system
+- affected person or asset
+- initial confidence
+- current operational state
+- reporting operator
+- related ticket or credential
+- immediate life-safety status
 
-## 3. Link Incident and Recovery
+Example:
 
-Ensure that every major incident category has a defined transition to:
+```text
+Event: Silent Security Alarm
+Time: 14:32
+Location: BETA-F6-NE
+Source: Camera-12 + Access Event
+Initial State: Non-Life-Threatening
+Reported By: Watcher-02
+```
 
-- recovery
-- exception handling
-- return to normal operations
-
-## 4. Define Escalation Authority
-
-Determine:
-
-- who may escalate
-- who may decide on containment
-- who may initiate break-glass or recovery
-- who closes incidents
-
-## 5. Add Post-Incident Review Model
-
-Document:
-
-- which incidents must be post-reviewed
-- who leads the post-review
-- how lessons are fed back into policy, the zone model, and governance
+The initial record may be incomplete. It should be updated without silently rewriting the original event.
 
 ---
 
-# Final Note
+## Initial Classification
 
-In a high-security technical environment, incident response is the layer that ties together what would otherwise risk becoming separate worlds: physical security, credentials, devices, privileged access, and operations.
+The control room should determine:
 
-The central principle of this model is:
+1. Is life safety affected?
+2. Is the event isolated or expanding?
+3. Is identity or authorization confidence reduced?
+4. Is communication trusted?
+5. Is the event inside or outside an authorized context?
+6. Which zone is affected?
+7. Is immediate containment required?
+8. Which authority owns the response?
+9. Are patrol guards required?
+10. Is Silent Security Mode appropriate?
 
-> Incidents must be detected early, contained quickly, restored in a controlled manner, and always lead to clear learning and improvement.
+---
+
+## Incident States
+
+The facility may use states such as:
+
+```text
+DETECTED
+UNDER REVIEW
+VERIFIED
+CONTAINMENT ACTIVE
+ESCALATED
+SILENT SECURITY MODE
+COMMUNICATIONS COMPROMISED
+LIFE-SAFETY OVERRIDE
+RECOVERY
+CLOSED
+```
+
+State changes should be:
+
+- authorized
+- attributable
+- time-stamped
+- visible to relevant operators
+- associated with a reason where appropriate
+- preserved for audit
+
+The system should not silently move between operational states.
+
+---
+
+## Trust-State Interaction
+
+An incident may reduce trust in:
+
+- a person
+- a credential
+- a ticket
+- a device
+- a radio
+- a camera
+- a zone
+- a route
+- a system
+- an operational assumption
+
+Reduced trust should not automatically mean that the affected subject is malicious.
+
+It should mean that the facility requires:
+
+- verification
+- increased observation
+- restricted movement
+- controlled communication
+- temporary suspension
+- escalation
+- recovery review
+
+---
+
+## Master Watcher and Watcher Response
+
+The Master Watcher should provide:
+
+- facility-wide overview
+- affected floor
+- coordinate and local sector
+- zone context
+- camera coverage
+- movement trails
+- active assignments
+- patrol guard status
+- operational mode
+- system limitations
+- confidence state
+
+Watchers should:
+
+- verify the initial event
+- select relevant cameras
+- review surrounding zone coverage
+- interpret movement and context
+- assign or coordinate patrol guards
+- maintain observation
+- control relevant cameras
+- update the incident state
+- escalate when required
+- preserve notes and evidence
+
+The Master Watcher provides the shared picture.
+
+The Watchers manage detailed interpretation and response.
+
+---
+
+## Facility Coordinates
+
+Incidents should use the facility coordinate layer where available.
+
+Standard coordinate format:
+
+```text
+[Floor]-[Grid Square]-[Local Sector]
+```
+
+Example:
+
+```text
+BETA-F6-NE
+```
+
+The coordinate may identify:
+
+- event location
+- subject location
+- last-known position
+- patrol destination
+- camera coverage
+- access point
+- zone boundary
+- response position
+
+The coordinate should remain fixed and spatially consistent.
+
+---
+
+## Patrol Guard Tasking
+
+During a silent, non-life-threatening security incident, the Watcher may assign a patrol guard through a controlled low-signature display.
+
+Assignment format:
+
+```text
+[Call Sign] ][ [Operational Coordinate]
+```
+
+Example:
+
+```text
+THETA:VIII ][ BETA-F6-NE
+STAIRS
+MOVE
+```
+
+This means:
+
+- call sign: `THETA:VIII`
+- destination: `BETA-F6-NE`
+- route: stairs
+- task state: move
+
+Possible task states include:
+
+```text
+MOVE
+OBSERVE
+HOLD
+WAIT
+RETURN
+CANCEL
+ESCALATE
+```
+
+Possible delivery endpoints include:
+
+- wrist-worn e-paper display
+- flashlight-mounted LED display
+- authenticated patrol device
+- haptic tasking device
+- controlled radio fallback
+
+The guard receives the minimum actionable task, not the entire incident narrative.
+
+---
+
+## Guard Selection and Reassignment
+
+Guard assignment should consider:
+
+- availability
+- current location
+- current task
+- access permissions
+- equipment status
+- route feasibility
+- incident priority
+- physical condition
+- communication state
+
+A guard already engaged should not receive a conflicting assignment without explicit authorized reassignment.
+
+The system should record:
+
+- selected guard
+- reason for selection
+- assigning Watcher
+- destination
+- route
+- task state
+- acknowledgement
+- arrival
+- completion or cancellation
+
+---
+
+## Silent Security Mode
+
+Silent Security Mode may be activated when:
+
+- the incident is not immediately life-threatening
+- radio traffic may reveal sensitive information
+- communications may be monitored
+- discreet patrol coordination is required
+- the control room has sufficient confidence to issue controlled tasking
+
+During Silent Security Mode:
+
+- radio traffic is minimized
+- coordinate-based tasking may be delivered silently
+- selected spoken directions may use contextual coding
+- the Master Watcher retains the fixed spatial map
+- Watchers retain the wider incident context
+- guards receive minimum necessary instructions
+- acknowledgement and movement verification remain active
+
+Radio remains available whenever clarity, escalation, or safety requires it.
+
+---
+
+## Context-Dependent Directional Coding
+
+Directional coding may be used during selected covert incidents.
+
+The coordinate system remains fixed:
+
+```text
+BETA-F6-NE
+```
+
+Selected spoken directional terms may use an active code set.
+
+The coded system must include:
+
+- activation authority
+- code-set version
+- affected personnel
+- acknowledgement
+- expiry or termination
+- fallback if uncertainty occurs
+- audit record
+
+If personnel are uncertain about the active mapping:
+
+> **Clarity takes priority over concealment.**
+
+---
+
+## Ticket and Authorization Incidents
+
+If an active ticket or authorization is involved, the response should compare:
+
+```text
+Authorized Context
+vs.
+Observed Context
+```
+
+Relevant factors include:
+
+- identity
+- purpose
+- time
+- zone
+- route
+- device
+- escort
+- credential
+- asset
+- current facility state
+- observed coordinate
+
+Possible outcomes include:
+
+- context consistent
+- review required
+- restricted movement
+- ticket suspended
+- ticket revoked
+- incident escalated
+- identity unresolved
+
+A technically valid ticket does not guarantee valid activity.
+
+---
+
+## High-Risk Verification
+
+At high-risk transitions, the facility may use:
+
+- controlled scanner
+- offline or isolated OPSEC server
+- trusted identity reference
+- ticket authenticity verification
+- revocation check
+- contextual review
+- human decision
+- dual control
+- explicit audit
+
+The verification sequence is:
+
+```text
+Present
+→ Read
+→ Verify authenticity and integrity
+→ Check validity and revocation
+→ Match identity
+→ Review context
+→ Decide
+→ Enforce
+→ Log
+```
+
+The reader or QR code must not independently define trust.
+
+---
+
+## Containment
+
+Containment actions may include:
+
+- restricting movement
+- holding a subject in a controlled area
+- suspending a ticket
+- isolating a credential
+- disabling a device
+- limiting zone access
+- increasing camera coverage
+- assigning a Watcher
+- assigning a patrol guard
+- changing communication mode
+- preserving relevant evidence
+- securing affected assets
+- preventing unauthorized further passage
+
+Containment should be proportionate to:
+
+- confidence
+- consequence
+- zone
+- threat
+- life-safety condition
+- operational impact
+
+---
+
+## Communication and Information Control
+
+During an incident, communications should reveal only what is necessary to the recipient.
+
+The control room may retain:
+
+- full incident context
+- identity information
+- camera relationships
+- movement history
+- authorization data
+- response plan
+
+A Watcher may receive:
+
+- zone context
+- camera context
+- assignment context
+- subject or asset information
+
+A patrol guard may receive:
+
+```text
+THETA:VIII ][ BETA-F6-NE
+STAIRS
+OBSERVE
+```
+
+This creates an information hierarchy:
+
+```text
+Master Watcher:
+Full facility context
+
+Watcher:
+Incident and zone context
+
+Patrol guard:
+Minimum actionable task
+```
+
+---
+
+## Escalation
+
+An incident should be escalated when:
+
+- life safety becomes involved
+- the event expands
+- containment fails
+- identity confidence remains unresolved
+- communications are compromised
+- multiple zones are affected
+- a critical asset is involved
+- privileged access is implicated
+- a guard or Watcher becomes unavailable
+- the incident exceeds local authority
+- there is conflict between security and safety requirements
+
+Escalation should identify:
+
+- new authority
+- current state
+- affected locations
+- current assignments
+- unresolved risks
+- communication mode
+- required resources
+- next decision point
+
+---
+
+## Life-Safety Override
+
+If life safety is affected, emergency procedures immediately take priority.
+
+Triggers include:
+
+- fire
+- smoke
+- medical emergency
+- immediate violence
+- structural danger
+- hazardous release
+- evacuation
+- rescue
+- emergency responder direction
+
+During life-safety conditions:
+
+- explicit communication is used
+- actual floor and room references remain available
+- radio silence may be broken
+- coded directional language is overridden
+- silent patrol tasks may be cancelled or replaced
+- emergency responders receive standard references
+- security controls must not obstruct rescue or evacuation
+- all emergency overrides are logged
+
+> **No security abstraction may create ambiguity during an emergency involving life safety.**
+
+---
+
+## Degraded Operations
+
+The incident model must define behavior when systems or assumptions are weakened.
+
+Possible degraded conditions include:
+
+- Master Watcher failure
+- camera failure
+- coordinate database failure
+- offline OPSEC server failure
+- display failure
+- radio compromise
+- device loss
+- outdated ticket data
+- synchronization failure
+- operator shortage
+- conflicting reports
+- loss of trusted identity data
+
+Fallback may include:
+
+- printed floor plans
+- controlled coordinate cards
+- direct camera identifiers
+- manual assignment
+- manual verification
+- named escort
+- second-person approval
+- controlled radio
+- temporary hold
+- denial
+- escalation
+- explicit confidence statements
+
+> **Failure of the trust system must not create an automatic increase in trust.**
+
+---
+
+## Recovery
+
+Recovery begins when:
+
+- the incident is contained
+- affected systems are secured
+- communication confidence is restored or replaced
+- temporary restrictions are reviewed
+- assignments are closed
+- credentials and devices are reconciled
+- affected zones are assessed
+- trust decisions are documented
+
+Recovery may include:
+
+- restoration of normal communication
+- termination of Silent Security Mode
+- revocation or replacement of compromised devices
+- ticket review
+- credential replacement
+- camera and sensor verification
+- zone revalidation
+- controlled return to normal operations
+- post-incident review
+
+Recovery is not merely technical reset.
+
+It is restoration of controlled operational legitimacy.
+
+---
+
+## Audit and Review
+
+The incident record should preserve:
+
+- initial event
+- source
+- time
+- coordinate
+- local sector
+- zone
+- classification
+- confidence
+- state transitions
+- Watcher assignments
+- guard assignments
+- device identities
+- task delivery
+- acknowledgement
+- movement verification
+- camera control
+- ticket or credential actions
+- communication-mode changes
+- containment
+- escalation
+- life-safety override
+- recovery
+- closure
+- manual overrides
+- unresolved issues
+
+Corrections should preserve original events rather than silently rewriting history.
+
+Review should examine:
+
+- what was detected
+- what was known at each point
+- which decisions were made
+- who held authority
+- whether communication exposed unnecessary information
+- whether tasking was clear
+- whether response was delayed
+- whether human workload affected performance
+- whether fallback worked
+- whether the incident should change policy or design
+
+---
+
+## Incident Closure
+
+An incident may be closed only when:
+
+- the active threat or anomaly is contained
+- affected personnel are accounted for
+- assignments are completed or cancelled
+- relevant credentials and devices are reconciled
+- affected systems are reviewed
+- temporary communication modes are terminated
+- unresolved risks are assigned
+- the incident record is complete enough for review
+- an authorized person confirms closure
+
+Closure does not erase uncertainty.
+
+Unresolved issues should remain visible as follow-up actions.
+
+---
+
+## Example Operational Sequence
+
+1. A silent, non-life-threatening anomaly is detected at `BETA-F6-NE`.
+2. The Watcher verifies the event through Camera-12 and access data.
+3. The Master Watcher displays the surrounding zone.
+4. Silent Security Mode is activated by an authorized authority.
+5. A code-set version is distributed to relevant personnel.
+6. Guard availability is reviewed.
+7. `THETA:VIII` is assigned because closer guards are occupied.
+8. The patrol display shows:
+
+   ```text
+   THETA:VIII ][ BETA-F6-NE
+   STAIRS
+   MOVE
+   ```
+
+9. The guard acknowledges discreetly.
+10. Cameras verify movement toward the assigned coordinate.
+11. The display updates to:
+
+   ```text
+   THETA:VIII
+   BETA-F6-NE
+   OBSERVE
+   ```
+
+12. The Watcher confirms arrival.
+13. The event is contained and reviewed.
+14. Silent Security Mode is terminated.
+15. Assignments and credentials are reconciled.
+16. The incident is closed with a complete audit record.
+
+---
+
+## Design Requirements
+
+The Incident Response Model should satisfy the following requirements:
+
+- incidents are detected through multiple possible sources
+- life safety is classified first
+- identity, zone, movement, and purpose are interpreted together
+- coordinates include floor, grid, and local sector where used
+- Master Watcher provides shared situational awareness
+- Watchers manage detailed interpretation and control
+- guard tasking is role-based and auditable
+- call signs are separate from assigned coordinates
+- silent tasking is limited to defined operational states
+- radio remains available as fallback
+- directional coding is subordinate to life safety
+- high-risk ticket decisions require controlled verification
+- containment actions are proportionate
+- degraded-mode behavior is defined
+- failure does not increase trust automatically
+- recovery includes restoration of operational legitimacy
+- all significant actions are auditable
+- unresolved issues remain visible after closure
+
+---
+
+## Limitations
+
+This model does not by itself provide:
+
+- complete threat detection
+- reliable intent determination
+- guaranteed identity assurance
+- complete communications security
+- physical protection
+- guaranteed camera coverage
+- guaranteed personnel availability
+- life-safety compliance
+- a substitute for emergency planning
+- a substitute for professional incident-response design
+- a finished implementation procedure
+
+Its effectiveness depends on:
+
+- accurate facility metadata
+- reliable sensors and cameras
+- trained personnel
+- clear authority
+- tested procedures
+- secure communications
+- disciplined fallback
+- regular exercises
+- independent review
+- life-safety integration
+
+---
+
+## Summary
+
+The Incident Response Model provides a controlled structure for responding to:
+
+- security anomalies
+- unauthorized or inconsistent presence
+- credential and ticket issues
+- communications compromise
+- device and asset events
+- technical failures
+- degraded operations
+- life-safety incidents
+
+It connects:
+
+```text
+Detection
+→ Interpretation
+→ Classification
+→ Master Watcher Overview
+→ Watcher Control
+→ Guard Tasking
+→ Containment
+→ Escalation
+→ Recovery
+→ Audit
+```
+
+The model preserves the central trust-architecture principle:
+
+> **Security must remain effective after initial access, during uncertainty, through degraded conditions, and until controlled recovery is complete.**
+
+---
+
+## Final Design Principles
+
+> **Classify life safety first.**
+
+> **Interpret identity, movement, zone, purpose, and time together.**
+
+> **The control room sees the whole incident; the guard receives the minimum actionable task.**
+
+> **Failure of the trust system must not create an automatic increase in trust.**
+
+> **Recovery restores control and legitimacy, not merely technical function.**
