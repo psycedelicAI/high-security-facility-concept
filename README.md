@@ -1,8 +1,10 @@
 # High-Security Facility Concept
 
+> Where identity, movement, zones, devices, surveillance, privilege, authorization, and recovery become one security model.
+
 A concept repository exploring how a high-security facility can be designed as a trust architecture for controlled physical and operational environments.
 
-This project focuses on how security emerges from the interaction between:
+The project examines how security emerges from the interaction between:
 
 - identity
 - actor type
@@ -32,7 +34,7 @@ Rather than treating physical security as a checklist of disconnected controls, 
 
 The central idea behind this project is that security in a high-risk environment should not depend only on whether someone has formal access.
 
-It should also depend on factors such as:
+It should also depend on:
 
 - who the actor is
 - what role they hold
@@ -41,7 +43,7 @@ It should also depend on factors such as:
 - which zone they are entering
 - which credential or device is being used
 - whether the movement is expected
-- whether the context justifies trust
+- whether the current context justifies trust
 - whether privileged actions remain constrained and reviewable
 - whether anomalies can be detected, interpreted, and investigated
 - whether incorrect presence can still be controlled after initial entry
@@ -49,32 +51,15 @@ It should also depend on factors such as:
 - whether trust can be restored after abnormal states
 - whether high-risk access requires accountable human verification
 
-In that sense, this repository can be understood as a conceptual model for trust architecture in high-security physical and operational environments.
+A core implication is:
 
-A core implication of this model is that security must remain effective even after the first access decision has failed, been bypassed, or been weakened by human error, informal behavior, social engineering, credential compromise, or contextual change.
-
----
-
-## Documentation Structure
-
-The repository is organized under `docs/` using the following structure:
-
-- `docs/foundational/`
-- `docs/architecture/`
-- `docs/operations/`
-- `docs/extensions/`
-- `docs/strategy/`
-- `docs/evaluation/`
-
-For the full document map, see:
-
-- [`docs/index.md`](docs/index.md)
+> **Security must remain effective even after the first access decision has failed, been bypassed, or been weakened by human error, informal behavior, social engineering, credential compromise, or contextual change.**
 
 ---
 
 ## What This Repository Covers
 
-The repository currently explores topics such as:
+The repository currently explores:
 
 - zone-based facility design
 - movement-aware trust logic
@@ -91,31 +76,33 @@ The repository currently explores topics such as:
 - post-access trust control
 - badge and zone mismatch interpretation
 - AI-assisted context interpretation
-- use cases and value proposition
-- incident lighting
-- alarm and signaling architecture
-- passive fire resilience
-- compatibility between high security and life safety
-- facility-wide spatial coordinates
-- fixed security-center orientation
-- Master Watcher and Watcher operations
-- contextual directional coding
-- context-bound authorization tickets
-- QR and ticket verification
+- contextual authorization tickets
+- QR and ticket presentation
 - offline OPSEC verification
 - human-in-the-loop access decisions
 - dual-control verification
-- controlled fallback during system degradation
+- facility-wide spatial coordination
+- chessboard-style facility coordinates
+- fixed security-center orientation
+- Master Watcher and Watcher operations
+- contextual directional coding
+- incident lighting
+- alarm and signaling architecture
+- passive fire resilience
+- controlled decoy access
+- compatibility between high security and life safety
+- use cases and strategic positioning
+- commercial delivery framing
+- whitepaper development
+- multi-model AI evaluation
 
 ---
 
 ## Key Architectural Themes
 
-Several architectural themes run throughout the repository.
-
 ### Contextual Trust
 
-Trust is not treated as binary or permanent.
+Trust is not binary or permanent.
 
 It depends on:
 
@@ -126,8 +113,8 @@ It depends on:
 - sequence
 - privilege
 - timing
-- device
 - purpose
+- device
 - escort state
 - operational condition
 
@@ -137,15 +124,13 @@ Authorization may be valid in one context and require review in another.
 
 Movement through the facility is treated as meaningful rather than neutral.
 
-Path, timing, zone sequence, direction, and deviation influence trust interpretation.
+Path, timing, sequence, direction, zone transitions, and deviation influence trust interpretation.
 
 A person may have valid access while still exhibiting movement that requires verification.
 
 ### Zone-Based Security Logic
 
-Zones are not just map sections.
-
-They represent meaningful differences in:
+Zones represent meaningful differences in:
 
 - trust expectation
 - consequence
@@ -158,9 +143,9 @@ Higher-risk zones may require stronger verification, greater friction, and expli
 
 ### Post-Access Trust Control
 
-Security must remain effective even after initial access has already occurred.
+Security must remain effective after initial access has occurred.
 
-Incorrect or weakly justified presence must still be:
+Incorrect or weakly justified presence must remain:
 
 - detectable
 - interpretable
@@ -168,11 +153,11 @@ Incorrect or weakly justified presence must still be:
 - controllable
 - auditable
 
-This includes situations where the first access decision was valid but later activity becomes inconsistent with the authorized context.
+A valid initial entry does not guarantee valid activity throughout the visit.
 
 ### Context-Bound Authorization
 
-A ticket is not treated as permanent permission.
+A facility ticket is not treated as permanent permission.
 
 It may be bound to:
 
@@ -186,7 +171,7 @@ It may be bound to:
 - credential
 - device
 - asset
-- current facility state
+- operational state
 
 The ticket defines an authorization context, not unlimited trust.
 
@@ -223,24 +208,39 @@ Ticket presentation
 
 The reader may collect and verify information, but the accountable decision remains with an authorized operational process.
 
+### Offline OPSEC Verification
+
+High-risk ticket verification may use a dedicated offline or tightly isolated OPSEC server.
+
+The model separates:
+
+- ticket presentation
+- authenticity and integrity verification
+- trusted identity comparison
+- contextual interpretation
+- human decision
+- enforcement
+- audit
+
+The principle is:
+
+> **Failure of the trust system must not create an automatic increase in trust.**
+
 ### Badge and Zone Interpretation
 
-Badge category, visible presence, ticket scope, and zone context can be used to support faster recognition of anomalous presence.
+Badge category, visible presence, ticket scope, device context, and zone can support faster recognition of anomalous presence.
 
-A mismatch between:
+A mismatch does not automatically prove malicious intent, but it should trigger:
 
-- badge category
-- actor type
-- ticket purpose
-- device
-- movement
-- zone
-
-does not automatically prove malicious intent, but it should trigger verification, challenge, hold, or escalation where appropriate.
+- verification
+- challenge
+- hold
+- suspension
+- escalation
 
 ### AI as an Interpretation Layer
 
-AI can strengthen the model by helping detect contextual mismatch between:
+AI may help detect contextual mismatch between:
 
 - badge category
 - actor type
@@ -251,13 +251,11 @@ AI can strengthen the model by helping detect contextual mismatch between:
 - access history
 - current facility state
 
-In this concept, AI is not limited to credential validation. It may support interpretation, anomaly prioritization, and escalation.
-
 AI should support accountable operators rather than silently becoming the final authority for high-risk access.
 
 ### Privilege as a Distinct Risk Layer
 
-Privileged access is treated as separate from ordinary access and subject to stronger:
+Privileged access is separate from ordinary access and subject to stronger:
 
 - identity separation
 - device separation
@@ -271,9 +269,7 @@ A valid facility ticket does not automatically grant administrative authority.
 
 ### Visibility and Interpretation
 
-Surveillance, lighting, camera coordination, and environmental visibility are treated as part of security understanding, not only incident evidence.
-
-The objective is not merely to record events, but to support:
+Surveillance, lighting, camera coordination, and environmental visibility support:
 
 - detection
 - interpretation
@@ -294,19 +290,19 @@ The facility may use an operational coordinate layer based on:
 - movement trails
 - incident markers
 
-A coordinate such as:
+Example:
 
 ```text
 Beta-F6
 ```
 
-can provide a shared operational reference without requiring descriptive architectural language in every communication.
+The coordinate provides a shared operational reference without requiring descriptive architectural language in every communication.
 
 ### Fixed Control-Room Orientation
 
 The security control room, video wall, Master Watcher, Watcher stations, floor plans, camera maps, and incident displays should maintain the same spatial relationship as the facility.
 
-The objective is to reduce:
+This reduces:
 
 - mental map rotation
 - cognitive load
@@ -338,35 +334,21 @@ Individual **Watchers** provide:
 - controlled handoff
 - operational logging
 
-The central principle is:
-
 > **Overview is centralized, responsibility is assigned, control is visible, and every handoff is deliberate.**
 
 ### Context-Dependent Directional Coding
 
 During selected covert, non-life-threatening security incidents, directional references may be contextually remapped to reduce the intelligence value of compromised radio communication.
 
-This layer must remain subordinate to life safety.
-
-Normal communication should remain clear, while coded directional communication may be activated only when:
-
-- a radio may be compromised
-- communication may be monitored
-- a covert security alarm has been activated
-- discreet coordination is required
-- no immediate danger to life exists
+This layer is subordinate to life safety.
 
 ### Signaling with Semantic Discipline
-
-Different event types should not be communicated through identical alarm semantics.
 
 Life-safety, security, technical, degraded, and controlled-state events must remain distinguishable.
 
 Communication-security measures must never create ambiguity during emergency response.
 
 ### Resilience Under Degradation
-
-The concept assumes that systems may weaken without fully failing.
 
 Operations under reduced confidence should remain:
 
@@ -375,10 +357,6 @@ Operations under reduced confidence should remain:
 - interpretable
 - auditable
 - capable of fallback
-
-A key principle is:
-
-> **Failure of the trust system must not create an automatic increase in trust.**
 
 ### Security with Survivability
 
@@ -391,11 +369,9 @@ High security should remain compatible with:
 - survivability
 - controlled emergency access
 
-Security controls must not become an obstacle to saving life.
-
 ### Full Incident Means Full Control
 
-When trust failure becomes serious enough to qualify as a full incident, the environment should shift from normal trust-based operation to a full-control response posture with:
+When trust failure becomes a full incident, the environment should shift to a full-control response posture with:
 
 - constrained movement
 - stronger verification
@@ -407,73 +383,113 @@ When trust failure becomes serious enough to qualify as a full incident, the env
 
 ---
 
-## Current Document Areas
+## Repository Structure
+
+The repository is organized as follows:
+
+```text
+docs/
+├── foundational/
+├── architecture/
+├── operations/
+├── extensions/
+├── strategy/
+├── evaluation/
+├── commercial/
+└── [index.md](https://index.md)
+
+whitepaper/
+├── pages/
+├── [README.md](https://README.md)
+└── [outline.md](https://outline.md)
+
+[README.md](https://README.md)
+LICENSE
+```
+
+For the complete documentation map, see:
+
+- [`docs/index.md`](docs/index.md)
+
+---
+
+## Documentation Areas
 
 ### Foundational
 
 Core framing and conceptual grounding:
 
-- [`docs/foundational/concept.md`](docs/foundational/concept.md)
-- [`docs/foundational/executive-summary.md`](docs/foundational/executive-summary.md)
-- [`docs/foundational/one-pager.md`](docs/foundational/one-pager.md)
-- [`docs/foundational/design-principles.md`](docs/foundational/design-principles.md)
-- [`docs/foundational/threat-model.md`](docs/foundational/threat-model.md)
-- [`docs/foundational/FAQ.md`](docs/foundational/FAQ.md)
-- [`docs/foundational/diagrams.md`](docs/foundational/diagrams.md)
+- [`concept.md`](docs/foundational/concept.md)
+- [`executive-summary.md`](docs/foundational/executive-summary.md)
+- [`one-pager.md`](docs/foundational/one-pager.md)
+- [`design-principles.md`](docs/foundational/design-principles.md)
+- [`threat-model.md`](docs/foundational/threat-model.md)
+- [`FAQ.md`](docs/foundational/FAQ.md)
+- [`diagrams.md`](docs/foundational/diagrams.md)
 
 ### Architecture
 
-Core trust, authorization, identity, and security architecture models:
+Core trust, identity, authorization, and security models:
 
-- [`docs/architecture/zone-model.md`](docs/architecture/zone-model.md)
-- [`docs/architecture/surveillance-model.md`](docs/architecture/surveillance-model.md)
-- [`docs/architecture/identity-and-actor-model.md`](docs/architecture/identity-and-actor-model.md)
-- [`docs/architecture/trust-state-model.md`](docs/architecture/trust-state-model.md)
-- [`docs/architecture/privileged-access.md`](docs/architecture/privileged-access.md)
-- [`docs/architecture/asset-custody.md`](docs/architecture/asset-custody.md)
-- [`docs/architecture/governance-model.md`](docs/architecture/governance-model.md)
-- [`docs/architecture/policy-baseline.md`](docs/architecture/policy-baseline.md)
-- [`docs/architecture/post-access-trust-control.md`](docs/architecture/post-access-trust-control.md)
-- [`docs/architecture/context-bound-facility-authorization-ticket.md`](docs/architecture/context-bound-facility-authorization-ticket.md)
-- [`docs/architecture/offline-opsec-ticket-verification-model.md`](docs/architecture/offline-opsec-ticket-verification-model.md)
+- [`zone-model.md`](docs/architecture/zone-model.md)
+- [`surveillance-model.md`](docs/architecture/surveillance-model.md)
+- [`identity-and-actor-model.md`](docs/architecture/identity-and-actor-model.md)
+- [`trust-state-model.md`](docs/architecture/trust-state-model.md)
+- [`privileged-access.md`](docs/architecture/privileged-access.md)
+- [`asset-custody.md`](docs/architecture/asset-custody.md)
+- [`governance-model.md`](docs/architecture/governance-model.md)
+- [`policy-baseline.md`](docs/architecture/policy-baseline.md)
+- [`post-access-trust-control.md`](docs/architecture/post-access-trust-control.md)
+- [`context-bound-facility-authorization-ticket.md`](docs/architecture/context-bound-facility-authorization-ticket.md)
+- [`offline-opsec-ticket-verification-model.md`](docs/architecture/offline-opsec-ticket-verification-model.md)
 
 ### Operations
 
-Operational resilience, spatial coordination, reviewability, and controlled continuity:
+Operational resilience, spatial coordination, control-room operations, and recovery:
 
-- [`docs/operations/incident-response.md`](docs/operations/incident-response.md)
-- [`docs/operations/degraded-operations-model.md`](docs/operations/degraded-operations-model.md)
-- [`docs/operations/recovery-model.md`](docs/operations/recovery-model.md)
-- [`docs/operations/maintenance-model.md`](docs/operations/maintenance-model.md)
-- [`docs/operations/audit-and-review-model.md`](docs/operations/audit-and-review-model.md)
-- [`docs/operations/context-dependent-directional-coding.md`](docs/operations/context-dependent-directional-coding.md)
-- [`docs/operations/facility-chessboard-coordinate-layer.md`](docs/operations/facility-chessboard-coordinate-layer.md)
-- [`docs/operations/fixed-security-center-orientation.md`](docs/operations/fixed-security-center-orientation.md)
-- [`docs/operations/master-watcher-operations-model.md`](docs/operations/master-watcher-operations-model.md)
+- [`audit-and-review-model.md`](docs/operations/audit-and-review-model.md)
+- [`context-dependent-directional-coding.md`](docs/operations/context-dependent-directional-coding.md)
+- [`degraded-operations-model.md`](docs/operations/degraded-operations-model.md)
+- [`facility-chessboard-coordinate-layer.md`](docs/operations/facility-chessboard-coordinate-layer.md)
+- [`fixed-security-center-orientation.md`](docs/operations/fixed-security-center-orientation.md)
+- [`incident-response.md`](docs/operations/incident-response.md)
+- [`maintenance-model.md`](docs/operations/maintenance-model.md)
+- [`master-watcher-operations-model.md`](docs/operations/master-watcher-operations-model.md)
+- [`recovery-model.md`](docs/operations/recovery-model.md)
 
 ### Extensions
 
-Supporting architecture extensions:
-
-- [`docs/extensions/incident-lighting.md`](docs/extensions/incident-lighting.md)
-- [`docs/extensions/alarm-and-signaling-model.md`](docs/extensions/alarm-and-signaling-model.md)
-- [`docs/extensions/passive-fire-resilience.md`](docs/extensions/passive-fire-resilience.md)
+- [`alarm-and-signaling-model.md`](docs/extensions/alarm-and-signaling-model.md)
+- [`controlled-decoy-access-layer.md`](docs/extensions/controlled-decoy-access-layer.md)
+- [`incident-lighting.md`](docs/extensions/incident-lighting.md)
+- [`passive-fire-resilience.md`](docs/extensions/passive-fire-resilience.md)
 
 ### Strategy
 
-Use, positioning, and future direction:
-
-- [`docs/strategy/use-cases.md`](docs/strategy/use-cases.md)
-- [`docs/strategy/value-proposition.md`](docs/strategy/value-proposition.md)
-- [`docs/strategy/roadmap.md`](docs/strategy/roadmap.md)
+- [`roadmap.md`](docs/strategy/roadmap.md)
+- [`use-cases.md`](docs/strategy/use-cases.md)
+- [`value-proposition.md`](docs/strategy/value-proposition.md)
 
 ### Evaluation
 
-Independent assessment and review material:
+- [`AI-Report-Review.md`](docs/evaluation/AI-Report-Review.md)
+- [`ChatGPT-Concept-Evaluation-Scorecard.md`](docs/evaluation/ChatGPT-Concept-Evaluation-Scorecard.md)
+- [`Claude-Concept-Evaluation-Scorecard.md`](docs/evaluation/Claude-Concept-Evaluation-Scorecard.md)
+- [`Concept-Evaluation-Scorecard.md`](docs/evaluation/Concept-Evaluation-Scorecard.md)
+- [`Grok-Concept-Evaluation-Scorecard.md`](docs/evaluation/Grok-Concept-Evaluation-Scorecard.md)
 
-- [`docs/evaluation/assessment.md`](docs/evaluation/assessment.md)
-- [`docs/evaluation/Concept-Evaluation-Scorecard.md`](docs/evaluation/Concept-Evaluation-Scorecard.md)
-- [`docs/evaluation/AI-Report-Review.md`](docs/evaluation/AI-Report-Review.md)
+### Commercial
+
+- [`master-services-agreement.md`](docs/commercial/master-services-agreement.md)
+- [`pricing-matrix.md`](docs/commercial/pricing-matrix.md)
+
+### Whitepaper
+
+The whitepaper provides a longer, external-facing narrative of the concept.
+
+- [`whitepaper/README.md`](whitepaper/README.md)
+- [`whitepaper/outline.md`](whitepaper/outline.md)
+- [Whitepaper page index](docs/index.md)
 
 ---
 
@@ -485,14 +501,24 @@ Independent assessment and review material:
 2. [`docs/foundational/executive-summary.md`](docs/foundational/executive-summary.md)
 3. [`docs/foundational/concept.md`](docs/foundational/concept.md)
 
-### Core Trust Architecture
+### Master Concept
 
 1. [`docs/foundational/concept.md`](docs/foundational/concept.md)
 2. [`docs/foundational/design-principles.md`](docs/foundational/design-principles.md)
-3. [`docs/architecture/zone-model.md`](docs/architecture/zone-model.md)
-4. [`docs/architecture/identity-and-actor-model.md`](docs/architecture/identity-and-actor-model.md)
-5. [`docs/architecture/trust-state-model.md`](docs/architecture/trust-state-model.md)
-6. [`docs/architecture/post-access-trust-control.md`](docs/architecture/post-access-trust-control.md)
+3. [`docs/foundational/threat-model.md`](docs/foundational/threat-model.md)
+4. [`docs/architecture/zone-model.md`](docs/architecture/zone-model.md)
+5. [`docs/architecture/identity-and-actor-model.md`](docs/architecture/identity-and-actor-model.md)
+6. [`docs/architecture/trust-state-model.md`](docs/architecture/trust-state-model.md)
+7. [`docs/architecture/post-access-trust-control.md`](docs/architecture/post-access-trust-control.md)
+
+### Contextual Authorization and High-Risk Access
+
+1. [`docs/architecture/context-bound-facility-authorization-ticket.md`](docs/architecture/context-bound-facility-authorization-ticket.md)
+2. [`docs/architecture/offline-opsec-ticket-verification-model.md`](docs/architecture/offline-opsec-ticket-verification-model.md)
+3. [`docs/architecture/asset-custody.md`](docs/architecture/asset-custody.md)
+4. [`docs/architecture/privileged-access.md`](docs/architecture/privileged-access.md)
+5. [`docs/architecture/post-access-trust-control.md`](docs/architecture/post-access-trust-control.md)
+6. [`docs/operations/audit-and-review-model.md`](docs/operations/audit-and-review-model.md)
 
 ### Spatial Operations and Control Room
 
@@ -500,24 +526,17 @@ Independent assessment and review material:
 2. [`docs/operations/facility-chessboard-coordinate-layer.md`](docs/operations/facility-chessboard-coordinate-layer.md)
 3. [`docs/operations/master-watcher-operations-model.md`](docs/operations/master-watcher-operations-model.md)
 4. [`docs/operations/context-dependent-directional-coding.md`](docs/operations/context-dependent-directional-coding.md)
-
-### Contextual Authorization and High-Risk Access
-
-1. [`docs/architecture/context-bound-facility-authorization-ticket.md`](docs/architecture/context-bound-facility-authorization-ticket.md)
-2. [`docs/architecture/offline-opsec-ticket-verification-model.md`](docs/architecture/offline-opsec-ticket-verification-model.md)
-3. [`docs/architecture/asset-custody.md`](docs/architecture/asset-custody.md)
-4. [`docs/architecture/post-access-trust-control.md`](docs/architecture/post-access-trust-control.md)
-5. [`docs/operations/audit-and-review-model.md`](docs/operations/audit-and-review-model.md)
+5. [`docs/operations/incident-response.md`](docs/operations/incident-response.md)
 
 ### Operations, Resilience, and Recovery
 
 1. [`docs/operations/incident-response.md`](docs/operations/incident-response.md)
 2. [`docs/operations/degraded-operations-model.md`](docs/operations/degraded-operations-model.md)
-3. [`docs/operations/recovery-model.md`](docs/operations/recovery-model.md)
-4. [`docs/operations/maintenance-model.md`](docs/operations/maintenance-model.md)
+3. [`docs/operations/maintenance-model.md`](docs/operations/maintenance-model.md)
+4. [`docs/operations/recovery-model.md`](docs/operations/recovery-model.md)
 5. [`docs/operations/audit-and-review-model.md`](docs/operations/audit-and-review-model.md)
 
-### Strategic Positioning
+### Strategy and Positioning
 
 1. [`docs/strategy/value-proposition.md`](docs/strategy/value-proposition.md)
 2. [`docs/strategy/use-cases.md`](docs/strategy/use-cases.md)
@@ -527,7 +546,48 @@ Independent assessment and review material:
 
 1. [`docs/evaluation/assessment.md`](docs/evaluation/assessment.md)
 2. [`docs/evaluation/Concept-Evaluation-Scorecard.md`](docs/evaluation/Concept-Evaluation-Scorecard.md)
-3. [`docs/evaluation/AI-Report-Review.md`](docs/evaluation/AI-Report-Review.md)
+3. [`docs/evaluation/ChatGPT-Concept-Evaluation-Scorecard.md`](docs/evaluation/ChatGPT-Concept-Evaluation-Scorecard.md)
+4. [`docs/evaluation/Claude-Concept-Evaluation-Scorecard.md`](docs/evaluation/Claude-Concept-Evaluation-Scorecard.md)
+5. [`docs/evaluation/Grok-Concept-Evaluation-Scorecard.md`](docs/evaluation/Grok-Concept-Evaluation-Scorecard.md)
+6. [`docs/evaluation/AI-Report-Review.md`](docs/evaluation/AI-Report-Review.md)
+
+### Whitepaper
+
+Read the whitepaper in order through:
+
+1. [`whitepaper/README.md`](whitepaper/README.md)
+2. [`whitepaper/outline.md`](whitepaper/outline.md)
+3. [`docs/index.md`](docs/index.md)
+
+---
+
+## Architectural Progression
+
+The repository can be understood as a connected progression:
+
+```text
+Identity and Actor
+        ↓
+Trust and Zone Context
+        ↓
+Movement and Surveillance
+        ↓
+Credentials, Devices, and Privilege
+        ↓
+Context-Bound Authorization
+        ↓
+Offline OPSEC Verification
+        ↓
+Spatial Coordination and Watcher Control
+        ↓
+Post-Access Trust Control
+        ↓
+Incident Response and Recovery
+        ↓
+Audit, Governance, and Review
+```
+
+The documents are separated for clarity, but they describe one larger architecture.
 
 ---
 
@@ -537,7 +597,7 @@ At its current stage, this repository is best understood as:
 
 > **A conceptual trust architecture framework for high-security facilities and other controlled environments.**
 
-It has been developed primarily around high-security technical environments, but parts of the model may also have adaptation potential in other contexts where:
+It has been developed primarily around high-security technical environments, but parts of the model may have adaptation potential in other contexts where:
 
 - trust is contextual
 - movement matters
@@ -562,7 +622,7 @@ This repository is an evolving concept architecture project, not a finalized eng
 
 The documents aim to express structure, logic, and architectural principles rather than implementation-specific specifications.
 
-The project is continuing to mature in areas such as:
+The project continues to mature in areas such as:
 
 - trust architecture framing
 - actor and trust-state differentiation
@@ -576,6 +636,7 @@ The project is continuing to mature in areas such as:
 - reviewability and governance discipline
 - post-access trust control
 - AI-assisted anomaly interpretation
+- professional validation and future application
 
 ---
 
@@ -585,13 +646,11 @@ This project exists to explore a simple but powerful question:
 
 > What would a high-security facility look like if it were designed as a coherent trust architecture rather than as a collection of isolated controls?
 
-That question remains at the center of the repository.
-
-A related question also follows from that framing:
+A related question follows:
 
 > What happens when the first access decision was wrong, but security still has to hold?
 
-The project increasingly addresses that question through:
+The project addresses that question through:
 
 - movement interpretation
 - anomaly detection
@@ -602,36 +661,6 @@ The project increasingly addresses that question through:
 - incident control
 - suspension and revocation
 - controlled recovery
-
----
-
-## Architectural Progression
-
-The repository can be understood as a connected progression:
-
-```text
-Identity and actor
-        ↓
-Trust and zone context
-        ↓
-Movement and surveillance
-        ↓
-Credentials, devices, and privilege
-        ↓
-Context-bound authorization
-        ↓
-Offline OPSEC verification
-        ↓
-Spatial coordination and Watcher control
-        ↓
-Post-access trust control
-        ↓
-Incident response and recovery
-        ↓
-Audit, review, and governance
-```
-
-The documents are separated for clarity, but they describe one larger architecture.
 
 ---
 
@@ -662,4 +691,15 @@ It should not be interpreted as:
 - a complete operational security procedure
 - a substitute for qualified professional review
 
-The concept is intended to be examined, challenged, adapted, and further developed by relevant professionals in security architecture, facility design, operations, governance, resilience, and life-safety disciplines.
+The concept is intended to be examined, challenged, adapted, and further developed by relevant professionals in:
+
+- security architecture
+- facility design
+- physical security
+- operations
+- governance
+- resilience
+- surveillance
+- life safety
+- emergency planning
+- human factors
