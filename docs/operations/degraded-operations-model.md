@@ -1,6 +1,6 @@
 # Degraded Operations Model – High-Security Facility Concept
 
-> A conceptual model describing how the High-Security Facility Concept should behave when systems, visibility, control quality, or operational certainty are reduced but the facility must continue functioning in a controlled manner.
+> A controlled-continuity model for maintaining governability, interpretability, and accountable action when systems, trust assumptions, communications, personnel, or operating conditions are weakened but not fully collapsed.
 
 ---
 
@@ -9,420 +9,996 @@
 | Field | Value |
 |---|---|
 | Document | Degraded Operations Model |
-| Subject | High-Security Facility Concept |
-| Type | Supporting Operational Resilience Document |
-| Status | Draft |
-| Scope | Partial failure, degraded visibility, reduced trust confidence, fallback operations, constrained continuity, compensating controls |
-| Audience | Security architects, operations leads, governance owners, incident designers, resilience planners, facility operators |
+| Subject | Controlled continuity under reduced confidence |
+| Type | Operations Model |
+| Status | Conceptual |
+| Scope | Degraded systems, weakened trust, communications compromise, personnel constraints, fallback, and life-safety interaction |
+| Related Areas | Trust-State Model, Incident Response, Recovery, Master Watcher, Watchers, Contextual Authorization, Offline OPSEC Verification, Audit and Review |
+| Parent Concept | High-Security Facility Concept |
 
 ---
 
 ## Purpose
 
-This document defines how the **High-Security Facility Concept** should behave under degraded operating conditions.
-
-Its purpose is to describe how the facility should preserve control, trust discipline, and survivability when normal operating assumptions are weakened but full shutdown is neither necessary nor practical.
-
-The concept assumes that degradation is not exceptional in principle.  
-It is an expected condition that must be governed.
-
-Examples of degradation may include:
-- partial surveillance loss
-- reduced lighting visibility
-- access control instability
-- communications disruption
-- sensor outages
-- signaling limitations
-- maintenance-related exposure
-- incomplete system confidence
-- operator overload
-- environmental impairment
-
-The goal is not to pretend operations are normal.  
-The goal is to remain controlled when normality is no longer fully available.
-
----
-
-# Core Principle
-
-The facility should not switch from “normal” directly to “failed.”
-
-There should be an intermediate operating logic in which:
-
-- trust becomes more cautious
-- movement becomes more constrained
-- oversight becomes more explicit
-- assumptions become less generous
-- operations continue only where control remains meaningful
-
-This is the core idea of degraded operations.
-
----
-
-# What Degraded Operations Means
-
-Degraded operations is the state in which the facility continues functioning, but under reduced certainty, reduced visibility, reduced control quality, or reduced system confidence.
-
-This means:
-- some functions may continue
-- some functions may narrow
-- some functions may require additional control
-- some movement may be restricted
-- some trust assumptions may be lowered
-- some decisions may shift from automated to human review
-- some actions may require explicit exception handling
-
-Degraded operations is therefore not business-as-usual.  
-It is controlled continuity under weakened conditions.
-
----
-
-# Design Philosophy
-
-## Degradation Should Be Expected
-
-The concept assumes that systems may weaken without fully collapsing.
-
-A mature architecture should therefore include an explicit operating model for reduced trust confidence and partial capability loss.
-
-## Reduced Confidence Should Reduce Freedom
-
-When the facility knows less, sees less, or controls less, it should generally trust less.
-
-This does not mean panic.  
-It means disciplined contraction.
-
-## Critical Functions Should Continue Selectively
-
-The goal of degraded operations is not maximum continuity at any cost.
-
-The goal is to preserve the most important safe and governable functions while avoiding uncontrolled exposure.
-
-## Human Interpretation Becomes More Important
-
-When automated confidence decreases, human oversight, review, and judgment become more central.
-
-## Degraded Operations Must Be Reviewable
-
-A degraded state should never become an invisible unofficial norm.  
-It must be visible, governed, and recoverable.
-
----
-
-# Sources of Degradation
-
-The concept assumes multiple possible sources of degraded operations.
-
-## 1. Surveillance Degradation
-Examples:
-- camera outage
-- visual obstruction
-- reduced night visibility
-- partial recording failure
-- uncertainty in observation quality
-
-## 2. Access Control Degradation
-Examples:
-- reader failure
-- partial lock logic failure
-- unreliable credential response
-- fallback access mode
-- temporary manual override reliance
-
-## 3. Sensor and Detection Degradation
-Examples:
-- alarm input failure
-- movement sensor loss
-- tamper detection weakness
-- environmental monitoring uncertainty
-
-## 4. Communications Degradation
-Examples:
-- operator communication delays
-- internal coordination failure
-- loss of some notification channels
-- reduced command clarity
-
-## 5. Signaling Degradation
-Examples:
-- workstation alert unavailability
-- degraded visual signaling
-- impaired distinction between state notifications
-- partial notification reach
-
-## 6. Environmental Degradation
-Examples:
-- smoke-affected visibility
-- reduced lighting
-- weather-related perimeter impairment
-- blocked sightlines
-- partial facility inaccessibility
-
-## 7. Human Operational Degradation
-Examples:
-- staff overload
-- reduced staffing
-- operator fatigue
-- increased ambiguity during incident states
-- response bottlenecks
-
----
-
-# Degraded Trust Logic
-
-A central principle of degraded operations is that trust confidence should narrow as certainty decreases.
-
-This may mean:
-
-- lower tolerance for unexplained movement
-- stronger sensitivity to anomalies
-- narrower privilege use
-- reduced autonomous movement for temporary actors
-- greater reliance on escort logic
-- increased review requirements
-- stronger restrictions around high-value zones
-
-The concept assumes:
-
-> When certainty decreases, trust should become more conditional.
-
-This helps prevent the facility from acting “normal” when normal trust assumptions no longer hold.
-
----
-
-# Degraded Movement Logic
-
-Movement during degraded operations should be more constrained, more interpretable, and more deliberately governed.
-
-This may include:
-- limiting non-essential zone transitions
-- reducing lateral freedom
-- requiring additional approval for sensitive movement
-- restricting movement into low-visibility areas
-- narrowing access to high-security zones
-- suspending some routine but non-critical movement patterns
-
-### Why
-Movement becomes more dangerous when the facility cannot clearly verify, observe, or interpret it.
-
----
-
-# Degraded Privilege Logic
-
-Privileged access becomes especially sensitive under degraded conditions.
-
-This is because privileged activity:
-- can bypass ordinary safeguards
-- may appear legitimate while being hard to verify
-- can increase exposure if review quality is already reduced
-
-For that reason, degraded conditions may justify:
-- narrower privileged windows
-- stronger justification thresholds
-- increased dual-control expectations
-- more explicit logging
-- stronger human review before high-impact actions
-
-The concept assumes that degradation should not silently expand privilege.
-
----
-
-# Degraded Surveillance Logic
-
-When surveillance quality decreases, the facility should not simply continue assuming the same interpretive confidence as before.
-
-Instead, it should recognize:
-- lower confidence in anomaly interpretation
-- lower confidence in event verification
-- greater uncertainty in low-baseline areas
-- increased risk of concealment or ambiguity
-
-This may justify:
-- temporary zone tightening
-- stronger visual support
-- increased operator attention
-- reduced tolerance for unexplained presence
-- more cautious use of trust assumptions
-
----
-
-# Degraded Signaling Logic
-
-When signaling channels are degraded, semantic clarity becomes even more important.
-
-The facility should avoid:
-- ambiguous notification behavior
-- improvised signaling semantics
-- inconsistent use of warning channels
-- hidden degraded-state communication
-
-Instead, degraded conditions should be:
-- explicit
-- role-aware
-- distinguishable from normal operation
-- understandable to operators and relevant personnel
-
-The concept assumes that confusion during degraded conditions can be nearly as dangerous as the original technical impairment.
-
----
-
-# Compensating Controls
-
-Degraded operations should rely on explicit compensating controls rather than silent hope.
-
-Examples of compensating control types may include:
-- increased human oversight
-- temporary escort requirements
-- narrowed movement authorization
-- explicit sign-in / sign-out discipline
-- restricted privileged actions
-- additional review checkpoints
-- temporary physical barriers
-- reduced zone openness
-- stronger operational logging
-
-The exact form may vary, but the principle remains:
-
-> Reduced system confidence should trigger compensating discipline.
-
----
-
-# Continuity Prioritization
-
-Not every function should be preserved equally during degradation.
-
-The concept assumes that the facility should prioritize:
-
-## Highest priority
-- life safety
-- core control integrity
+This document defines how the facility should remain governable when normal systems, assumptions, communication paths, personnel availability, or trust conditions are weakened.
+
+Degraded operations do not necessarily mean total failure.
+
+They may occur when:
+
+- a system is partially unavailable
+- a data source is stale
+- communication confidence is reduced
+- a device is suspected of compromise
+- the Master Watcher is unavailable
+- camera coverage is incomplete
+- the offline OPSEC server cannot be reached
+- a patrol display fails
+- personnel are overloaded
+- multiple incidents compete for attention
+- a facility enters a restricted operating state
+- trust in a person, asset, zone, or process is reduced
+
+The objective is to preserve:
+
+- control
+- interpretation
 - accountability
-- critical zone protection
-- interpretability of ongoing events
-
-## Medium priority
-- essential operations with strong oversight
-- limited movement required for continuity
-- constrained maintenance or technical response
-
-## Lower priority
-- convenience access
-- non-essential movement
-- broad autonomous activity
-- low-value routine flexibility
-
-This reflects the principle that continuity should be selective, not indiscriminate.
+- safe continuity
+- explicit uncertainty
+- controlled fallback
+- life-safety compatibility
 
 ---
 
-# Governance Requirements
+## Core Principle
 
-Degraded operations should always be governed.
+> **Reduced confidence must not produce undefined behavior.**
 
-This includes:
-- recognizing when the facility has entered degraded state
-- defining who can declare it
-- defining what restrictions automatically or manually follow
-- defining who may authorize exceptions
-- defining how degraded operation is logged
-- defining how degraded state is reviewed
-- defining how the facility returns to stronger trust conditions
+When normal systems or trust assumptions are weakened, the facility must not:
 
-Without governance, degraded operation can become:
-- normalized weakness
-- inconsistent exception handling
-- invisible trust erosion
-- unreviewed overexposure
+- silently continue as if nothing changed
+- grant broader access because a verification system failed
+- allow operators to invent inconsistent procedures
+- hide uncertainty
+- rely on unrecorded exceptions
+- permit informal shortcuts to become normal operations
 
----
+Instead, the facility should move into a defined degraded state with:
 
-# Relationship to Incident Response and Recovery
-
-Degraded operations is related to, but distinct from, both incident response and recovery.
-
-## Not identical to incident response
-An incident may trigger degraded operations, but degradation may also arise from non-hostile failure.
-
-## Not identical to recovery
-Recovery is about returning to a stronger normal state.  
-Degraded operations is about how the facility behaves while still in reduced condition.
-
-This distinction matters because:
-- some degraded states may last longer than incidents
-- some degraded states may be tolerated temporarily
-- recovery requires deliberate transition out of degraded logic
+- known limitations
+- assigned authority
+- restricted actions
+- fallback procedures
+- explicit communication
+- enhanced logging
+- recovery conditions
 
 ---
 
-# Human Factors
+## What Degraded Operations Means
 
-Degraded operations should remain understandable to people.
+Degraded operations may affect one or more of the following:
 
-A weak degraded model can create:
-- confusion
-- inconsistency
-- silent overexposure
-- role uncertainty
-- informal workaround culture
+### Trust
 
-A strong degraded model should instead support:
-- clarity of restrictions
-- awareness of changed conditions
-- confidence in what still applies
-- disciplined behavior under weaker system confidence
+- uncertain identity
+- suspected credential compromise
+- unresolved movement
+- unclear authorization
+- reduced confidence in an actor or device
 
-This is important because people often compensate informally when systems degrade.  
-The concept aims to replace informal drift with governed fallback logic.
+### Technology
+
+- camera loss
+- sensor loss
+- access-control failure
+- Master Watcher failure
+- Watcher-station failure
+- coordinate database failure
+- offline OPSEC server failure
+- display failure
+- synchronization failure
+
+### Communications
+
+- radio compromise
+- channel monitoring
+- lost radio
+- lost patrol display
+- failed acknowledgement
+- outdated code set
+- communication delay
+- conflicting instructions
+
+### Personnel
+
+- unavailable Watcher
+- occupied patrol guards
+- operator fatigue
+- staffing shortage
+- shift transition
+- loss of required authority
+- inability to achieve dual control
+
+### Environment
+
+- fire
+- smoke
+- power disruption
+- flooding
+- structural damage
+- restricted visibility
+- hazardous release
+- unusual operating conditions
+
+### Governance
+
+- unclear authority
+- incomplete records
+- conflicting instructions
+- outdated policy
+- unapproved exception
+- loss of review capability
 
 ---
 
-# What This Model Rejects
+## Degraded-State Classification
 
-This concept rejects the following assumptions:
+The facility may classify degraded conditions according to severity.
 
-## Rejected assumption 1:
-If the facility is not fully failed, it should operate as normal.
+### Level 0 — Normal Operations
 
-## Rejected assumption 2:
-Minor degradation does not affect trust quality.
+Normal systems, trust assumptions, and procedures are available.
 
-## Rejected assumption 3:
-Convenience continuity should override control quality.
+- standard verification
+- standard access
+- standard communication
+- standard surveillance
+- routine audit
 
-## Rejected assumption 4:
-Operators can always compensate informally without governance.
+### Level 1 — Local Degradation
 
-## Rejected assumption 5:
-Privileged activity becomes less risky when systems are weaker.
+A limited system, device, zone, or process is weakened while wider operations remain stable.
 
-These are treated as dangerous simplifications.
+Examples:
+
+- one camera unavailable
+- one scanner offline
+- one patrol display fails
+- one access reader requires manual verification
+
+Possible controls:
+
+- local fallback
+- increased observation
+- manual confirmation
+- targeted logging
+- temporary restriction
+
+### Level 2 — Operational Degradation
+
+Multiple systems, personnel, or assumptions are weakened.
+
+Examples:
+
+- several cameras unavailable
+- Master Watcher degraded
+- offline verification delayed
+- communication confidence reduced
+- multiple guards occupied
+- repeated ticket or credential mismatches
+
+Possible controls:
+
+- reduced access
+- stronger human review
+- reassignment
+- restricted movement
+- increased Watcher control
+- temporary suspension of non-essential activity
+
+### Level 3 — Facility-Control Degradation
+
+The facility’s ability to interpret or govern normal activity is substantially reduced.
+
+Examples:
+
+- major surveillance loss
+- control-room systems unavailable
+- widespread communications compromise
+- inability to verify identity or authorization reliably
+- multiple zones affected
+- insufficient authorized staff
+- significant infrastructure disruption
+
+Possible controls:
+
+- full-control posture
+- closure of selected zones
+- suspension of routine access
+- manual control points
+- controlled accountability
+- emergency staffing
+- escalation to senior authority
+
+### Level 4 — Life-Safety or Critical Emergency
+
+Life safety or critical survivability is affected.
+
+Examples:
+
+- fire
+- smoke
+- medical emergency
+- immediate violence
+- structural danger
+- hazardous release
+- evacuation
+- rescue
+
+Possible controls:
+
+- emergency procedures
+- explicit communication
+- evacuation or shelter
+- rescue coordination
+- emergency responder access
+- life-safety override of ordinary security abstractions
+
+Life safety takes priority.
 
 ---
 
-# Design Implications
+## Degraded-State Transition
 
-Because of this model, the concept favors:
+A degraded state should be activated when:
 
-- explicit degraded-state recognition
-- movement contraction under uncertainty
-- stronger conditional trust logic
-- privilege discipline during weakened oversight
-- compensating controls
-- reviewable fallback behavior
-- continuity prioritization
-- governed transition back to normal operation
+- a required system becomes unavailable
+- trust in a system or communication path falls below an accepted level
+- identity or authorization cannot be verified normally
+- personnel capacity falls below operational requirements
+- multiple anomalies create uncertainty
+- a control-room function becomes unreliable
+- a life-safety condition emerges
+
+A transition should record:
+
+- state level
+- trigger
+- time
+- affected area
+- affected systems
+- authority
+- restrictions
+- fallback
+- review interval
+- recovery conditions
+
+The facility should avoid informal “temporary” degradation that remains undocumented.
 
 ---
 
-# Summary
+## Trust and Degraded Operations
 
-Within the **High-Security Facility Concept**, degraded operation is not treated as an undefined gray zone between normality and failure.
+Degraded operation is not only a technical condition.
 
-It is treated as a meaningful operating condition with its own logic.
+It may be caused by reduced trust in:
 
-The central idea is:
+- a person
+- a credential
+- a ticket
+- a device
+- a radio
+- a camera
+- a sensor
+- a route
+- a database
+- a Watcher
+- a procedure
+- a physical zone
 
-> When control confidence decreases, the facility should not pretend trust is unchanged.  
-> It should narrow assumptions, constrain movement, strengthen oversight, and preserve only the functions that can still be performed meaningfully and safely.
+The appropriate response may include:
 
-This allows the environment to remain controlled even when it is no longer fully strong.
+- verification
+- observation
+- restriction
+- suspension
+- replacement
+- isolation
+- reassignment
+- escalation
+- recovery review
+
+Reduced trust does not automatically prove malicious intent.
+
+It means that normal assumptions may no longer be sufficient.
+
+---
+
+## Master Watcher and Control-Room Degradation
+
+The Master Watcher should display degraded-state information such as:
+
+- unavailable systems
+- stale data
+- missing camera coverage
+- unavailable Watchers
+- unavailable guards
+- uncertain coordinates
+- failed assignments
+- communication status
+- current fallback procedure
+- current authority
+- recovery conditions
+
+If the Master Watcher is unavailable, the facility should use:
+
+- approved printed floor plans
+- controlled coordinate cards
+- direct camera identifiers
+- standard facility references
+- manual assignment boards
+- controlled verbal procedures
+- manual event logging
+- Watcher-to-Watcher confirmation
+
+The fallback interface must not silently present stale or unverified information as current.
+
+---
+
+## Watcher Degradation
+
+If a Watcher station or operator becomes unavailable:
+
+- assigned cameras must be reviewed
+- responsibility must be transferred explicitly
+- affected zones must be identified
+- gaps in observation must be visible
+- another Watcher may be assigned
+- camera-control ownership must be updated
+- unresolved events must remain open
+
+A camera feed being visible at another station does not automatically mean that responsibility has transferred.
+
+---
+
+## Patrol Guard Degradation
+
+The facility should track patrol guard availability.
+
+Possible states include:
+
+```text
+AVAILABLE
+ASSIGNED
+EN ROUTE
+ON TASK
+HOLDING
+UNAVAILABLE
+COMMUNICATION DEGRADED
+EMERGENCY ENGAGED
+```
+
+If a guard becomes unavailable or cannot acknowledge a task:
+
+1. the Watcher is notified
+2. the assignment is marked unresolved
+3. the guard’s last known state is recorded
+4. another guard may be selected
+5. radio fallback may be used
+6. the incident may be escalated
+
+A replacement guard should not receive an unclear or outdated task.
+
+---
+
+## Wrist and Flashlight Display Failure
+
+If a patrol display fails:
+
+- the assignment should be marked uncertain
+- the guard should not be assumed to have received an update
+- the Watcher should be notified
+- the current task should be reviewed
+- radio fallback may be activated
+- direct Watcher guidance may be used
+- the guard may be reassigned
+- life-safety communication remains available
+
+Possible causes include:
+
+- battery failure
+- display damage
+- communication loss
+- device loss
+- device reassignment
+- stale assignment
+- incorrect coordinate
+- synchronization failure
+- suspected compromise
+
+The system must not continue to rely on an unseen or unacknowledged task.
+
+---
+
+## Coordinate-System Degradation
+
+If coordinate information becomes unreliable:
+
+- affected coordinates should be marked uncertain
+- stale metadata should be identified
+- camera-coordinate mismatches should be exposed
+- direct physical references may be used
+- standard facility terminology may be restored
+- patrol tasking may be held
+- Watchers may provide direct confirmation
+- life-safety references remain explicit
+
+A coordinate should not be treated as authoritative if:
+
+- its floor mapping is uncertain
+- its grid boundaries are wrong
+- its local sector is unresolved
+- camera coverage is stale
+- the display is out of synchronization
+- operators disagree about its meaning
+
+---
+
+## Communications Degradation
+
+Communication degradation may include:
+
+- suspected radio monitoring
+- stolen radio
+- channel compromise
+- lost device
+- outdated directional code
+- failed acknowledgement
+- conflicting messages
+- excessive interference
+- loss of trusted communication path
+
+Possible controls include:
+
+- Silent Security Mode
+- Context-Dependent Directional Coding
+- low-signature patrol displays
+- reduced radio content
+- controlled radio fallback
+- replacement devices
+- alternative authorized channels
+- direct Watcher confirmation
+- explicit emergency communication
+
+If the active code set is uncertain:
+
+> **Stop relying on coded direction and restore clear communication.**
+
+---
+
+## Contextual Authorization Degradation
+
+If a ticket or authorization cannot be fully verified:
+
+- high-risk access should be held or denied
+- manual verification may be used where approved
+- named escort may be required
+- second-person approval may be required
+- route and duration may be restricted
+- additional observation may be assigned
+- the event must be logged
+
+Failure of the ticket system must not create broader access.
+
+The fallback hierarchy may be:
+
+```text
+Normal verification
+        ↓
+Manual controlled verification
+        ↓
+Second-person approval
+        ↓
+Restricted access or escort
+        ↓
+Hold or deny
+        ↓
+Escalate
+```
+
+---
+
+## Offline OPSEC Server Degradation
+
+If the offline OPSEC server is unavailable:
+
+- automatic high-risk verification is suspended
+- QR presentation alone is insufficient
+- identity must be checked through approved fallback
+- paper or controlled reference may be used if authorized
+- named escort may be required
+- second-person approval may be required
+- access may be restricted in time and route
+- enhanced logging is required
+- normal verification must be restored and reconciled afterward
+
+If fallback conditions cannot be met:
+
+```text
+Hold or deny
+```
+
+---
+
+## Data and Metadata Degradation
+
+The facility should identify when data becomes:
+
+- stale
+- incomplete
+- conflicting
+- unavailable
+- corrupted
+- unauthenticated
+- out of sequence
+- not synchronized
+
+Affected data may include:
+
+- identity references
+- trusted photographs
+- ticket records
+- revocation data
+- zone permissions
+- camera metadata
+- coordinate mappings
+- device assignments
+- asset records
+- incident states
+
+The system should expose data confidence rather than present uncertainty as certainty.
+
+---
+
+## Access and Movement Under Degradation
+
+When normal trust or observation is reduced, the facility may:
+
+- restrict new access
+- pause non-essential movement
+- close selected zones
+- require escorts
+- require two-person approval
+- increase camera observation
+- use manual checkpoints
+- reduce permitted routes
+- suspend tickets
+- isolate devices
+- increase logging
+- shift to full-control posture
+
+Movement should remain purposeful and reviewable.
+
+Informal shortcuts should not become accepted merely because systems are degraded.
+
+---
+
+## Control-Flow Principle
+
+During degraded operations:
+
+```text
+Reduced confidence
+        ↓
+More explicit control
+        ↓
+Less discretionary movement
+        ↓
+Greater human verification
+        ↓
+More visible accountability
+```
+
+Degradation should not produce:
+
+```text
+Reduced confidence
+        ↓
+Less control
+        ↓
+More informal behavior
+```
+
+---
+
+## Human Factors
+
+Degraded operations increase cognitive and operational load.
+
+The facility should account for:
+
+- operator fatigue
+- repeated manual checks
+- queue formation
+- alert overload
+- communication pressure
+- conflicting instructions
+- staffing shortages
+- shift changes
+- unfamiliar fallback procedures
+- pressure to restore normal operation too quickly
+
+Controls may include:
+
+- relief staffing
+- task rotation
+- simplified status vocabulary
+- clearly assigned authority
+- visible fallback state
+- decision support
+- mandatory handoffs
+- shorter task instructions
+- explicit uncertainty
+- post-event review
+
+Fallback procedures must be simpler than the normal system where possible.
+
+---
+
+## Authority and Governance
+
+Every degraded state should have a defined authority.
+
+The authority should be able to:
+
+- activate the state
+- define affected areas
+- assign restrictions
+- approve fallback
+- assign resources
+- escalate
+- authorize exceptions
+- terminate the degraded state
+- require post-event review
+
+High-risk exceptions should not depend on one unreviewed individual where dual control is required.
+
+The system should preserve:
+
+- who activated the state
+- who approved exceptions
+- who performed manual checks
+- who terminated the state
+- why decisions were made
+
+---
+
+## Communication During Degraded Operations
+
+Communication should be:
+
+- explicit
+- short
+- role-aware
+- state-aware
+- auditable
+- consistent with life-safety requirements
+
+The facility should identify:
+
+- active communication mode
+- available channels
+- trusted channels
+- compromised channels
+- fallback channels
+- emergency channels
+- recipients who have acknowledged the state
+
+If uncertainty exists about who received an instruction, the system should not assume delivery.
+
+---
+
+## Audit and Review
+
+The degraded-state record should include:
+
+- trigger
+- state level
+- authority
+- affected systems
+- affected zones
+- affected people or assets
+- restrictions
+- fallback procedures
+- manual decisions
+- task assignments
+- device failures
+- communication mode
+- access decisions
+- overrides
+- review intervals
+- recovery conditions
+- termination
+- post-event findings
+
+Review should examine:
+
+- whether the state was activated early enough
+- whether restrictions were proportionate
+- whether fallback increased workload
+- whether people improvised
+- whether communications remained clear
+- whether access control became too permissive or too restrictive
+- whether life-safety compatibility was preserved
+- whether recovery was declared too early
+- whether the architecture should change
+
+---
+
+## Recovery Conditions
+
+A degraded state should not end merely because a system appears to function again.
+
+Recovery should require confirmation that:
+
+- affected systems are trusted or replaced
+- data is synchronized
+- camera and coordinate mappings are verified
+- communications are trusted
+- ticket and revocation records are current
+- patrol devices are accounted for
+- assignments are reconciled
+- temporary access restrictions are reviewed
+- operators understand the restored state
+- unresolved incidents remain assigned
+- an authorized person approves return
+
+Recovery may occur gradually.
+
+Possible stages include:
+
+```text
+Degraded
+→ Stabilizing
+→ Validating
+→ Controlled Restoration
+→ Normal Operations
+```
+
+---
+
+## Life-Safety Compatibility
+
+Life safety takes priority over degraded security abstractions.
+
+During:
+
+- fire
+- smoke
+- medical emergency
+- immediate violence
+- evacuation
+- rescue
+- structural danger
+- hazardous release
+
+the facility should:
+
+- use explicit communication
+- use actual floor and room references
+- preserve emergency access
+- allow radio use
+- override silent tasking where necessary
+- override coded directional language
+- coordinate with responders
+- log emergency overrides
+- review security consequences afterward
+
+A degraded security system must never delay rescue or evacuation.
+
+---
+
+## Example: Patrol Display Failure
+
+1. A silent task is assigned to `THETA:VIII`.
+2. The patrol display does not acknowledge delivery.
+3. The Watcher marks the assignment unresolved.
+4. The Master Watcher displays the failed task state.
+5. The Watcher checks camera coverage and guard location.
+6. A controlled radio fallback is attempted.
+7. If the guard cannot be reached, another guard is selected.
+8. The original assignment is cancelled or marked uncertain.
+9. The event is recorded for review.
+
+---
+
+## Example: Master Watcher Failure
+
+1. The Master Watcher becomes unavailable.
+2. The control room enters a defined degraded state.
+3. Watchers use approved fixed floor plans and coordinate references.
+4. Camera assignments are confirmed manually.
+5. Patrol tasking uses controlled displays or radio fallback.
+6. New high-risk activity is restricted if spatial confidence is insufficient.
+7. A temporary manual assignment record is maintained.
+8. System restoration is validated.
+9. Records are reconciled.
+10. Normal operations resume only after authorization.
+
+---
+
+## Example: Offline Verification Failure
+
+1. A high-risk ticket is presented.
+2. The offline OPSEC server is unavailable.
+3. Automatic high-risk verification is suspended.
+4. Identity and purpose are reviewed through the approved fallback.
+5. Escort and second-person approval are required.
+6. Access is restricted or held.
+7. The event is manually logged.
+8. The system is restored.
+9. The fallback decision is reconciled and reviewed.
+
+---
+
+## Design Requirements
+
+The Degraded Operations Model should satisfy the following requirements:
+
+- degraded states are defined before incidents occur
+- state levels are understandable
+- triggers are documented
+- authority is assigned
+- affected systems and zones are visible
+- uncertainty is exposed
+- failure does not increase trust automatically
+- fallback procedures exist for critical systems
+- patrol display failure has defined handling
+- Master Watcher failure has defined handling
+- offline verification failure has defined handling
+- communication degradation has defined handling
+- coordinate uncertainty is visible
+- high-risk access becomes more controlled, not less
+- manual decisions are auditable
+- human workload is monitored
+- life safety overrides security abstractions
+- recovery conditions are explicit
+- restoration is validated before normal operation
+- unresolved issues remain assigned
+
+---
+
+## Relationship to the Wider Architecture
+
+### Trust-State Model
+
+Defines how reduced confidence and changing trust affect operational state.
+
+### Incident Response
+
+Defines how degraded conditions are detected, classified, contained, escalated, and reviewed.
+
+### Master Watcher Operations
+
+Defines how control-room overview, Watchers, patrol tasking, and camera coordination operate during degradation.
+
+### Facility Chessboard Coordinate Layer
+
+Provides stable spatial references and controlled fallback coordinates.
+
+### Incident Coordinate Wrist Display
+
+Defines how patrol tasking behaves when displays, devices, or communication paths are degraded.
+
+### Context-Dependent Directional Coding
+
+Provides a controlled communication layer when radio trust is reduced.
+
+### Context-Bound Authorization Ticket
+
+Defines authorization conditions that may be restricted or suspended during degraded operation.
+
+### Offline OPSEC Verification
+
+Defines high-risk ticket verification and fallback when the offline server is unavailable.
+
+### Recovery Model
+
+Defines the restoration of trust, control, and operational legitimacy after the degraded state.
+
+### Audit and Review
+
+Preserves the complete history of degraded decisions and fallback actions.
+
+---
+
+## Limitations
+
+This model does not by itself provide:
+
+- guaranteed continuity
+- complete technical resilience
+- reliable communications
+- complete identity assurance
+- automatic decision-making
+- life-safety compliance
+- protection against insider misuse
+- replacement for professional continuity planning
+- replacement for emergency planning
+- a finished implementation procedure
+
+Its effectiveness depends on:
+
+- realistic fallback design
+- trained operators
+- adequate staffing
+- reliable manual procedures
+- tested communications
+- accurate facility references
+- disciplined authority
+- regular exercises
+- independent review
+- integration with life-safety planning
+
+---
+
+## Summary
+
+The Degraded Operations Model ensures that weakened systems and reduced trust do not produce uncontrolled behavior.
+
+It provides a structured response to:
+
+- system failure
+- communication compromise
+- device loss
+- stale data
+- personnel shortage
+- coordinate uncertainty
+- offline verification failure
+- Master Watcher failure
+- patrol display failure
+- identity or authorization uncertainty
+- operational disruption
+- life-safety interaction
+
+The model follows:
+
+```text
+Degradation detected
+        ↓
+State classified
+        ↓
+Authority assigned
+        ↓
+Restrictions applied
+        ↓
+Fallback activated
+        ↓
+Actions logged
+        ↓
+Systems and trust validated
+        ↓
+Controlled restoration
+        ↓
+Review
+```
+
+The central principle is:
+
+> **When normal trust, systems, or assumptions are weakened, the facility must become more explicit, more controlled, and more accountable—not more informal.**
+
+---
+
+## Final Design Principles
+
+> **Reduced confidence must not produce undefined behavior.**
+
+> **Failure of the trust system must not create an automatic increase in trust.**
+
+> **Degraded operations should increase explicit control, not informal discretion.**
+
+> **Life safety overrides security abstractions.**
+
+> **Normal operations resume only after trust, data, systems, and authority have been validated.**
