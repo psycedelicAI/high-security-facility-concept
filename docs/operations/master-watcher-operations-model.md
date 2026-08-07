@@ -1,6 +1,6 @@
 # Master Watcher Operations Model – High-Security Facility Concept
 
-> A facility-aligned operational control model in which the Master Watcher provides shared spatial awareness while individual Watchers perform detailed observation, camera control, and incident response.
+> A facility-aligned human coordination model in which the Master Watcher Operator maintains the facility-wide operational picture while Watcher Operators manage assigned areas, patrol guards execute physical tasks, and controlled maneuver functions support incident response.
 
 ---
 
@@ -12,8 +12,8 @@
 | Subject | Central and distributed security-control operations |
 | Type | Supporting Operations Model |
 | Status | Conceptual |
-| Scope | Master Watcher, Watcher stations, camera coordination, incident observation, and control handoff |
-| Related Areas | Facility Chessboard Coordinate Layer, Fixed Security-Center Orientation, Surveillance, Incident Response, OPSEC, Human Factors |
+| Scope | Master Watcher Operator, Watcher Operators, patrol guards, camera coordination, patrol tasking, maneuver control, incident observation, and control handoff |
+| Related Areas | Facility Chessboard Coordinate Layer, Fixed Security-Center Orientation, Incident Coordinate Wrist Display, Incident Maneuver and Door Control, Surveillance, Incident Response, OPSEC, Human Factors |
 | Parent Concept | High-Security Facility Concept |
 
 ---
@@ -22,56 +22,261 @@
 
 This document defines the operational relationship between:
 
-- the **Master Watcher**
-- individual **Watchers**
-- the security control room
 - the facility video wall
+- the Master Watcher Operator
+- the Master Watcher interface
+- the Master Watcher station
+- Watcher Operators
+- Watcher stations
+- patrol guards
+- incident-coordinate displays
+- the Incident Maneuver Panel
 - facility cameras
 - floor and zone references
-- the chessboard coordinate layer
+- chessboard coordinates
+- guard assignments
 - incident and movement tracking
-- camera-control handoff
+- camera-control ownership
+- door and passage control
 - operational audit
 
-The purpose is to create a layered control-room model in which one central interface establishes a shared overview, while distributed Watcher stations provide detailed observation and control.
+The purpose is to create a layered control-room model in which:
+
+- the Master Watcher Operator maintains the facility-wide picture
+- Watcher Operators interpret and manage assigned incidents
+- patrol guards receive minimum actionable tasks
+- cameras and sensors support verification
+- controlled maneuver functions shape authorized passage when required
+- responsibility and control remain visible
+- all relevant actions remain auditable
 
 ---
 
 ## Core Principle
 
-> **The Master Watcher establishes shared situational awareness; individual Watchers assume detailed observation and control.**
+> **The Master Watcher Operator coordinates the whole facility. Watcher Operators control assigned areas. Patrol guards execute physical tasks.**
 
-The Master Watcher is not intended to replace all individual operator stations.
+The Master Watcher is therefore both:
 
-It functions as the central spatial and operational reference for:
+- a human operational role
+- a facility-aligned interface and station
 
-- facility-wide orientation
-- rapid camera discovery
-- incident localization
-- zone overview
-- assignment
-- coordination
-- control transfer
-- shared operating picture
+The system is not intended to replace human operational judgment with an oversized automated console.
 
-The Watchers function as detailed operational positions responsible for:
+It is a human coordination model strengthened by:
 
-- active observation
-- camera control
-- movement tracking
-- verification
-- reporting
-- escalation
-- handoff
-- incident-specific control
+- spatial interfaces
+- cameras
+- coordinates
+- assignment logic
+- controlled access information
+- passage control
+- auditability
+- degraded-operation procedures
 
 ---
 
-## Operational Concept
+## Terminology
 
-The security control room contains three connected interface layers:
+The following distinctions must remain explicit.
 
-### 1. Facility Video Wall
+| Term | Meaning |
+|---|---|
+| **Master Watcher Operator** | The human responsible for the facility-wide operational picture, prioritization, coordination, and escalation. |
+| **Master Watcher Interface** | The central horizontal touch interface representing the facility and its operational state. |
+| **Master Watcher Station** | The physical workstation where the Master Watcher Operator performs the role. |
+| **Watcher Operator** | A human responsible for detailed observation and control of an assigned zone, incident, camera group, or task. |
+| **Watcher Interface** | The software view used for detailed monitoring and control. |
+| **Watcher Station** | The physical OPSEC workstation used by a Watcher Operator. |
+| **Patrol Guard** | A physical responder who executes assigned movement, observation, containment, or support tasks. |
+| **Incident Commander** | The person responsible for broader incident authority, response posture, escalation, and return-to-normal decisions where that role is separate. |
+| **Incident Maneuver Panel** | A restricted interface for authorized, temporary door and passage control during defined incidents. |
+
+A “Watcher” should not be understood merely as:
+
+- a camera
+- a display
+- an automated process
+- an unnamed user
+- an unowned feed
+
+---
+
+## Operational Hierarchy
+
+The operational relationship is:
+
+```text
+Master Watcher Operator
+Facility-wide coordination, priority, authority, and escalation
+        ↓
+Watcher Operators
+Zone-level observation, camera control, interpretation, and local response
+        ↓
+Patrol Guards
+Physical movement, local observation, and task execution
+```
+
+The interface relationship is:
+
+```text
+Master Watcher Operator
+        ↔
+Master Watcher Interface
+        ↓
+Watcher Operators and Watcher Stations
+        ↓
+Cameras, Zones, Coordinates, Doors, and Patrol Tasks
+        ↓
+Patrol Guards and Low-Signature Task Displays
+```
+
+This hierarchy preserves a separation between:
+
+- overall coordination
+- local interpretation
+- physical execution
+- interface support
+- decision authority
+
+---
+
+## Master Watcher Operator Role
+
+The Master Watcher Operator is the human responsible for maintaining and coordinating the facility-wide operational picture.
+
+The role includes:
+
+- monitoring the whole facility
+- reviewing competing incidents
+- prioritizing events
+- coordinating Watcher Operators
+- assigning or approving zone responsibility
+- reviewing guard availability
+- coordinating patrol assignments
+- authorizing operational handoffs
+- resolving control conflicts
+- monitoring camera ownership
+- approving or supervising maneuver sequences
+- tracking communication state
+- identifying degraded conditions
+- escalating beyond local control
+- coordinating with the Incident Commander
+- supervising return to normal operations
+
+The Master Watcher Operator does not necessarily control every camera or door directly.
+
+The role is primarily responsible for:
+
+```text
+Overall picture
+→ Priority
+→ Coordination
+→ Ownership
+→ Handoff
+→ Escalation
+→ Restoration
+```
+
+---
+
+## Master Watcher Operator Decision Support
+
+The Master Watcher system may support recommendations without silently becoming the final authority.
+
+For example:
+
+```text
+Incident detected at BETA-F6-NE
+
+Suggested Watcher Operator: Watcher-03
+
+Reasons:
+- assigned to adjacent zone
+- lowest current workload
+- required clearance available
+- relevant cameras already visible
+- PTZ control available
+- no conflicting high-priority task
+```
+
+The recommended workflow is:
+
+```text
+System suggests
+        ↓
+Master Watcher Operator reviews
+        ↓
+Assignment is confirmed or changed
+        ↓
+Watcher Operator acknowledges
+        ↓
+Audit record is created
+```
+
+Decision support should make the reasoning visible.
+
+Possible recommendation factors include:
+
+- geographic or zone responsibility
+- workload
+- current incident priority
+- required clearance
+- camera availability
+- PTZ ownership
+- proximity to the affected area
+- guard availability
+- communications state
+- operator fatigue or shift state
+- competing incidents
+- current degraded-operation level
+
+The system should not present a recommendation as an unquestionable decision.
+
+---
+
+## Master Watcher Interface
+
+The Master Watcher is a central horizontal, touch-enabled facility representation located in the security control room.
+
+It follows the same orientation as the facility and provides:
+
+- spatial selection
+- camera discovery
+- zone overview
+- coordinate selection
+- local-sector selection
+- incident localization
+- temporary camera grouping
+- Watcher assignment
+- guard assignment
+- camera-control coordination
+- maneuver-panel access
+- control handoff
+- shared coordination
+- system-state visibility
+
+The Master Watcher should be designed for rapid interaction and coordination rather than prolonged detailed camera control.
+
+Its primary function is to help the control room answer:
+
+- Where is the event?
+- Which floor is affected?
+- Which coordinate and local sector are involved?
+- Which zone is involved?
+- Which cameras cover the area?
+- Which Watcher Operator is responsible?
+- Which patrol guard is available?
+- What surrounding context must be shown?
+- What is the current confidence level?
+- Has control or tasking been assigned?
+- Has the assigned person arrived?
+- Are passage conditions supporting or obstructing response?
+- Is life safety clear?
+
+---
+
+## Facility Video Wall
 
 The video wall provides a shared room-level view of:
 
@@ -81,157 +286,242 @@ The video wall provides a shared room-level view of:
 - floor and zone conditions
 - movement indicators
 - Watcher assignments
+- guard assignments
+- door and passage states
 - system health
 - relevant trust-state information
-
-### 2. Master Watcher
-
-The Master Watcher is a horizontal, touch-enabled facility representation located centrally in the security control room.
-
-It follows the same orientation as the facility and provides:
-
-- spatial selection
-- camera discovery
-- zone overview
-- coordinate selection
-- incident localization
-- temporary camera grouping
-- Watcher assignment
-- control handoff
-- shared coordination
-
-### 3. Watcher Stations
-
-Watcher stations are individual OPSEC workstations used for detailed observation and camera control.
-
-A Watcher may be assigned:
-
-- a zone
-- a camera group
-- a coordinate
-- a movement event
-- an incident
-- a technical area
-- a specific observation task
-
-These three layers should operate as one system while preserving role separation.
-
----
-
-## Definition: Master Watcher
-
-The Master Watcher is the central facility-aligned touch interface used to establish and maintain a shared operational picture.
-
-It should represent:
-
-- the facility
-- selected floors
-- operational coordinates
-- zones
-- camera locations
-- camera fields of view
-- access points
-- incident markers
-- movement trails
-- Watcher assignments
 - current operational mode
+- life-safety status
 
-The Master Watcher should be designed for rapid interaction rather than prolonged detailed camera control.
+The video wall should maintain the same spatial orientation as:
 
-Its primary function is to help the control room answer:
-
-- Where is the event?
-- Which floor is affected?
-- Which zone is involved?
-- Which cameras cover the area?
-- Which Watcher is responsible?
-- What surrounding context must be shown?
-- What is the current confidence level?
-- Has control been assigned?
-
----
-
-## Definition: Watcher
-
-A Watcher is an individual OPSEC operator or operational station responsible for detailed observation and control.
-
-The term may refer to:
-
-- the operator
-- the station
-- the assigned operational role
-
-The implementation should distinguish clearly between the operator identity and the physical station identity.
-
-A Watcher may be responsible for:
-
-- monitoring a defined zone
-- controlling individual cameras
-- following a subject
-- verifying an alert
-- maintaining observation
-- recording events
-- coordinating with other Watchers
-- requesting assistance
-- transferring responsibility
-
----
-
-## Facility-Aligned Orientation
-
-The Master Watcher must follow the fixed orientation of the facility.
-
-The same orientation must be used by:
-
-- the physical control room
-- the video wall
+- the physical facility
 - the Master Watcher
 - Watcher stations
 - floor plans
+- coordinate maps
 - camera maps
-- facility coordinates
-- zone overlays
-- incident markers
 
-The facility entrance should remain a stable shared reference.
+Different displays may show different detail.
 
-The map should not rotate based on:
-
-- selected camera
-- operator position
-- subject movement
-- incident state
-- temporary display layout
-- camera viewing direction
-
-The camera feed may show a different visual perspective, but the facility map must remain fixed.
+They must not show conflicting spatial meaning.
 
 ---
 
-## Master Watcher Interface
+## Watcher Operator Role
 
-The Master Watcher should provide a facility-level interactive map.
+A Watcher Operator is a human responsible for detailed observation and control within an assigned area, incident, camera group, or operational task.
 
-A typical interface may include:
+The role includes:
 
-- floor selector
-- facility grid
-- Greek operational floor designation
-- zone boundaries
-- camera icons
-- camera fields of view
-- incident markers
-- subject markers
-- access points
-- movement trails
-- Watcher assignments
-- camera-control ownership
-- operational mode indicator
-- system health state
-- confidence indicators
-- event timeline
+- monitoring a defined zone
+- controlling individual cameras
+- following a subject or event
+- verifying alerts
+- interpreting movement
+- checking access and ticket context
+- assigning patrol guards within authority
+- defining routes and task states
+- monitoring guard movement
+- confirming arrival
+- maintaining observation
+- recording events
+- coordinating with other Watcher Operators
+- transferring responsibility
+- escalating when local control is insufficient
 
-The interface should make it possible to select a point, camera, zone, or event and immediately reveal the relevant operational context.
+The Watcher Operator sees the incident and zone context necessary to act.
+
+A patrol guard may receive only:
+
+```text
+THETA:VIII ][ BETA-F6-NE
+STAIRS
+OBSERVE
+```
+
+---
+
+## Watcher Assignment
+
+The Master Watcher Operator may assign a Watcher Operator based on:
+
+- zone responsibility
+- floor
+- coordinate
+- local sector
+- camera group
+- incident
+- subject
+- technical area
+- access event
+- clearance
+- current workload
+- PTZ availability
+- adjacent-zone responsibility
+- current communications state
+
+An assignment should identify:
+
+- Watcher station
+- operator identity
+- area of responsibility
+- camera group
+- coordinate or zone
+- incident reference
+- start time
+- expected task
+- priority
+- review or expiry condition
+- handoff requirements
+
+Assignments must be visible to relevant operators.
+
+---
+
+## Guard Assignment
+
+A Watcher Operator or authorized Master Watcher Operator may assign a patrol guard to a coordinate-based task.
+
+The assignment should consider:
+
+- guard availability
+- current location
+- current task
+- access permissions
+- equipment status
+- incident priority
+- route feasibility
+- operational condition
+- communications state
+- whether the guard is already engaged
+
+A guard already assigned to an active task should not receive a conflicting assignment without explicit authorized reassignment.
+
+Example:
+
+```text
+THETA:VIII ][ BETA-F6-NE
+ROUTE: STAIRS
+TASK: MOVE
+```
+
+The guard’s call sign and task location are separate fields.
+
+---
+
+## Guard Call-Sign Structure
+
+A patrol call sign uses:
+
+```text
+[Greek Designation]:[Roman Guard Number]
+```
+
+Example:
+
+```text
+THETA:VIII
+```
+
+The assignment format is:
+
+```text
+[Call Sign] ][ [Operational Coordinate]
+```
+
+Example:
+
+```text
+THETA:VIII ][ BETA-F6-NE
+```
+
+This is interpreted as:
+
+```text
+Guard Call Sign: THETA:VIII
+Assigned Coordinate: BETA-F6-NE
+```
+
+The `][` delimiter separates identity from task position.
+
+The call sign does not necessarily indicate the guard’s current physical floor.
+
+A Theta-assigned guard may be sent to Beta because closer guards are unavailable or already occupied.
+
+---
+
+## Patrol Tasking and Low-Signature Delivery
+
+During a defined silent-security incident, the guard may receive a task through:
+
+- wrist-worn e-paper display
+- low-power wrist display
+- flashlight-mounted LED display
+- secured handheld display
+- authenticated patrol equipment
+- haptic tasking device
+- controlled radio fallback
+
+The guard-facing display should show only the minimum actionable information.
+
+Example:
+
+```text
+THETA:VIII ][ BETA-F6-NE
+STAIRS
+MOVE
+```
+
+After arrival:
+
+```text
+THETA:VIII
+BETA-F6-NE
+OBSERVE
+```
+
+The control room retains the wider context while the guard receives the task required for execution.
+
+---
+
+## Radio-Silent Tasking
+
+During Silent Security Mode, the display may reduce the need for spoken radio traffic.
+
+The system may transmit silently:
+
+- call sign
+- coordinate
+- local sector
+- route
+- task state
+- update
+- cancellation
+- return instruction
+
+This reduces exposure of:
+
+- incident location
+- guard identity
+- destination
+- route
+- response activity
+- facility structure
+- number of responding personnel
+
+Radio remains available for:
+
+- life-safety events
+- unexpected contact
+- medical emergencies
+- unclear instructions
+- escalation
+- display failure
+- communication failure
+- emergency responder coordination
+
+> **Radio silence is a defined operating mode, not a prohibition on speaking when safety or clarity requires it.**
 
 ---
 
@@ -248,21 +538,22 @@ When an operator selects a camera on the Master Watcher, the system should:
 7. display relevant access points
 8. display related movement
 9. display active incident data
-10. identify available Watchers
-11. provide a temporary overview of the surrounding zone
-12. allow detailed control to be assigned to a Watcher
+10. identify available Watcher Operators
+11. identify relevant patrol guards
+12. provide a temporary overview of the surrounding zone
+13. allow detailed control to be assigned to a Watcher Operator
 
 The selected camera should not be treated as an isolated feed.
 
-The system should help operators understand what is happening around the camera, not only what is visible inside its current frame.
+The system should help operators understand what is happening around the camera, not only what is visible inside its frame.
 
 ---
 
 ## Temporary Zone Overview
 
-When a camera, coordinate, or incident is selected, all relevant cameras in the associated zone may provide a temporary overview.
+When a camera, coordinate, or incident is selected, relevant cameras in the associated zone may provide a temporary overview.
 
-This overview may include:
+This may include:
 
 - fixed cameras
 - PTZ cameras
@@ -270,40 +561,42 @@ This overview may include:
 - adjacent-zone cameras
 - corridor cameras
 - access-point cameras
-- relevant technical-zone cameras
+- technical-zone cameras
 - cameras covering likely movement paths
 
-The purpose is to rapidly establish:
+The purpose is to establish:
 
 - what is happening
 - where it is happening
 - whether movement is expanding
 - whether additional actors are present
 - whether the event is isolated or connected
-- which Watcher should take detailed control
+- which Watcher Operator should take detailed control
+- which guard, if any, should be tasked
 
 The temporary overview should have a defined duration or termination condition.
 
-It should not permanently override existing operational responsibilities without authorization.
+It should not permanently override existing responsibilities without authorization.
 
 ---
 
 ## Overview First, Control Second
 
-The Master Watcher should support the following principle:
+The Master Watcher should support:
 
 > **Select one point, reveal the surrounding context, establish a shared overview, then assign detailed control.**
 
-This creates a controlled sequence:
+The sequence is:
 
 1. detection
 2. localization
 3. contextual overview
-4. assignment
-5. detailed observation
-6. verification
-7. escalation or containment
-8. review
+4. Watcher Operator assignment
+5. guard selection if required
+6. detailed observation
+7. verification
+8. escalation or containment
+9. review
 
 This reduces the risk that an operator:
 
@@ -311,57 +604,15 @@ This reduces the risk that an operator:
 - misses adjacent movement
 - overlooks a second actor
 - fails to identify an exit route
-- assumes a single feed represents the whole event
-- duplicates another Watcher’s work
-
----
-
-## Watcher Assignment
-
-The Master Watcher should support explicit assignment of responsibility.
-
-An assignment may be based on:
-
-- zone
-- floor
-- coordinate
-- camera group
-- incident
-- subject
-- technical area
-- access event
-- operational role
-- current workload
-- required clearance
-
-An assignment should identify:
-
-- Watcher station
-- operator identity
-- area of responsibility
-- camera group
-- coordinate or zone
-- incident reference
-- start time
-- expected task
-- priority
-- review or expiry condition
-
-Example:
-
-```text
-Watcher-03 assigned to Beta-F6 and adjacent zone coverage.
-Incident: Silent Security Event-07.
-Assignment active: 14:32.
-```
-
-Assignments must be visible to all relevant operators.
+- assumes one feed represents the entire event
+- duplicates another operator’s work
+- assigns an already occupied guard
 
 ---
 
 ## Camera-Control Ownership
 
-Only one Watcher should normally have active manual control of a given controllable camera at a time.
+Only one Watcher Operator should normally have active manual control of a controllable camera at a time.
 
 The system should clearly display:
 
@@ -379,22 +630,23 @@ This prevents:
 - unexpected camera movement
 - duplicated effort
 - uncertain responsibility
-- assumptions that someone else is controlling the camera
+- assumptions that another operator is controlling the camera
 
-A Master Watcher operator may request or authorize a control transfer, but detailed camera control should normally remain with the assigned Watcher.
+The Master Watcher Operator may authorize or coordinate a control transfer, but detailed camera control should normally remain with the assigned Watcher Operator.
 
 ---
 
-## Control Handoff
+## Explicit Control Handoff
 
 A control handoff should be explicit and auditable.
 
 The handoff should identify:
 
-- sending Watcher
-- receiving Watcher
+- sending Watcher Operator
+- receiving Watcher Operator
 - camera or camera group
 - coordinate
+- local sector
 - zone
 - subject or event
 - current observation state
@@ -410,14 +662,61 @@ Example:
 ```text
 Watcher-01 to Watcher-03:
 
-Subject-01 last confirmed at Beta-F6.
-Movement expected toward Beta-G6.
+Subject-01 last confirmed at BETA-F6-NE.
+Movement expected toward BETA-G6-W.
 Camera control and observation responsibility transferred at 14:36.
 ```
 
-The receiving Watcher should acknowledge the handoff.
+Responsibility should not be considered transferred merely because a camera feed was opened at another station.
 
-Responsibility should not be considered transferred merely because a camera feed was opened on another station.
+The receiving Watcher Operator should acknowledge the handoff.
+
+---
+
+## Incident Maneuver and Door Control
+
+The Master Watcher environment may provide access to a restricted Incident Maneuver Panel during defined operational states.
+
+The panel may support:
+
+- door-state visibility
+- controlled guard routes
+- temporary passage conditions
+- access-point sequencing
+- movement restriction
+- camera and door correlation
+- temporary containment
+- release and restoration
+
+The panel should be available only when:
+
+- an authorized incident state is active
+- the operator has appropriate permissions
+- life-safety status is known
+- the action is logged
+- the action has a defined owner and timeout
+
+Example:
+
+```text
+Coordinate: BETA-F6-NE
+Incident State: SILENT SECURITY
+Guard: THETA:VIII
+Route: STAIRS
+Door Sequence: ACTIVE
+Camera Coverage: CONFIRMED
+Life-Safety State: CLEAR
+Door D-12: UNLOCKED FOR PASSAGE
+Door D-13: SECURED
+```
+
+The Master Watcher Operator may authorize incident-level maneuver actions.
+
+Watcher Operators may request or control assigned lower-consequence passages according to policy.
+
+Critical isolation or exceptional containment may require dual control.
+
+Life safety overrides all security containment.
 
 ---
 
@@ -430,16 +729,21 @@ Relevant operators should be able to see:
 - active incident
 - selected floor
 - selected coordinate
+- local sector
 - affected zone
 - associated cameras
 - current subject or event
 - confidence state
-- assigned Watchers
+- assigned Watcher Operators
+- assigned guards
+- guard availability
 - camera-control owner
+- door and passage states
 - current operational mode
 - recent movement
 - relevant access events
 - system limitations
+- life-safety status
 
 Different interfaces may show different levels of detail.
 
@@ -450,7 +754,9 @@ They must not show conflicting:
 - zone boundaries
 - camera locations
 - incident states
+- guard assignments
 - control ownership
+- door states
 - operational modes
 
 ---
@@ -462,6 +768,8 @@ The Master Watcher and Watcher stations should integrate with the Facility Chess
 A coordinate should support:
 
 - floor selection
+- grid-square selection
+- local-sector selection
 - camera selection
 - zone selection
 - incident marking
@@ -469,108 +777,68 @@ A coordinate should support:
 - last-known-position reporting
 - confidence state
 - source attribution
+- patrol tasking
+- route definition
+- door and passage relationships
 - control handoff
 - audit history
 
 Example:
 
 ```text
-Beta-F6
+BETA-F6-NE
 ```
 
 The system should be able to show:
 
 ```text
-Beta-F6
+BETA-F6-NE
 → physical facility position
 → zone
 → camera coverage
 → access points
+→ door relationships
 → movement history
-→ assigned Watcher
+→ assigned Watcher Operator
+→ assigned guard
 → current incident state
 ```
 
-A coordinate without a floor designation should be treated as incomplete.
-
 ---
 
-## Greek Floor Designations
+## Context-Bound Authorization Integration
 
-The Master Watcher may use Greek operational floor designations.
+The Master Watcher may support high-risk authorization review by displaying:
 
-Example:
+- requested zone
+- operational floor
+- coordinate
+- local sector
+- ticket holder’s last observed position
+- permitted route
+- route deviation
+- escort status
+- current facility state
+- relevant cameras
+- Watcher assignment
+- door and passage context
+
+The Master Watcher provides spatial and operational context.
+
+It does not replace the offline OPSEC verification server or the authorized human decision-maker.
+
+The relationship is:
 
 ```text
-Alpha
-Beta
-Gamma
-Delta
+Offline OPSEC Server
+→ verifies ticket and trusted identity data
+
+Master Watcher
+→ provides spatial and operational context
+
+Authorized OPSEC Operator
+→ makes the accountable decision
 ```
-
-The system should display both the operational designation and the authorized physical translation where appropriate.
-
-The translation should be controlled centrally and should not depend solely on operator memory.
-
-During life-safety incidents:
-
-- actual physical floor references must remain available
-- emergency personnel must not be required to use Greek designations
-- standard emergency terminology takes priority
-
----
-
-## Context-Dependent Directional Coding
-
-The Master Watcher may display the active communications mode.
-
-Possible modes include:
-
-- Normal Operations
-- Silent Security Mode
-- Compromised Communications Mode
-- Emergency Mode
-
-If Context-Dependent Directional Coding is active:
-
-- the active code set should be visible to authorized operators
-- the code version should be identifiable
-- affected zones or personnel should be shown
-- activation time should be recorded
-- the control room should know who has acknowledged the mode
-- the coordinate map itself must remain unchanged
-- life-safety communication must override coded directions
-
-The Master Watcher should help operators distinguish between:
-
-```text
-Physical coordinate
-vs.
-Coded spoken direction
-```
-
-These must not be conflated.
-
----
-
-## Incident Workflow
-
-A typical incident workflow may proceed as follows:
-
-1. A silent, non-life-threatening security alarm is activated.
-2. The Master Watcher displays the affected floor or zone.
-3. An operator selects the relevant coordinate or camera.
-4. The system displays the surrounding camera environment.
-5. The video wall presents the shared overview.
-6. A Watcher is assigned detailed responsibility.
-7. The Watcher controls relevant cameras.
-8. Adjacent Watchers are notified if movement expands.
-9. Observations receive timestamps and confidence states.
-10. Movement is tracked across coordinates.
-11. Directional coding is enabled if required.
-12. The incident is contained or escalated.
-13. Camera control and observation responsibility are formally closed.
-14. The event is reviewed and retained for audit.
 
 ---
 
@@ -582,8 +850,10 @@ A typical incident workflow may proceed as follows:
 - standard facility references
 - fixed spatial orientation
 - standard Watcher assignments
+- routine patrol tasking
 - routine audit
 - normal access and movement interpretation
+- restricted or unavailable maneuver functions
 
 ### Silent Security Mode
 
@@ -591,9 +861,21 @@ A typical incident workflow may proceed as follows:
 - selected personnel may use coded directional communication
 - relevant camera groups may receive increased observation priority
 - Master Watcher displays the affected area
-- Watchers receive defined assignments
+- Watcher Operators receive defined assignments
+- patrol guards may receive low-signature tasking
+- Incident Maneuver Panel may become available according to authority
 - camera-control handoff is explicitly tracked
-- life-safety remains outside the coded layer
+- life safety remains outside the coded layer
+
+### High-Risk Incident Mode
+
+- higher assurance and control requirements apply
+- door and passage actions may require elevated authorization
+- dual control may be required
+- guard tasking is more tightly controlled
+- selected zones may be restricted
+- ticket and credential verification may be increased
+- all temporary access changes are audited
 
 ### Compromised Communications Mode
 
@@ -602,7 +884,9 @@ A typical incident workflow may proceed as follows:
 - new communication conditions may be distributed
 - camera and location monitoring may be increased
 - device and credential custody may be reviewed
-- relevant control ownership remains visible
+- patrol assignments may be reassigned
+- control ownership remains visible
+- maneuver actions require explicit confirmation
 
 ### Emergency Mode
 
@@ -610,8 +894,10 @@ A typical incident workflow may proceed as follows:
 - explicit physical references are used
 - emergency routes remain clear
 - coded communication is overridden
+- silent patrol tasks may be cancelled or replaced
 - emergency responders receive standard references
 - security and life-safety operations are coordinated without ambiguity
+- door control follows approved emergency behavior
 
 ---
 
@@ -630,6 +916,9 @@ The Master Watcher model should support:
 - clear incident status
 - predictable behavior
 - easy recovery from operator error
+- minimal task information for patrol personnel
+- clear door-state interpretation
+- visible uncertainty
 
 The interface should avoid:
 
@@ -641,7 +930,10 @@ The interface should avoid:
 - confusing floor labels
 - unlabeled temporary states
 - control changes without confirmation
-- automatic behavior that is not visible to operators
+- automatic behavior that is not visible
+- transferring control-room complexity to guard displays
+- showing commanded door states as verified physical states
+- hiding life-safety uncertainty
 
 > **The system should be cryptic to an unauthorized listener, but obvious to the authorized operator.**
 
@@ -659,6 +951,7 @@ Possible permissions include:
 - view incident status
 - view camera feeds
 - view coordinate information
+- view door and passage status
 
 ### Coordinate
 
@@ -667,6 +960,18 @@ Possible permissions include:
 - mark observations
 - add notes
 - update confidence
+- define local sectors
+
+### Patrol Tasking
+
+- view guard availability
+- assign guards
+- define routes
+- set task states
+- cancel assignments
+- reassign guards
+- review acknowledgement
+- review arrival
 
 ### Camera Control
 
@@ -675,22 +980,33 @@ Possible permissions include:
 - accept camera handoff
 - release camera control
 
+### Maneuver Control
+
+- request passage sequence
+- control assigned lower-consequence passages
+- review door states
+- request temporary unlock
+- request route restriction
+- release temporary states
+
 ### Incident Control
 
-- assign Watchers
+- assign Watcher Operators
 - prioritize camera groups
 - activate temporary zone overview
 - request escalation
 - enter or exit defined operational modes
+- coordinate with Incident Commander
 
 ### Administrative Control
 
 - change mappings
 - modify floor metadata
 - modify camera-coordinate associations
-- change operational mode permissions
+- change operational-mode permissions
 - review audit records
 - manage system configuration
+- manage door and passage metadata
 
 High-risk actions should require elevated authorization and should be logged.
 
@@ -701,14 +1017,26 @@ High-risk actions should require elevated authorization and should be logged.
 The Master Watcher system should record relevant actions, including:
 
 - user authentication
+- role activation
 - floor selected
 - coordinate selected
+- local sector selected
 - camera selected
 - camera overview activated
 - camera-control request
 - camera-control handoff
-- Watcher assignment
-- Watcher acknowledgement
+- Watcher Operator assignment
+- guard assignment
+- guard acknowledgement
+- task-state change
+- route change
+- guard reassignment
+- arrival confirmation
+- maneuver-panel activation
+- door command
+- door-state verification
+- temporary-state timeout
+- control transfer
 - incident-mode activation
 - directional-code status
 - observation created
@@ -723,12 +1051,16 @@ The Master Watcher system should record relevant actions, including:
 The audit trail should preserve:
 
 - who acted
+- which role was active
 - what was selected
 - what changed
 - when it changed
 - why it changed where available
 - which incident was active
 - which operator held responsibility
+- which guard received the task
+- which device received the assignment
+- which door or passage was affected
 
 ---
 
@@ -747,8 +1079,14 @@ Possible conditions include:
 - display synchronization failure
 - camera-control conflict
 - communications degradation
-- suspected interface tampering
+- patrol display failure
+- guard device loss
+- maneuver panel failure
+- door-state uncertainty
 - loss of incident-state information
+- loss of Master Watcher Operator
+- loss of Watcher Operator
+- authority conflict
 
 Fallback procedures may include:
 
@@ -757,15 +1095,49 @@ Fallback procedures may include:
 - direct camera identifiers
 - standard facility references
 - manual Watcher assignment
+- manual guard assignment
+- manual door verification
 - voice confirmation
 - manual event logging
 - direct camera handoff procedures
 - suspension of automated camera grouping
+- controlled radio
+- task cancellation or reassignment
+- hold or deny
 - explicit statement of uncertainty
+- escalation to Incident Commander
 
-The system must not create a false impression of control when the underlying interface or data is unreliable.
+The system must not create a false impression of control when the underlying interface, authority, or data is unreliable.
 
 > **Reduced system confidence must produce controlled fallback, not undefined behavior.**
+
+---
+
+## Authority Continuity
+
+The facility should define who assumes responsibility if the Master Watcher Operator becomes unavailable.
+
+Possible continuity arrangements include:
+
+- designated alternate Master Watcher Operator
+- explicit shift handoff
+- Incident Commander assumption
+- senior Watcher Operator assumption
+- manual coordination procedure
+- controlled reduction of facility activity
+
+The transition should include:
+
+- current incidents
+- active assignments
+- camera ownership
+- door and passage states
+- communication mode
+- unresolved tasks
+- current degraded state
+- required follow-up
+
+Responsibility should not be assumed merely because a person begins viewing the same interface.
 
 ---
 
@@ -780,17 +1152,21 @@ During life-threatening conditions:
 - emergency routes remain clear
 - standard evacuation references take priority
 - emergency responders do not depend on internal codes
-- contextual directional coding is overridden where ambiguity could occur
+- contextual directional coding is overridden
+- silent patrol tasking may be cancelled
+- emergency tasking may replace security tasking
+- maneuver controls follow approved emergency behavior
 - the interface must make life-safety status visible
 
 The Master Watcher may still support:
 
 - camera overview
-- casualty or hazard localization
+- hazard localization
 - evacuation monitoring
 - responder coordination
 - route monitoring
 - zone status
+- guard reassignment for rescue support
 
 However, the system must not introduce uncertainty into rescue or evacuation operations.
 
@@ -800,26 +1176,40 @@ However, the system must not introduce uncertainty into rescue or evacuation ope
 
 The Master Watcher Operations Model should satisfy the following requirements:
 
+- Master Watcher Operator is a defined human role
+- Master Watcher Interface and Station are distinct from the operator role
+- Watcher Operator is a defined human role
+- Watcher Interface and Station are distinct from the operator role
 - Master Watcher is centrally located where practical
 - Master Watcher follows facility orientation
 - video wall and Watcher stations share the same orientation
 - facility entrance remains a stable reference
 - Master Watcher provides shared spatial awareness
-- individual Watchers provide detailed observation and control
+- system recommendations show their reasoning
+- individual Watcher Operators provide detailed observation and control
 - selecting a camera can expose surrounding zone coverage
 - temporary camera overviews are clearly indicated
 - camera-control ownership is visible
 - control handoffs require acknowledgement
 - assignments are role-based
+- guards are not assigned conflicting tasks without authorized reassignment
 - coordinates include operational floor designations
+- local sectors are supported
 - observations include time, source, and confidence
 - active operational mode is visible
 - coded communication is separated from physical coordinates
+- patrol tasking uses minimum necessary disclosure
+- task acknowledgement is available
+- movement and arrival can be verified
+- maneuver actions have owners and timeouts
+- commanded and verified door states are distinguished
 - life-safety communication overrides coded communication
 - high-risk actions are authorized and auditable
+- authority continuity is defined
 - degraded-mode procedures exist
 - system uncertainty is visible
 - manual fallback procedures are documented
+- device loss or display failure triggers review
 
 ---
 
@@ -827,11 +1217,19 @@ The Master Watcher Operations Model should satisfy the following requirements:
 
 ### Facility Chessboard Coordinate Layer
 
-Provides the spatial grid used by the Master Watcher and Watchers.
+Provides the spatial grid, floor designations, local sectors, doors, and patrol coordinates.
 
 ### Fixed Security-Center Orientation
 
 Ensures that the Master Watcher, video wall, Watcher stations, and facility maps share one spatial orientation.
+
+### Incident Coordinate Wrist Display Model
+
+Defines how patrol guards receive low-signature coordinate assignments, routes, and task states.
+
+### Incident Maneuver and Door Control Model
+
+Defines controlled door and passage actions, temporary states, maneuver sequences, and recovery.
 
 ### Surveillance Model
 
@@ -841,21 +1239,29 @@ Provides camera visibility, interpretation, verification, and response support.
 
 Defines how events are detected, classified, contained, escalated, and reviewed.
 
+### Context-Dependent Directional Coding
+
+Provides a separate communications-security layer during selected covert security incidents.
+
+### Context-Bound Authorization Ticket
+
+Defines authorization context that may be compared with observed location and movement.
+
+### Offline OPSEC Ticket Verification
+
+Provides high-risk ticket verification and accountable human decision-making.
+
 ### Degraded Operations
 
-Defines how the control room remains governable when systems or assumptions are weakened.
+Defines how the control room, operators, doors, and patrol tasking remain governable when systems or assumptions are weakened.
 
 ### Trust-State Model
 
 Defines how the facility’s operational posture changes as confidence and trust change.
 
-### Context-Dependent Directional Coding
-
-Provides a separate communications-security layer during selected covert security incidents.
-
 ### Audit and Review
 
-Ensures that assignments, control actions, observations, and changes remain reconstructable.
+Ensures that assignments, control actions, observations, door commands, and changes remain reconstructable.
 
 ---
 
@@ -870,20 +1276,28 @@ The Master Watcher model does not by itself provide:
 - access authorization
 - operator competence
 - physical protection
+- certified door control
 - guaranteed subject tracking
+- guaranteed guard availability
 - life-safety compliance
 - protection against compromised data
 - protection against insider misuse
+- replacement for professional incident command
 
 Its effectiveness depends on:
 
 - reliable facility metadata
 - functioning cameras and sensors
+- engineered door systems
+- authenticated devices
 - trained operators
+- trained patrol guards
 - clear role separation
 - tested procedures
 - secure authentication
 - accurate control handoff
+- reliable task delivery
+- explicit authority continuity
 - regular review
 - disciplined configuration management
 
@@ -891,47 +1305,86 @@ Its effectiveness depends on:
 
 ## Summary
 
-The Master Watcher Operations Model creates a layered control-room structure:
+The Master Watcher Operations Model creates a layered human control-room and patrol-coordination structure:
 
 ```text
 Facility
     ↓
 Video Wall
     ↓
-Master Watcher
+Master Watcher Operator
+    ↔
+Master Watcher Interface
     ↓
-Watcher Stations
+Watcher Operators
     ↓
-Cameras, Zones, Coordinates, and Incident Actions
+Cameras, Zones, Coordinates, Doors, and Incident Actions
+    ↓
+Patrol Guards and Low-Signature Task Displays
 ```
 
-The Master Watcher provides:
+The Master Watcher Operator provides:
 
 - facility-wide spatial awareness
+- priority management
+- Watcher coordination
+- guard coordination
+- incident escalation
+- control ownership
+- handoff oversight
+- maneuver authorization
+- degraded-state coordination
+- restoration oversight
+
+The Master Watcher Interface provides:
+
 - rapid camera and zone discovery
 - shared incident context
 - coordinate selection
+- local-sector precision
 - temporary camera overview
 - Watcher assignment
+- guard assignment
+- door and passage context
 - operational coordination
 
-The Watchers provide:
+Watcher Operators provide:
 
 - detailed observation
 - camera control
 - movement tracking
 - verification
+- guard tasking
+- local maneuver requests
 - escalation
 - incident ownership
 - controlled handoff
 - operational logging
 
+Patrol guards provide:
+
+- physical response
+- local observation
+- task execution
+- arrival confirmation
+- escalation when required
+
 Together, they create a control model in which:
 
-> **The Master Watcher sees the whole facility, while the Watchers control the details.**
+> **The Master Watcher Operator coordinates the whole facility, Watcher Operators control assigned details, and patrol guards receive the correct task without receiving unnecessary incident information.**
 
 ---
 
-## Final Design Principle
+## Final Design Principles
+
+> **The Master Watcher is a human operational role strengthened by a facility-aligned interface.**
 
 > **Overview is centralized, responsibility is assigned, control is visible, and every handoff is deliberate.**
+
+> **The control room sees the whole incident; the patrol guard receives the minimum actionable task.**
+
+> **Maneuver functions shape authorized passage conditions but never replace human verification or life-safety authority.**
+
+> **Every temporary door state has an owner, a timeout, and a verified ending.**
+
+> **Life safety overrides silent tasking, coded communication, and security containment.**
