@@ -14,8 +14,11 @@ The repository is organized as a connected body of work covering:
 - trust architecture
 - facility and security architecture
 - contextual authorization
+- offline OPSEC verification
 - operational control
 - spatial coordination
+- patrol tasking
+- maneuver and passage control
 - resilience and recovery
 - governance and review
 - strategic positioning
@@ -86,28 +89,30 @@ Core trust, identity, authorization, and security models.
 
 ## Operations
 
-Operational resilience, spatial coordination, control-room operations, and recovery.
+Operational resilience, spatial coordination, control-room operations, patrol tasking, maneuver, and recovery.
 
 - [audit-and-review-model.md](operations/audit-and-review-model.md) — Reconstructability, accountability, review, and follow-up.
 - [context-dependent-directional-coding.md](operations/context-dependent-directional-coding.md) — State-dependent directional coding during selected covert, non-life-threatening incidents.
 - [degraded-operations-model.md](operations/degraded-operations-model.md) — Controlled continuity under reduced trust, degraded systems, or weakened assumptions.
-- [facility-chessboard-coordinate-layer.md](operations/facility-chessboard-coordinate-layer.md) — Facility-wide floor and grid coordinates for observation, movement, cameras, zones, and incident response.
+- [facility-chessboard-coordinate-layer.md](operations/facility-chessboard-coordinate-layer.md) — Facility-wide floor, grid, and local-sector coordinates for observation, movement, cameras, zones, doors, and incident response.
 - [fixed-security-center-orientation.md](operations/fixed-security-center-orientation.md) — Fixed spatial orientation for the control room, video wall, Master Watcher, Watcher stations, maps, and cameras.
-- [incident-response.md](operations/incident-response.md) — Incident detection, classification, containment, escalation, and response.
-- [maintenance-model.md](operations/maintenance-model.md) — Controlled, attributable, and reviewable maintenance activity.
-- [master-watcher-operations-model.md](operations/master-watcher-operations-model.md) — Central Master Watcher coordination and distributed Watcher observation and camera control.
-- [recovery-model.md](operations/recovery-model.md) — Restoration of trust, control, and operational legitimacy after disruption.
+- [incident-coordinate-wrist-display-model.md](operations/incident-coordinate-wrist-display-model.md) — Low-signature patrol tasking through wrist-worn, flashlight-mounted, and authenticated displays.
+- [incident-maneuver-and-door-control-model.md](operations/incident-maneuver-and-door-control-model.md) — Incident-based passage control, temporary door states, guard-route support, containment, and recovery.
+- [incident-response.md](operations/incident-response.md) — Incident detection, classification, containment, escalation, recovery, and audit.
+- [maintenance-model.md](operations/maintenance-model.md) — Controlled and reviewable maintenance activity.
+- [master-watcher-operations-model.md](operations/master-watcher-operations-model.md) — Master Watcher Operator coordination, Watcher Operator control, patrol tasking, camera ownership, maneuver coordination, and handoffs.
+- [recovery-model.md](operations/recovery-model.md) — Restoration of trust, control, communication, access, movement, and operational legitimacy.
 
 ---
 
 ## Extensions
 
-Supporting models for realism, signaling, controlled deception, and survivability.
+Supporting models for realism, signaling, controlled deception, survivability, and life-safety compatibility.
 
-- [alarm-and-signaling-model.md](extensions/alarm-and-signaling-model.md) — Meaningful alarm categories and differentiated signaling.
+- [alarm-and-signaling-model.md](extensions/alarm-and-signaling-model.md) — Meaningful alarm categories, signaling, ownership, priority, and response.
 - [controlled-decoy-access-layer.md](extensions/controlled-decoy-access-layer.md) — Controlled exposure, decoy access, and concealed response logic.
 - [incident-lighting.md](extensions/incident-lighting.md) — Lighting as a support layer for detection, interpretation, safety, and control.
-- [passive-fire-resilience.md](extensions/passive-fire-resilience.md) — Passive fire resilience, containment, survivability, and life-safety compatibility.
+- [passive-fire-resilience.md](extensions/passive-fire-resilience.md) — Passive fire resilience, compartmentation, emergency access, survivability, and security compatibility.
 
 ---
 
@@ -127,9 +132,9 @@ Independent assessment and review material.
 
 - [AI-Report-Review.md](evaluation/AI-Report-Review.md) — Review material based on AI-generated assessment and interpretation.
 - [ChatGPT-Concept-Evaluation-Scorecard.md](evaluation/ChatGPT-Concept-Evaluation-Scorecard.md) — Concept evaluation and scoring from ChatGPT.
+- [Claude-Concept-Evaluation-Scorecard.md](evaluation/Claude-Concept-Evaluation-Scorecard.md) — Concept evaluation and scoring from Claude.
 - [Concept-Evaluation-Scorecard.md](evaluation/Concept-Evaluation-Scorecard.md) — Structured category-based evaluation of the concept.
 - [Grok-Concept-Evaluation-Scorecard.md](evaluation/Grok-Concept-Evaluation-Scorecard.md) — Concept evaluation and scoring from Grok.
-- [Claude-Concept-Evaluation-Scorecard.md](evaluation/Claude-Concept-Evaluation-Scorecard.md) — Concept evaluation and scoring from Claude.
 
 ---
 
@@ -219,7 +224,7 @@ Start with:
 
 ---
 
-## Master Concept Path
+## Master Concept
 
 For the overall conceptual architecture:
 
@@ -246,15 +251,29 @@ Read:
 
 ---
 
-## Spatial Operations and Control Room
+## Spatial Operations, Patrol Tasking, and Control Room
 
 Read:
 
 1. [operations/fixed-security-center-orientation.md](operations/fixed-security-center-orientation.md)
 2. [operations/facility-chessboard-coordinate-layer.md](operations/facility-chessboard-coordinate-layer.md)
 3. [operations/master-watcher-operations-model.md](operations/master-watcher-operations-model.md)
-4. [operations/context-dependent-directional-coding.md](operations/context-dependent-directional-coding.md)
-5. [operations/incident-response.md](operations/incident-response.md)
+4. [operations/incident-coordinate-wrist-display-model.md](operations/incident-coordinate-wrist-display-model.md)
+5. [operations/context-dependent-directional-coding.md](operations/context-dependent-directional-coding.md)
+6. [operations/incident-maneuver-and-door-control-model.md](operations/incident-maneuver-and-door-control-model.md)
+
+---
+
+## Incident Response and Maneuver
+
+Read:
+
+1. [operations/incident-response.md](operations/incident-response.md)
+2. [operations/master-watcher-operations-model.md](operations/master-watcher-operations-model.md)
+3. [operations/incident-maneuver-and-door-control-model.md](operations/incident-maneuver-and-door-control-model.md)
+4. [operations/incident-coordinate-wrist-display-model.md](operations/incident-coordinate-wrist-display-model.md)
+5. [operations/degraded-operations-model.md](operations/degraded-operations-model.md)
+6. [operations/recovery-model.md](operations/recovery-model.md)
 
 ---
 
@@ -267,6 +286,7 @@ Read:
 3. [operations/maintenance-model.md](operations/maintenance-model.md)
 4. [operations/recovery-model.md](operations/recovery-model.md)
 5. [operations/audit-and-review-model.md](operations/audit-and-review-model.md)
+6. [extensions/passive-fire-resilience.md](extensions/passive-fire-resilience.md)
 
 ---
 
@@ -337,30 +357,56 @@ Read the whitepaper in order:
 
 # Architectural Relationships
 
-## Spatial Operations and Control
-
-```text
-Context-Dependent Directional Coding
-        ↓
-Facility Chessboard Coordinate Layer
-        ↓
-Fixed Security-Center Orientation
-        ↓
-Master Watcher Operations Model
-```
-
 ## Contextual Authorization and Verification
 
 ```text
 Context-Bound Facility Authorization Ticket
         ↓
-Offline OPSEC Ticket Verification Model
+Offline OPSEC Ticket Verification
         ↓
 Human or Dual-Control Decision
         ↓
 Post-Access Trust Control
         ↓
 Audit, Suspension, Revocation, and Recovery
+```
+
+## Spatial Operations and Control
+
+```text
+Fixed Security-Center Orientation
+        ↓
+Facility Chessboard Coordinate Layer
+        ↓
+Master Watcher Operations
+        ↓
+Watcher Operators
+        ↓
+Incident Coordinate Wrist Display
+        ↓
+Patrol Guard Tasking
+        ↓
+Incident Maneuver and Door Control
+```
+
+## Incident Response and Recovery
+
+```text
+Alarm or Event
+        ↓
+Incident Response
+        ↓
+Master Watcher Coordination
+        ↓
+Watcher Operator Interpretation
+        ↓
+Guard Tasking and Maneuver
+        ↓
+Containment or Escalation
+        ↓
+Degraded Operations if Required
+        ↓
+Recovery and Audit
 ```
 
 ## Overall Concept Progression
@@ -379,6 +425,8 @@ Context-Bound Authorization
 Offline OPSEC Verification
         ↓
 Spatial Coordination and Watcher Control
+        ↓
+Patrol Tasking and Maneuver
         ↓
 Post-Access Trust Control
         ↓
@@ -405,9 +453,13 @@ It now supports:
 - dual-control decision-making
 - facility-wide spatial coordination
 - fixed control-room orientation
-- Master Watcher and Watcher operations
+- Master Watcher Operators
+- Watcher Operators
+- patrol tasking and low-signature displays
 - contextual directional coding
+- incident maneuver and door control
 - controlled continuity under degraded conditions
+- recovery and reconciliation
 - reviewability and governance
 - public methodology with private client-specific delivery
 - external-facing concept presentation
@@ -425,7 +477,7 @@ The currently visible documentation set contains:
 |---|---:|
 | Foundational | 7 |
 | Architecture | 11 |
-| Operations | 9 |
+| Operations | 11 |
 | Extensions | 4 |
 | Strategy | 3 |
 | Evaluation | 5 |
@@ -433,7 +485,7 @@ The currently visible documentation set contains:
 | `docs/index.md` | 1 |
 | Whitepaper pages | 13 |
 | Whitepaper support files | 2 |
-| **Total visible Markdown documents** | **57** |
+| **Total visible Markdown documents** | **59** |
 
 This count includes:
 
@@ -471,3 +523,6 @@ The concept should be examined, challenged, adapted, and further developed by re
 - life safety
 - emergency planning
 - human factors
+- communications
+- access-control engineering
+```
