@@ -1,6 +1,6 @@
 # Incident Response Model – High-Security Facility Concept
 
-> A controlled incident-response model for detecting, interpreting, containing, escalating, and recovering from security, operational, technical, and life-safety events.
+> A controlled incident-response model for detecting, interpreting, containing, escalating, coordinating, and recovering from security, operational, technical, communications, and life-safety events.
 
 ---
 
@@ -12,15 +12,15 @@
 | Subject | Incident detection, interpretation, containment, escalation, and recovery |
 | Type | Operations Model |
 | Status | Conceptual |
-| Scope | Security incidents, communications compromise, anomalous movement, access violations, degraded operations, and life-safety interaction |
-| Related Areas | Trust-State Model, Surveillance, Master Watcher, Watchers, Facility Coordinates, Contextual Authorization, Degraded Operations, Recovery, Audit and Review |
+| Scope | Security incidents, communications compromise, anomalous movement, access violations, patrol tasking, maneuver control, degraded operations, and life-safety interaction |
+| Related Areas | Trust-State Model, Surveillance, Master Watcher Operations, Facility Coordinates, Contextual Authorization, Incident Maneuver and Door Control, Degraded Operations, Recovery, Audit and Review |
 | Parent Concept | High-Security Facility Concept |
 
 ---
 
 ## Purpose
 
-This document defines how the facility should detect, classify, interpret, contain, escalate, document, and recover from incidents.
+This document defines how the facility should detect, classify, interpret, contain, escalate, coordinate, document, and recover from incidents.
 
 The model treats an incident as more than an alarm event.
 
@@ -31,19 +31,22 @@ An incident may involve a change in:
 - movement legitimacy
 - zone legitimacy
 - credential status
+- ticket status
 - device status
 - communication confidence
+- door or passage conditions
 - operational continuity
 - life-safety condition
 - governance or control
 
-The response should therefore remain connected to:
+The response should remain connected to:
 
 ```text
 Detection
 → Interpretation
 → Classification
 → Assignment
+→ Maneuver
 → Containment
 → Escalation
 → Recovery
@@ -67,8 +70,64 @@ It should evaluate:
 - whether the activity is consistent with purpose and context
 - whether the event is expanding
 - whether communication can be trusted
+- whether door or passage control is relevant
 - whether life safety is affected
 - which response authority applies
+- which operators and guards are available
+
+---
+
+## Operational Roles
+
+### Master Watcher Operator
+
+The human responsible for:
+
+- facility-wide situational awareness
+- prioritization
+- coordination of Watcher Operators
+- guard coordination
+- competing-incident management
+- maneuver authorization or oversight
+- escalation
+- authority continuity
+- restoration oversight
+
+### Watcher Operator
+
+The human responsible for:
+
+- detailed incident interpretation
+- assigned camera and zone control
+- coordinate and local-sector verification
+- guard tasking within authority
+- movement verification
+- maneuver requests
+- local escalation
+- handoff and audit
+
+### Patrol Guard
+
+The physical responder responsible for:
+
+- assigned movement
+- local observation
+- task execution
+- arrival confirmation
+- reporting hazards
+- escalating uncertainty
+- using radio when safety or clarity requires it
+
+### Incident Commander
+
+Where separate, the person responsible for:
+
+- incident posture
+- major containment decisions
+- facility-wide restrictions
+- external coordination
+- emergency response authority
+- return-to-normal decisions
 
 ---
 
@@ -87,6 +146,7 @@ Examples:
 - forced passage
 - suspicious presence
 - post-access trust failure
+- uncontrolled movement
 
 ### Communications Incident
 
@@ -98,6 +158,7 @@ Examples:
 - lost patrol display
 - incorrect directional-code state
 - failed task delivery
+- uncertain code-set acknowledgement
 
 ### Credential or Ticket Incident
 
@@ -110,7 +171,7 @@ Examples:
 - credential loss
 - unauthorized credential use
 - escort separation
-- ticket and observed context mismatch
+- ticket and observed-context mismatch
 
 ### Device or Asset Incident
 
@@ -120,8 +181,8 @@ Examples:
 - unauthorized tool
 - missing asset
 - device compromise
-- asset leaving the approved route
 - scanner or transfer-media loss
+- asset leaving the approved route
 
 ### Technical Incident
 
@@ -129,11 +190,13 @@ Examples:
 
 - camera failure
 - access-control failure
+- door-state failure
 - sensor failure
 - Master Watcher failure
+- Watcher-station failure
 - database or metadata failure
 - synchronization failure
-- degraded control-room capability
+- maneuver-panel failure
 
 ### Life-Safety Incident
 
@@ -147,7 +210,7 @@ Examples:
 - hazardous release
 - evacuation or rescue requirement
 
-Life safety takes priority over covert communication and ordinary security tasking.
+Life safety takes priority over covert communication, ordinary security tasking, and containment logic.
 
 ---
 
@@ -161,6 +224,7 @@ Incidents may be detected through:
 - device mismatch
 - camera observation
 - movement analysis
+- door-state anomaly
 - Watcher report
 - patrol guard report
 - silent alarm
@@ -186,6 +250,7 @@ Signals should be interpreted together with:
 - device
 - credential
 - escort
+- door and passage state
 - current operational state
 - confidence
 
@@ -206,6 +271,7 @@ The first event record should capture, where possible:
 - affected system
 - affected person or asset
 - initial confidence
+- door or passage context
 - current operational state
 - reporting operator
 - related ticket or credential
@@ -219,10 +285,13 @@ Time: 14:32
 Location: BETA-F6-NE
 Source: Camera-12 + Access Event
 Initial State: Non-Life-Threatening
+Door Context: D-12 Available / D-13 Secured
 Reported By: Watcher-02
 ```
 
-The initial record may be incomplete. It should be updated without silently rewriting the original event.
+The initial record may be incomplete.
+
+It should be updated without silently rewriting the original event.
 
 ---
 
@@ -235,11 +304,16 @@ The control room should determine:
 3. Is identity or authorization confidence reduced?
 4. Is communication trusted?
 5. Is the event inside or outside an authorized context?
-6. Which zone is affected?
-7. Is immediate containment required?
-8. Which authority owns the response?
-9. Are patrol guards required?
-10. Is Silent Security Mode appropriate?
+6. Which zone and coordinate are affected?
+7. Are door or passage conditions relevant?
+8. Is immediate containment required?
+9. Which authority owns the response?
+10. Which Watcher Operator should be assigned?
+11. Are patrol guards required?
+12. Is Silent Security Mode appropriate?
+13. Is the Incident Maneuver Panel permitted?
+
+Life safety must be classified first.
 
 ---
 
@@ -252,6 +326,7 @@ DETECTED
 UNDER REVIEW
 VERIFIED
 CONTAINMENT ACTIVE
+MANEUVER ACTIVE
 ESCALATED
 SILENT SECURITY MODE
 COMMUNICATIONS COMPROMISED
@@ -283,6 +358,8 @@ An incident may reduce trust in:
 - a device
 - a radio
 - a camera
+- a door
+- a sensor
 - a zone
 - a route
 - a system
@@ -297,6 +374,7 @@ It should mean that the facility requires:
 - restricted movement
 - controlled communication
 - temporary suspension
+- maneuver review
 - escalation
 - recovery review
 
@@ -304,7 +382,7 @@ It should mean that the facility requires:
 
 ## Master Watcher and Watcher Response
 
-The Master Watcher should provide:
+The Master Watcher Operator should provide:
 
 - facility-wide overview
 - affected floor
@@ -314,26 +392,29 @@ The Master Watcher should provide:
 - movement trails
 - active assignments
 - patrol guard status
+- door and passage status
 - operational mode
 - system limitations
 - confidence state
+- life-safety state
 
-Watchers should:
+Watcher Operators should:
 
 - verify the initial event
 - select relevant cameras
 - review surrounding zone coverage
 - interpret movement and context
 - assign or coordinate patrol guards
+- request or manage authorized maneuver actions
 - maintain observation
-- control relevant cameras
 - update the incident state
 - escalate when required
 - preserve notes and evidence
+- acknowledge handoffs
 
-The Master Watcher provides the shared picture.
+The Master Watcher Operator maintains the whole-facility picture.
 
-The Watchers manage detailed interpretation and response.
+Watcher Operators manage detailed interpretation and response.
 
 ---
 
@@ -361,6 +442,7 @@ The coordinate may identify:
 - patrol destination
 - camera coverage
 - access point
+- door or passage
 - zone boundary
 - response position
 
@@ -370,7 +452,7 @@ The coordinate should remain fixed and spatially consistent.
 
 ## Patrol Guard Tasking
 
-During a silent, non-life-threatening security incident, the Watcher may assign a patrol guard through a controlled low-signature display.
+During a silent, non-life-threatening security incident, a Watcher Operator may assign a patrol guard through a controlled low-signature display.
 
 Assignment format:
 
@@ -430,6 +512,7 @@ Guard assignment should consider:
 - incident priority
 - physical condition
 - communication state
+- whether the guard is already engaged
 
 A guard already engaged should not receive a conflicting assignment without explicit authorized reassignment.
 
@@ -437,13 +520,25 @@ The system should record:
 
 - selected guard
 - reason for selection
-- assigning Watcher
+- assigning Watcher Operator
 - destination
 - route
 - task state
 - acknowledgement
 - arrival
 - completion or cancellation
+
+Example reasoning:
+
+```text
+Selected: THETA:VIII
+Reason:
+- closer guards occupied
+- access permission valid
+- stairs route available
+- communication device acknowledged
+- no conflicting life-safety task
+```
 
 ---
 
@@ -463,9 +558,10 @@ During Silent Security Mode:
 - coordinate-based tasking may be delivered silently
 - selected spoken directions may use contextual coding
 - the Master Watcher retains the fixed spatial map
-- Watchers retain the wider incident context
+- Watcher Operators retain the wider incident context
 - guards receive minimum necessary instructions
 - acknowledgement and movement verification remain active
+- the Incident Maneuver Panel may be enabled according to authority
 
 Radio remains available whenever clarity, escalation, or safety requires it.
 
@@ -516,12 +612,13 @@ Relevant factors include:
 - time
 - zone
 - route
+- coordinate
 - device
 - escort
 - credential
 - asset
 - current facility state
-- observed coordinate
+- door and passage context
 
 Possible outcomes include:
 
@@ -569,6 +666,97 @@ The reader or QR code must not independently define trust.
 
 ---
 
+## Incident Maneuver and Door Control
+
+The Incident Maneuver Panel may be activated during defined security states.
+
+It may support:
+
+- controlled guard routes
+- temporary door states
+- access-point sequencing
+- movement restriction
+- camera and door correlation
+- temporary containment
+- controlled release
+- restoration of normal passage conditions
+
+Example:
+
+```text
+Coordinate: BETA-F6-NE
+Incident State: SILENT SECURITY
+Guard: THETA:VIII
+Route: STAIRS
+Door Sequence: ACTIVE
+Camera Coverage: CONFIRMED
+Life-Safety State: CLEAR
+Door D-12: UNLOCKED FOR PASSAGE
+Door D-13: SECURED
+```
+
+Every temporary door state must have:
+
+- owner
+- reason
+- incident reference
+- start time
+- timeout
+- current state
+- verification
+- restoration condition
+
+Door actions should create controlled time and separation for verification.
+
+They must not independently determine:
+
+- guilt
+- intent
+- identity
+- threat level
+- final disposition
+
+---
+
+## Maneuver and Containment Sequence
+
+A possible incident maneuver sequence is:
+
+```text
+Incident coordinate identified
+        ↓
+Life-safety state verified
+        ↓
+Maneuver authority confirmed
+        ↓
+Guard route established
+        ↓
+Relevant passage conditions reviewed
+        ↓
+Temporary door state applied
+        ↓
+Guard movement verified
+        ↓
+Subject movement monitored
+        ↓
+Containment, release, or escalation
+        ↓
+Door states restored and verified
+```
+
+The sequence should pause if:
+
+- life-safety state becomes uncertain
+- door state becomes unknown
+- occupancy is unknown
+- route is blocked
+- guard acknowledgement fails
+- camera coverage is lost
+- authority becomes unclear
+- communication confidence collapses
+
+---
+
 ## Containment
 
 Containment actions may include:
@@ -580,11 +768,12 @@ Containment actions may include:
 - disabling a device
 - limiting zone access
 - increasing camera coverage
-- assigning a Watcher
+- assigning a Watcher Operator
 - assigning a patrol guard
 - changing communication mode
-- preserving relevant evidence
 - securing affected assets
+- controlling selected passage points
+- preserving relevant evidence
 - preventing unauthorized further passage
 
 Containment should be proportionate to:
@@ -595,49 +784,42 @@ Containment should be proportionate to:
 - threat
 - life-safety condition
 - operational impact
+- occupancy
+- available observation
+
+Containment creates time for human verification.
+
+It does not determine guilt.
 
 ---
 
-## Communication and Information Control
+## Anti-Entrapment and Safety Conditions
 
-During an incident, communications should reveal only what is necessary to the recipient.
+Before applying movement restrictions, operators should evaluate:
 
-The control room may retain:
+- fire and smoke status
+- occupancy
+- emergency routes
+- guard locations
+- active tickets
+- authorized passages
+- camera coverage
+- door status
+- anti-entrapment conditions
+- manual override
+- responder access
+- current life-safety state
 
-- full incident context
-- identity information
-- camera relationships
-- movement history
-- authorization data
-- response plan
+A door must not be closed merely because a coordinate or route model suggests it.
 
-A Watcher may receive:
+People may be:
 
-- zone context
-- camera context
-- assignment context
-- subject or asset information
-
-A patrol guard may receive:
-
-```text
-THETA:VIII ][ BETA-F6-NE
-STAIRS
-OBSERVE
-```
-
-This creates an information hierarchy:
-
-```text
-Master Watcher:
-Full facility context
-
-Watcher:
-Incident and zone context
-
-Patrol guard:
-Minimum actionable task
-```
+- inside the door zone
+- between controlled doors
+- injured
+- unable to respond
+- authorized but not visible
+- responding to an emergency
 
 ---
 
@@ -653,7 +835,8 @@ An incident should be escalated when:
 - multiple zones are affected
 - a critical asset is involved
 - privileged access is implicated
-- a guard or Watcher becomes unavailable
+- a guard or Watcher Operator becomes unavailable
+- door or passage state cannot be trusted
 - the incident exceeds local authority
 - there is conflict between security and safety requirements
 
@@ -663,6 +846,7 @@ Escalation should identify:
 - current state
 - affected locations
 - current assignments
+- door and passage conditions
 - unresolved risks
 - communication mode
 - required resources
@@ -694,8 +878,9 @@ During life-safety conditions:
 - coded directional language is overridden
 - silent patrol tasks may be cancelled or replaced
 - emergency responders receive standard references
-- security controls must not obstruct rescue or evacuation
-- all emergency overrides are logged
+- security containment must not block rescue or evacuation
+- door behavior follows approved emergency procedures
+- all overrides are logged
 
 > **No security abstraction may create ambiguity during an emergency involving life safety.**
 
@@ -708,6 +893,7 @@ The incident model must define behavior when systems or assumptions are weakened
 Possible degraded conditions include:
 
 - Master Watcher failure
+- Watcher-station failure
 - camera failure
 - coordinate database failure
 - offline OPSEC server failure
@@ -715,6 +901,7 @@ Possible degraded conditions include:
 - radio compromise
 - device loss
 - outdated ticket data
+- door-state uncertainty
 - synchronization failure
 - operator shortage
 - conflicting reports
@@ -730,6 +917,7 @@ Fallback may include:
 - named escort
 - second-person approval
 - controlled radio
+- manual door verification
 - temporary hold
 - denial
 - escalation
@@ -749,6 +937,7 @@ Recovery begins when:
 - temporary restrictions are reviewed
 - assignments are closed
 - credentials and devices are reconciled
+- temporary door states are restored and verified
 - affected zones are assessed
 - trust decisions are documented
 
@@ -760,11 +949,12 @@ Recovery may include:
 - ticket review
 - credential replacement
 - camera and sensor verification
+- door-state verification
 - zone revalidation
 - controlled return to normal operations
 - post-incident review
 
-Recovery is not merely technical reset.
+Recovery is not merely a technical reset.
 
 It is restoration of controlled operational legitimacy.
 
@@ -783,7 +973,7 @@ The incident record should preserve:
 - classification
 - confidence
 - state transitions
-- Watcher assignments
+- Watcher Operator assignments
 - guard assignments
 - device identities
 - task delivery
@@ -791,6 +981,7 @@ The incident record should preserve:
 - movement verification
 - camera control
 - ticket or credential actions
+- door and passage actions
 - communication-mode changes
 - containment
 - escalation
@@ -810,9 +1001,11 @@ Review should examine:
 - who held authority
 - whether communication exposed unnecessary information
 - whether tasking was clear
+- whether door control improved or delayed response
 - whether response was delayed
 - whether human workload affected performance
 - whether fallback worked
+- whether life-safety compatibility was preserved
 - whether the incident should change policy or design
 
 ---
@@ -825,6 +1018,7 @@ An incident may be closed only when:
 - affected personnel are accounted for
 - assignments are completed or cancelled
 - relevant credentials and devices are reconciled
+- temporary door states are restored and verified
 - affected systems are reviewed
 - temporary communication modes are terminated
 - unresolved risks are assigned
@@ -840,35 +1034,40 @@ Unresolved issues should remain visible as follow-up actions.
 ## Example Operational Sequence
 
 1. A silent, non-life-threatening anomaly is detected at `BETA-F6-NE`.
-2. The Watcher verifies the event through Camera-12 and access data.
-3. The Master Watcher displays the surrounding zone.
+2. Watcher-02 verifies the event through Camera-12 and access data.
+3. The Master Watcher Operator reviews the facility-wide picture.
 4. Silent Security Mode is activated by an authorized authority.
 5. A code-set version is distributed to relevant personnel.
-6. Guard availability is reviewed.
-7. `THETA:VIII` is assigned because closer guards are occupied.
-8. The patrol display shows:
+6. The affected zone and adjacent routes are reviewed.
+7. The Incident Maneuver Panel confirms life-safety status is clear.
+8. Guard availability is reviewed.
+9. `THETA:VIII` is assigned because closer guards are occupied.
+10. The patrol display shows:
 
-   ```text
-   THETA:VIII ][ BETA-F6-NE
-   STAIRS
-   MOVE
-   ```
+    ```text
+    THETA:VIII ][ BETA-F6-NE
+    STAIRS
+    MOVE
+    ```
 
-9. The guard acknowledges discreetly.
-10. Cameras verify movement toward the assigned coordinate.
-11. The display updates to:
+11. The guard acknowledges discreetly.
+12. A controlled passage sequence supports the route.
+13. Cameras verify movement toward the assigned coordinate.
+14. The guard arrives at `BETA-F6-NE`.
+15. The display updates to:
 
-   ```text
-   THETA:VIII
-   BETA-F6-NE
-   OBSERVE
-   ```
+    ```text
+    THETA:VIII
+    BETA-F6-NE
+    OBSERVE
+    ```
 
-12. The Watcher confirms arrival.
-13. The event is contained and reviewed.
-14. Silent Security Mode is terminated.
-15. Assignments and credentials are reconciled.
-16. The incident is closed with a complete audit record.
+16. The Watcher Operator confirms arrival and observation.
+17. Door states are restored or remain controlled according to the incident state.
+18. The event is contained and reviewed.
+19. Silent Security Mode is terminated.
+20. Assignments, credentials, devices, and door states are reconciled.
+21. The incident is closed with a complete audit record.
 
 ---
 
@@ -878,20 +1077,26 @@ The Incident Response Model should satisfy the following requirements:
 
 - incidents are detected through multiple possible sources
 - life safety is classified first
-- identity, zone, movement, and purpose are interpreted together
+- identity, zone, movement, purpose, and time are interpreted together
 - coordinates include floor, grid, and local sector where used
+- Master Watcher Operator is a defined human role
+- Watcher Operator is a defined human role
 - Master Watcher provides shared situational awareness
-- Watchers manage detailed interpretation and control
+- Watcher Operators manage detailed interpretation and control
 - guard tasking is role-based and auditable
 - call signs are separate from assigned coordinates
 - silent tasking is limited to defined operational states
 - radio remains available as fallback
 - directional coding is subordinate to life safety
+- maneuver control is restricted and authorized
+- door states include ownership, timeout, and verification
 - high-risk ticket decisions require controlled verification
 - containment actions are proportionate
+- anti-entrapment and life-safety conditions are checked
 - degraded-mode behavior is defined
 - failure does not increase trust automatically
 - recovery includes restoration of operational legitimacy
+- temporary door states are restored and verified
 - all significant actions are auditable
 - unresolved issues remain visible after closure
 
@@ -905,6 +1110,7 @@ This model does not by itself provide:
 - reliable intent determination
 - guaranteed identity assurance
 - complete communications security
+- certified door-control engineering
 - physical protection
 - guaranteed camera coverage
 - guaranteed personnel availability
@@ -917,6 +1123,7 @@ Its effectiveness depends on:
 
 - accurate facility metadata
 - reliable sensors and cameras
+- engineered door systems
 - trained personnel
 - clear authority
 - tested procedures
@@ -938,6 +1145,7 @@ The Incident Response Model provides a controlled structure for responding to:
 - communications compromise
 - device and asset events
 - technical failures
+- door and passage anomalies
 - degraded operations
 - life-safety incidents
 
@@ -948,8 +1156,9 @@ Detection
 → Interpretation
 → Classification
 → Master Watcher Overview
-→ Watcher Control
+→ Watcher Operator Control
 → Guard Tasking
+→ Maneuver and Passage Control
 → Containment
 → Escalation
 → Recovery
@@ -966,9 +1175,11 @@ The model preserves the central trust-architecture principle:
 
 > **Classify life safety first.**
 
-> **Interpret identity, movement, zone, purpose, and time together.**
+> **Interpret identity, movement, zone, purpose, time, and passage context together.**
 
 > **The control room sees the whole incident; the guard receives the minimum actionable task.**
+
+> **Containment creates time for verification; it does not determine guilt.**
 
 > **Failure of the trust system must not create an automatic increase in trust.**
 
