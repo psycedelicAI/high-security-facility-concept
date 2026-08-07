@@ -1,6 +1,6 @@
 # Passive Fire Resilience – High-Security Facility Concept
 
-> A conceptual model for how compartmentation, low-combustibility interiors, smoke-aware design, and suppression-compatible architecture can reduce fire spread and improve life-safety resilience in a high-security facility.
+> A passive fire-resilience model ensuring that containment, compartmentation, access control, surveillance, and incident operations remain compatible with life safety, evacuation, rescue, and survivability.
 
 ---
 
@@ -9,311 +9,674 @@
 | Field | Value |
 |---|---|
 | Document | Passive Fire Resilience |
-| Subject | High-Security Facility Concept |
-| Type | Supporting Safety and Resilience Document |
-| Status | Draft |
-| Scope | Fire compartmentation, low-fuel interior design, passive spread limitation, smoke-aware design, suppression support, life-safety resilience |
-| Audience | Security architects, facility planners, fire safety designers, operations leads, resilience planners, physical security specialists |
+| Subject | Passive fire protection, compartmentation, survivability, and security compatibility |
+| Type | Supporting Resilience Model |
+| Status | Conceptual |
+| Scope | Passive fire protection, fire compartments, smoke control interfaces, emergency access, door behavior, evacuation, and security operations |
+| Related Areas | Incident Response, Degraded Operations, Incident Maneuver and Door Control, Alarm and Signaling, Recovery, Life-Safety Planning |
+| Parent Concept | High-Security Facility Concept |
 
 ---
 
 ## Purpose
 
-This document defines a conceptual approach to passive fire resilience within the **High-Security Facility Concept**.
+This document defines how passive fire resilience should be treated as part of the wider High-Security Facility Concept.
 
-The purpose is not to replace detailed fire engineering, regulatory design, or life-safety compliance work.  
-Instead, it provides a design philosophy for how the facility should reduce fire growth, limit spread, preserve survivability, and support safe response through architecture and material discipline.
+High security must not depend on:
 
-In this concept, fire safety should not rely solely on detection and suppression.  
-The facility itself should contribute to resilience by making fire more difficult to spread, less likely to escalate rapidly, and less able to transform a local incident into a wider facility-level emergency.
+- permanently locked doors
+- unrestricted movement control
+- security-only alarm logic
+- remote containment without life-safety review
+- assumptions that all systems remain available
+- emergency routes that are difficult to interpret
+- doors or barriers that obstruct evacuation or rescue
 
----
+Passive fire resilience provides a physical survivability layer that continues to function even when:
 
-# Core Principle
-
-The facility should not contain unnecessary fuel, unnecessary spread paths, or unnecessary dependence on a single response layer.
-
-Passive fire resilience is achieved by combining:
-
-- compartment-aware layout
-- durable and low-combustibility material choices
-- limited interior fuel load where practical
-- smoke-conscious building behavior
-- suppression-compatible architecture
-- life-safety thinking that remains compatible with security design
-
-The goal is to slow fire development, limit spread, protect occupants, and create time for correct response.
+- power is lost
+- communications fail
+- surveillance is degraded
+- access-control systems become unavailable
+- operators are overloaded
+- active fire systems are delayed or compromised
 
 ---
 
-# Design Philosophy
+## Core Principle
 
-## Fire Resilience Begins Before Alarm Activation
+> **Security containment must never defeat fire compartmentation, evacuation, rescue, emergency access, or life safety.**
 
-A facility is stronger when it does not depend entirely on alarms, human reaction time, or suppression systems to prevent catastrophe.
+Passive fire resilience should remain compatible with:
 
-Passive resilience begins with the way rooms, corridors, surfaces, boundaries, and materials are chosen.
+- compartmentation
+- fire-rated construction
+- smoke control
+- protected escape routes
+- emergency responder access
+- fire doors
+- protected shafts
+- structural fire resistance
+- safe evacuation
+- controlled re-entry after the event
 
-## High Security Must Not Mean High Entrapment Risk
-
-A high-security environment must not become dangerous simply because security barriers, restrictive movement models, or compartment logic leave occupants without survivable options in a fire event.
-
-Security architecture and life-safety architecture must remain compatible.
-
-## Material Simplicity Supports Resilience
-
-Decorative, soft, layered, or fuel-rich interior design may increase fire load, smoke production, maintenance complexity, and unpredictability.
-
-A more disciplined material philosophy can reduce ignition opportunity and limit fire escalation potential.
-
-## Spread Prevention Is More Valuable Than Late Reaction
-
-A facility should aim not only to detect fire, but to make spread slower, harder, and less likely to cross from one room, zone, or function to another.
-
-## Smoke Is a Primary Life-Safety Concern
-
-A resilient building should treat smoke movement as a major design issue, not as a secondary consequence of flame.
+Security systems may support these functions, but must not redefine or obstruct them.
 
 ---
 
-# Fire Compartmentation
+## Passive and Active Protection
 
-Compartmentation is a foundational principle of passive fire resilience.
+Passive protection is built into the facility and does not depend solely on active systems or operator action.
 
-The facility should be designed so that fire, heat, and smoke are less able to move rapidly between rooms, technical areas, corridors, and operational zones.
+Examples may include:
 
-This supports:
+- fire-rated walls
+- fire-rated floors
+- fire-rated doors
+- protected corridors
+- protected stairs
+- compartment boundaries
+- smoke barriers
+- fire stopping
+- protected service penetrations
+- structural fire resistance
+- protected shafts
+- protected escape routes
 
-- reduced spread speed
-- greater survivability
-- more time for evacuation or protected waiting
-- improved suppression effectiveness
-- reduced risk of facility-wide escalation
+Active systems may include:
 
-Compartment-aware design may include:
-- strong room boundaries
-- controlled inter-zone separation
-- resilient doors and passage points
-- disciplined treatment of penetrations and openings
-- layout choices that avoid unnecessary spread paths
+- fire detection
+- alarm systems
+- smoke control
+- suppression
+- emergency lighting
+- fire-control interfaces
+- responder communication
 
-The purpose is not only to protect the building, but to preserve time and control during an event.
+The concept treats these layers as complementary.
 
----
-
-# Low-Fuel Interior Philosophy
-
-A central principle of this concept is that interiors should avoid unnecessary combustible load wherever practical.
-
-This means the facility should prefer:
-- durable materials
-- low-combustibility surfaces
-- simple and robust finishes
-- limited decorative layering
-- minimal use of soft, fuel-rich interior elements in controlled or high-security areas
-
-The logic is straightforward:
-
-> The less unnecessary fuel present in the environment, the less energy a fire can draw from the space.
-
-This does not require every room to be harsh or unusable.  
-It means that in high-security and technical environments, material selection should favor resilience over decorative excess.
+```text
+Passive protection
++
+Active detection and response
++
+Human coordination
+=
+Fire-resilient facility operation
+```
 
 ---
 
-# Interior Material Discipline
+## Relationship to Security Architecture
 
-Material discipline is not only about fire classification.  
-It is also about reducing complexity, limiting unpredictable behavior, and avoiding interiors that contribute unnecessarily to heat release, smoke production, or flame spread.
+High-security design may introduce:
 
-Within this concept, interior design should favor materials that are:
+- man-traps
+- controlled doors
+- layered zones
+- restricted passages
+- temporary movement shaping
+- door-state control
+- surveillance
+- credential checks
+- guard tasking
 
-- durable
-- low-maintenance
-- structurally stable under stress
-- resistant to rapid fire contribution
-- compatible with technical and security environments
+These features must be evaluated against fire and life-safety requirements.
 
-In practice, this may mean the concept generally favors restrained, robust, and low-fuel interior strategies over soft or heavily decorative interior design approaches.
+A security barrier that delays or prevents safe evacuation is not a successful security control.
 
----
+The correct relationship is:
 
-# Smoke-Aware Design Principles
+```text
+Security control
+→ supports controlled access during normal and security operations
 
-Smoke is often one of the most immediate life-safety threats in a building fire.
+Life-safety condition
+→ overrides ordinary security control
 
-For that reason, passive fire resilience should include awareness of how building layout and systems may influence smoke spread, occupant survivability, and evacuation conditions.
-
-At a conceptual level, the facility should aim to ensure that:
-
-- smoke spread is not unintentionally accelerated by normal airflow behavior
-- protected routes remain as survivable as possible
-- compartment boundaries are not undermined by avoidable openings or uncontrolled transfer paths
-- emergency building behavior supports life safety rather than normal comfort logic
-
-The exact implementation of smoke control requires specialist fire engineering and should not be assumed by conceptual design alone.  
-However, the concept should clearly recognize that smoke behavior is central to resilience.
+Recovery
+→ restores security only after safety conditions are confirmed
+```
 
 ---
 
-# Suppression-Compatible Architecture
+## Fire Compartmentation
 
-Suppression systems are important, but they should not carry the entire burden of fire safety alone.
+Fire compartments should be treated as meaningful physical boundaries.
 
-A stronger facility combines suppression with architecture that already works in favor of containment.
+The facility should identify:
 
-This means the building should be designed so that suppression systems benefit from:
+- compartment boundaries
+- fire-rated doors
+- smoke-control zones
+- protected technical areas
+- protected escape routes
+- stair and lift conditions
+- service penetrations
+- areas requiring responder access
+- interfaces between security zones and fire zones
 
-- slower fire growth
-- limited spread pathways
-- lower interior fuel load
-- compartment integrity
-- reduced smoke escalation where possible
+Security zones and fire compartments may not have identical boundaries.
 
-In this model, suppression is reinforced by passive resilience rather than treated as the only meaningful defense.
+The system should therefore maintain separate but correlated models:
 
----
+```text
+Security Zone
+≠
+Fire Compartment
+```
 
-# Occupant Survivability and Response Time
-
-A resilient facility should not be designed only around immediate escape assumptions.
-
-It should also consider that in some situations, survival depends on creating time.
-
-That time may be needed for:
-
-- recognition of the event
-- alarm interpretation
-- evacuation movement
-- assisted evacuation
-- operator coordination
-- protected waiting in temporarily safer spaces
-- incident response escalation
-
-This does not mean every room should be treated as a refuge space by default.  
-It means the facility should be designed to reduce the chance that a local fire event immediately becomes unsurvivable.
+A security operator must not assume that a security-zone boundary is also a safe fire boundary.
 
 ---
 
-# Compatibility with High-Security Environments
+## Fire Door and Security Door Relationship
 
-Passive fire resilience is particularly important in high-security facilities because those environments often include:
+Where a door serves both security and fire functions, its behavior must be governed by approved life-safety logic.
 
-- controlled movement
-- restricted access
-- compartmented spaces
-- technical rooms with limited occupancy
-- heightened containment logic
-- reduced tolerance for uncontrolled openings
+The facility should distinguish between:
 
-These same features may improve security while increasing the risk of poor life-safety outcomes if fire resilience is not designed carefully.
+- security lock state
+- fire-door state
+- commanded state
+- sensor-reported state
+- verified physical state
+- emergency state
 
-For that reason, the concept holds that:
+Example:
 
-> High security must be compatible with survivability.
+```text
+Security Command: LOCKED
+Fire State: EMERGENCY RELEASE
+Physical State: OPEN
+```
 
-A facility should not require occupants to choose between security integrity and basic life safety.
+A security command must not prevent a required fire-door response.
 
----
-
-# Spread Minimization Between Functional Areas
-
-A high-security facility typically contains multiple operational environments with different functions and risk profiles.
-
-These may include:
-- office spaces
-- control rooms
-- technical rooms
-- access control zones
-- maintenance areas
-- protected technical spaces
-- corridors and transition areas
-
-Passive fire resilience should reduce the likelihood that fire in one such area rapidly affects another.
-
-The architecture should therefore aim to:
-- limit cross-functional spread
-- preserve separation between critical spaces
-- avoid unnecessary continuity of fuel or air pathways
-- reduce the chance that one local fire disables multiple operational layers
+Fire-door status should be visible to relevant operators, but security personnel must not override engineered fire behavior without qualified authority.
 
 ---
 
-# Human Factors and Interpretability
+## Incident Maneuver and Door Control
 
-Passive resilience also supports human clarity.
+The Incident Maneuver Panel may support security movement during selected incidents, but it must remain subordinate to fire and life safety.
 
-In a facility where rooms, boundaries, and materials are designed with discipline, occupants and responders may be better able to understand:
+Before a temporary door action is applied, the system should verify where possible:
 
-- where the event is likely contained
-- where spread risk is higher
-- which routes may remain viable
-- which spaces are more exposed
-- when a room is likely to provide more time versus less time
+- fire alarm state
+- smoke condition
+- evacuation status
+- emergency responder activity
+- occupancy
+- door function
+- egress impact
+- protected-route condition
 
-A resilient environment is not only safer physically.  
-It is also easier to reason about under stress.
+During a life-safety event:
 
----
+- security containment may be cancelled
+- temporary locks may be released or changed according to approved emergency behavior
+- emergency routes must remain available
+- responder access must be preserved
+- guards may abandon security routes
+- explicit communication must replace silent tasking where necessary
 
-# Governance Implications
-
-Passive fire resilience has governance implications.
-
-These may include:
-- material policy for different zones
-- review of interior modifications
-- control of decorative additions
-- treatment of penetrations and retrofits
-- compatibility between fire resilience and security barriers
-- coordination between facility planning, safety, and security functions
-
-Without governance, even a strong initial design can degrade over time through exceptions, convenience changes, and non-disciplined alterations.
+> **The maneuver layer may support security response only while life-safety conditions remain clear.**
 
 ---
 
-# Risks and Design Constraints
+## Life-Safety Override
 
-This concept must be applied with awareness of real-world constraints.
+Life-safety override applies during:
 
-These include:
-- cost and constructability
-- human comfort and usability
-- acoustic considerations
-- retrofitting difficulty
-- tension between openness and compartmentation
-- tension between aesthetics and low-fuel simplicity
-- interaction with access control and zone boundaries
-- regulatory requirements beyond conceptual design
+- fire
+- smoke
+- evacuation
+- rescue
+- medical emergency
+- structural danger
+- hazardous release
+- emergency responder direction
 
-The purpose of this model is not to eliminate those constraints, but to ensure that resilience remains a first-class design concern.
+During override:
 
----
+- actual floor and room references are used
+- standard emergency communication is used
+- radio silence may be broken
+- contextual directional coding is suspended
+- patrol display tasking may be cancelled or replaced
+- security door controls follow approved emergency behavior
+- emergency responders receive clear access
+- all overrides are logged
 
-# Design Boundaries
-
-This document does not define:
-
-- specific fire ratings
-- exact wall or door assemblies
-- detailed smoke control engineering
-- suppression system specifications
-- building code compliance details
-- certified material lists
-- local regulatory implementation
-- exact refuge space criteria
-
-Those elements require detailed fire engineering, architectural design, and jurisdiction-specific validation.
+No guard, Watcher Operator, or Master Watcher Operator should be required to interpret a covert security code before acting on an immediate life-safety instruction.
 
 ---
 
-# Summary
+## Protected Escape Routes
 
-Within the **High-Security Facility Concept**, passive fire resilience means that the building itself should help resist escalation.
+Protected escape routes should remain:
 
-The central idea is:
+- identifiable
+- accessible
+- adequately separated
+- compatible with evacuation
+- clearly signed
+- supported by emergency lighting
+- free from unnecessary security ambiguity
 
-> Fire safety should not rely only on detection and suppression.  
-> A high-security facility should use compartmentation, low-fuel interior design, smoke-aware thinking, and suppression-compatible architecture to slow fire growth, reduce spread, preserve survivability, and support controlled response.
+Security systems should not create:
 
-A resilient high-security environment is one in which security does not create entrapment, and where architecture actively contributes to life safety.
+- hidden escape restrictions
+- unexplained route changes
+- conflicting floor references
+- doors that cannot be opened during evacuation
+- dependence on a control-room operator for basic egress
+- route instructions that are unclear under smoke or stress
+
+Operational coordinate systems may supplement emergency references, but must never replace approved emergency signage or responder terminology.
+
+---
+
+## Emergency Responder Access
+
+The facility should define how emergency responders gain access without depending on ordinary security workflows.
+
+This may include:
+
+- responder access points
+- emergency keys or credentials
+- controlled escort procedures
+- fire-service interfaces
+- responder staging areas
+- facility maps
+- fire-compartment references
+- direct control-room coordination
+- emergency override authority
+
+Emergency responder access must be:
+
+- rapid
+- explicit
+- auditable
+- compatible with fire and security design
+- understandable without internal operational codes
+
+---
+
+## Smoke and Visibility
+
+Smoke may affect:
+
+- camera visibility
+- local-sector interpretation
+- guard movement
+- door verification
+- radio communication
+- human orientation
+- route selection
+- occupant accountability
+
+The facility should not assume that cameras or coordinate systems remain reliable in smoke conditions.
+
+When visibility is reduced:
+
+- life-safety procedures take priority
+- explicit physical references are used
+- guards may require direct guidance
+- cameras should be marked uncertain where affected
+- silent tasking may be suspended
+- evacuation and rescue routes remain authoritative
+
+---
+
+## Surveillance and Fire Conditions
+
+Surveillance may support:
+
+- detection
+- occupant accountability
+- evacuation monitoring
+- hazard localization
+- responder coordination
+- post-event review
+
+However, camera data may become:
+
+- obstructed
+- stale
+- unavailable
+- misinterpreted
+- disconnected from actual conditions
+
+The system should distinguish:
+
+```text
+Camera view available
+≠
+Area confirmed safe
+```
+
+Fire conditions require multiple sources where possible:
+
+- fire detection
+- smoke sensors
+- camera observation
+- direct report
+- access events
+- responder assessment
+- physical verification
+
+---
+
+## Master Watcher Operations During Fire Events
+
+The Master Watcher Operator should receive a clear life-safety view that may include:
+
+- fire alarm state
+- affected compartment
+- smoke zones
+- evacuation status
+- protected routes
+- door states
+- responder access
+- guard locations
+- camera availability
+- system limitations
+- emergency authority
+
+The Master Watcher should make clear when:
+
+- security controls are overridden
+- doors follow emergency behavior
+- silent tasking is cancelled
+- coded communications are suspended
+- the facility has entered Emergency Mode
+
+The Master Watcher Operator coordinates information and resources but does not replace qualified fire or emergency authority.
+
+---
+
+## Role Boundaries
+
+### Master Watcher Operator
+
+May:
+
+- coordinate the shared operational picture
+- display life-safety state
+- support responder coordination
+- track guards and Watchers
+- identify security consequences
+
+Must not independently override engineered fire behavior without authorized basis.
+
+### Watcher Operator
+
+May:
+
+- monitor assigned cameras
+- report affected areas
+- support evacuation and responder coordination
+- track security anomalies during the event
+
+Must prioritize explicit emergency instructions.
+
+### Patrol Guard
+
+May:
+
+- follow emergency instructions
+- assist evacuation or responder access
+- report hazards
+- abandon silent security tasking when safety requires it
+- use radio immediately when necessary
+
+### Incident Commander or Emergency Authority
+
+May determine:
+
+- emergency posture
+- evacuation
+- responder coordination
+- security restrictions compatible with life safety
+- controlled re-entry
+- return to normal operations
+
+---
+
+## Degraded Fire and Life-Safety Operations
+
+The facility should define behavior when fire-related systems are degraded.
+
+Possible conditions include:
+
+- fire alarm unavailable
+- smoke sensor failure
+- emergency lighting failure
+- camera loss
+- door-state uncertainty
+- fire-compartment data unavailable
+- communication failure
+- responder access failure
+- power disruption
+- conflicting alarm states
+
+Fallback may include:
+
+- direct physical verification
+- manual fire watch
+- explicit radio communication
+- controlled evacuation procedures
+- responder briefing
+- printed fire plans
+- manual door confirmation
+- suspension of security containment
+- increased staffing
+- documented uncertainty
+
+A degraded security system must never make the fire response less clear.
+
+---
+
+## Audit and Review
+
+The facility should preserve records of:
+
+- fire or smoke event
+- alarm activation
+- security-mode override
+- door-state changes
+- emergency releases
+- evacuation support
+- responder access
+- guard and Watcher assignments
+- cancelled silent tasks
+- communication-mode changes
+- manual overrides
+- life-safety authority
+- re-entry decisions
+- restoration of security controls
+- post-event review
+
+Review should examine:
+
+- whether security controls delayed safety actions
+- whether doors behaved as intended
+- whether responders received clear access
+- whether maps and coordinates were useful or confusing
+- whether cameras created false confidence
+- whether silent tasking was cancelled promptly
+- whether emergency communication remained clear
+- whether the facility returned to normal too early
+- whether design or policy changes are required
+
+---
+
+## Recovery and Re-Entry
+
+Security controls should not return to normal merely because the visible emergency has ended.
+
+Recovery should confirm:
+
+- fire and smoke conditions are assessed
+- compartments are reviewed
+- doors and barriers are physically verified
+- emergency routes are clear
+- responders approve or coordinate re-entry
+- cameras and sensors are functioning
+- temporary security states are known
+- credentials and devices are reconciled
+- guard and Watcher assignments are closed or reassigned
+- affected zones are safe for controlled re-entry
+- the authority to restore normal security is identified
+
+Recovery may proceed through:
+
+```text
+Emergency
+→ Stabilization
+→ Assessment
+→ Responder Coordination
+→ Controlled Re-entry
+→ Security Restoration
+→ Review
+```
+
+---
+
+## Design Requirements
+
+Passive fire resilience should satisfy the following conceptual requirements:
+
+- passive fire protection is treated as part of security architecture
+- security zones and fire compartments are distinguished
+- fire doors follow approved life-safety behavior
+- emergency routes remain available
+- responder access is explicit
+- security door control cannot silently defeat fire behavior
+- life-safety override is defined
+- emergency communication remains explicit
+- silent tasking can be cancelled
+- coded directional communication is suspended when necessary
+- camera limitations are visible
+- door-state uncertainty is exposed
+- degraded fire conditions have fallback procedures
+- re-entry is controlled
+- security restoration is verified
+- all significant overrides are auditable
+- professional fire and life-safety review remains required
+
+---
+
+## Relationship to the Wider Architecture
+
+### Incident Response
+
+Defines how fire, smoke, evacuation, rescue, and security interaction are classified and coordinated.
+
+### Incident Maneuver and Door Control
+
+Defines how temporary security passage control is overridden or constrained by life safety.
+
+### Degraded Operations
+
+Defines fallback when fire, communication, camera, door, or control systems are weakened.
+
+### Alarm and Signaling Model
+
+Defines how fire, security, technical, and degraded signals remain distinguishable.
+
+### Master Watcher Operations
+
+Provides facility-wide visibility, coordination, and resource tracking during emergency conditions.
+
+### Facility Chessboard Coordinate Layer
+
+May provide supplementary spatial references, but does not replace emergency floor and room references.
+
+### Recovery Model
+
+Defines controlled restoration of trust, access, doors, and operations after the event.
+
+### Audit and Review
+
+Preserves the history of alarms, overrides, emergency actions, and recovery.
+
+---
+
+## Limitations
+
+This model does not by itself provide:
+
+- fire engineering
+- certified life-safety design
+- code compliance
+- evacuation modelling
+- smoke-control engineering
+- fire alarm design
+- structural fire-resistance calculations
+- emergency responder procedures
+- guaranteed camera visibility
+- guaranteed door behavior
+- replacement for qualified fire protection professionals
+
+Its effectiveness depends on:
+
+- professional fire engineering
+- correctly designed passive protection
+- tested active systems
+- clear emergency procedures
+- trained personnel
+- reliable responder coordination
+- regular exercises
+- jurisdiction-specific compliance
+- independent review
+
+---
+
+## Summary
+
+Passive Fire Resilience ensures that high-security controls remain compatible with:
+
+- compartmentation
+- evacuation
+- rescue
+- emergency access
+- smoke conditions
+- survivability
+- controlled re-entry
+- recovery
+
+It connects:
+
+```text
+Fire and Smoke Detection
+→ Life-Safety Classification
+→ Security Override
+→ Evacuation and Responder Access
+→ Controlled Stabilization
+→ Re-entry
+→ Security Restoration
+→ Audit
+```
+
+The central principle is:
+
+> **High security must remain survivable, and survivability must remain operationally clear.**
+
+---
+
+## Final Design Principles
+
+> **Life safety overrides security containment.**
+
+> **Security zones and fire compartments are related but not identical.**
+
+> **A commanded door state is not proof of safe physical behavior.**
+
+> **Emergency responders must not depend on internal security codes.**
+
+> **Silent tasking and coded communication must yield to explicit emergency communication.**
+
+> **Security is restored only after life-safety conditions, systems, doors, routes, and authority have been validated.**
