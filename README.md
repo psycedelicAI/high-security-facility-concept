@@ -1,6 +1,6 @@
 # High-Security Facility Concept
 
-> Where identity, movement, zones, devices, surveillance, privilege, authorization, and recovery become one security model.
+> Where identity, movement, zones, devices, surveillance, authorization, privilege, maneuver, and recovery become one security model.
 
 A concept repository exploring how a high-security facility can be designed as a trust architecture for controlled physical and operational environments.
 
@@ -14,9 +14,11 @@ The project examines how security emerges from the interaction between:
 - devices
 - surveillance
 - privilege
+- authorization
 - governance
 - signaling
 - incident handling
+- maneuver and passage control
 - degraded operations
 - recovery
 - audit and review
@@ -25,8 +27,10 @@ The project examines how security emerges from the interaction between:
 - spatial coordination
 - contextual authorization
 - human-controlled verification
+- patrol tasking
+- operational ownership
 
-Rather than treating physical security as a checklist of disconnected controls, this concept approaches the facility as a structured system in which trust, access, visibility, resilience, interpretation, and response must work together.
+Rather than treating physical security as a checklist of disconnected controls, this concept approaches the facility as a structured system in which trust, access, visibility, resilience, interpretation, response, and recovery must work together.
 
 ---
 
@@ -50,10 +54,39 @@ It should also depend on:
 - whether the facility remains governable during degraded conditions
 - whether trust can be restored after abnormal states
 - whether high-risk access requires accountable human verification
+- whether every operational action has a clear owner
 
 A core implication is:
 
 > **Security must remain effective even after the first access decision has failed, been bypassed, or been weakened by human error, informal behavior, social engineering, credential compromise, or contextual change.**
+
+---
+
+## Foundational Design Thesis
+
+The concept began with a simple principle:
+
+> **Friction without control value is only irritation.**
+
+Security measures should therefore be evaluated by the control value they create.
+
+A control should contribute to one or more of the following:
+
+- reduced attack surface
+- stronger verification
+- improved detection
+- constrained movement
+- protected credential or asset custody
+- clearer accountability
+- better incident interpretation
+- controlled recovery
+- improved life-safety compatibility
+
+The concept does not treat physical security as a replacement for IT security.
+
+Instead:
+
+> **Strong IT security combined with facility-centered physical and operational trust creates a higher defensive ceiling in environments where digital assets depend on physical presence, movement, devices, and privileged access.**
 
 ---
 
@@ -83,9 +116,15 @@ The repository currently explores:
 - dual-control verification
 - facility-wide spatial coordination
 - chessboard-style facility coordinates
+- local grid-sector precision
 - fixed security-center orientation
-- Master Watcher and Watcher operations
+- Master Watcher Operators
+- Watcher Operators
+- patrol guard tasking
+- low-signature wrist and flashlight displays
 - contextual directional coding
+- incident maneuver and door control
+- controlled passage and movement shaping
 - incident lighting
 - alarm and signaling architecture
 - passive fire resilience
@@ -117,6 +156,7 @@ It depends on:
 - device
 - escort state
 - operational condition
+- observed behavior
 
 Authorization may be valid in one context and require review in another.
 
@@ -285,15 +325,17 @@ The facility may use an operational coordinate layer based on:
 - Greek floor designations
 - fixed facility orientation
 - chessboard-style grid references
+- local grid sectors
 - camera locations
 - zones
+- doors and passage points
 - movement trails
 - incident markers
 
 Example:
 
 ```text
-Beta-F6
+BETA-F6-NE
 ```
 
 The coordinate provides a shared operational reference without requiring descriptive architectural language in every communication.
@@ -311,30 +353,67 @@ This reduces:
 - handoff errors
 - incident interpretation delays
 
-### Master Watcher and Watchers
+### Master Watcher Operators and Watcher Operators
 
-The **Master Watcher** provides:
+The model distinguishes clearly between human roles and interfaces.
 
-- facility-wide spatial awareness
-- coordinate selection
-- camera discovery
-- temporary zone overview
-- incident localization
-- Watcher assignment
-- control coordination
+The **Master Watcher Operator** coordinates:
 
-Individual **Watchers** provide:
-
-- detailed observation
-- camera control
-- movement tracking
-- verification
+- facility-wide situational awareness
+- incident priorities
+- Watcher Operator assignments
+- patrol guard assignments
+- camera ownership
+- control handoffs
+- maneuver authorization
+- degraded-state continuity
 - escalation
-- incident ownership
-- controlled handoff
+- recovery oversight
+
+The **Watcher Operator** manages:
+
+- assigned zones and incidents
+- detailed camera control
+- movement verification
+- coordinate interpretation
+- patrol tasking
+- local maneuver requests
+- escalation
+- handoff
 - operational logging
 
-> **Overview is centralized, responsibility is assigned, control is visible, and every handoff is deliberate.**
+The **Master Watcher Interface** is the central facility-aligned touch interface.
+
+The **Watcher Station** is the individual OPSEC workstation.
+
+> **The Master Watcher Operator coordinates the whole facility. Watcher Operators control assigned areas. Patrol guards execute physical tasks.**
+
+### Patrol Tasking and Low-Signature Displays
+
+Patrol guards may receive incident tasks through:
+
+- wrist-worn e-paper displays
+- low-power displays
+- flashlight-mounted LED displays
+- authenticated patrol equipment
+- haptic devices
+- controlled radio fallback
+
+A compact assignment may appear as:
+
+```text
+THETA:VIII ][ BETA-F6-NE
+STAIRS
+MOVE
+```
+
+This separates:
+
+```text
+Guard identity ][ Operational position
+```
+
+The guard receives the minimum actionable task while the control room retains the wider incident context.
 
 ### Context-Dependent Directional Coding
 
@@ -342,11 +421,30 @@ During selected covert, non-life-threatening security incidents, directional ref
 
 This layer is subordinate to life safety.
 
+### Incident Maneuver and Door Control
+
+During defined security states, authorized operators may temporarily shape passage conditions to:
+
+- support guard movement
+- restrict uncontrolled routes
+- coordinate doors and cameras
+- create time for verification
+- support containment
+- restore controlled passage after the incident
+
+Every temporary door state must have:
+
+- an owner
+- a reason
+- a timeout
+- visible current status
+- verified restoration
+
+Life safety overrides containment.
+
 ### Signaling with Semantic Discipline
 
-Life-safety, security, technical, degraded, and controlled-state events must remain distinguishable.
-
-Communication-security measures must never create ambiguity during emergency response.
+Life-safety, security, technical, communications, authorization, degraded, maneuver, and recovery events must remain distinguishable.
 
 ### Resilience Under Degradation
 
@@ -368,6 +466,7 @@ High security should remain compatible with:
 - rescue
 - survivability
 - controlled emergency access
+- controlled re-entry
 
 ### Full Incident Means Full Control
 
@@ -417,8 +516,6 @@ For the complete documentation map, see:
 
 ### Foundational
 
-Core framing and conceptual grounding:
-
 - [`concept.md`](docs/foundational/concept.md)
 - [`executive-summary.md`](docs/foundational/executive-summary.md)
 - [`one-pager.md`](docs/foundational/one-pager.md)
@@ -428,8 +525,6 @@ Core framing and conceptual grounding:
 - [`diagrams.md`](docs/foundational/diagrams.md)
 
 ### Architecture
-
-Core trust, identity, authorization, and security models:
 
 - [`zone-model.md`](docs/architecture/zone-model.md)
 - [`surveillance-model.md`](docs/architecture/surveillance-model.md)
@@ -445,13 +540,13 @@ Core trust, identity, authorization, and security models:
 
 ### Operations
 
-Operational resilience, spatial coordination, control-room operations, and recovery:
-
 - [`audit-and-review-model.md`](docs/operations/audit-and-review-model.md)
 - [`context-dependent-directional-coding.md`](docs/operations/context-dependent-directional-coding.md)
 - [`degraded-operations-model.md`](docs/operations/degraded-operations-model.md)
 - [`facility-chessboard-coordinate-layer.md`](docs/operations/facility-chessboard-coordinate-layer.md)
 - [`fixed-security-center-orientation.md`](docs/operations/fixed-security-center-orientation.md)
+- [`incident-coordinate-wrist-display-model.md`](docs/operations/incident-coordinate-wrist-display-model.md)
+- [`incident-maneuver-and-door-control-model.md`](docs/operations/incident-maneuver-and-door-control-model.md)
 - [`incident-response.md`](docs/operations/incident-response.md)
 - [`maintenance-model.md`](docs/operations/maintenance-model.md)
 - [`master-watcher-operations-model.md`](docs/operations/master-watcher-operations-model.md)
@@ -520,13 +615,23 @@ The whitepaper provides a longer, external-facing narrative of the concept.
 5. [`docs/architecture/post-access-trust-control.md`](docs/architecture/post-access-trust-control.md)
 6. [`docs/operations/audit-and-review-model.md`](docs/operations/audit-and-review-model.md)
 
-### Spatial Operations and Control Room
+### Spatial Operations, Patrol Tasking, and Control Room
 
 1. [`docs/operations/fixed-security-center-orientation.md`](docs/operations/fixed-security-center-orientation.md)
 2. [`docs/operations/facility-chessboard-coordinate-layer.md`](docs/operations/facility-chessboard-coordinate-layer.md)
 3. [`docs/operations/master-watcher-operations-model.md`](docs/operations/master-watcher-operations-model.md)
-4. [`docs/operations/context-dependent-directional-coding.md`](docs/operations/context-dependent-directional-coding.md)
-5. [`docs/operations/incident-response.md`](docs/operations/incident-response.md)
+4. [`docs/operations/incident-coordinate-wrist-display-model.md`](docs/operations/incident-coordinate-wrist-display-model.md)
+5. [`docs/operations/context-dependent-directional-coding.md`](docs/operations/context-dependent-directional-coding.md)
+6. [`docs/operations/incident-maneuver-and-door-control-model.md`](docs/operations/incident-maneuver-and-door-control-model.md)
+
+### Incident Response and Maneuver
+
+1. [`docs/operations/incident-response.md`](docs/operations/incident-response.md)
+2. [`docs/operations/master-watcher-operations-model.md`](docs/operations/master-watcher-operations-model.md)
+3. [`docs/operations/incident-maneuver-and-door-control-model.md`](docs/operations/incident-maneuver-and-door-control-model.md)
+4. [`docs/operations/incident-coordinate-wrist-display-model.md`](docs/operations/incident-coordinate-wrist-display-model.md)
+5. [`docs/operations/degraded-operations-model.md`](docs/operations/degraded-operations-model.md)
+6. [`docs/operations/recovery-model.md`](docs/operations/recovery-model.md)
 
 ### Operations, Resilience, and Recovery
 
@@ -535,6 +640,7 @@ The whitepaper provides a longer, external-facing narrative of the concept.
 3. [`docs/operations/maintenance-model.md`](docs/operations/maintenance-model.md)
 4. [`docs/operations/recovery-model.md`](docs/operations/recovery-model.md)
 5. [`docs/operations/audit-and-review-model.md`](docs/operations/audit-and-review-model.md)
+6. [`docs/extensions/passive-fire-resilience.md`](docs/extensions/passive-fire-resilience.md)
 
 ### Strategy and Positioning
 
@@ -580,6 +686,8 @@ Offline OPSEC Verification
         ↓
 Spatial Coordination and Watcher Control
         ↓
+Patrol Tasking and Maneuver
+        ↓
 Post-Access Trust Control
         ↓
 Incident Response and Recovery
@@ -588,6 +696,42 @@ Audit, Governance, and Review
 ```
 
 The documents are separated for clarity, but they describe one larger architecture.
+
+---
+
+## Architectural Interfaces
+
+Each document is intended to function as a subsystem with relationships to other subsystems.
+
+A useful reading pattern is:
+
+```text
+Purpose
+→ Inputs
+→ Outputs
+→ Ownership
+→ Dependencies
+→ Consumers
+→ Failure Modes
+→ Audit
+```
+
+Examples:
+
+| Question | Primary subsystem |
+|---|---|
+| Who is present? | Identity and Actor Model |
+| What are they authorized to do? | Context-Bound Authorization Ticket |
+| Can the authorization be trusted now? | Offline OPSEC Verification |
+| Where are they? | Facility Chessboard Coordinates |
+| Who sees and coordinates it? | Master Watcher Operations |
+| What task is sent to patrol? | Incident Coordinate Wrist Display |
+| Can passage be shaped? | Incident Maneuver and Door Control |
+| Can trust continue after entry? | Post-Access Trust Control |
+| What happens during the event? | Incident Response |
+| What happens when systems weaken? | Degraded Operations |
+| How is control restored? | Recovery |
+| Can the event be reconstructed? | Audit and Review |
 
 ---
 
@@ -629,7 +773,10 @@ The project continues to mature in areas such as:
 - contextual authorization
 - human-controlled high-risk verification
 - spatial coordination and facility orientation
-- Master Watcher and Watcher operations
+- Master Watcher Operators
+- Watcher Operators
+- patrol tasking and low-signature displays
+- incident maneuver and door control
 - degraded operations and controlled continuity
 - signaling semantics
 - resilience and survivability
@@ -659,6 +806,7 @@ The project addresses that question through:
 - human-controlled verification
 - spatial coordination
 - incident control
+- passage management
 - suspension and revocation
 - controlled recovery
 
@@ -703,3 +851,6 @@ The concept is intended to be examined, challenged, adapted, and further develop
 - life safety
 - emergency planning
 - human factors
+- communications
+- access-control engineering
+- door and life-safety engineering
