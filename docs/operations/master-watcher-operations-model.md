@@ -85,7 +85,7 @@ The following diagram illustrates the physical relationship between the
 shared camera network, watcher stations, Watcher Operators, and Master
 Watcher consoles.
 
-![Master Watcher Operations Model — High-Security Facility Concept](images/master-watcher-operations-model.png)
+![Master Watcher Operations Model — High-Security Facility Concept](docs/operations/images/master-watcher-operations-model - Room Design.png)
 
 The layout shows:
 
