@@ -75,7 +75,33 @@ It is a human coordination model strengthened by:
 - degraded-operation procedures
 
 ---
+- degraded-operation procedures
 
+---
+
+## Conceptual Operations-Room Layout
+
+The following diagram illustrates the physical relationship between the
+shared camera network, watcher stations, Watcher Operators, and Master
+Watcher consoles.
+
+![Master Watcher Operations Model — High-Security Facility Concept](images/master-watcher-operations-model.png)
+
+The layout shows:
+
+- a shared live-feed wall and camera network
+- Watcher Stations Alpha, Beta, Gamma, and Delta
+- three operator positions at each Watcher Station
+- dedicated workstation displays for detailed monitoring and zoom control
+- a Master Watcher console for facility-wide observation
+- a separate Multi-Incident Mode console for simultaneous incident coordination
+
+The diagram is conceptual and does not by itself define authority,
+staffing levels, or final physical-room dimensions.
+
+---
+
+## Terminology
 ## Terminology
 
 The following distinctions must remain explicit.
